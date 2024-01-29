@@ -33,7 +33,7 @@
   height:600px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   align-content: center;
 }
@@ -53,9 +53,20 @@
   border-radius: 8px;
 }
 
+.pic-desc{
+  color: grey;
+}
+.pic-desc > h2{
+margin: 0px;
+}
+
+.pic-desc > p{
+  margin-top: 0px;
+}
+
 .desc{
   width:250px;
-  height:300px;
+  height:250px;
   border:2px solid  #61dafb;
   border-radius: 8px;
 }
