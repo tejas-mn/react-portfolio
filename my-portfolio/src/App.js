@@ -13,7 +13,7 @@ function App() {
         </div>
       <div className="pic-desc">
         <h2>Tejas M N</h2>
-        <p>SDET | CSGI</p>
+        <p><b><i>SDET | CSGI</i></b></p>
       </div>
         <div className="desc">
         </div>
