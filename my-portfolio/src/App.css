@@ -23,7 +23,10 @@
 }
 
 
-
+.btm-txt{
+  color: #dddddd;
+  text-align: center;
+}
 
 .left{
   margin-right:20px;
@@ -118,3 +121,5 @@ section > p{
     transform: rotate(360deg);
   }
 }
+
+/* //////////// */

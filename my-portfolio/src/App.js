@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
   return (
@@ -16,8 +16,15 @@ function App() {
         <p>SDET | CSGI</p>
       </div>
         <div className="desc">
-
         </div>
+        <div className="btm-txt">
+        <p>
+         Integer semper dui mauris, in faucibus sem sollicitudin eget adipiscInteger semper dui mauris, in faucibus sem sollicitudin eget.Lorem ipsum dolor sit amet, consectetur adipiscInteger semper dui mauris, in faucibus sem sollicitudin eget.
+          </p>
+      
+  
+        </div>
+        
       </div>
 
       <div className="right">
