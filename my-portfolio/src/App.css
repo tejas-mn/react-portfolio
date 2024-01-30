@@ -104,6 +104,11 @@ margin: 0px;
   margin:5px;
 }
 
+.link > h2{
+  color: white !important;
+  text-decoration: none;
+}
+
 .box{
   border-bottom: 2px solid white;
 }

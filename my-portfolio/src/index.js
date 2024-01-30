@@ -4,10 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {BrowserRouter, Route, Routes, Link} from 'react-router-dom'
+import { LeftComponent } from './components/LeftComponent';
+import { RightComponent } from './components/RightComponent';
+import { Experience } from './components/Experience';
+import { About } from './components/About';
+import { Work } from './components/Work';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App/>}>
+            <Route path='about' element = {<About/>} />
+            <Route path='experience' element = {<Experience/>} />
+            <Route path='work' element = {<Work/>} />
+          </Route>
+          <Route path='/left' element={<LeftComponent/>}> </Route>
+          <Route path='/right' element={<RightComponent/>}> </Route> 
+        </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
