@@ -1,9 +1,6 @@
 import { Skills } from "./Skill";
 import { Link, Outlet } from "react-router-dom";
 
-
-
-
 export function RightComponent(){
     return   (
     <div className="right">
