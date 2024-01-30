@@ -36,7 +36,7 @@
   margin-right:20px;
   border:2px solid  #61dafbb9;
   border-radius: 8px;
-  width:300px;
+  width:250px;
   height:700px;
   display: flex;
   align-items: center;
@@ -60,16 +60,16 @@
 }
 
 .pic{
-  width:150px;
-  height:150px;
+  width:120px;
+  height:120px;
   border:2px solid  #61dafb;
   border-radius: 108px;
   margin-bottom: 0px;
 }
 
 .pic > img{
-  width:150px;
-  height:150px;
+  width:120px;
+  height:120px;
   border-radius: 108px;
 }
 
@@ -138,7 +138,8 @@ section > p{
   display: flex;
   flex-wrap: wrap;
   color: #dddddd;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
   padding: 10px;
 }
 
