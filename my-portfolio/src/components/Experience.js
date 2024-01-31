@@ -7,10 +7,13 @@ export function Experience(){
         </p>
 
             <p>
-              <b>CSG International </b>  <i> (Sep 2023 – Present)</i>  <br/>
-              <i>Test Engineer Grad</i>     
+                <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
+                    <b>CSG International </b>  <i> (Sep 2023 – Present)</i>  <br/>
+                    <i>Test Engineer Grad</i> 
+                </div>
+                 
               <ul>
-                <li>Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and
+                <li>Writing component tests for APIs developed in the feature utilizing C# libraries like <b>Xunit</b>, FluentAssertions and
 mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.</li>
 <li>Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services
 like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.</li>
@@ -21,8 +24,10 @@ and monitoring performance results and logs. Testing defects across development 
             </p>
 
             <p>
+            <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
               <b>CSG International  </b>  <i> (March 2023 – Sep 2023)</i>  <br/>
-              <i>Test Intern</i>     
+              <i>Test Intern</i> 
+            </div>    
               <ul>
                 <li>Developed responsive frontend components utilizing HTML, CSS, JavaScript and Bootstrap.</li>
                 <li>Designed a website for local school involving CSS Media Queries and Bootstrap layouts.</li>
@@ -31,8 +36,10 @@ and monitoring performance results and logs. Testing defects across development 
             </p>
 
             <p>
+            <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
               <b>SOFTMANTISSA  </b>  <i> (Oct 2021 – Jan 2022)</i>  <br/>
               <i>Web developer Intern</i>     
+            </div>
               <ul>
                 <li>Developed responsive frontend components utilizing HTML, CSS, JavaScript and Bootstrap.</li>
                 <li>Designed a website for local school involving CSS Media Queries and Bootstrap layouts.</li>
