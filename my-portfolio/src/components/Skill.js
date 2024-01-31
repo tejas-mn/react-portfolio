@@ -3,14 +3,17 @@ function Skill({skill}){
 }
 
 export function Skills(){
-    let skills = ['Javascript', 'C# .NET', 'React', 'C++'];
+    let skills = ['DSA', 'OOPS', 'Javascript', 'C#', '.NET WEB API', 'React', 'C++', 'Python', 'Flask', 'AWS' ];
     return ( 
-        <div className='skills'>
-            {
-                skills.map(ele => {
-                    return <Skill key={ele} skill={ele} />
-                })
-            }
-        </div>
+        <section>
+            <h2>Tech Skills</h2>
+            <div className='skills'>
+                {
+                    skills.map(ele => {
+                        return <Skill key={ele} skill={ele} />
+                    })
+                }
+            </div>
+        </section>
     )
 }

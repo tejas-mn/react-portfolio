@@ -36,8 +36,13 @@ export  function LeftComponent(){
           </div>
           
           <hr></hr>
-          <p>Github | Linkedin | Leetcode</p>
-          
+          <p>
+            <a href="https://www.github.com/tejas-mn" target="blank" style={{color:'lightblue', textDecoration:'none'}}>Github | </a> 
+            <a href="https://www.linkedin.com/in/tejasmn/" target="blank" style={{color:'lightblue', textDecoration:'none'}}> Linkedin | </a>
+            <a href="https://www.leetcode.com/tejasmn" target="blank" style={{color:'lightblue', textDecoration:'none'}}> Leetcode</a>
+
+          </p>
+       
         </div>
         
       </div>

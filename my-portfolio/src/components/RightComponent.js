@@ -1,5 +1,6 @@
 import { About } from "./About";
 import { Link, Outlet ,useLocation } from "react-router-dom";
+import { Skills } from "./Skill";
 
 export function RightComponent(props){
   const  location = useLocation()
@@ -9,9 +10,12 @@ export function RightComponent(props){
       <div className="right-nav">
         <Link className="link" to='/about'> <h2>About |</h2> </Link>
         <Link className="link" to='/experience'> <h2>Experience |</h2> </Link>
-        <Link className="link" to='/work'> <h2>Work</h2> </Link>
+        <Link className="link" to='/work'> <h2>Work |</h2> </Link>
+        <Link className="link" to='/work'> <h2>Contact</h2> </Link>
       </div>
       {(location.pathname==='/')?(<About/>):( <Outlet/>)}
+
+
   </div>
   )
 }

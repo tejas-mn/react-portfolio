@@ -6,11 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:  #282c34;
-  /* background: radial-gradient(#282c34, #282c34, #61dafb); */
+  background: hsl(184, 100%, 6%);
   /* z-index: -1; */
-  background-image: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-background_53876-101652.jpg');
+  /* background-image: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-background_53876-101652.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 code {
