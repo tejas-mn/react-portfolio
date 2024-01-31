@@ -2,6 +2,7 @@
   text-align: center;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   height: 100%;
   justify-content: center;
@@ -36,7 +37,6 @@
   border:2px solid  #61dafbb9;
   border-radius: 8px;
   width:250px;
- 
   display: flex;
   align-items: center;
   padding: 30px;
