@@ -185,3 +185,65 @@ section > p{
   background-color: hsl(0, 0%, 19%);
 }
 
+@media only screen and (max-width: 1450px) {
+ .left{
+  width: 100%;
+  margin-right: 0px;
+  margin-bottom:10px;
+ }
+ .right{
+  width: 100%;
+ }
+
+ /* .right-nav{
+  display: none;
+ } */
+}
+
+
+@media only screen and (max-width: 510px) {
+ 
+  .right-nav{
+   display: none;
+  }
+
+  section > h2 {
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .pic-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 20px 10px;
+  }
+
+  .pic > img {
+    width: 90px;
+    height: 90px;
+    border-radius: 108px;
+  }
+
+  img{
+    width: 90px;
+    height: 90px;
+  }
+
+  .pic{
+    width: 90px;
+    height: 90px;
+  }
+
+  .pic-desc{
+    margin: 10px;
+  }
+
+  .pic-desc > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.App{
+  padding: 0px;
+}
+ }

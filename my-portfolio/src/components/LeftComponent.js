@@ -21,19 +21,15 @@ export  function LeftComponent(){
         
           <div className='skills2'>
             <div>
-              <li>Javascript</li>
+              <li>EMAIL:</li>
+              <li>tejasmn2020@gmail.com</li>
             </div>
             <div>
-              <li>C# .NET </li>
+              <li>LOCATION:</li>
+              <li>Bangalore, India </li>
             </div>
             <div>
-              <li>Javascript</li>
-            </div>
-            <div>
-              <li>C# .NET </li>
-            </div>
-            <div>
-              <li>C# .NET </li>
+              <li>MY RESUME </li>
             </div>
           </div>
           
