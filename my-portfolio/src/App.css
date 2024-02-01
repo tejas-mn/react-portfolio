@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: normal;
   align-self: center;
-  /* background-color: #282c34; */
+  background-color: #282c34;
 
 }
 
@@ -30,11 +30,31 @@
   color: #dddddd;
   text-align: center;
   margin-bottom: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
 }
+
+.btm-txt > p > span{
+ margin: 5px;
+}
+
+.btm-txt > p > a > span {
+  color: whitesmoke;
+}
+
+
+.btm-txt > p > a > span :hover{
+  color: rgb(169, 169, 169);
+ }
 
 .left{
   margin-right:20px;
-  border:2px solid  #61dafbb9;
+  /* border:2px solid  #61dafbb9; */
   border-radius: 8px;
   width:250px;
   display: flex;
@@ -42,26 +62,26 @@
   padding: 30px;
   flex-direction: column;
   align-content: center;
-  box-shadow: 0.2px 0.2px 10px rgba(0, 183, 255, 0.349);
+  /* box-shadow: 0.2px 0.2px 10px rgba(0, 183, 255, 0.349); */
   background-color: hsl(240, 2%, 13%);
 
 }
 
 
 .right{
-  border:2px solid  #61dafb;
+  /* border:2px solid  #61dafb; */
   border-radius: 8px;
   width:1000px;
  
   padding: 30px;
   background-color: hsl(240, 2%, 13%);
-  box-shadow: 0.2px 0.2px 10px rgba(0, 183, 255, 0.5);
+  /* box-shadow: 0.2px 0.2px 10px rgba(0, 183, 255, 0.5); */
 }
 
 .pic{
   width:120px;
   height:120px;
-  border:2px solid  #61dafb;
+  /* border:2px solid  #61dafb; */
   border-radius: 108px;
   margin-bottom: 0px;
 }
@@ -86,7 +106,7 @@ margin: 0px;
 .desc{
   width:250px;
 
-  box-shadow: 0.2px 0.2px 10px rgb(0, 183, 255);
+  /* box-shadow: 0.2px 0.2px 10px rgb(0, 183, 255); */
   border:2px solid  #dddddd;
   border-radius: 8px;
 }
@@ -152,13 +172,13 @@ section > p{
 .skills > div{
   list-style: none;
   border-radius: 10px;
-  border:1px solid whitesmoke;
+  /* border:1px solid whitesmoke; */
   padding: 5px 20px;
   margin:10px;
   font-style: italic;
   width: fit-content;
   height: fit-content;
-  box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488);
+  /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: hsl(0, 0%, 19%);
 }
 
@@ -176,12 +196,12 @@ section > p{
 .skills2 > div{
   list-style: none;
   border-radius: 10px;
-  border:2px solid whitesmoke;
+  /* border:2px solid whitesmoke; */
   padding: 10px 20px;
   margin:10px;
   width: 200px;
   height: fit-content;
-  box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488);
+  /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: hsl(0, 0%, 19%);
 }
 

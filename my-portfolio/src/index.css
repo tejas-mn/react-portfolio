@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:  #282c34;
-  background: hsl(184, 100%, 6%);
+  background-color: #282c34;
+  /* background-color:  #282c34; */
+  /* background: hsl(184, 100%, 6%); */
   /* z-index: -1; */
   /* background-image: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-background_53876-101652.jpg');
   background-repeat: no-repeat;
