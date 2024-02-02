@@ -1,69 +1,17 @@
+import { PicContainer } from "./PicContainer";
+import { ProfileDetails } from "./ProfileDetails";
+import { ProfileLinks } from "./ProfileLinks";
+
 export  function LeftComponent(){
     return (
-    <div className="left">
-       <div className="pic-container">
-        <div className="pic">
-            <img src="https://img.freepik.com/free-vector/gradient-t-logo-template_23-2149372726.jpg?w=740&t=st=1706544579~exp=1706545179~hmac=fbddfea98bf54dc5a4603184bd23eef36513d5fbce5f0797b1b9e8b6c00f780d"></img>
-          </div>
-          <div className="pic-desc">
-            <h2>Tejas M N</h2>
-            <p><b><i>SDET | CSGI</i></b></p>
-          </div>
-          
-       </div>
-        <div className="desc">
-        </div>
-        
+      <div className="left">
+        <PicContainer/>
+        <div className="desc"> </div>
         <div className="btm-txt">
-          <p>
-            Aspiring SDET looking for transitioning into SDE Role: Proficient in Testing & Development, Ready to Drive Innovation and Excel in Building Scalable Solutions
-          </p>
-        
-          <div className='skills2'>
-            <div>
-              {/* <li>EMAIL:</li> */}
-              <li>tejasmn2020@gmail.com</li>
-            </div>
-            <div>
-              {/* <li>LOCATION:</li> */}
-              <li>Bangalore, India </li>
-            </div>
-            <div>
-              <li>My Resume </li>
-            </div>
-          </div>
-          
+          <ProfileDetails/>
           <hr></hr>
-          <p >
-
-            <a href="https://www.github.com/tejas-mn" target="blank" style={{color:'lightblue', textDecoration:'none'}}>
-              <span> 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 25 25" width="3em" height="3em" fill="currentColor">
-                  <path fill-rule="evenodd" d="M12.048 2a9.913 9.913 0 00-6.511 2.44 10.308 10.308 0 00-3.407 6.171 10.436 10.436 0 001.323 6.954 10.079 10.079 0 005.422 4.418c.505.095.684-.226.684-.497v-1.744c-2.804.624-3.396-1.378-3.396-1.378a2.738 2.738 0 00-1.115-1.504c-.906-.63.074-.63.074-.63.317.046.62.165.886.348.266.184.488.426.648.71.137.252.32.475.541.655a2.128 2.128 0 001.582.463c.28-.033.551-.122.798-.262a2.198 2.198 0 01.616-1.372c-2.23-.258-4.572-1.14-4.572-5.035a4.013 4.013 0 011.03-2.75 3.813 3.813 0 01.098-2.713s.844-.277 2.76 1.05a9.303 9.303 0 015.028 0c1.917-1.327 2.755-1.05 2.755-1.05.37.85.413 1.811.123 2.693a4.014 4.014 0 011.029 2.75c0 3.94-2.348 4.803-4.584 5.036.24.246.425.542.543.868.118.326.166.674.14 1.02v2.814c0 .333.18.591.69.49a10.085 10.085 0 005.346-4.434 10.437 10.437 0 001.29-6.91 10.31 10.31 0 00-3.373-6.132A9.916 9.916 0 0012.048 2z" clip-rule="evenodd"></path>
-                </svg>
-              </span>
-            </a> 
-
-            <a href="https://www.linkedin.com/in/tejasmn/" target="blank" style={{color:'lightblue', textDecoration:'none'}}>           
-              <span> 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 25 25" width="3em" height="3em" fill="currentColor">
-                  <path fill-rule="evenodd" d="M7.061 20.678H3.3V8.572h3.762v12.106zM5.157 7.086C3.97 7.086 3.2 6.242 3.2 5.203c0-1.064.791-1.88 2.006-1.88 1.214 0 1.957.816 1.98 1.88.002 1.042-.767 1.883-2.029 1.883zM20.8 20.678h-3.76v-6.71c0-1.56-.546-2.622-1.907-2.622-1.04 0-1.657.718-1.932 1.41-.099.245-.123.594-.123.939v6.98H9.313v-8.244c0-1.51-.048-2.774-.099-3.862h3.267l.175 1.682h.073c.496-.791 1.71-1.955 3.74-1.955 2.474 0 4.331 1.657 4.331 5.222v7.159z" clip-rule="evenodd"></path>
-                </svg>
-              </span>
-            </a>
-
-            <a href="https://www.leetcode.com/tejasmn" target="blank" style={{color:'lightblue', textDecoration:'none'}}>
-                <span> 
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 25 25" width="3em" height="3em" fill="currentColor">
-                    <path fill-rule="evenodd" d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z" clip-rule="evenodd"></path>
-                  </svg>
-                </span>
-            </a>
-
-          </p>
-       
+          <ProfileLinks/>
         </div>
-        
       </div>
     )
 }
