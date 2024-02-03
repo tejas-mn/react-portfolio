@@ -13,7 +13,7 @@
 }
 
 p{
-  letter-spacing: 0.7px;
+  letter-spacing: 0.5px;
   color: rgb(200, 200, 200) !important;
 }
 
@@ -42,7 +42,7 @@ li{
 .btm-txt > p{
   color: #dddddd;
   text-align: center;
-  margin-bottom: 0px;
+  margin: 0px;
   display: flex;
   flex-wrap: nowrap;
   align-content: center;
@@ -73,7 +73,7 @@ li{
 
 .left{
   margin-right:20px;
-  /* border:2px solid  #61dafbb9; */
+  border:2px solid  #61dafbb9;
   border-radius: 8px;
   width:250px;
   display: flex;
@@ -88,7 +88,7 @@ li{
 
 
 .right{
-  /* border:2px solid  #61dafb; */
+  border:2px solid  #61dafb;
   border-radius: 8px;
   width:1000px;
  
@@ -112,7 +112,7 @@ li{
 }
 
 .pic-desc{
-  color: rgb(226, 226, 226);
+  color: rgb(255, 255, 255);
 }
 .pic-desc > h2{
 margin: 0px;
@@ -200,6 +200,7 @@ section > p{
   /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: hsl(0, 0%, 19%);
   transition: 0.1s;
+  letter-spacing: 1px;
 }
 
 .skills > div:hover{
@@ -231,6 +232,7 @@ section > p{
   /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: hsl(0, 0%, 19%);
   transition: 0.1s;
+  letter-spacing: 1px;
 }
 
  .resume-btn:hover{
@@ -302,3 +304,67 @@ section > p{
   padding: 0px;
 }
  }
+
+ /*********/
+
+ h1 {
+      font-size: 2.5rem !important;
+      }
+
+      h2 {
+          font-size: 2rem !important;
+          }
+
+          h3 {
+              font-size: 2rem !important;
+              }
+
+              h4 {
+                  font-size: 1.75rem;
+                  }
+
+                  h5 {
+                      font-size: 1.5rem;
+                      }
+
+                      h6 {
+                          font-size: 1.25rem;
+                          }
+
+                          p {
+                              font-size: 1rem ! important;
+                              }
+
+                              @media (max-width: 480px) {
+                                  html {
+                                          font-size: 12px !important;
+                                              }
+                                              }
+
+                                              @media (min-width: 480px) {
+                                                  html {
+                                                          font-size: 13px !important;
+                                                              }
+                                                              }
+
+                                                              @media (min-width: 768px) {
+                                                                  html {
+                                                                          font-size: 14px !important;
+                                                                              }
+                                                                              }
+
+                                                                              @media (min-width: 992px) {
+                                                                                  html {
+                                                                                          font-size: 15px;
+                                                                                              }
+                                                                                              }
+
+                                                                                              @media (min-width: 1200px) {
+                                                                                                  html {
+                                                                                                         font-size: 16px;
+                                                                                                         }
+                                                                                                 }
+                                       
+
+                                                              
+ 

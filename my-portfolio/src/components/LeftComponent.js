@@ -6,10 +6,10 @@ export  function LeftComponent(){
     return (
       <div className="left">
         <PicContainer/>
-        <div className="desc"> </div>
+        {/* <div className="desc"> </div> */}
         <div className="btm-txt">
           <ProfileDetails/>
-          <hr></hr>
+          {/* <hr></hr> */}
           <ProfileLinks/>
         </div>
       </div>

@@ -2,7 +2,8 @@ export function ProfileDetails(){
     return (
         <>
         <p>
-            Aspiring SDET looking for transitioning into SDE Role: Proficient in Testing & Development, Ready to Drive Innovation and Excel in Building Scalable Solutions
+            Aspiring SDET looking for transitioning into SDE Role 
+            { /*Proficient in Testing & Development, Ready to Drive Innovation and Excel in Building Scalable Solutions*/}
         </p>
         
         <div className='skills2'>
