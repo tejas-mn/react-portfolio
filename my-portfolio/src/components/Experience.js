@@ -8,7 +8,7 @@ export function Experience(){
 
             <p>
                 <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
-                    <b>CSG International </b>  <i> (Sep 2023 – Present)</i>  <br/>
+                    <b>CSG International </b>  <i style={{float:'right'}}> (Sep 2023 – Present)</i>  <br/>
                     <i>Test Engineer Grad</i> 
                 </div>
                  
@@ -25,7 +25,7 @@ and monitoring performance results and logs. Testing defects across development 
 
             <p>
             <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
-              <b>CSG International  </b>  <i> (March 2023 – Sep 2023)</i>  <br/>
+              <b>CSG International  </b>  <i style={{float:'right'}}> (March 2023 – Sep 2023)</i>  <br/>
               <i>Test Intern</i> 
             </div>    
               <ul>
@@ -37,7 +37,7 @@ and monitoring performance results and logs. Testing defects across development 
 
             <p>
             <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
-              <b>SOFTMANTISSA  </b>  <i> (Oct 2021 – Jan 2022)</i>  <br/>
+              <b>SOFTMANTISSA  </b>  <i style={{float:'right'}}> (Oct 2021 – Jan 2022)</i>  <br/>
               <i>Web developer Intern</i>     
             </div>
               <ul>
@@ -47,7 +47,7 @@ and monitoring performance results and logs. Testing defects across development 
               </ul>
             </p>
 
-            <hr></hr>
+            {/* <hr></hr> */}
        
     </section>
     )

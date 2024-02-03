@@ -15,17 +15,17 @@ export function About(){
             <h2>Education</h2>
           
             <p>
-              <b>Dr. Ambedkar Institute Of Technology </b>  <i> (July 2019 – August 2023)</i>  <br/>
-              <i>Bachelor of Engineering, CGPA - 8.83</i>     
+              <b>Dr. Ambedkar Institute Of Technology </b>  <i style={{float:'right'}}> (July 2019 – August 2023)</i>  <br/>
+              <i>B.Tech CSE, CGPA: 8.83</i>     
             </p>
 
             <p>
-              <b>St. Claret PU College  </b>  <i> (June 2017 – March 2019)</i>  <br/>
+              <b>St. Claret PU College  </b>  <i style={{float:'right'}}> (June 2017 – March 2019)</i>  <br/>
               <i>Class 12/PUC, Percentage: 92.67%</i>     
             </p>
 
             <p>
-              <b>Vinodh English High School </b>  <i> (June 2016 – April 2017)</i>  <br/>
+              <b>Vinodh English High School </b>  <i style={{float:'right'}}> (June 2016 – April 2017)</i>  <br/>
               <i>Class 10/SSLC, Percentage: 93.76%</i>     
             </p>
 

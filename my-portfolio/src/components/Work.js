@@ -1,47 +1,22 @@
+import ProjectsGrid from "./ProjectsGrid";
 import { Skills } from "./Skill";
+import React, { useState } from 'react';
+import { ProjectsList } from "./ProjectsList";
 
 export function Work(){
+  const [isVisible, setIsVisible] = useState(false);
+  
     return ( 
     <section>
         <h2>Projects | Blogs</h2>
 
-            <p>
-              <b>CSG International </b>  <i> (Sep 2023 – Present)</i>  <br/>
-              <i>Test Engineer Grad</i>     
-              <ul>
-                <li>Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and
-mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.</li>
-<li>Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services
-like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.</li>
-<li>Performing API automation and scripting using Postman, Performance tests using JMeter with Kibana for visualizing
-and monitoring performance results and logs. Testing defects across development and production environments.</li>
-<li>Actively involved in Agile methodologies and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro.</li>
-              </ul>
-            </p>
+        <a href="#" onClick={()=>{setIsVisible((prev)=>!prev)}} style={{color:'white'}}>Toggle View</a>
+        
+        {
+            (isVisible)?(<ProjectsGrid/>):(<ProjectsList/>)
+        }
 
-            <p>
-              <b>CSG International  </b>  <i> (March 2023 – Sep 2023)</i>  <br/>
-              <i>Test Intern</i>     
-              <ul>
-                <li>Developed responsive frontend components utilizing HTML, CSS, JavaScript and Bootstrap.</li>
-                <li>Designed a website for local school involving CSS Media Queries and Bootstrap layouts.</li>
-                <li>Developed Student Management Api’s using Python Flask.</li>
-              </ul>
-            </p>
-            
-            <p>
-              <b>SOFTMANTISSA  </b>  <i> (Oct 2021 – Jan 2022)</i>  <br/>
-              <i>Web developer Intern</i>     
-              <ul>
-                <li>Developed responsive frontend components utilizing HTML, CSS, JavaScript and Bootstrap.</li>
-                <li>Designed a website for local school involving CSS Media Queries and Bootstrap layouts.</li>
-                <li>Developed Student Management Api’s using Python Flask.</li>
-              </ul>
-            </p>
-
-            <hr></hr>
-       
-  
+    
     </section>
     )
   }
