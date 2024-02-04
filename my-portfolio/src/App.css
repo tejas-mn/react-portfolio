@@ -307,64 +307,83 @@ section > p{
 
  /*********/
 
- h1 {
-      font-size: 2.5rem !important;
-      }
+h1 {
+font-size: 2.5rem !important;
+}
 
-      h2 {
-          font-size: 2rem !important;
-          }
+h2 {
+font-size: 2rem !important;
+}
 
-          h3 {
-              font-size: 2rem !important;
-              }
+h3 {
+font-size: 2rem !important;
+}
 
-              h4 {
-                  font-size: 1.75rem;
-                  }
+h4 {
+font-size: 1.75rem;
+}
 
-                  h5 {
-                      font-size: 1.5rem;
-                      }
+h5 {
+font-size: 1.5rem;
+}
 
-                      h6 {
-                          font-size: 1.25rem;
-                          }
+h6 {
+font-size: 1.25rem;
+}
 
-                          p {
-                              font-size: 1rem ! important;
-                              }
+p {
+font-size: 1rem ! important;
+}
 
-                              @media (max-width: 480px) {
-                                  html {
-                                          font-size: 12px !important;
-                                              }
-                                              }
+@media (max-width: 480px) {
+html {
+font-size: 12px !important;
+}
+}
 
-                                              @media (min-width: 480px) {
-                                                  html {
-                                                          font-size: 13px !important;
-                                                              }
-                                                              }
+@media (min-width: 480px) {
+html {
+font-size: 13px !important;
+}
+}
 
-                                                              @media (min-width: 768px) {
-                                                                  html {
-                                                                          font-size: 14px !important;
-                                                                              }
-                                                                              }
+@media (min-width: 768px) {
+html {
+font-size: 14px !important;
+}
+}
 
-                                                                              @media (min-width: 992px) {
-                                                                                  html {
-                                                                                          font-size: 15px;
-                                                                                              }
-                                                                                              }
+@media (min-width: 992px) {
+html {
+font-size: 15px;
+}
+}
 
-                                                                                              @media (min-width: 1200px) {
-                                                                                                  html {
-                                                                                                         font-size: 16px;
-                                                                                                         }
-                                                                                                 }
-                                       
+@media (min-width: 1200px) {
+html {
+font-size: 16px;
+}
+}
+             
+.view-btn {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #3d3d3d;
+}
+
+.view-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
+}
 
                                                               
  
