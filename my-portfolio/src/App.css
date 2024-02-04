@@ -366,10 +366,10 @@ font-size: 16px;
 }
              
 .view-btn {
-  background-color: #2d2d2d;
+  background-color: #454545;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
@@ -378,11 +378,12 @@ font-size: 16px;
 
 .view-btn:hover {
   background-color: #3d3d3d;
+  border-bottom: 1px solid white;
 }
 
 .view-btn:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
+  /*box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
 }
 
                                                               
