@@ -73,7 +73,7 @@ li{
 
 .left{
   margin-right:20px;
-  border:2px solid  #61dafbb9;
+  /* border:2px solid  #61dafbb9; */
   border-radius: 8px;
   width:250px;
   display: flex;
@@ -82,18 +82,18 @@ li{
   flex-direction: column;
   align-content: center;
   box-shadow: 0.2px 0.2px 50px rgba(0, 0, 0, 0.197);
-  background-color: hsl(240, 2%, 13%);
+  background-color: hsl(240, 2%, 10%);
 
 }
 
 
 .right{
-  border:2px solid  #61dafb;
+  /* border:2px solid  #61dafb; */
   border-radius: 8px;
   width:1000px;
  
   padding: 30px;
-  background-color: hsl(240, 2%, 13%);
+  background-color: hsl(240, 2%, 10%);
   box-shadow: 0.2px 0.2px 50px rgba(0, 0, 0, 0.197);
 }
 

@@ -35,11 +35,11 @@
 
 
 .project-box {
-  background-color: #272727;
+  background-color: rgb(32, 31, 31);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border:1px solid  #61dafbb9;
+  /* border:1px solid  #61dafbb9; */
   transition:  0.3s ease-in-out;
 }
 
