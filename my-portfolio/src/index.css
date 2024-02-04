@@ -19,6 +19,19 @@ code {
     monospace;
 }
 
+html::-webkit-scrollbar {
+  width: 8px; /* Width of vertical scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Track color */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
+  border-radius: 4px; /* Rounded corners for thumb */
+}
+
 /* *{
   outline: 1px solid white;
 } */

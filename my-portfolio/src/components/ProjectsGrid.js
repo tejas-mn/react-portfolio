@@ -3,8 +3,7 @@ import './projects.css'
 import { ProjectsList } from './ProjectsList';
 import { ProfileLinks } from './ProfileLinks';
 
-function ProjectsGrid() {
-  const [isVisible, setIsVisible] = useState(true);
+function ProjectsGrid({isVisible}) {
   
   const projects = [
     { id: 1, title: 'E-commerce Website', description: 'A fully functional e-commerce website built with React and Redux. Allows users to browse products, add them to the cart, and proceed to checkout.', imageUrl: 'https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/07/Ecommerce-design-strategies-for-Amazon-sellers.jpg?auto=format&q=60&fit=max&w=930' },
@@ -21,7 +20,7 @@ function ProjectsGrid() {
 
   return (
     <>
-        <div className={`project-grid ${isVisible ? 'fade-in' : ''}`}>
+        <div className={`project-grid ${isVisible ? ' fade-in' : ''}`}>
             {projects.map(project => (
                 <div key={project.id} className="project-box">
                 <img src={project.imageUrl} alt={project.title} />

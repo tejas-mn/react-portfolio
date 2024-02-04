@@ -19,7 +19,7 @@ export function Work(){
           style={{height:'30px', borderRadius:'5px', cursor:'pointer'}}>{btnText}</button>
       </div>
         {
-            (isGridView)?(<ProjectsGrid/>):(<ProjectsList/>)
+            (isGridView)?(<ProjectsGrid isVisible={ isGridView } />):(<ProjectsList/>)
         }
     </section>
     )

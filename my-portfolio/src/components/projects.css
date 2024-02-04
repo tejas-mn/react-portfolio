@@ -1,65 +1,66 @@
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-    padding: 10px;
-    max-height: calc(3 * (250px + 20px)); /* Height for 3 rows of boxes */
-    overflow-y: auto; /* Add scrollbar for vertical overflow */
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); /* For Firefox */
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 10px;
+  max-height: calc(3 * (250px + 20px)); /* Height for 3 rows of boxes */
+  overflow-y: auto; /* Add scrollbar for vertical overflow */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); /* For Firefox */
+}
 
-  .project-grid {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* CSS transition for opacity */
-  }
-  
-  .fade-in {
-    opacity: 1;
-  }
-  
-  
-  .project-grid::-webkit-scrollbar {
-    width: 8px; /* Width of vertical scrollbar */
-  }
-  
-  .project-grid::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); /* Track color */
-  }
-  
-  .project-grid::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
-    border-radius: 4px; /* Rounded corners for thumb */
-  }
-  
-  .project-box {
-    background-color: #272727;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border:1px solid  #61dafbb9;
-    transition:  0.3s ease-in-out;
+.project-grid {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* CSS transition for opacity */
 }
-  
+
+.fade-in {
+  opacity: 1;
+}
+
+
+.project-grid::-webkit-scrollbar {
+  width: 8px; /* Width of vertical scrollbar */
+}
+
+.project-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Track color */
+}
+
+.project-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
+  border-radius: 4px; /* Rounded corners for thumb */
+}
+
+
+
+.project-box {
+  background-color: #272727;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border:1px solid  #61dafbb9;
+  transition:  0.3s ease-in-out;
+}
+
 .project-box:hover{
-    transition: 0.3s ease-in-out;
-    transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.03);
 }
-  .project-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .project-box h3 {
-    color: whitesmoke;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .project-box p {
-    margin-top: 10px;
-    font-size: 1rem;
-  }
-  
+.project-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-box h3 {
+  color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-box p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
