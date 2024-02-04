@@ -131,11 +131,15 @@ margin: 0px;
 }
 
 .right-nav{
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   color: white;
   display: flex;
   justify-content: flex-end;
-  padding:8px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: rgba(18, 18, 18, 0.671);
+  /* border:2px solid  #61dafbb9; */
+  border-radius: 6px;
 }
 
 .right-nav > h2 {
@@ -366,23 +370,25 @@ font-size: 16px;
 }
              
 .view-btn {
-  background-color: #454545;
+  background-color: #2d2d2d;
   color: #ffffff;
   border: none;
-  /* border-radius: 4px; */
-  padding: 10px 20px;
+  border-radius: 4px;
+  padding: 8px 20px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin:5px;
 }
 
 .view-btn:hover {
   background-color: #3d3d3d;
-  border-bottom: 1px solid white;
+  
 }
 
 .view-btn:focus {
   outline: none;
+  border-bottom: 1px solid white;
   /*box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
 }
 
