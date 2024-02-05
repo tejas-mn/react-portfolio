@@ -6,7 +6,7 @@
   max-height: calc(3 * (250px + 20px)); /* Height for 3 rows of boxes */
   overflow-y: auto; /* Add scrollbar for vertical overflow */
   scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); /* For Firefox */
+  scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1); /* For Firefox */
 }
 
 .project-grid {
@@ -46,6 +46,7 @@
 .project-box:hover{
   transition: 0.3s ease-in-out;
   transform: scale(1.03);
+  cursor: pointer;
 }
 
 .project-box img {
