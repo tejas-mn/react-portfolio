@@ -30,12 +30,12 @@ export function ProjectsList(){
       pageNumbers.push(i);
     }
     return (
-      <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'center' }}>
+      <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'flex-end'}}>
         {pageNumbers.map((number) => (
           <li key={number} style={{ margin: '0 5px' }}>
             <button
               style={{
-                backgroundColor: currentPage === number ? '#007bff' : '#333',
+                backgroundColor: currentPage === number ? 'rgb(89 89 89)' : '#333',
                 color: currentPage === number ? '#fff' : '#fff',
                 border: 'none',
                 padding: '5px 10px',
@@ -56,7 +56,7 @@ export function ProjectsList(){
   
     <> 
       {currentProjects.map(currentProject => (
-                <p>
+                <p style={{ backgroundColor:'#242222' , borderRadius:'8px', padding:'10px'}}>
                 <b>{currentProject.title}</b>  <i> (Sep 2023 – Present)</i>  <br/>
                 <i>Test Engineer Grad</i>     
                 <ul>
