@@ -45,7 +45,8 @@ export function ProjectsList(){
  return (
     <> 
       {currentProjects.map(currentProject => (
-                <p style={{ backgroundColor:'#242222' , borderRadius:'8px', padding:'10px'}}>
+                // '#242222'
+                <p style={{ backgroundColor: '#ffffff', borderRadius:'8px', padding:'10px'}}>
                 <b>{currentProject.title}</b>  <i> (Sep 2023 – Present)</i>  <br/>
                 <i>Test Engineer Grad</i>     
                 <ul>

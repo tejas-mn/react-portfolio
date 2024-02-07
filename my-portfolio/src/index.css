@@ -1,11 +1,15 @@
+:root {
+  --index-bg-color-dark: #282c34; /* Declaration of a CSS variable */
+  --index-bg-color-light: #f9f9f7;
+}
+
+
 body {
   /* margin: 0; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:  'Futura';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  background-color: var(--index-bg-color-light);
   /* background-color:  #282c34; */
   /* background: hsl(184, 100%, 6%); */
   /* z-index: -1; */

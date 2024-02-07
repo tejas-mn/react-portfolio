@@ -1,6 +1,6 @@
 export function ProfileLinks(){
     return (
-        <p >
+        <p>
 
         <a href="https://www.github.com/tejas-mn" target="blank" style={{color:'lightblue', textDecoration:'none'}}>
           <span> 

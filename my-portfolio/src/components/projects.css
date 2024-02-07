@@ -1,3 +1,23 @@
+:root {
+  --app-bg-color-dark: #282c34; /* Declaration of a CSS variable */
+  --app-bg-color-light: #f9f9f7;
+  --left-bg-color-dark: hsl(240, 2%, 10%);
+  --left-bg-color-light: #f4f3ef;
+  --right-nav-color-dark: rgba(37, 36, 36, 0.671);
+  --right-nav-color-light: #efeee8;
+  --btn-color-light: #ffffff;
+  --btn-color-dark: #2d2d2d;
+  --btn-color-dark-hover:  #3d3d3d;
+  --btn-color-light-hover:  #f7f7f7;
+  --skills-color-dark:hsl(0, 0%, 19%);
+  --skills-color-light: var(--btn-color-light);
+  --text-color-light:rgb(200, 200, 200);
+  --link-light-theme: whitesmoke;
+  --link-dark-theme: black;
+  --project-box-dark : rgb(32, 31, 31);
+
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -35,7 +55,7 @@
 
 
 .project-box {
-  background-color: rgb(32, 31, 31);
+  background-color: var(--btn-color-light);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -63,7 +83,7 @@
 }
 
 .project-box h3 {
-  color: whitesmoke;
+  color: var(--app-bg-color-dark); /*whitesmoke*/
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.2rem;
