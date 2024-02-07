@@ -1,5 +1,6 @@
 import { Skills } from "./Skill";
 import { edu } from "./DataProvider";
+
 function Education(){
   return (
     <>

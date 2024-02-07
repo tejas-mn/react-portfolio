@@ -18,9 +18,7 @@ export function Work(){
           }} 
         >{btnText}</button>
       </div>
-        {
-            (isGridView)?(<ProjectsGrid isVisible={ isGridView } />):(<ProjectsList/>)
-        }
+        { (isGridView)?(<ProjectsGrid isVisible={ isGridView } />):(<ProjectsList/>) }
     </section>
     )
 }
