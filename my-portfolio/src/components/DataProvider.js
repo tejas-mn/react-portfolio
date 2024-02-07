@@ -8,7 +8,7 @@ const exp = [
     { 
       id:1, company:'CSG International', title:'Test Engineer Grad', timeline:'Sep 2023 – Present',
       desc: [
-        "Writing component tests for APIs developed in the feature utilizing C# libraries like <b>Xunit</b>, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
+        "Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
         "Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.",
         "Performing API automation and scripting using Postman, Performance tests using JMeter with Kibana for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
         "Actively involved in Agile methodologies and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro."
@@ -17,7 +17,7 @@ const exp = [
     { 
       id:2, company:'CSG International', title:'Test Intern', timeline:'March 2023 – Sep 2023',
       desc: [
-        "Writing component tests for APIs developed in the feature utilizing C# libraries like <b>Xunit</b>, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
+        "Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
         "Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.",
         "Performing API automation and scripting using Postman, Performance tests using JMeter with Kibana for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
         "Actively involved in Agile methodologies and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro."

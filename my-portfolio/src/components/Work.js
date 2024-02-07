@@ -1,5 +1,4 @@
 import ProjectsGrid from "./ProjectsGrid";
-import { Skills } from "./Skill";
 import React, { useState } from 'react';
 import { ProjectsList } from "./ProjectsList";
 
