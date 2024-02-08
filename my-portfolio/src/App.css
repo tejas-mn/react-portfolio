@@ -43,6 +43,18 @@
   padding:10px;
 }
 
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.right *{
+  animation: fadeInAnimation 0.1s ease-in-out forwards; /* Adjust duration and timing function as needed */
+}
 
 .App {
   text-align: center;
@@ -55,6 +67,7 @@
   align-items: normal;
   align-self: center;
   /* background-color: var(--app-bg-color-light); */
+
 }
 
 p{
