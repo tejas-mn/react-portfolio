@@ -83,7 +83,7 @@
 }
 
 .project-box h3 {
-  color: var(--app-bg-color-dark); /*whitesmoke*/
+  color: var(--text-color-light); 
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.2rem;

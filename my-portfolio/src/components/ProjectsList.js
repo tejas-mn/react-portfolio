@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { projects } from "../Providers/DataProvider";
+import { ThemeContext } from '../Providers/ThemeProvider';
 
 export function ProjectsList(){
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
@@ -25,8 +27,8 @@ export function ProjectsList(){
           <li key={number} style={{ margin: '0 5px' }}>
             <button
               style={{
-                backgroundColor: currentPage === number ? 'rgb(89 89 89)' : '#333',
-                color: currentPage === number ? '#fff' : '#fff',
+                backgroundColor: currentPage === number ? (theme=='dark-theme')?'rgb(89 89 89)':'#f7f7f7' : (theme=='dark-theme')?'#333':'#fff',
+                color: (theme=='dark-theme')? '#fff' : '#333',
                 border: 'none',
                 padding: '5px 10px',
                 borderRadius: '5px',

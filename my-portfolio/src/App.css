@@ -43,6 +43,7 @@
   padding:10px;
 }
 
+
 .App {
   text-align: center;
   padding: 10px;
@@ -62,7 +63,7 @@ p{
 }
 
 li{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   
   color: var(--text-color-light) !important;
   /* letter-spacing: 0.7px; */
@@ -128,6 +129,7 @@ li{
   box-shadow: 0.2px 0.2px 50px rgba(0, 0, 0, 0.197);
   background-color: var(--left-bg-color-light);
   height:100%;
+  z-index: 1;
 }
 
 .right{
@@ -137,6 +139,7 @@ li{
   padding: 30px;
   background-color: var(--left-bg-color-light);
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.197);
+  z-index: 1;
 }
 
 .pic{
@@ -381,7 +384,7 @@ font-size: 1.25rem;
 }
 
 p {
-font-size: 1rem ! important;
+font-size: 1.2rem ! important;
 }
 
 @media (max-width: 480px) {
@@ -422,7 +425,7 @@ font-size: 16px;
   padding: 8px 20px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
   margin:5px;
 }
 

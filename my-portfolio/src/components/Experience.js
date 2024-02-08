@@ -17,7 +17,7 @@ function ExperienceDetail({e})
   return (
     <>
       <p key={e.id}>
-          <div style={{borderLeft:'3px solid lightblue', paddingLeft:'5px'}}>
+          <div style={{borderLeft:'5px solid lightblue', paddingLeft:'5px'}}>
               <b>{e.company} </b>  <i style={{float:'right'}}> ({e.timeline})</i>  <br/>
               <i>{e.title}</i> 
           </div>
