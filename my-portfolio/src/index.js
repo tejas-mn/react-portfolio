@@ -26,7 +26,7 @@ root.render(
           </Route>
           <Route path='/left' element={<LeftComponent/>}> </Route>
           <Route path='/right' element={<RightComponent/>}> </Route>
-          <Route path='/app' element={<ThemedApp/>}></Route> 
+          <Route path='/app' element={<App/>}></Route> 
         </Routes>
       </BrowserRouter>
   </React.StrictMode>

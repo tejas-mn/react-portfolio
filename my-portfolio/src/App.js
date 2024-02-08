@@ -6,11 +6,10 @@ import { useContext } from 'react';
 
  function App() {
   // const {theme, toggleTheme} = useTheme();
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <>
-     <button style={{margin:'10px', color:'black', boxShadow:'0px 0px 10px  #dddddd'}} className='view-btn' onClick={() => toggleTheme()}>{theme}</button>
      <div className={`App ${theme}`} >
     
       <LeftComponent/>
