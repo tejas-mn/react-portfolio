@@ -1,4 +1,4 @@
-import { skills } from "./DataProvider";
+import { skills } from "../Providers/DataProvider";
 
 function Skill({skill}){
     return <div> <li>{skill}</li> </div>

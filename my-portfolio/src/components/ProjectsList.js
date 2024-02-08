@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { projects } from './DataProvider';
+import { projects } from "../Providers/DataProvider";
 
 export function ProjectsList(){
 
@@ -46,7 +46,7 @@ export function ProjectsList(){
     <> 
       {currentProjects.map(currentProject => (
                 // '#242222'
-                <p style={{ backgroundColor: '#ffffff', borderRadius:'8px', padding:'10px'}}>
+                <p className='project-list'>
                 <b>{currentProject.title}</b>  <i> (Sep 2023 – Present)</i>  <br/>
                 <i>Test Engineer Grad</i>     
                 <ul>

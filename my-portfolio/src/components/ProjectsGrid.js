@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './projects.css'
 import { ProfileLinks } from './ProfileLinks';
-import { projects } from './DataProvider';
+import { projects } from "../Providers/DataProvider";
 
 function ProjectsGrid({isVisible}) {
   

@@ -3,7 +3,9 @@
   --index-bg-color-light: #f9f9f7;
 }
 
-
+* {
+  transition:  0.3s ease-in-out !important;
+}
 body {
   /* margin: 0; */
   font-family:  'Futura';

@@ -1,4 +1,4 @@
-import { exp } from "./DataProvider"
+import { exp } from "../Providers/DataProvider";
 
 export function Experience(){
     return  (
