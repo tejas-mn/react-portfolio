@@ -432,6 +432,7 @@ font-size: 16px;
   cursor: pointer;
   transition: background-color 0.1s ease;
   margin:5px;
+  border-bottom: 1px solid var(--text-color-dark);
 }
 
 .view-btn:hover {
@@ -441,7 +442,7 @@ font-size: 16px;
 
 .view-btn:focus {
   outline: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--skills-color-dark);
   /*box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
 }
 

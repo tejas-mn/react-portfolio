@@ -14,7 +14,7 @@ body {
   letter-spacing: 0px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--index-bg-color-light);
+  background-color: var(--index-bg-color-dark);
   /* background-color:  #282c34; */
   /* background: hsl(184, 100%, 6%); */
   /* z-index: -1; */
