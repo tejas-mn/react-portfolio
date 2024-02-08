@@ -49,8 +49,8 @@ export function ProjectsList(){
       {currentProjects.map(currentProject => (
                 // '#242222'
                 <p className='project-list'>
-                <b>{currentProject.title}</b>  <i> (Sep 2023 – Present)</i>  <br/>
-                <i>Test Engineer Grad</i>     
+                <b>{currentProject.title}</b> <quote>| React, JavaScript, .NET</quote>  <i style={{float:'right'}}> (Sep 2023 – Present)</i>  <br/>
+                <quote>Github | Live Link</quote>     
                 <ul>
                   <li>Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and
                   mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.</li>
