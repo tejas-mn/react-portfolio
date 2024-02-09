@@ -7,7 +7,7 @@ function Skill({skill}){
 export function Skills(){
     return ( 
         <section>
-            <h2>Tech Skills</h2>
+            <h2>⚡ Tech Skills</h2>
             <div className='skills'>
                 { skills.map(ele => <Skill key={ele} skill={ele} />) }
             </div>

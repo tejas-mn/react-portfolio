@@ -9,7 +9,7 @@ export function Work(){
   return ( 
     <section>
       <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
-        <h2 style={{color:'white'}}>Projects | Blogs</h2>
+        <h2 style={{color:'white'}}>🚀 Projects | Blogs</h2>
         <button className="view-btn"
           onClick={()=>{
             setGridView((prev)=>!prev);

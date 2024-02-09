@@ -14,7 +14,7 @@ export  function LeftComponent(){
         <ProfileDetails/>
         <ProfileLinks/>
       </div>
-      <button style={{marginTop:'30px'}} className='view-btn' onClick={() => toggleTheme()}>{(theme=='light-theme')?'dark-theme':'light-theme'}</button>
+      <button style={{marginTop:'30px', borderRadius:'100px'}} className='view-btn' onClick={() => toggleTheme()}>{(theme=='light-theme')?'🌗':'🌓'}</button>
     </div>
   )
 }

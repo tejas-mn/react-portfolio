@@ -49,6 +49,21 @@ let skills = ['DSA', 'OOPS', 'Javascript', 'C#', '.NET WEB API', 'React', 'C++',
 const pics = [
   "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/334384092/original/56bd04ca9f50033757525fc41e9fbed0a08e460e/design-a-custom-logo.png",
   "https://i.pinimg.com/736x/a3/96/63/a3966351deb43da383db28f854e2f6b3.jpg",
-  
 ]
-export {edu, exp, projects, skills}
+
+const userInfo = {
+  name : 'Tejas M N',
+  email : 'tejasmn2020@gmail.com',
+  location : 'Bangalore, India',
+  profession : 'SDET | CSGI',
+  headline : 'Aspiring SDET looking for transitioning into SDE Role',
+  links : {
+    resume : 'https://drive.google.com/file/d/1vZlM2naXPM-dFPVBR1X4JRvv49TKBsKo/view?usp=sharing',
+    leetcode : 'https://www.leetcode.com/tejasmn',
+    github : 'https://www.github.com/tejas-mn',
+    linkedin : 'https://www.linkedin.com/in/tejasmn/'
+  } ,
+  profilePic : pics[1],
+}
+
+export {edu, exp, projects, skills, userInfo}
