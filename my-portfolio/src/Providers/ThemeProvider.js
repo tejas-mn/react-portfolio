@@ -1,6 +1,8 @@
-import React, { useEffect, createContext, useState } from "react";
+import React, { useEffect, createContext, useState, useContext } from "react";
 
 const ThemeContext = createContext();
+
+const useTheme = () => useContext(ThemeContext);
 
 const getTheme = () => {
   const theme = localStorage.getItem("theme");
@@ -45,4 +47,4 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-export { ThemeContext, ThemeProvider };
+export { useTheme, ThemeProvider };

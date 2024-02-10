@@ -1,12 +1,10 @@
 import "./App.css";
 import { LeftComponent } from "./components/LeftComponent";
 import { RightComponent } from "./components/RightComponent";
-import { ThemeProvider, ThemeContext } from "./Providers/ThemeProvider";
-import { useContext } from "react";
+import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
 
 function App() {
-  // const {theme, toggleTheme} = useTheme();
-  const { theme } = useContext(ThemeContext);
+  const {theme} = useTheme();
 
   return (
     <>

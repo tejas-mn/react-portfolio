@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import { usePagination } from "../Providers/PaginationProvider";
-import { ThemeContext } from "../Providers/ThemeProvider";
+import { useTheme } from "../Providers/ThemeProvider";
 
 export const Pagination = () => {
   const { currentPage, nextPage, prevPage, totalPages, setCurrentPage } = usePagination();
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {

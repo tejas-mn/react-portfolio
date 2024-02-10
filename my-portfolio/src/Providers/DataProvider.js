@@ -26,10 +26,10 @@ const exp = [
     title: "Test Engineer Grad",
     timeline: "Sep 2023 – Present",
     desc: [
-      "Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
-      "Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.",
-      "Performing API automation and scripting using Postman, Performance tests using JMeter with Kibana for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
-      "Actively involved in Agile methodologies and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro.",
+      "Writing component tests for APIs developed in the feature utilizing *C#* libraries like *Xunit*, *FluentAssertions* and mocking microservices through *WireMock* integrated into *Docker* & *Azure DevOps* pipeline.",
+      "Writing *SQL* queries for querying and seeding data against database tables for component tests. Utilizing AWS services like *CloudWatch*, *S3* , *DynamoDB*, *SNS*, *SQS* for testing event driven scenarios.",
+      "Performing API automation and scripting using *Postman*, Performance tests using *JMeter* with *Kibana* for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
+      "Actively involved in *Agile methodologies* and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro.",
     ],
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     techStack: "React, JavaScript, .NET",
     timeline: "Sep 2023 – Present",
     description:
-      "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using JWT that prevents certain users from accessing API endpoints.",
+      "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
     imageUrl:
       "https://private-user-images.githubusercontent.com/68629215/302111269-8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTg1MDgsIm5iZiI6MTcwNzA1ODIwOCwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTEyNjktOGNmMTljMmUtYTVlNC00NmExLThhN2QtM2VlMTJmOTEwZjNmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0NTAwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk2MGExNGJjODEwNDcxNGJhYzMwYjY5YzA1YmI3OGMzZTQ1OTJmYmVhOTIzMTFhNThlYTA4ZDk5MDljZDA1MzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.z3uOemKtxzjYeG3r5bIEh1FFOTkWFNbILQQRCQQ4eNw",
   },
@@ -74,7 +74,7 @@ const projects = [
     techStack: "React, JavaScript, .NET",
     timeline: "Sep 2023 – Present",
     description:
-      "A Full Stack Gym Management application implementing CRUD operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
+      "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
     imageUrl:
       "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
@@ -124,7 +124,7 @@ const projects = [
     techStack: "React, JavaScript, .NET",
     timeline: "Sep 2023 – Present",
     description:
-      "A Tkinter application that allows a TV remote to control Personal Computer connected via Arduino. Can be used to control presentations, media etc.",
+      "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
     imageUrl:
       "https://private-user-images.githubusercontent.com/68629215/302109933-f1564105-db6e-48c5-990a-638442314831.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTcxOTEsIm5iZiI6MTcwNzA1Njg5MSwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMDk5MzMtZjE1NjQxMDUtZGI2ZS00OGM1LTk5MGEtNjM4NDQyMzE0ODMxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0MjgxMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNTEyODgxNGYzZWEzOGRjY2U5N2EzNDgxNjRlOTQ2MTEyZjcxMjQ2ZjAwM2MxYzYyY2Q3ZDE3M2RjYmNlZGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.-cBb4lqhS6s09ID_ribtRZRhtF4hZfewgoPp-DfrU3w",
   },

@@ -1,11 +1,10 @@
 import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
-import { ThemeContext } from "../Providers/ThemeProvider";
-import { useContext } from "react";
+import { useTheme } from "../Providers/ThemeProvider";
 
 export function LeftComponent() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
   return (
     <div className="left">
       <PicContainer />

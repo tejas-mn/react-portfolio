@@ -1,6 +1,7 @@
 import { exp, userInfo } from "../Providers/DataProvider";
 import { PaginationProvider, usePagination } from "../Providers/PaginationProvider";
 import { Pagination } from "./Pagination";
+import { useAutoBoldText } from "../Providers/customHooks";
 
 function PaginatedItemList(){
   const paginatedExperience = usePagination().getPaginatedItems();
@@ -29,6 +30,8 @@ export function Experience() {
 }
 
 function ExperienceDetail({ e }) {
+  useAutoBoldText();
+  
   return (
     <>
       <p key={e.id}>
@@ -39,7 +42,7 @@ function ExperienceDetail({ e }) {
         </div>
         <ul>
           {e.desc.map((d) => (
-            <li>{d}</li>
+            <li className="auto-format">{d}</li>
           ))}
         </ul>
       </p>

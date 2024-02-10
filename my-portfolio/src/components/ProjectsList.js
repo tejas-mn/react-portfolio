@@ -5,10 +5,12 @@ import {
   PaginationProvider,
   usePagination,
 } from "../Providers/PaginationProvider";
+import { useAutoBoldText } from "../Providers/customHooks";
 
 const PaginatedItemList = () => {
   const paginatedItems = usePagination().getPaginatedItems();
-
+  useAutoBoldText();
+  
   return (
     <>
       {paginatedItems.map((currentProject) => (
@@ -18,7 +20,7 @@ const PaginatedItemList = () => {
           <i style={{ float: "right" }}> ({currentProject.timeline})</i> <br />
           <quote>Github | Live Link</quote>
           <ul>
-            <li>{currentProject.description}</li>
+            <li className="auto-format">{currentProject.description}</li>
           </ul>
         </p>
       ))}
