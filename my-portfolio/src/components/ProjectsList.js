@@ -10,7 +10,8 @@ const PaginatedItemList = () => {
     <>
         {paginatedItems.map(currentProject => (
           <p className='project-list'>
-          <b>{currentProject.title}</b> <quote>| React, JavaScript, .NET</quote>  <i style={{float:'right'}}> (Sep 2023 – Present)</i>  <br/>
+          <b>{currentProject.title}</b> <quote>| React, JavaScript, .NET</quote>  
+          <i style={{float:'right'}}> (Sep 2023 – Present)</i>  <br/>
           <quote>Github | Live Link</quote>     
           <ul>
             <li>Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and

@@ -75,6 +75,13 @@ p{
   color: var(--text-color-light) !important;
 }
 
+.page-btn{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 li{
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   

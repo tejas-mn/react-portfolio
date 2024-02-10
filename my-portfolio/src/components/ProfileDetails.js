@@ -15,8 +15,9 @@ export function ProfileDetails(){
                     <li><span style={{fontSize:'large'}}></span> {userInfo.location}</li>
                 </div>
                 <div className="resume-btn">
-                    <a  style={{color:"white", textDecoration:'none'}}
-                        href={userInfo.links.resume} target="blank"><li><span style={{fontSize:'large'}}>📝</span> My Resume </li></a>
+                    <a  style={{color:"white", textDecoration:'none'}} href={userInfo.links.resume} target="blank">
+                        <li><span style={{fontSize:'large'}}>📝</span> My Resume </li>
+                    </a>
                 </div>
             </div>
         </>
