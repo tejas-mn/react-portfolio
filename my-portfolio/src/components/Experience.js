@@ -1,13 +1,29 @@
 import { exp, userInfo } from "../Providers/DataProvider";
+import { PaginationProvider, usePagination } from "../Providers/PaginationProvider";
+import { Pagination } from "./Pagination";
+
+function PaginatedItemList(){
+  const paginatedExperience = usePagination().getPaginatedItems();
+
+  return (
+    <>
+     {paginatedExperience.map((ex) => (
+        <ExperienceDetail e={ex} />
+      ))}
+    </>
+  )
+}
 
 export function Experience() {
   return (
     <section>
       <h2>💼 Experience</h2>
       <p>{userInfo.experienceInfo}</p>
-      {exp.map((ex) => (
-        <ExperienceDetail e={ex} />
-      ))}
+     
+      <PaginationProvider items={exp} itemsPerPage={2}>
+        <PaginatedItemList/>
+        <Pagination/>
+      </PaginationProvider>
     </section>
   );
 }
