@@ -1,5 +1,6 @@
 :root {
-  --app-bg-color-dark: #282c34; /* Declaration of a CSS variable */
+  --app-bg-color-dark: #282c34;
+  /* Declaration of a CSS variable */
   --app-bg-color-light: #f9f9f7;
   --left-bg-color-dark: hsl(240, 2%, 10%);
   --left-bg-color-light: #f4f3ef;
@@ -7,14 +8,14 @@
   --right-nav-color-light: #efeee8;
   --btn-color-light: #ffffff;
   --btn-color-dark: #2d2d2d;
-  --btn-color-dark-hover:  #3d3d3d;
-  --btn-color-light-hover:  #f7f7f7;
-  --skills-color-dark:hsl(0, 0%, 19%);
+  --btn-color-dark-hover: #3d3d3d;
+  --btn-color-light-hover: #f7f7f7;
+  --skills-color-dark: hsl(0, 0%, 19%);
   --skills-color-light: var(--btn-color-light);
-  --text-color-light:rgb(200, 200, 200);
+  --text-color-light: rgb(200, 200, 200);
   --link-light-theme: whitesmoke;
   --link-dark-theme: black;
-  --project-box-dark : rgb(32, 31, 31);
+  --project-box-dark: rgb(32, 31, 31);
 
 }
 
@@ -23,15 +24,20 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
   padding: 10px;
-  max-height: calc(3 * (250px + 20px)); /* Height for 3 rows of boxes */
-  overflow-y: auto; /* Add scrollbar for vertical overflow */
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1); /* For Firefox */
+  max-height: calc(3 * (250px + 20px));
+  /* Height for 3 rows of boxes */
+  overflow-y: auto;
+  /* Add scrollbar for vertical overflow */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1);
+  /* For Firefox */
 }
 
 .project-grid {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* CSS transition for opacity */
+  transition: opacity 0.5s ease-in-out;
+  /* CSS transition for opacity */
 }
 
 .fade-in {
@@ -40,16 +46,20 @@
 
 
 .project-grid::-webkit-scrollbar {
-  width: 8px; /* Width of vertical scrollbar */
+  width: 8px;
+  /* Width of vertical scrollbar */
 }
 
 .project-grid::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1); /* Track color */
+  background: rgba(0, 0, 0, 0.1);
+  /* Track color */
 }
 
 .project-grid::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
-  border-radius: 4px; /* Rounded corners for thumb */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Thumb color */
+  border-radius: 4px;
+  /* Rounded corners for thumb */
 }
 
 
@@ -60,10 +70,10 @@
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   /* border:1px solid  #61dafbb9; */
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.project-box:hover{
+.project-box:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.03);
   cursor: pointer;
@@ -73,17 +83,17 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  transition:  0.3s ease-in-out;
-  
+  transition: 0.3s ease-in-out;
+
 }
 
-.project-box img:hover{
+.project-box img:hover {
   transform: scale(1.1);
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .project-box h3 {
-  color: var(--text-color-light); 
+  color: var(--text-color-light);
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.2rem;

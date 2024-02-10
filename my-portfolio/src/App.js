@@ -1,26 +1,24 @@
-import './App.css';
-import {LeftComponent} from './components/LeftComponent';
-import { RightComponent } from './components/RightComponent';
-import { ThemeProvider, ThemeContext } from './Providers/ThemeProvider';
-import { useContext } from 'react';
+import "./App.css";
+import { LeftComponent } from "./components/LeftComponent";
+import { RightComponent } from "./components/RightComponent";
+import { ThemeProvider, ThemeContext } from "./Providers/ThemeProvider";
+import { useContext } from "react";
 
- function App() {
+function App() {
   // const {theme, toggleTheme} = useTheme();
   const { theme } = useContext(ThemeContext);
 
   return (
     <>
-     <div className={`App ${theme}`} >
-    
-      <LeftComponent/>
-      <RightComponent/>
-    </div>
+      <div className={`App ${theme}`}>
+        <LeftComponent />
+        <RightComponent />
+      </div>
     </>
-  
   );
 }
 
-export  function ThemedApp() {
+export function ThemedApp() {
   return (
     <ThemeProvider>
       <App />

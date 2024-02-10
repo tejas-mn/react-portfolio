@@ -22,7 +22,7 @@ const ThemeProvider = ({ children }) => {
     } else {
       setTheme("dark-theme");
     }
-  };
+  }
 
   useEffect(() => {
     const refreshTheme = () => {
