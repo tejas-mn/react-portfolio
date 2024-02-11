@@ -7,24 +7,20 @@ export function LeftComponent() {
   const { theme, toggleTheme } = useTheme();
   return (
     <>
-
       <div className="left">
-      
-      <PicContainer />
-      <div className="btm-txt">
-        <ProfileDetails />
-        <ProfileLinks />
+        <PicContainer />
+        <div className="btm-txt">
+          <ProfileDetails />
+          <ProfileLinks />
+        </div>
+        <button
+          style={{ marginTop: "30px", borderRadius: "100px" }}
+          className="view-btn theme-btn"
+          onClick={() => toggleTheme()}
+        >
+          {theme === "light-theme" ? "🌗" : "🌓"}
+        </button>
       </div>
-      <button 
-        style={{ marginTop: "30px", borderRadius: "100px" }}
-        className="view-btn theme-btn"
-        onClick={() => toggleTheme()}
-      >
-        {theme === "light-theme" ? "🌗" : "🌓"}
-      </button>
-     
-    </div>
     </>
-    
   );
 }

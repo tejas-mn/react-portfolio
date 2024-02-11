@@ -53,7 +53,7 @@
 }
 
 .right * {
-  animation: fadeInAnimation 0.1s ease-in-out forwards; 
+  animation: fadeInAnimation 0.1s ease-in-out forwards;
 }
 
 .App {
@@ -157,7 +157,7 @@ li {
   z-index: 1;
 }
 
-.mobile-nav{
+.mobile-nav {
   display: none;
 }
 
@@ -337,36 +337,36 @@ section > p {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  .mobile-nav{
+  .mobile-nav {
     flex: 1;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: fixed;
     width: auto !important;
     bottom: 0;
     z-index: 4;
   }
-  
-  .desktop-nav{
+
+  .desktop-nav {
     display: none;
   }
 
-  .nav-container{
+  .nav-container {
     flex: 1;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: fixed;
     width: auto !important;
     bottom: 0;
     z-index: 4;
   }
 
-  .right{
+  .right {
     margin-bottom: 60px;
   }
-  
+
   section > h2 {
     margin-top: 0px;
     padding-left: 0px;
@@ -413,7 +413,7 @@ section > p {
   .view-btn {
     padding: 4px 8px !important;
   }
-  .theme-btn{
+  .theme-btn {
     margin-top: 0 !important;
     /* border-radius: 0 !important; */
   }
