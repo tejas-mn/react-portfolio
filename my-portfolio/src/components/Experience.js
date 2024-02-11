@@ -40,11 +40,11 @@ function ExperienceDetail({ e }) {
           <br />
           <i>{e.title}</i>
         </div>
-        <ul>
+     <ul>
           {e.desc.map((d) => (
             <li className="auto-format">{d}</li>
           ))}
-        </ul>
+          </ul>
       </p>
     </>
   );
