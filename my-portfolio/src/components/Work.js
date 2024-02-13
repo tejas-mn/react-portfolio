@@ -14,8 +14,9 @@ export function Work() {
           justifyContent: "space-between",
           alignItems: "center",
         }}
+        className="project-title-container"
       >
-        <h2 style={{ color: "white" }}>🚀 Projects | Blogs</h2>
+        <h2 style={{ color: "white"}} className="project-title">🚀 Projects | Blogs</h2>
         <button
           className="view-btn"
           onClick={() => {

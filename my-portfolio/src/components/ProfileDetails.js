@@ -8,12 +8,12 @@ export function ProfileDetails() {
       <div className="skills2">
         <div>
           <li>
-            <span style={{ fontSize: "medium" }}></span> {userInfo.email}
+             {userInfo.email}
           </li>
         </div>
         <div>
           <li>
-            <span style={{ fontSize: "large" }}></span> {userInfo.location}
+       {userInfo.location}
           </li>
         </div>
         <div className="resume-btn">
@@ -23,7 +23,7 @@ export function ProfileDetails() {
             target="blank"
           >
             <li>
-              <span style={{ fontSize: "large" }}>📝</span> My Resume{" "}
+              <span style={{ fontSize: "large" }}>📝</span> My Resume
             </li>
           </a>
         </div>
