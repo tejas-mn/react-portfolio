@@ -17,8 +17,8 @@ const PaginatedItemList = () => {
         <p className="project-list">
           <b>{currentProject.title}</b>{" "}
           <quote>| {currentProject.techStack}</quote>
-          <i style={{ float: "right" }}> ({currentProject.timeline})</i> <br />
-          <quote>Github | Live Link</quote>
+          <i style={{ float: "right" }}> ({currentProject.timeline})</i>
+          <quote style={{display:'block'}}>Github | Live Link</quote>
           <ul>
             <li className="auto-format">{currentProject.description}</li>
           </ul>
