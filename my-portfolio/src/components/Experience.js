@@ -23,7 +23,6 @@ export function Experience() {
     <section>
       <h2>💼 Experience</h2>
       <p>{userInfo.experienceInfo}</p>
-
       <PaginationProvider items={exp} itemsPerPage={2}>
         <PaginatedItemList />
         <Pagination />

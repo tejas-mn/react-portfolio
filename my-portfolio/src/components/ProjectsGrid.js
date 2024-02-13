@@ -16,7 +16,7 @@ function ProjectsGrid({ isVisible }) {
                 borderRadius: "8px",
               }}
             >
-              <img src={project.imageUrl} alt={project.title} />
+            <img src={project.imageUrl} alt={project.title} />
             </div>
             <h3>{project.title}</h3>
             <ProfileLinks />
