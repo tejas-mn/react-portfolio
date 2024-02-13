@@ -331,6 +331,14 @@ section > p {
 }
 
 @media only screen and (max-width: 510px) {
+  .project-title-container{
+    margin-bottom: 12px;
+  }
+  
+  .project-title{
+    margin: 0px;
+  }
+
   .edu-timeline{
     float: none !important;
     /* display: block; */
