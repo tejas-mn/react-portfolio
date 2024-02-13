@@ -4,7 +4,6 @@ export function ProfileDetails() {
   return (
     <>
       <p>{userInfo.headline}</p>
-
       <div className="skills2">
         <div>
           <li>

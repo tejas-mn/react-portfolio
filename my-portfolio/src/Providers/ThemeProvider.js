@@ -1,22 +1,13 @@
 import React, { useEffect, createContext, useState, useContext } from "react";
+import { useLocalStorage } from "./customHooks";
 
 const ThemeContext = createContext();
 
 const useTheme = () => useContext(ThemeContext);
 
-const getTheme = () => {
-  const theme = localStorage.getItem("theme");
-  if (!theme) {
-    // Default theme is taken as dark-theme
-    localStorage.setItem("theme", "dark-theme");
-    return "dark-theme";
-  } else {
-    return theme;
-  }
-};
-
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(getTheme);
+  const [localTheme, setLocalTheme] = useLocalStorage("theme", ()=> "dark-theme");
+  const [theme, setTheme] = useState(localTheme);
 
   function toggleTheme() {
     if (theme === "dark-theme") {
@@ -27,11 +18,7 @@ const ThemeProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    const refreshTheme = () => {
-      localStorage.setItem("theme", theme);
-    };
-
-    refreshTheme();
+    setLocalTheme(theme);
   }, [theme]);
 
   return (
