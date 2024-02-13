@@ -29,9 +29,8 @@ function Education() {
           <>
             <p id={e.id}>
               <b>{e.title}</b>
-              <i style={{ float: "right" }}> ({e.timeline})</i>
-              <br />
-              <i>{e.desc}</i>
+              <i className="edu-timeline" style={{ float: "right" }}> ({e.timeline})</i>
+              <i style={{display:'block'}}>{e.desc}</i>
             </p>
           </>
         ))}
