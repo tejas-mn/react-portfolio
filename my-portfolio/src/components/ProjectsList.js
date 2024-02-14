@@ -18,7 +18,12 @@ const PaginatedItemList = () => {
           <b>{currentProject.title}</b>{" "}
           <quote>| {currentProject.techStack}</quote>
           <i style={{ float: "right" }}> ({currentProject.timeline})</i>
-          <quote style={{display:'block'}}>Github | Live Link</quote>
+          <quote style={{display:'block'}}> <a 
+          style = {{textDecoration:'none',color:'black' , backgroundColor:'whitesmoke', padding:'0px 1px', borderRadius:'5px'}}
+          href="https://github.com">Github<sup>↗</sup></a> | {" "}
+          
+          <a style={{textDecoration:'none', color:'black', backgroundColor:'whitesmoke', padding:'0px 1px', borderRadius:'5px' }}
+          href="https://github.com">Live Link<sup>↗</sup></a></quote>
           <ul>
             <li className="auto-format">{currentProject.description}</li>
           </ul>
