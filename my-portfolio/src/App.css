@@ -43,13 +43,13 @@
   padding: 10px;
 }
 
-.proj-link-list-btn{
+.proj-link-list-btn {
   text-decoration: none;
   color: var(--text-color-light);
   background-color: var(--skills-color-light);
   padding: 0px 1px;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px var(--right-nav-color-light)
 }
 
 
@@ -57,6 +57,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -76,7 +77,6 @@
   justify-content: center;
   align-items: normal;
   align-self: center;
-  /* background-color: var(--app-bg-color-light); */
 }
 
 p {
@@ -107,11 +107,7 @@ li {
   color: #61dafb;
 }
 
-/* .resume-btn :hover{
-  background-color: rgba(0, 0, 0, 0.266);
-} */
-
-.btm-txt > p {
+.btm-txt>p {
   color: #dddddd;
   text-align: center;
   margin: 0px;
@@ -123,26 +119,25 @@ li {
   flex-direction: row;
 }
 
-.btm-txt > p > span {
+.btm-txt>p>span {
   margin: 5px;
 }
 
-.btm-txt > p > a:hover {
+.btm-txt>p>a:hover {
   transition: 0.1s ease;
   transform: scale(1.07);
 }
 
-.btm-txt > p > a > span {
+.btm-txt>p>a>span {
   color: var(--text-color-light);
 }
 
-.btm-txt > p > a > span :hover {
+.btm-txt>p>a>span :hover {
   color: rgb(169, 169, 169);
 }
 
 .left {
   margin-right: 20px;
-  /* border:2px solid  #61dafbb9; */
   border-radius: 8px;
   width: 250px;
   display: flex;
@@ -158,7 +153,7 @@ li {
 }
 
 .right {
-  /* border:2px solid  #61dafb; */
+
   border-radius: 8px;
   width: 1000px;
   padding: 30px;
@@ -174,12 +169,11 @@ li {
 .pic {
   width: 120px;
   height: 120px;
-  /* border:2px solid  #61dafb; */
   border-radius: 108px;
   margin-bottom: 0px;
 }
 
-.pic > img {
+.pic>img {
   width: 120px;
   height: 120px;
   border-radius: 108px;
@@ -188,40 +182,40 @@ li {
 .pic-desc {
   color: rgb(255, 255, 255);
 }
-.pic-desc > h2 {
+
+.pic-desc>h2 {
   margin: 0px;
 }
 
-.pic-desc > p {
+.pic-desc>p {
   margin-top: 0px;
 }
 
 .desc {
   width: 250px;
 
-  /* box-shadow: 0.2px 0.2px 10px rgb(0, 183, 255); */
   border: 2px solid #dddddd;
   border-radius: 8px;
 }
 
 .right-nav {
-  /* border-bottom: 2px solid white; */
+
   color: white;
   display: flex;
   justify-content: flex-end;
   padding: 5px 8px;
   border-radius: 5px;
   background-color: var(--right-nav-color-light);
-  /* border:2px solid  #61dafbb9; */
+
   border-radius: 6px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.197);
 }
 
-.right-nav > h2 {
+.right-nav>h2 {
   margin: 5px;
 }
 
-.link > h2 {
+.link>h2 {
   color: white !important;
   text-decoration: none;
   margin-top: 0px;
@@ -232,7 +226,7 @@ li {
   border-bottom: 2px solid white;
 }
 
-section > h2 {
+section>h2 {
   display: flex;
   justify-content: flex-start;
   /* padding-left:8px; */
@@ -240,7 +234,7 @@ section > h2 {
   margin-bottom: 2px;
 }
 
-section > p {
+section>p {
   color: white;
   text-align: justify;
   padding: 5px;
@@ -251,12 +245,11 @@ section > p {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-
-/* //////////// */
 
 .skills {
   display: flex;
@@ -267,29 +260,26 @@ section > p {
   padding: 10px;
 }
 
-.skills > div {
+.skills>div {
   list-style: none;
   border-radius: 10px;
-  /* border:1px solid whitesmoke; */
   padding: 5px 20px;
   margin: 10px;
   font-style: italic;
   width: fit-content;
   height: fit-content;
-  /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: var(--skills-color-light);
   transition: 0.1s;
   letter-spacing: 1px;
 }
 
-.skills > div:hover {
+.skills>div:hover {
   cursor: pointer;
   transition: 0.1s;
-  /* background-color: hsl(0, 0%, 10%); */
 
   transform: scale(1.03);
 }
-/* ////// */
+
 
 .skills2 {
   display: flex;
@@ -299,15 +289,13 @@ section > p {
   padding: 10px;
 }
 
-.skills2 > div {
+.skills2>div {
   list-style: none;
   border-radius: 10px;
-  /* border:2px solid whitesmoke; */
   padding: 10px 20px;
   margin: 10px;
   width: 200px;
   height: fit-content;
-  /* box-shadow: 0.4px 0.4px 10px rgba(0, 208, 255, 0.488); */
   background-color: var(--skills-color-light);
   transition: 0.1s;
   letter-spacing: 1px;
@@ -315,14 +303,13 @@ section > p {
 
 .resume-btn {
   background: linear-gradient(343deg, #bffaff6e, #fdffbc5d);
-  box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127); 
+  box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127);
   padding: 7px 20px !important;
 }
 
 .resume-btn:hover {
   cursor: pointer;
   transition: 0.1s;
-  /* background-color: hsl(0, 0%, 10%); */
   transform: scale(1.03);
 }
 
@@ -332,34 +319,34 @@ section > p {
     margin-right: 0px;
     margin-bottom: 10px;
   }
+
   .right {
     width: 100%;
   }
 
-  /* .right-nav{
-  display: none;
- } */
 }
 
 @media only screen and (max-width: 510px) {
-  .project-title-container{
+  .project-title-container {
     margin-bottom: 12px;
   }
-  
-  .project-title{
+
+  .project-title {
     margin: 0px;
   }
 
-  .edu-timeline{
+  .edu-timeline {
     float: none !important;
     /* display: block; */
   }
+
   .right-nav {
     /*display: none;*/
     padding: 8px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+
   .mobile-nav {
     flex: 1;
     display: flex;
@@ -390,7 +377,7 @@ section > p {
     margin-bottom: 60px;
   }
 
-  section > h2 {
+  section>h2 {
     margin-top: 0px;
     padding-left: 0px;
   }
@@ -403,7 +390,7 @@ section > p {
     padding: 0px 10px 0px 10px;
   }
 
-  .pic > img {
+  .pic>img {
     width: 90px;
     height: 90px;
     border-radius: 108px;
@@ -423,26 +410,28 @@ section > p {
     margin: 10px;
   }
 
-  .pic-desc > p {
+  .pic-desc>p {
     margin-top: 0px;
     margin-bottom: 0px;
   }
+
   .App {
     padding: 0px;
   }
+
   .left {
-    width: 100% !important; 
+    width: 100% !important;
   }
+
   .view-btn {
     padding: 4px 8px !important;
   }
+
   .theme-btn {
-    margin-top: 0 !important; 
+    margin-top: 0 !important;
     /* border-radius: 0 !important; */
   }
 }
-
-/*********/
 
 h1 {
   font-size: 2.5rem !important;
@@ -524,5 +513,4 @@ p {
 .view-btn:focus {
   outline: none;
   border-bottom: 1px solid var(--skills-color-dark);
-  /*box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4d4d4d; /* Add focus style */
 }

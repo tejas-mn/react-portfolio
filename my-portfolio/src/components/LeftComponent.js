@@ -2,7 +2,7 @@ import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
 import { useTheme } from "../Providers/ThemeProvider";
-import { Link } from "react-router-dom";
+
 export function LeftComponent() {
   const { theme, toggleTheme } = useTheme();
   return (

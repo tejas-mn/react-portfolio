@@ -6,7 +6,7 @@ const ThemeContext = createContext();
 const useTheme = () => useContext(ThemeContext);
 
 const ThemeProvider = ({ children }) => {
-  const [localTheme, setLocalTheme] = useLocalStorage("theme", ()=> "dark-theme");
+  const [localTheme, setLocalTheme] = useLocalStorage("theme", () => "dark-theme");
   const [theme, setTheme] = useState(localTheme);
 
   function toggleTheme() {
