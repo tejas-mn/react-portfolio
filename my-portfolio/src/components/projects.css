@@ -26,6 +26,8 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1);
+  position: relative;
+  /*place child divs relative to this container*/
 }
 
 .project-grid {
