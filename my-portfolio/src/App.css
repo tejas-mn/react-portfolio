@@ -43,6 +43,16 @@
   padding: 10px;
 }
 
+.proj-link-list-btn{
+  text-decoration: none;
+  color: var(--text-color-light);
+  background-color: var(--skills-color-light);
+  padding: 0px 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
@@ -305,7 +315,8 @@ section > p {
 
 .resume-btn {
   background: linear-gradient(343deg, #bffaff6e, #fdffbc5d);
-  box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127);
+  box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127); 
+  padding: 7px 20px !important;
 }
 
 .resume-btn:hover {
@@ -420,13 +431,13 @@ section > p {
     padding: 0px;
   }
   .left {
-    width: 100% !important;
+    width: 100% !important; 
   }
   .view-btn {
     padding: 4px 8px !important;
   }
   .theme-btn {
-    margin-top: 0 !important;
+    margin-top: 0 !important; 
     /* border-radius: 0 !important; */
   }
 }
