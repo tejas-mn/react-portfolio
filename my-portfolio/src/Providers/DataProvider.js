@@ -66,7 +66,7 @@ const projects = [
     description:
       "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302111269-8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTg1MDgsIm5iZiI6MTcwNzA1ODIwOCwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTEyNjktOGNmMTljMmUtYTVlNC00NmExLThhN2QtM2VlMTJmOTEwZjNmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0NTAwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk2MGExNGJjODEwNDcxNGJhYzMwYjY5YzA1YmI3OGMzZTQ1OTJmYmVhOTIzMTFhNThlYTA4ZDk5MDljZDA1MzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.z3uOemKtxzjYeG3r5bIEh1FFOTkWFNbILQQRCQQ4eNw",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 1,
@@ -86,7 +86,7 @@ const projects = [
     description:
       "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302108099-a2e4980f-f704-4a40-9d43-ef3d8786836b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTU1NTMsIm5iZiI6MTcwNzA1NTI1MywicGF0aCI6Ii82ODYyOTIxNS8zMDIxMDgwOTktYTJlNDk4MGYtZjcwNC00YTQwLTlkNDMtZWYzZDg3ODY4MzZiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0MDA1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM4NTZiYjM2MGI0YThjNmVjNWI2YzgwZjk1NzI3MjkyNWNkZWY3MGMzMmI1ZWMxMTY2NjIzYTk0ODhkOGRkNzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.a7WGXffRJvcv6kNn6sbF8WM4J3ChAuyQwuCYemGqAh0",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ const projects = [
     description:
       "A web app to detect potato laef blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302108418-deb842dc-7a58-4d4c-b7c0-5472dbb37e45.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTU4MzQsIm5iZiI6MTcwNzA1NTUzNCwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMDg0MTgtZGViODQyZGMtN2E1OC00ZDRjLWI3YzAtNTQ3MmRiYjM3ZTQ1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0MDUzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ5YzE3YTI4NTI3ZWI4NDAyMjc0Nzk1MjQwYWM3YTM4ODc0OTU2MWM5MmI3OTgwZDQ0NjE3ZjVlZmEyZDYxYjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.LTEBONhan2jg-70tvluNC9LAYXgvMVdlnGKyLHD9fXc",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ const projects = [
     description:
       "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302109493-436e962b-747f-4872-a3aa-bcc94a2f8979.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTY3MjIsIm5iZiI6MTcwNzA1NjQyMiwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMDk0OTMtNDM2ZTk2MmItNzQ3Zi00ODcyLWEzYWEtYmNjOTRhMmY4OTc5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0MjAyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFlZjJhOTUzNTExZDNkYjJkODJkODUzZDQ1NDQzOGFkOTBjYTM4OTE3NDI4MzQ2MzlkZjVlNjk1NmJmY2M5NTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.U1bBvlvq2GuaC-8fty3zbAjSfyGyKqgvTO-s_1fXzH4",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 6,
@@ -116,7 +116,7 @@ const projects = [
     description:
       "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302110796-2913bea4-4610-4a91-be5a-282f5f142786.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTc5OTIsIm5iZiI6MTcwNzA1NzY5MiwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTA3OTYtMjkxM2JlYTQtNDYxMC00YTkxLWJlNWEtMjgyZjVmMTQyNzg2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0NDEzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIyY2VlNzgwOThkZDhjYzIwYjVkNjdiODhjYTVhNmIxOGVjZjIwNzgxMGRjNTc0NDg2NDA0ZGQ1OTFiNDBlMjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.wgowQXx-IxXANCWW_BtDoLo_NnkH7UZV9oWJu5mecsc",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 5,
@@ -126,7 +126,7 @@ const projects = [
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302109933-f1564105-db6e-48c5-990a-638442314831.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTcxOTEsIm5iZiI6MTcwNzA1Njg5MSwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMDk5MzMtZjE1NjQxMDUtZGI2ZS00OGM1LTk5MGEtNjM4NDQyMzE0ODMxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE0MjgxMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRmNTEyODgxNGYzZWEzOGRjY2U5N2EzNDgxNjRlOTQ2MTEyZjcxMjQ2ZjAwM2MxYzYyY2Q3ZDE3M2RjYmNlZGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.-cBb4lqhS6s09ID_ribtRZRhtF4hZfewgoPp-DfrU3w",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
     id: 6,
@@ -136,7 +136,7 @@ const projects = [
     description:
       "A simple weather app that displays weather information using OpenWeather API.",
     imageUrl:
-      "https://private-user-images.githubusercontent.com/68629215/302113230-d87dd822-044d-47d2-8882-316229607c93.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNjA1MDEsIm5iZiI6MTcwNzA2MDIwMSwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTMyMzAtZDg3ZGQ4MjItMDQ0ZC00N2QyLTg4ODItMzE2MjI5NjA3YzkzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA0VDE1MjMyMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE2NDNhNTA2YzE3N2FhMWZkNTNjYTcyYzZhYjZmYWJhMmI5YTI5MmMwMTY3ZGE2MjcxZThjYTRkZjc1ZjBiMWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._msVQlUmCZ-R700hSCh6JGySu-MMHU5hkM4iDW2zPuA",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
 ];
 
