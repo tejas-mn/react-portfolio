@@ -1,6 +1,5 @@
 :root {
   --index-bg-color-dark: #282c34;
-  /* Declaration of a CSS variable */
   --index-bg-color-light: #f9f9f7;
 }
 
@@ -17,8 +16,11 @@ body {
   letter-spacing: 0px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--index-bg-color-dark);
-  /* background-color:  #282c34; */
+  background-size: cover;
+  background: rgb(33, 33, 33);
+  background: linear-gradient(11deg, rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 48%, rgba(45, 45, 45, 1) 100%);
+  /* background: rgb(255,255,255);
+  background: linear-gradient(140deg, rgba(255,255,255,1) 0%, rgba(255, 251, 251, 0.715) 100%, rgba(255,255,255,1) 100%);  background-color:  #282c34; */
   /* background: hsl(184, 100%, 6%); */
   /* z-index: -1; */
   /* background-image: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-background_53876-101652.jpg');
@@ -33,19 +35,15 @@ body {
 
 html::-webkit-scrollbar {
   width: 8px;
-  /* Width of vertical scrollbar */
 }
 
 html::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.1);
-  /* Track color */
 }
 
 html::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
-  /* Thumb color */
   border-radius: 4px;
-  /* Rounded corners for thumb */
 }
 
 /* *{

@@ -15,8 +15,8 @@ const PaginatedItemList = () => {
     <>
       {paginatedItems.map((currentProject) => (
         <p className="project-list">
-          <b>{currentProject.title}</b>{" "}
-          <quote>| {currentProject.techStack}</quote>
+          <b style={{ fontSize: 'larger' }}>{currentProject.title}</b>{" | "}
+          <i>{currentProject.techStack}</i>
           <i style={{ float: "right" }}> ({currentProject.timeline})</i>
           <quote style={{ display: 'block' }}>
             <a className="proj-link-list-btn"
