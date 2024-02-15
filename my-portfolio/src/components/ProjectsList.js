@@ -10,7 +10,7 @@ import { useAutoBoldText } from "../Providers/customHooks";
 const PaginatedItemList = () => {
   const paginatedItems = usePagination().getPaginatedItems();
   useAutoBoldText();
-  
+
   return (
     <>
       {paginatedItems.map((currentProject) => (
@@ -18,7 +18,11 @@ const PaginatedItemList = () => {
           <b>{currentProject.title}</b>{" "}
           <quote>| {currentProject.techStack}</quote>
           <i style={{ float: "right" }}> ({currentProject.timeline})</i>
-          <quote style={{display:'block'}}>Github | Live Link</quote>
+          <quote style={{ display: 'block' }}>
+            <a className="proj-link-list-btn"
+              href="https://github.com">Github<sup>↗</sup></a> | {" "}
+            <a className="proj-link-list-btn"
+              href="https://github.com">Live Link<sup>↗</sup></a></quote>
           <ul>
             <li className="auto-format">{currentProject.description}</li>
           </ul>

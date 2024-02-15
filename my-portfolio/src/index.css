@@ -1,13 +1,15 @@
 :root {
-  --index-bg-color-dark: #282c34; /* Declaration of a CSS variable */
+  --index-bg-color-dark: #282c34;
+  /* Declaration of a CSS variable */
   --index-bg-color-light: #f9f9f7;
 }
 
 * {
-  transition: 0.1s ease-in-out !important;
+  transition: background 0.2s ease !important;
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 15px;
   font-family: "Sahitya";
@@ -30,16 +32,20 @@ body {
 } */
 
 html::-webkit-scrollbar {
-  width: 8px; /* Width of vertical scrollbar */
+  width: 8px;
+  /* Width of vertical scrollbar */
 }
 
 html::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1); /* Track color */
+  background: rgba(0, 0, 0, 0.1);
+  /* Track color */
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
-  border-radius: 4px; /* Rounded corners for thumb */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Thumb color */
+  border-radius: 4px;
+  /* Rounded corners for thumb */
 }
 
 /* *{
