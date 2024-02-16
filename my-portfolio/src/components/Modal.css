@@ -21,15 +21,14 @@
 }
 
 .modal {
-    background-color: var(--btn-color-light);
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    height: 50%;
+    /* width: 90%; */
     margin: 10px;
     position: fixed;
-    top:20px;
+    top:0; /*20px*/
     opacity: 0;
     transform: scale(0.7);
     transition: transform 3s ease-in-out;
@@ -43,6 +42,7 @@
 }
 
 .modal.open {
+    padding-top: 0;
     opacity: 1;
     transform: scale(1);
     transition: transform 3s ease-in-out;
@@ -55,6 +55,7 @@
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 1;
     font-size: 20px;
     color: var(--text-color-dark)
 }

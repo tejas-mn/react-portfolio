@@ -1,14 +1,21 @@
 import React from "react";
 import "./projects.css";
-import { ProfileLinks } from "./ProfileLinks";
 import { projects } from "../Providers/DataProvider";
 import { Modal } from "./Modal";
 import { useState } from "react";
-
+import ProjectModal from "./projectModal";
 
 function ProjectsGrid({ isVisible }) {
+
   const [modalOpen, setModalOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState({});
+  const [currentProject, setCurrentProject] = useState({
+    id: "",
+    title: "",
+    techStack: "",
+    timeline: "",
+    description: "",
+    imageUrl: ""
+  });
 
   const openModal = (p) => {
     setModalOpen(true);
@@ -36,31 +43,12 @@ function ProjectsGrid({ isVisible }) {
             >
               <img src={project.imageUrl} alt={project.title} />
             </div>
-            <h3>{project.title}</h3>
-            {/* <ProfileLinks />
-            <p>{project.description}</p> */}
+            <h3>🚀 {project.title}</h3>
           </div>
         ))}
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <h3 style={{ marginTop: '0' }}>{currentProject.title}</h3>
-          {/* <div>
-            <div className="_left"></div>
-            <div className="_right"></div>
-          </div> */}
-          <p className="project-list">
-
-            <i style={{ float: "left" }}>{currentProject.techStack}</i>
-            <i style={{ float: "right" }}> ({currentProject.timeline})</i>
-            <quote >
-              <a className="proj-link-list-btn"
-                href="https://github.com">Github<sup>↗</sup></a> | {" "}
-              <a className="proj-link-list-btn"
-                href="https://github.com">Live Link<sup>↗</sup></a></quote>
-            <ul>
-              <p className="auto-format">{currentProject.description}</p>
-            </ul>
-          </p>
+          <ProjectModal title={currentProject.title} imageUrl={currentProject.imageUrl} tags={currentProject.techStack.split(',')} description={currentProject.description} />
         </Modal>
       </div>
     </>
