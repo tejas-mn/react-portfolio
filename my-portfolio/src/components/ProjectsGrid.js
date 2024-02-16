@@ -43,7 +43,7 @@ function ProjectsGrid({ isVisible }) {
             >
               <img src={project.imageUrl} alt={project.title} />
             </div>
-            <h3>🚀 {project.title}</h3>
+            <h3 className="pr-title">{project.title}</h3>
           </div>
         ))}
 
