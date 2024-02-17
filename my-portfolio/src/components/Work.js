@@ -4,7 +4,7 @@ import { ProjectsList } from "./ProjectsList";
 
 export function Work() {
   const [isGridView, setGridView] = useState(false);
-  const [btnText, setbtnText] = useState("Grid view");
+  const [btnText, setbtnText] = useState("☷ Grid view");
 
   return (
     <section>
@@ -16,12 +16,12 @@ export function Work() {
         }}
         className="project-title-container"
       >
-        <h2 style={{ color: "white"}} className="project-title">🚀 Projects | Blogs</h2>
+        <h2 style={{ color: "white" }} className="project-title">🚀 Projects | Blogs</h2>
         <button
           className="view-btn"
           onClick={() => {
             setGridView((prev) => !prev);
-            !isGridView ? setbtnText("List View") : setbtnText("Grid View");
+            !isGridView ? setbtnText("≡ List View") : setbtnText("☷  Grid View");
           }}
         >
           {btnText}

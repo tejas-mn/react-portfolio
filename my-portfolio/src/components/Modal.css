@@ -9,7 +9,7 @@
     max-height: 100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(34, 34, 34, 0.164);
+    background-color: rgba(var(--btn-color-light), 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,31 +32,38 @@
     /*20px*/
     opacity: 0;
     transform: scale(0.7);
-    transition: transform 3s ease-in-out;
-    transition: opacity 3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal-overlay.open {
     opacity: 1;
     pointer-events: auto;
     transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(6px) grayscale(1);
 }
 
 .modal.open {
     padding-top: 0;
     opacity: 1;
     transform: scale(1);
-    transition: transform 3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .close-button {
     position: absolute;
-    top: 18px;
-    right: 15px;
+    top: 11px;
+    right: 11px;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1;
     font-size: 20px;
     color: var(--btn-color-light);
+    transition: transform 0.5s ease-in !important;
+}
+
+.close-button:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in !important;
 }
