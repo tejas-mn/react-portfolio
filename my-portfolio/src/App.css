@@ -520,3 +520,7 @@ p {
   outline: none;
   border-bottom: 1px solid var(--skills-color-dark);
 }
+
+.project-title{
+  margin-bottom: 10px !important;
+}

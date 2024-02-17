@@ -59,7 +59,7 @@ const exp = [
 
 const projects = [
   {
-    id: 7,
+    id: 8,
     title: ".NET Web API",
     techStack: "C# .NET, OOPS, SQL",
     timeline: "Sep 2023 – Present",
@@ -121,7 +121,7 @@ const projects = [
   {
     id: 5,
     title: "IR Remote Controller for PC",
-    techStack: "Tkinter, Arduino, Pyautogui",
+    techStack: "Tkinter, Arduino, Pyautogui, Python",
     timeline: "Sep 2023 – Present",
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
@@ -129,7 +129,7 @@ const projects = [
       "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
   },
   {
-    id: 6,
+    id: 7,
     title: "Weather App",
     techStack: "Html, CSS, JavaScript",
     timeline: "Sep 2023 – Present",
