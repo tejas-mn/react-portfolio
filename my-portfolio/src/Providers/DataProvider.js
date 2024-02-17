@@ -111,7 +111,7 @@ const projects = [
   {
     id: 6,
     title: "Web based remote command runner using CGI",
-    techStack: "Python, Html, RHEL8, Docker ",
+    techStack: "Python, Html, RHEL8, Docker, Flask",
     timeline: "Sep 2023 – Present",
     description:
       "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",

@@ -20,9 +20,13 @@
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: max-content;
+  /*picks max height for a box from neighbor boxes without considering the grid height*/
   grid-gap: 20px;
   padding: 10px;
   max-height: calc(3 * (170px + 20px));
+  height: calc(3 * (170px + 20px));
+  /*to have space to display the modal*/
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1);
