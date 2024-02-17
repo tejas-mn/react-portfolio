@@ -18,6 +18,10 @@ function ProjectsGrid({ isVisible }) {
   });
 
   const openModal = (p) => {
+    document.querySelector('.project-grid').scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
     setModalOpen(true);
   };
 

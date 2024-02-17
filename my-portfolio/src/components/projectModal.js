@@ -81,6 +81,9 @@ const styles = {
     },
     tagContainer: {
         marginBottom: '10px',
+        gap: '10px',
+        display: 'flex',
+        flexWrap: 'wrap',
     },
     tag: {
         display: 'inline-block',
