@@ -66,7 +66,11 @@ const projects = [
     description:
       "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+    githubUrl:
+      "https://github.com/tejas-mn/Sorto-Viz",
+    liveUrl:
+      "https://algo-viz-tej.netlify.app/"
   },
   {
     id: 1,
@@ -77,6 +81,10 @@ const projects = [
       "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
     imageUrl:
       "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+    githubUrl:
+      "https://github.com/tejas-mn/Gym-Management-System-Flask",
+    liveUrl:
+      "https://algo-viz-tej.netlify.app/"
   },
   {
     id: 2,
@@ -86,7 +94,11 @@ const projects = [
     description:
       "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/Sorto-Viz/assets/68629215/4c511869-ff49-4de6-bc1a-d751ddf814ff",
+    githubUrl:
+      "https://github.com/tejas-mn/Sorto-Viz",
+    liveUrl:
+      "https://algo-viz-tej.netlify.app/"
   },
   {
     id: 3,
@@ -96,7 +108,11 @@ const projects = [
     description:
       "A web app to detect potato laef blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/final-year-project/assets/68629215/9a8e5c08-a7a2-4338-83ca-ba3be4ba462d",
+    githubUrl:
+      "https://github.com/tejas-mn/final-year-project",
+    liveUrl:
+      "https://tejasmn.pythonanywhere.com/"
   },
   {
     id: 4,
@@ -106,7 +122,11 @@ const projects = [
     description:
       "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
+    githubUrl:
+      "https://github.com/tejas-mn/Flask-App/tree/master",
+    liveUrl:
+      "https://github.com/tejas-mn/Flask-App/tree/master"
   },
   {
     id: 6,
@@ -116,7 +136,11 @@ const projects = [
     description:
       "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/SSH-Remote-Access/assets/68629215/d7dd336a-3fce-4006-8fcf-04d54392c55b",
+    githubUrl:
+      "https://github.com/tejas-mn/SSH-Remote-Access",
+    liveUrl:
+      "https://www.youtube.com/playlist?list=PLGmZIPUNEgq-Mcfrd6fTkiifT_H6cM92B"
   },
   {
     id: 5,
@@ -126,7 +150,11 @@ const projects = [
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/mp-final/assets/68629215/af64bc19-a0eb-46bc-b9bd-0d1cb3d9c816",
+    githubUrl:
+      "https://github.com/tejas-mn/mp-final",
+    liveUrl:
+      "https://github.com/tejas-mn/mp-final"
   },
   {
     id: 7,
@@ -136,7 +164,11 @@ const projects = [
     description:
       "A simple weather app that displays weather information using OpenWeather API.",
     imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "https://github.com/tejas-mn/weather-app-gcloud-lab/assets/68629215/d87dd822-044d-47d2-8882-316229607c93",
+    githubUrl:
+      "https://github.com/tejas-mn/weather-app-gcloud-lab",
+    liveUrl:
+      "https://github.com/tejas-mn/weather-app-gcloud-lab"
   },
 ];
 

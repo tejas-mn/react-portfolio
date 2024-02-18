@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./projects.css";
 import { projects } from "../Providers/DataProvider";
 import { Modal } from "./Modal";
-import { useState } from "react";
 import ProjectModal from "./projectModal";
 
 function ProjectsGrid({ isVisible }) {
@@ -16,6 +15,21 @@ function ProjectsGrid({ isVisible }) {
     description: "",
     imageUrl: ""
   });
+
+  const [loading, setLoading] = useState(true);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const checkIfImageIsPainted = () => {
+      if (imageRef.current.complete && imageRef.current.naturalHeight !== 0) {
+        setLoading(false);
+      } else {
+        requestAnimationFrame(checkIfImageIsPainted);
+      }
+    };
+
+    requestAnimationFrame(checkIfImageIsPainted);
+  }, []);
 
   const openModal = (p) => {
     document.querySelector('.project-grid').scrollTo({
@@ -36,7 +50,7 @@ function ProjectsGrid({ isVisible }) {
       <div style={styles.tagContainer}>
         {tags.map((tag, index) => (
           <span className="tag" key={index} style={styles.tag} onClick={() => {
-            (tag==='All')?setFilteredProjects(()=>projects):setFilteredProjects(()=>projects.filter((p) => p.techStack.split(', ').includes(tag)))
+            (tag === 'All') ? setFilteredProjects(() => projects) : setFilteredProjects(() => projects.filter((p) => p.techStack.split(', ').includes(tag)))
           }}>{tag}</span>
         ))}
       </div>
@@ -55,14 +69,22 @@ function ProjectsGrid({ isVisible }) {
                 borderRadius: "8px",
               }}
             >
-              <img src={project.imageUrl} alt={project.title} />
+
+              {loading && <img src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="Loading..." style={{
+                height: '156px', scale: '0.5 !important'
+              }} />}
+
+              <img ref={imageRef} src={project.imageUrl} alt={project.title} style={{
+                height: '156px',
+                display: loading ? 'none' : 'block'
+              }} />
             </div>
             <h3 className="pr-title">{project.title}</h3>
           </div>
         ))}
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <ProjectModal title={currentProject.title} imageUrl={currentProject.imageUrl} tags={currentProject.techStack.split(',')} description={currentProject.description} />
+          <ProjectModal title={currentProject.title} imageUrl={currentProject.imageUrl} githubUrl={currentProject.githubUrl} liveUrl={currentProject.liveUrl} tags={currentProject.techStack.split(',')} description={currentProject.description} />
         </Modal>
       </div>
     </>
