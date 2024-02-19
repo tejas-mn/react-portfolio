@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import "./App.css";
 import { LeftComponent } from "./components/LeftComponent";
 import { RightComponent } from "./components/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
 
 function App() {
-  const {theme} = useTheme();
+  const { theme } = useTheme();
+
+  const bg = {
+    "light-theme": 'var( --index-bg-light)',
+    "dark-theme": 'var( --index-bg-dark)'
+  }
+
+  useEffect(() => {
+    document.querySelector('body').style.background = bg[theme];
+    console.log(bg[theme])
+  }, [theme]);
 
   return (
     <>

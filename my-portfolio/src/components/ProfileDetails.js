@@ -7,7 +7,17 @@ export function ProfileDetails() {
       <div className="skills2">
         <div>
           <li>
-            {userInfo.email}
+            <svg style={{
+              display: 'inline',
+              position: 'relative',
+              bottom: '-2px'
+            }}
+
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1em" width="1em" aria-hidden="true" role="none" fill="currentColor">
+              <path d="M2 4v13a3 3 0 003 3h14a3 3 0 003-3V4zm18 2v1.47l-8 5.33-8-5.33V6zm-1 12H5a1 1 0 01-1-1V8.67L12 14l8-5.33V17a1 1 0 01-1 1z" />
+            </svg>
+
+            {" "}{userInfo.email}
           </li>
         </div>
         <div>
