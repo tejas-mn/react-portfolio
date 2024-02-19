@@ -41,11 +41,9 @@ function ExperienceDetail({ e }) {
           <b>{e.company} </b> <i style={{ float: "right" }}> ({e.timeline})</i>
           <i style={{ display: 'block' }}>{e.title}</i>
         </div>
-        <ul style={{
-          paddingLeft: '30px'
-        }}>
+        <ul className="exp-ul">
           {e.desc.map((d) => (
-            <li className="auto-format">{d}</li>
+            <><li className="auto-format exp-list">{d}</li></>
           ))}
         </ul>
       </p>

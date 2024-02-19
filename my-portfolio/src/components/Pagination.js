@@ -17,7 +17,8 @@ export const Pagination = () => {
       <button
         className="page-btn"
         style={{
-          backgroundColor: theme === "dark-theme" ? "rgb(89 89 89)" : "#f7f7f7",
+          backgroundColor:
+           'var(--btn-color-light)',
           color: theme === "dark-theme" ? "#fff" : "#333",
         }}
         onClick={prevPage}
@@ -32,13 +33,7 @@ export const Pagination = () => {
             className="page-btn"
             style={{
               backgroundColor:
-                currentPage === number
-                  ? theme === "dark-theme"
-                    ? "rgb(89 89 89)"
-                    : "#f7f7f7"
-                  : theme === "dark-theme"
-                  ? "#333"
-                  : "#fff",
+                currentPage === number ? ('var(--btn-color-light)'):'var(--btn-color-light-hover)',
               color: theme === "dark-theme" ? "#fff" : "#333",
             }}
             onClick={() => setCurrentPage(number)}
@@ -51,7 +46,8 @@ export const Pagination = () => {
       <button
         className="page-btn"
         style={{
-          backgroundColor: theme === "dark-theme" ? "rgb(89 89 89)" : "#f7f7f7",
+          backgroundColor:
+           'var(--btn-color-light)',
           color: theme === "dark-theme" ? "#fff" : "#333",
         }}
         onClick={nextPage}

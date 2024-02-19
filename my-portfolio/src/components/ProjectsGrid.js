@@ -69,14 +69,8 @@ function ProjectsGrid({ isVisible }) {
                 borderRadius: "8px",
               }}
             >
-
-              {loading && <img src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="Loading..." style={{
-                height: '156px', scale: '0.5 !important'
-              }} />}
-
-              <img ref={imageRef} src={project.imageUrl} alt={project.title} style={{
-                height: '156px',
-                display: loading ? 'none' : 'block'
+            <img ref={imageRef} src={(!loading)?project.imageUrl:'https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif'} alt={project.title} style={{
+                height: '156px'
               }} />
             </div>
             <h3 className="pr-title">{project.title}</h3>
@@ -90,7 +84,6 @@ function ProjectsGrid({ isVisible }) {
     </>
   );
 }
-
 
 const styles = {
   tagContainer: {

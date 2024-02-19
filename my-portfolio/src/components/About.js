@@ -30,7 +30,7 @@ function Education() {
             <p id={e.id}>
               <b>{e.title}</b>
               <i className="edu-timeline" style={{ float: "right" }}> ({e.timeline})</i>
-              <i style={{display:'block'}}>{e.desc}</i>
+              <i style={{ display: 'block' }}>{e.desc}</i>
             </p>
           </>
         ))}
