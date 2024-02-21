@@ -29,8 +29,11 @@ function Education() {
           <>
             <p id={e.id}>
               <b>{e.title}</b>
-              <i className="edu-timeline" style={{ float: "right" }}> ({e.timeline})</i>
-              <i style={{ display: 'block' }}>{e.desc}</i>
+              <i className="edu-timeline" style={styles.edu_timeline}>
+                {" "}
+                ({e.timeline})
+              </i>
+              <i style={styles.desc}>{e.desc}</i>
             </p>
           </>
         ))}
@@ -38,3 +41,8 @@ function Education() {
     </>
   );
 }
+
+const styles = {
+  edu_timeline: { float: "right" },
+  desc: { display: "block" },
+};

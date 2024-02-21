@@ -14,7 +14,7 @@ export function LeftComponent() {
           <ProfileLinks />
         </div>
         <button
-          style={{ marginTop: "30px", borderRadius: "100px" }}
+          style={styles.btn}
           className="view-btn theme-btn"
           onClick={() => toggleTheme()}
         >
@@ -24,3 +24,7 @@ export function LeftComponent() {
     </>
   );
 }
+
+const styles = {
+  btn: { marginTop: "30px", borderRadius: "100px" },
+};

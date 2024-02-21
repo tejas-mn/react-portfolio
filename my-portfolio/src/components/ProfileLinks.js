@@ -3,11 +3,7 @@ import { userInfo } from "../Providers/DataProvider";
 export function ProfileLinks() {
   return (
     <p>
-      <a
-        href={userInfo.links.github}
-        target="blank"
-        style={{ color: "lightblue", textDecoration: "none" }}
-      >
+      <a href={userInfo.links.github} target="blank">
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +21,7 @@ export function ProfileLinks() {
         </span>
       </a>
 
-      <a
-        href={userInfo.links.linkedin}
-        target="blank"
-        style={{ color: "lightblue", textDecoration: "none" }}
-      >
+      <a href={userInfo.links.linkedin} target="blank">
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,11 +39,7 @@ export function ProfileLinks() {
         </span>
       </a>
 
-      <a
-        href={userInfo.links.leetcode}
-        target="blank"
-        style={{ color: "lightblue", textDecoration: "none" }}
-      >
+      <a href={userInfo.links.leetcode} target="blank">
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

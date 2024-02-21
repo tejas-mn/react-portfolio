@@ -8,20 +8,17 @@ export function Work() {
 
   return (
     <section>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-        className="project-title-container"
-      >
-        <h2 style={{ color: "white" }} className="project-title">🚀 Projects | Blogs</h2>
+      <div style={styles.projectHeader} className="project-title-container">
+        <h2 style={styles.title} className="project-title">
+          🚀 Projects | Blogs
+        </h2>
         <button
           className="view-btn"
           onClick={() => {
             setGridView((prev) => !prev);
-            !isGridView ? setbtnText("≡ List View") : setbtnText("☷  Grid View");
+            !isGridView
+              ? setbtnText("≡ List View")
+              : setbtnText("☷  Grid View");
           }}
         >
           {btnText}
@@ -31,3 +28,12 @@ export function Work() {
     </section>
   );
 }
+
+const styles = {
+  projectHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  title: { color: "white" },
+};

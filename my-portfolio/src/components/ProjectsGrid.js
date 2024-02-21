@@ -13,7 +13,7 @@ function ProjectsGrid({ isVisible }) {
     techStack: "",
     timeline: "",
     description: "",
-    imageUrl: ""
+    imageUrl: "",
   });
 
   const [loading, setLoading] = useState(true);
@@ -32,9 +32,9 @@ function ProjectsGrid({ isVisible }) {
   }, []);
 
   const openModal = (p) => {
-    document.querySelector('.project-grid').scrollTo({
+    document.querySelector(".project-grid").scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
     setModalOpen(true);
   };
@@ -43,42 +43,67 @@ function ProjectsGrid({ isVisible }) {
     setModalOpen(false);
   };
 
-  const tags = ['All', 'React', 'C# .NET', 'Flask', 'Python'];
+  const tags = ["All", "React", "C# .NET", "Flask", "Python"];
 
   return (
     <>
       <div style={styles.tagContainer}>
         {tags.map((tag, index) => (
-          <span className="tag" key={index} style={styles.tag} onClick={() => {
-            (tag === 'All') ? setFilteredProjects(() => projects) : setFilteredProjects(() => projects.filter((p) => p.techStack.split(', ').includes(tag)))
-          }}>{tag}</span>
+          <span
+            className="tag"
+            key={index}
+            style={styles.tag}
+            onClick={() => {
+              tag === "All"
+                ? setFilteredProjects(() => projects)
+                : setFilteredProjects(() =>
+                    projects.filter((p) =>
+                      p.techStack.split(", ").includes(tag)
+                    )
+                  );
+            }}
+          >
+            {tag}
+          </span>
         ))}
       </div>
 
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
         {filteredProjects.map((project) => (
-          <div key={project.id} className="project-box" id={project.id}
+          <div
+            key={project.id}
+            className="project-box"
+            id={project.id}
             onClick={() => {
               setCurrentProject(project);
               openModal();
-            }}>
-            <div
-              style={{
-                overflow: "hidden",
-                transition: "0.3s ease-in-out",
-                borderRadius: "8px",
-              }}
-            >
-            <img ref={imageRef} src={(!loading)?project.imageUrl:'https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif'} alt={project.title} style={{
-                height: '156px'
-              }} />
+            }}
+          >
+            <div style={styles.gridImageContainer}>
+              <img
+                ref={imageRef}
+                src={
+                  !loading
+                    ? project.imageUrl
+                    : "https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
+                }
+                alt={project.title}
+                style={styles.gridImage}
+              />
             </div>
             <h3 className="pr-title">{project.title}</h3>
           </div>
         ))}
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <ProjectModal title={currentProject.title} imageUrl={currentProject.imageUrl} githubUrl={currentProject.githubUrl} liveUrl={currentProject.liveUrl} tags={currentProject.techStack.split(',')} description={currentProject.description} />
+          <ProjectModal
+            title={currentProject.title}
+            imageUrl={currentProject.imageUrl}
+            githubUrl={currentProject.githubUrl}
+            liveUrl={currentProject.liveUrl}
+            tags={currentProject.techStack.split(",")}
+            description={currentProject.description}
+          />
         </Modal>
       </div>
     </>
@@ -87,19 +112,27 @@ function ProjectsGrid({ isVisible }) {
 
 const styles = {
   tagContainer: {
-    display: 'flex',
-    margin: '10px',
-    marginTop: '0px',
-    justifyContent: 'center'
+    display: "flex",
+    margin: "10px",
+    marginTop: "0px",
+    justifyContent: "center",
   },
   tag: {
-    display: 'inline-block',
-    backgroundColor: 'var(--btn-color-light)',
-    color: '#333',
-    padding: '1px 15px',
-    borderRadius: '4px',
-    marginRight: '5px',
-  }
-}
+    display: "inline-block",
+    backgroundColor: "var(--btn-color-light)",
+    color: "#333",
+    padding: "1px 15px",
+    borderRadius: "4px",
+    marginRight: "5px",
+  },
+  gridImageContainer: {
+    overflow: "hidden",
+    transition: "0.3s ease-in-out",
+    borderRadius: "8px",
+  },
+  gridImage: {
+    height: "156px",
+  },
+};
 
 export default ProjectsGrid;
