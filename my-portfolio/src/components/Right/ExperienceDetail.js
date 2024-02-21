@@ -1,11 +1,12 @@
 import { useAutoBoldText } from "../../hooks/customHooks";
+
 export default function ExperienceDetail({ e }) {
   useAutoBoldText();
 
   return (
     <>
       <p key={e.id}>
-        <div style={styles.titleBorder}>
+        <div key={e.id} style={styles.titleBorder}>
           <h5>{e.company} </h5> <i style={styles.timeline}> ({e.timeline})</i>
           <b style={styles.title}>
             <i>{e.title}</i>
@@ -14,7 +15,7 @@ export default function ExperienceDetail({ e }) {
         <ul className="exp-ul">
           {e.desc.map((d) => (
             <>
-              <li className="auto-format exp-list">{d}</li>
+              <li key={e.id} className="auto-format exp-list">{d}</li>
             </>
           ))}
         </ul>

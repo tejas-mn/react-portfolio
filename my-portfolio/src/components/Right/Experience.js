@@ -11,7 +11,7 @@ function PaginatedItemList() {
   return (
     <>
       {paginatedExperience.map((ex) => (
-        <ExperienceDetail e={ex} />
+        <ExperienceDetail key={ex.id} e={ex} />
       ))}
     </>
   );

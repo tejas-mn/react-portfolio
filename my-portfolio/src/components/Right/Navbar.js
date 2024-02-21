@@ -1,21 +1,26 @@
 import { Link } from "react-router-dom";
 
+function NavBtn({ name, link }) {
+  return (
+    <Link className="link" to={link}>
+      <button className="view-btn">{name}</button>{" "}
+    </Link>
+  );
+}
+
 export function NavBar() {
+  
+  const navBtns = [
+    {name:"🖋️ About", link:"/about"},
+    {name:"💼 Experience", link:"/experience"},
+    {name:"🚀 Work", link:"/work"},
+    {name:"📞 Contact", link:"/"}
+  ]
+
   return (
     <div className="nav-container">
       <div className="right-nav">
-        <Link className="link" to="/about">
-          <button className="view-btn">🖋️ About </button>{" "}
-        </Link>
-        <Link className="link" to="/experience">
-          <button className="view-btn">💼 Experience </button>{" "}
-        </Link>
-        <Link className="link" to="/work">
-          <button className="view-btn">🚀 Work </button>{" "}
-        </Link>
-        <Link className="link" to="/work">
-          <button className="view-btn">📞 Contact</button>{" "}
-        </Link>
+        { navBtns.map(btn => <NavBtn key={btn.link} name={btn.name} link={btn.link}/>) }
       </div>
     </div>
   );

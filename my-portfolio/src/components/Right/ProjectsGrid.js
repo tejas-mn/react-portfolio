@@ -4,18 +4,7 @@ import { projects } from "../../Providers/DataProvider";
 import { Modal } from "./utils/Modal";
 import ProjectModal from "./projectModal";
 
-function ProjectsGrid({ isVisible }) {
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState({
-    id: "",
-    title: "",
-    techStack: "",
-    timeline: "",
-    description: "",
-    imageUrl: "",
-  });
-
+function ProjectBox({ project, setCurrentProject, openModal }) {
   const [loading, setLoading] = useState(true);
   const imageRef = useRef(null);
 
@@ -31,23 +20,36 @@ function ProjectsGrid({ isVisible }) {
     requestAnimationFrame(checkIfImageIsPainted);
   }, []);
 
-  const openModal = (p) => {
-    document.querySelector(".project-grid").scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  const tags = ["All", "React", "C# .NET", "Flask", "Python"];
-
   return (
-    <>
-      <div style={styles.tagContainer}>
+      <div
+        key={project.id}
+        className="project-box"
+        id={project.id}
+        onClick={() => {
+          setCurrentProject(project);
+          openModal();
+        }}
+      >
+        <div style={styles.gridImageContainer}>
+          <img
+            ref={imageRef}
+            src={
+              !loading
+                ? project.imageUrl
+                : "https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
+            }
+            alt={project.title}
+            style={styles.gridImage}
+          />
+        </div>
+        <h3 className="pr-title">{project.title}</h3>
+      </div>
+  );
+}
+
+function Tags({tags, setFilteredProjects}){
+  return (
+    <div style={styles.tagContainer}>
         {tags.map((tag, index) => (
           <span
             className="tag"
@@ -67,32 +69,42 @@ function ProjectsGrid({ isVisible }) {
           </span>
         ))}
       </div>
+  );
+}
 
+function ProjectsGrid({ isVisible }) {
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState({
+    id: "",
+    title: "",
+    techStack: "",
+    timeline: "",
+    description: "",
+    imageUrl: "",
+  });
+
+  const openModal = (p) => {
+    document.querySelector(".project-grid").scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const tags = ["All", "React", "C# .NET", "Flask", "Python"];
+
+  return (
+    <>
+      <Tags tags={tags} setFilteredProjects={setFilteredProjects}/>
+      
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
         {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            className="project-box"
-            id={project.id}
-            onClick={() => {
-              setCurrentProject(project);
-              openModal();
-            }}
-          >
-            <div style={styles.gridImageContainer}>
-              <img
-                ref={imageRef}
-                src={
-                  !loading
-                    ? project.imageUrl
-                    : "https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
-                }
-                alt={project.title}
-                style={styles.gridImage}
-              />
-            </div>
-            <h3 className="pr-title">{project.title}</h3>
-          </div>
+          <ProjectBox project={project} openModal={openModal} setCurrentProject={setCurrentProject}/>
         ))}
 
         <Modal isOpen={modalOpen} onClose={closeModal}>

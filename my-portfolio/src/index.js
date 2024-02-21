@@ -10,7 +10,6 @@ import { RightComponent } from "./components/Right/RightComponent";
 import { Experience } from "./components/Right/Experience";
 import { About } from "./components/Right/About";
 import { Work } from "./components/Right/Work";
-import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

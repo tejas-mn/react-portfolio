@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAutoBoldText } from "../../hooks/customHooks";
 import "./projects.css";
 
@@ -39,7 +39,7 @@ export default function ProjectModal({
           style={styles.buttonContainer}
           className="project-modal-button-container"
         >
-          <a href={githubUrl} target="_blank">
+          <a href={githubUrl} target="_blank" rel="noreferrer">
             <button style={styles.button}>
               {" "}
               <svg
@@ -57,7 +57,7 @@ export default function ProjectModal({
               Github
             </button>
           </a>
-          <a href={liveUrl} target="_blank">
+          <a href={liveUrl} target="_blank" rel="noreferrer">
             <button style={styles.button}>
               {" "}
               <svg
@@ -66,7 +66,6 @@ export default function ProjectModal({
                 viewBox="0 0 24 24"
                 height="1em"
                 width="1em"
-                aria-hidden="true"
                 role="none"
                 fill="currentColor"
               >

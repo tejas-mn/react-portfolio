@@ -13,9 +13,6 @@ export function RightComponent() {
         </div>
         {location.pathname === "/" ? <About /> : <Outlet />}
       </div>
-      <div className="mobile-nav">
-        <NavBar />
-      </div>
     </>
   );
 }

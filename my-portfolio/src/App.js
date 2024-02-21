@@ -3,6 +3,7 @@ import "./App.css";
 import { LeftComponent } from "./components/Left/LeftComponent";
 import { RightComponent } from "./components/Right/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
+import { NavBar } from "./components/Right/Navbar";
 
 function App() {
   const { theme } = useTheme();
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     document.querySelector('body').style.background = bg[theme];
-    console.log(bg[theme])
+    // eslint-disable-next-line
   }, [theme]);
 
   return (
@@ -22,6 +23,9 @@ function App() {
       <div className={`App ${theme}`}>
         <LeftComponent />
         <RightComponent />
+        <div className="mobile-nav">
+          <NavBar />
+        </div>
       </div>
     </>
   );
