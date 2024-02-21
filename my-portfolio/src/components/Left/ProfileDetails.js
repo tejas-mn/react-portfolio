@@ -1,4 +1,4 @@
-import { userInfo } from "../Providers/DataProvider";
+import { userInfo } from "../../Providers/DataProvider";
 
 export function ProfileDetails() {
   return (

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
-import { LeftComponent } from "./components/LeftComponent";
-import { RightComponent } from "./components/RightComponent";
+import { LeftComponent } from "./components/Left/LeftComponent";
+import { RightComponent } from "./components/Right/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
 
 function App() {
@@ -34,5 +34,3 @@ export function ThemedApp() {
     </ThemeProvider>
   );
 }
-
-export default App;

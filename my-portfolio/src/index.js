@@ -5,11 +5,11 @@ import { ThemedApp } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { LeftComponent } from "./components/LeftComponent";
-import { RightComponent } from "./components/RightComponent";
-import { Experience } from "./components/Experience";
-import { About } from "./components/About";
-import { Work } from "./components/Work";
+import { LeftComponent } from "./components/Left/LeftComponent";
+import { RightComponent } from "./components/Right/RightComponent";
+import { Experience } from "./components/Right/Experience";
+import { About } from "./components/Right/About";
+import { Work } from "./components/Right/Work";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,7 +24,6 @@ root.render(
         </Route>
         <Route path="/left" element={<LeftComponent />}></Route>
         <Route path="/right" element={<RightComponent />}></Route>
-        <Route path="/app" element={<App />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

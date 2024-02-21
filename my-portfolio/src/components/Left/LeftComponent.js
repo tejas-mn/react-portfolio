@@ -1,7 +1,7 @@
 import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
-import { useTheme } from "../Providers/ThemeProvider";
+import { useTheme } from "../../Providers/ThemeProvider";
 
 export function LeftComponent() {
   const { theme, toggleTheme } = useTheme();

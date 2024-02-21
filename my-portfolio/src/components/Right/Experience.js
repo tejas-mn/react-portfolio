@@ -1,9 +1,9 @@
-import { exp, userInfo } from "../Providers/DataProvider";
+import { exp, userInfo } from "../../Providers/DataProvider";
 import {
   PaginationProvider,
   usePagination,
-} from "../Providers/PaginationProvider";
-import { Pagination } from "./Pagination";
+} from "../../Providers/PaginationProvider";
+import { Pagination } from "./utils/Pagination";
 import ExperienceDetail from "./ExperienceDetail";
 
 function PaginatedItemList() {

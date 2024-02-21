@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAutoBoldText } from "../Providers/customHooks";
+import { useAutoBoldText } from "../../hooks/customHooks";
 import "./projects.css";
 
 export default function ProjectModal({

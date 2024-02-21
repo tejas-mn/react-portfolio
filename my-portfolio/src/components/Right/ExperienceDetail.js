@@ -1,4 +1,4 @@
-import { useAutoBoldText } from "../Providers/customHooks";
+import { useAutoBoldText } from "../../hooks/customHooks";
 export default function ExperienceDetail({ e }) {
   useAutoBoldText();
 

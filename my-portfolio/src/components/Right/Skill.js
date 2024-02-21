@@ -1,4 +1,4 @@
-import { skills } from "../Providers/DataProvider";
+import { skills } from "../../Providers/DataProvider";
 
 function Skill({ skill }) {
   return (

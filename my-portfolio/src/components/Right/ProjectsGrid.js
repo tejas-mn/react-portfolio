@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./projects.css";
-import { projects } from "../Providers/DataProvider";
-import { Modal } from "./Modal";
+import { projects } from "../../Providers/DataProvider";
+import { Modal } from "./utils/Modal";
 import ProjectModal from "./projectModal";
 
 function ProjectsGrid({ isVisible }) {

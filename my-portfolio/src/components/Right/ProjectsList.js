@@ -1,11 +1,11 @@
 import React from "react";
-import { projects } from "../Providers/DataProvider";
-import { Pagination } from "./Pagination";
+import { projects } from "../../Providers/DataProvider";
+import { Pagination } from "./utils/Pagination";
 import {
   PaginationProvider,
   usePagination,
-} from "../Providers/PaginationProvider";
-import { useAutoBoldText } from "../Providers/customHooks";
+} from "../../Providers/PaginationProvider";
+import { useAutoBoldText } from "../../hooks/customHooks";
 
 const PaginatedItemList = () => {
   const paginatedItems = usePagination().getPaginatedItems();

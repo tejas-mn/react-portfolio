@@ -1,5 +1,5 @@
 import { Skills } from "./Skill";
-import { edu, userInfo } from "../Providers/DataProvider";
+import { edu, userInfo } from "../../Providers/DataProvider";
 
 export function About() {
   return (
