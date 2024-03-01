@@ -1,103 +1,87 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
+import DropDown from "./utils/DropDown"; 
 
-export function SearchBar({ setTags, setFilteredProjects, tagsState }) {
+function SearchBar({ setTags, setFilteredProjects, tagsState }) {
+  const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
+  const [searchResult, setSearchResult] = useState(defaultTags);
   const [isFocused, setIsFocused] = useState(false);
 
-  const handleOnFocus = () => {
-    setIsFocused(true);
-  };
+  const handleOnFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
 
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
-
-  var myHeaders = new Headers();
-  myHeaders.append("apikey", "xxxxxx");
-
-  var requestOptions = {
-    method: "GET",
-    headers: myHeaders,
-  };
-
-  const handleSearch = (e) => {
-    if (e.target.value !== "") {
-      fetch(
-        "https://api.apilayer.com/skills?q=" + e.target.value,
-        requestOptions
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setSearchResult(data);
-        })
-        .catch((err) => console.error(err));
+  const handleSearch = (value) => {
+    setSearchText(value);
+    if (value.trim() !== "") {
+      fetchSearchResults(value);
+    } else {
+      setSearchResult(defaultTags);
     }
+  };
 
-    setSearchText(e.target.value);
+  const fetchSearchResults = (value) => {
+    const requestOptions = {
+      method: "GET",
+      headers: new Headers({ "apikey": "xxxxxx" }),
+    };
+
+    fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
+      .then((res) => setSearchResult(res.json()))
+      .catch((err) => console.error(err));
   };
 
   useEffect(() => {
     if (tagsState.length === 0) {
       setFilteredProjects(projects);
-      return;
+    } else {
+      setFilteredProjects(
+        projects.filter((project) =>
+          tagsState.some((tag) =>
+            project.techStack.toLowerCase().split(",").includes(tag.toLowerCase())
+          )
+        )
+      );
     }
-
-    setFilteredProjects(
-      projects.filter((p) => {
-        return tagsState.some((t) =>
-          p.techStack.toLowerCase().split(",").includes(t.toLowerCase())
-        );
-      })
-    );
   }, [tagsState]);
 
-  return (
-    <>
-      <div
-        style={{ position: "relative"}}
-      >
-        <input
-          placeholder="Search Eg.React.."
-          type="text"
-          value={searchText}
-          onFocus={handleOnFocus}
-          onBlur={handleBlur}
-          onChange={(e) => handleSearch(e)}
-          style={styles.searchInput}
-        ></input>
-        <button
-          className="view-btn"
-          onClick={() => {
-            if (searchText.length === 0) return;
-            setTags([...tagsState, searchText]);
-            setSearchText("");
-          }}
-        >
-          Search
-        </button>
+  const handleAddTag = (tag) => {
+    if (tag.trim() !== "") {
+      if(tagsState.length > 4){
+        alert("Max Tags Reached");
+        return;
+      }
+      else{
+        setTags([...tagsState, tag]);
+      }
+      setSearchText("");
+      setSearchResult(defaultTags);
+    }
+  };
 
-        {isFocused && (
-          <ul style={styles.searchResultList}>
-            {searchResult.map((e) => (
-              <li className="search-list-item"
-                style={{ cursor: "pointer", border: "1px solid var(--btn-color-light-hover)" }}
-                onMouseDown={() => {
-                  if (e.length === 0) return;
-                  setTags([...tagsState, e]);
-                  setSearchText("");
-                  setSearchResult([]);
-                }}
-              >
-                {e}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </>
+  return (
+    <div style={{ position: "relative"}}>
+      <input
+        placeholder="Search Eg.React.."
+        type="text"
+        value={searchText}
+        onFocus={handleOnFocus}
+        onBlur={handleBlur}
+        onChange={(e) => handleSearch(e.target.value)}
+        style={styles.searchInput}
+      />
+      <button
+        className="view-btn"
+        onClick={() => handleAddTag(searchText)}
+        disabled={searchText.length === 0}
+      >
+        Search
+      </button>
+
+      {isFocused && (
+        <DropDown options={searchResult} onSelect={handleAddTag} />
+      )}
+    </div>
   );
 }
 
@@ -113,18 +97,8 @@ const styles = {
     borderRight: "none",
     height: "25px",
     backgroundColor: "var(--btn-color-light)",
-    color: "var(--text-color-light)",
-    // boxShadow: "0px 0px 13px 0px rgba(0,0,0,0.1)",
-  },
-  searchResultList: {
-    backgroundColor: 'var(--btn-color-light)',
-    color: 'var(--text-color-light)',
-    zIndex: "10 !important",
-    position: "absolute",
-    top: "30px",
-    listStyle: "none",
-    width: "145px",
-    paddingLeft: "0px",
-    borderRadius: "5px",
-  },
+    color: "var(--text-color-light)"
+  }
 };
+
+export default SearchBar;

@@ -3,7 +3,7 @@ import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
 import { Modal } from "./utils/Modal";
 import ProjectModal from "./projectModal";
-import { SearchBar } from "./SearchBar";
+import  SearchBar  from "./SearchBar";
 import { ProjectBox } from "./ProjectBox";
 import TagContainer  from "./TagContainer";
 
@@ -31,7 +31,6 @@ function ProjectsGrid({ isVisible }) {
     setModalOpen(false);
   };
 
-  const tags = ["React", "C# .NET", "Flask", "Python"];
   const [tagsState, setTags] = useState([]);
   
   const handleTagClick = (tagToRemove) => {
