@@ -15,7 +15,7 @@ export function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   };
 
   var myHeaders = new Headers();
-  myHeaders.append("apikey", "MocKHbSBhrdn61WZx6XbtbEDhwYkaojD");
+  myHeaders.append("apikey", "xxxxxx");
 
   var requestOptions = {
     method: "GET",

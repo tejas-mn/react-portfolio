@@ -5,7 +5,7 @@ import { Modal } from "./utils/Modal";
 import ProjectModal from "./projectModal";
 import { SearchBar } from "./SearchBar";
 import { ProjectBox } from "./ProjectBox";
-import TagContainer  from "./Tags";
+import TagContainer  from "./TagContainer";
 
 function ProjectsGrid({ isVisible }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
