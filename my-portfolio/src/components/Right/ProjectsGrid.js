@@ -83,8 +83,40 @@ function Tags({ tags, setTags, setFilteredProjects, filteredProjects }) {
 
 function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const [searchText, setSearchText] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [isFocused, setIsFocused] = useState(false); 
+
+  const handleOnFocus = () => { 
+    setIsFocused(true); 
+  }; 
+
+  const handleBlur = () => { 
+      setIsFocused(false); 
+  }; 
+
+  var myHeaders = new Headers();
+  myHeaders.append("apikey", "xxxxx");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders
+  };
+
+
   const handleSearch = (e) => {
+   if(e.target.value!=""){
+    fetch("https://api.apilayer.com/skills?q=" + e.target.value, requestOptions)
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data);
+      setSearchResult(data);
+    })
+    .catch(err => console.error(err));
+    
+   }
+    
     setSearchText(e.target.value);
+
   };
 
   useEffect(() => {
@@ -104,11 +136,15 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   return (
     <>
-      <div>
+      <div style={{
+        position:'relative'
+      }}>
         <input
           placeholder="Search Eg.React.."
           type="text"
           value={searchText}
+          onFocus={handleOnFocus} 
+          onBlur={handleBlur} 
           onChange={(e) => handleSearch(e)}
           style={{
             outline: "none",
@@ -135,7 +171,36 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
         >
           Search
         </button>
+
+      {
+        isFocused && <ul style={
+          {
+            backgroundColor:'white',
+            zIndex : '10 !important',
+            position:'absolute',
+            top:'30px',
+            listStyle:'none',
+            border:'1px solid whitesmoke',
+            width:'145px',
+            paddingLeft:'0px',
+            borderRadius:'5px'
+          }
+        }>
+          {
+            searchResult.map(e => <li style={{cursor:'pointer', border:'1px solid whitesmoke'}}  
+                onMouseDown={() => {
+                if (e.length === 0) return;
+                setTags([...tagsState, e]);
+                setSearchText("");
+                setSearchResult([]);
+              }}
+            >{e}</li>)
+          }
+        </ul>
+      }  
+      
       </div>
+
     </>
   );
 }
