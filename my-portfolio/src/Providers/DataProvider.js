@@ -75,7 +75,7 @@ const projects = [
   {
     id: 1,
     title: "Gym Management System",
-    techStack: "Flask, Bootstrap, JavaScript, SQL",
+    techStack: "Flask,Bootstrap,JavaScript,SQL",
     timeline: "Sep 2023 – Present",
     description:
       "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
@@ -89,7 +89,7 @@ const projects = [
   {
     id: 2,
     title: "Sorting Visualizer",
-    techStack: "React, JavaScript ",
+    techStack: "React,JavaScript",
     timeline: "Sep 2023 – Present",
     description:
       "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
@@ -103,7 +103,7 @@ const projects = [
   {
     id: 3,
     title: "Leaf Disease Detection using CNN",
-    techStack: "Flask, Tensorflow, OpenCv, Javascript, Bootstrap",
+    techStack: "Flask,Tensorflow,OpenCv,Javascript,Bootstrap",
     timeline: "Sep 2023 – Present",
     description:
       "A web app to detect potato laef blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
@@ -117,7 +117,7 @@ const projects = [
   {
     id: 4,
     title: "Todo App",
-    techStack: "Flask, Html & CSS, JavaScript, jQuery",
+    techStack: "Flask,Html & CSS,JavaScript,jQuery",
     timeline: "Sep 2023 – Present",
     description:
       "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
@@ -131,7 +131,7 @@ const projects = [
   {
     id: 6,
     title: "Web based remote command runner using CGI",
-    techStack: "Python, Html, RHEL8, Docker, Flask",
+    techStack: "Python,Html,RHEL8,Docker,Flask",
     timeline: "Sep 2023 – Present",
     description:
       "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
@@ -145,7 +145,7 @@ const projects = [
   {
     id: 5,
     title: "IR Remote Controller for PC",
-    techStack: "Tkinter, Arduino, Pyautogui, Python",
+    techStack: "Tkinter,Arduino,Pyautogui,Python",
     timeline: "Sep 2023 – Present",
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
@@ -159,7 +159,7 @@ const projects = [
   {
     id: 7,
     title: "Weather App",
-    techStack: "Html, CSS, JavaScript",
+    techStack: "Html,CSS,JavaScript",
     timeline: "Sep 2023 – Present",
     description:
       "A simple weather app that displays weather information using OpenWeather API.",

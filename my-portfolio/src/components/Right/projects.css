@@ -31,6 +31,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(221, 221, 221, 0.2) rgba(0, 0, 0, 0.1);
   position: relative;
+  z-index: -1;
   /*place child divs relative to this container*/
 }
 
@@ -62,7 +63,7 @@
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   /* border:1px solid  #61dafbb9; */
-  transition: 0.3s ease-in-out;
+  animation: fadeInAnimation 0.3s ease-in-out forwards;
 }
 
 .project-box:hover {

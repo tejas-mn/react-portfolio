@@ -95,6 +95,10 @@ p {
   cursor: pointer;
 }
 
+.page-btn:hover{
+  background-color: var(--btn-color-light-hover) !important;
+}
+
 li {
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   color: var(--text-color-light) !important;
@@ -344,6 +348,10 @@ section>p {
     /* display: block; */
   }
 
+  .exp-ul{
+    padding-left: 30px !important;
+  }
+
   .right-nav {
     /*display: none;*/
     padding: 8px;
@@ -458,7 +466,9 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; 
+  margin : 0px;
+  margin-block-end: -5px;
 }
 
 h6 {
@@ -523,4 +533,12 @@ p {
 
 .project-title {
   margin-bottom: 10px !important;
+}
+
+.exp-list{
+  margin-block-end:10px;
+}
+
+.search-list-item:hover{
+  background-color: var(--btn-color-light-hover);
 }
