@@ -5,7 +5,7 @@ import { Modal } from "./utils/Modal";
 import ProjectModal from "./projectModal";
 import { SearchBar } from "./SearchBar";
 import { ProjectBox } from "./ProjectBox";
-import { Tags } from "./Tags";
+import TagContainer  from "./Tags";
 
 function ProjectsGrid({ isVisible }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -30,18 +30,25 @@ function ProjectsGrid({ isVisible }) {
   const closeModal = () => {
     setModalOpen(false);
   };
-  
+
   const tags = ["React", "C# .NET", "Flask", "Python"];
   const [tagsState, setTags] = useState([]);
+  
+  const handleTagClick = (tagToRemove) => {
+    const updatedTags = tagsState.filter((tag) => tag !== tagToRemove);
+    const updatedProjects = filteredProjects.filter(
+      (project) => !project.techStack.toLowerCase().split(",").includes(tagToRemove.toLowerCase())
+    );
+    setTags(updatedTags);
+    setFilteredProjects(updatedProjects);
+  };
 
   return (
     <>
       <div style={styles.searchContainer}>
-        <Tags
+        <TagContainer
           tags={tagsState}
-          setTags={setTags}
-          setFilteredProjects={setFilteredProjects}
-          filteredProjects={filteredProjects}
+          handleTagClick={handleTagClick}
         />
 
         <SearchBar
