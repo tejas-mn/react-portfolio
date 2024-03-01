@@ -78,7 +78,7 @@ const PaginatedItemList = () => {
 export function ProjectsList() {
   return (
     <>
-      <PaginationProvider itemsPerPage={3} items={projects}>
+      <PaginationProvider itemsPerPage={4} items={projects}>
         <PaginatedItemList />
         <Pagination />
       </PaginationProvider>
