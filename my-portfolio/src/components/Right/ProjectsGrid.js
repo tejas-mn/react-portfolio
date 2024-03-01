@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
-import { Modal } from "./utils/Modal";
+import Modal from "./utils/Modal";
 import ProjectModal from "./projectModal";
-import  SearchBar  from "./SearchBar";
-import { ProjectBox } from "./ProjectBox";
-import TagContainer  from "./TagContainer";
+import SearchBar from "./SearchBar";
+import ProjectBox from "./ProjectBox";
+import TagContainer from "./TagContainer";
 
 function ProjectsGrid({ isVisible }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -32,11 +32,15 @@ function ProjectsGrid({ isVisible }) {
   };
 
   const [tagsState, setTags] = useState([]);
-  
+
   const handleTagClick = (tagToRemove) => {
     const updatedTags = tagsState.filter((tag) => tag !== tagToRemove);
     const updatedProjects = filteredProjects.filter(
-      (project) => !project.techStack.toLowerCase().split(",").includes(tagToRemove.toLowerCase())
+      (project) =>
+        !project.techStack
+          .toLowerCase()
+          .split(",")
+          .includes(tagToRemove.toLowerCase())
     );
     setTags(updatedTags);
     setFilteredProjects(updatedProjects);
@@ -45,10 +49,7 @@ function ProjectsGrid({ isVisible }) {
   return (
     <>
       <div style={styles.searchContainer}>
-        <TagContainer
-          tags={tagsState}
-          handleTagClick={handleTagClick}
-        />
+        <TagContainer tags={tagsState} handleTagClick={handleTagClick} />
 
         <SearchBar
           setTags={setTags}
@@ -89,7 +90,7 @@ const styles = {
     backgroundColor: "var(--right-nav-color-light)",
     borderRadius: "10px",
     marginBottom: "10px",
-  }
+  },
 };
 
 export default ProjectsGrid;
