@@ -538,3 +538,7 @@ p {
 .exp-list{
   margin-block-end:10px;
 }
+
+.search-list-item:hover{
+  background-color: var(--btn-color-light-hover);
+}
