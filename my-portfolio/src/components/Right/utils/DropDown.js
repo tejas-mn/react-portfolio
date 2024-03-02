@@ -25,7 +25,7 @@ const styles = {
     position: "absolute",
     top: "30px",
     listStyle: "none",
-    width: "145px",
+    width: "70%",
     paddingLeft: "0px",
     borderRadius: "5px",
   },
