@@ -9,9 +9,10 @@ function Tag({ tag, onClick }) {
 }
 
 function TagList({ tags, onTagClick }) {
+  
   return (
     <div style={styles.tagContainer}>
-      {tags.map((tag, index) => (
+      {Array.from(tags).map((tag, index) => (
         <Tag key={index} tag={tag} onClick={() => onTagClick(tag)} />
       ))}
     </div>
