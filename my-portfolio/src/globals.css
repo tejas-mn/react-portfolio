@@ -1,0 +1,83 @@
+:root {
+  --app-bg-color-dark: #282c34;
+  --app-bg-color-light: #f9f9f7;
+  --left-bg-color-dark: hsl(240, 2%, 10%);
+  --left-bg-color-light: #f4f3ef;
+  --right-nav-color-dark: rgba(37, 36, 36, 0.671);
+  --right-nav-color-light: #efeee8;
+  --btn-color-light: #ffffff;
+  --btn-color-dark: #2d2d2d;
+  --btn-color-dark-hover: #3d3d3d;
+  --btn-color-light-hover: #f7f7f7;
+  --skills-color-dark: hsl(0, 0%, 19%);
+  --skills-color-light: var(--btn-color-light);
+  --text-color-light: rgb(200, 200, 200);
+  --text-color-dark: rgb(0, 0, 0);
+  --link-light-theme: whitesmoke;
+  --link-dark-theme: black;
+  --index-bg-dark: linear-gradient(
+    11deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(0, 0, 0, 1) 48%,
+    rgba(45, 45, 45, 1) 100%
+  );
+  --index-bg-light: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 251, 251, 0.715) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.light-theme {
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --bg-navbar: var(--bg-navbar-light);
+  --text-color-light: rgb(0, 0, 0);
+}
+
+.dark-theme {
+  --app-bg-color-light: #282c34;
+  --left-bg-color-light: hsl(240, 2%, 10%);
+  --link-light-theme: var(--link-dark-theme);
+  --btn-color-light: var(--btn-color-dark);
+  --btn-color-light-hover: var(--btn-color-dark-hover);
+  --text-color-light: rgb(200, 200, 200);
+  --right-nav-color-light: var(--right-nav-color-dark);
+  --skills-color-light: var(--skills-color-dark);
+  --index-bg-light: var(--index-bg-dark);
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  color: #282c34 !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+  color: var(--text-color-light) !important;
+}
+
+h3 {
+  font-size: 2rem !important;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin: 0px;
+  margin-block-end: -5px;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.2rem !important;
+}

@@ -5,8 +5,6 @@ import { ThemedApp } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { LeftComponent } from "./components/Left/LeftComponent";
-import { RightComponent } from "./components/Right/RightComponent";
 import { Experience } from "./components/Right/Experience";
 import { About } from "./components/Right/About";
 import { Work } from "./components/Right/Work";
