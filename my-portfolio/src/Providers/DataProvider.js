@@ -194,7 +194,7 @@ const userInfo = {
   name: "Tejas M N",
   email: "tejasmn2020@gmail.com",
   location: "Bangalore, India",
-  profession: "SDET | CSGI",
+  profession: "SDET @ CSGI",
   headline: "Aspiring SDET looking for transitioning into SDE Role",
   links: {
     resume:
@@ -203,6 +203,7 @@ const userInfo = {
     github: "https://www.github.com/tejas-mn",
     linkedin: "https://www.linkedin.com/in/tejasmn/",
   },
+  bannerImages : ["https://www.otakukulture.in/wp-content/uploads/2023/09/Op.png", "https://i.pinimg.com/550x/d9/11/96/d91196b3dc2628506dfca2e92ccbf22e.jpg", "https://i.pinimg.com/736x/99/9c/95/999c95488c111f78e8de0298e2510e7f.jpg", "https://i.pinimg.com/736x/12/cd/97/12cd9772e6dad8b7af73c2b0880ddba5.jpg", "https://gifdb.com/images/high/aesthetic-anime-pixelated-background-bnuuk8wf00lrrcvf.gif", "https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif", "https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769"],
   profilePic: pics[1],
   aboutInfo:
     "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET in US based product company. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript, SQL, C#, and React. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies.",

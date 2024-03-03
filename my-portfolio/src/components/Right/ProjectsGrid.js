@@ -31,10 +31,10 @@ function ProjectsGrid({ isVisible }) {
     setModalOpen(false);
   };
 
-  const [tagsState, setTags] = useState([]);
+  const [tagsState, setTags] = useState(new Set());
 
   const handleTagClick = (tagToRemove) => {
-    const updatedTags = tagsState.filter((tag) => tag !== tagToRemove);
+    const updatedTags = Array.from(tagsState).filter((tag) => tag !== tagToRemove);
     const updatedProjects = filteredProjects.filter(
       (project) =>
         !project.techStack
@@ -42,7 +42,7 @@ function ProjectsGrid({ isVisible }) {
           .split(",")
           .includes(tagToRemove.toLowerCase())
     );
-    setTags(updatedTags);
+    setTags(new Set(updatedTags));
     setFilteredProjects(updatedProjects);
   };
 

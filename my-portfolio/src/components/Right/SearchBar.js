@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
-import DropDown from "./utils/DropDown"; 
+import DropDown from "./utils/DropDown";
 
 function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
-  const [searchResult, setSearchResult] = useState(defaultTags);
+  const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(false);
 
   const handleOnFocus = () => setIsFocused(true);
@@ -16,29 +16,36 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
     if (value.trim() !== "") {
       fetchSearchResults(value);
     } else {
-      setSearchResult(defaultTags);
+      setSearchResult(new Set());
     }
   };
 
   const fetchSearchResults = (value) => {
     const requestOptions = {
       method: "GET",
-      headers: new Headers({ "apikey": "xxxxxx" }),
+      headers: new Headers({ apikey: "xxxxxx" }),
     };
 
     fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
-      .then((res) => setSearchResult(res.json()))
-      .catch((err) => console.error(err));
+      .then((res) => res.json())
+      .then((data) => setSearchResult(new Set(data.filter((d)=>!tagsState.has(d)))))
+      .catch((err) => {
+        setSearchResult(new Set(defaultTags.filter((tag)=>!tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
+        console.error(err)
+      });
   };
 
   useEffect(() => {
-    if (tagsState.length === 0) {
+    if (tagsState.size === 0) {
       setFilteredProjects(projects);
     } else {
       setFilteredProjects(
         projects.filter((project) =>
-          tagsState.some((tag) =>
-            project.techStack.toLowerCase().split(",").includes(tag.toLowerCase())
+          Array.from(tagsState).some((tag) =>
+            project.techStack
+              .toLowerCase()
+              .split(",")
+              .includes(tag.toLowerCase())
           )
         )
       );
@@ -47,20 +54,19 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   const handleAddTag = (tag) => {
     if (tag.trim() !== "") {
-      if(tagsState.length > 4){
+      if (tagsState.size > 4) {
         alert("Max Tags Reached");
         return;
-      }
-      else{
-        setTags([...tagsState, tag]);
+      } else {
+        setTags(new Set([...tagsState, tag]));
       }
       setSearchText("");
-      setSearchResult(defaultTags);
+      setSearchResult(new Set());
     }
   };
 
   return (
-    <div style={{ position: "relative"}}>
+    <div style={{ position: "relative" }}>
       <input
         placeholder="Search Eg.React.."
         type="text"
@@ -79,7 +85,7 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
       </button>
 
       {isFocused && (
-        <DropDown options={searchResult} onSelect={handleAddTag} />
+        <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} />
       )}
     </div>
   );
@@ -97,8 +103,8 @@ const styles = {
     borderRight: "none",
     height: "25px",
     backgroundColor: "var(--btn-color-light)",
-    color: "var(--text-color-light)"
-  }
+    color: "var(--text-color-light)",
+  },
 };
 
 export default SearchBar;

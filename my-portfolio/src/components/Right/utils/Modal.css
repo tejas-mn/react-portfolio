@@ -40,7 +40,8 @@
     opacity: 1;
     pointer-events: auto;
     transition: transform 0.3s ease-in-out;
-    backdrop-filter: blur(6px) grayscale(1);
+    /* backdrop-filter: blur(6px) grayscale(1); */
+    background-color: rgba(0, 0, 0, 0.041);
 }
 
 .modal.open {

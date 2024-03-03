@@ -5,11 +5,10 @@ import { ThemedApp } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { LeftComponent } from "./components/Left/LeftComponent";
-import { RightComponent } from "./components/Right/RightComponent";
 import { Experience } from "./components/Right/Experience";
 import { About } from "./components/Right/About";
 import { Work } from "./components/Right/Work";
+import Contact from "./components/Right/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,12 +16,11 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ThemedApp />}>
-          <Route path="about" element={<About />} />
-          <Route path="experience" element={<Experience />} />
-          <Route path="work" element={<Work />} />
+          <Route exact path="about" element={<About />} />
+          <Route exact path="experience" element={<Experience />} />
+          <Route exact path="work" element={<Work />} />
+          <Route exact path="contact" element={<Contact/>} />
         </Route>
-        <Route path="/left" element={<LeftComponent />}></Route>
-        <Route path="/right" element={<RightComponent />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,8 +1,18 @@
 :root {
   --index-bg-color-dark: #282c34;
   --index-bg-color-light: #f9f9f7;
-  --index-bg-dark: linear-gradient(11deg, rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 48%, rgba(45, 45, 45, 1) 100%);
-  --index-bg-light: linear-gradient(140deg, rgba(255, 255, 255, 1) 0%, rgba(255, 251, 251, 0.715) 100%, rgba(255, 255, 255, 1) 100%);
+  --index-bg-dark: linear-gradient(
+    11deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(0, 0, 0, 1) 48%,
+    rgba(45, 45, 45, 1) 100%
+  );
+  --index-bg-light: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 251, 251, 0.715) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 * {
@@ -19,17 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-size: cover;
-  /* background: hsl(184, 100%, 6%); */
-  /* z-index: -1; */
-  /* background-image: url('https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-background_53876-101652.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 html::-webkit-scrollbar {
   width: 8px;
@@ -45,5 +45,5 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* *{
-  outline: 1px solid white;
+  outline: 1px solid black;
 } */
