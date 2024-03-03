@@ -1,27 +1,30 @@
-import { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { useTheme } from "../../../Providers/ThemeProvider";
 
-export default function ParticlesBackground() {
-  const [init, setInit] = useState(false);
+function ParticlesBackground() {
+  const [isInitialized, setIsInitialized] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    initParticles();
   }, []);
+
+  const initParticles = async () => {
+    await initParticlesEngine(async (engine) => {
+      await loadFull(engine);
+    });
+    setIsInitialized(true);
+  };
 
   const particlesLoaded = (container) => {
     console.log(container);
   };
 
   const bg = {
-    "light-theme": "var( --index-bg-light)",
-    "dark-theme": "var( --index-bg-dark)",
+    "light-theme": "var(--index-bg-light)",
+    "dark-theme": "var(--index-bg-dark)",
   };
 
   const particleColor = {
@@ -29,8 +32,8 @@ export default function ParticlesBackground() {
     "light-theme": "#000000",
   };
 
-  const options = useMemo(
-    () => ({
+  const options = useMemo(() => {
+    return {
       background: {
         color: {
           value: bg[theme],
@@ -96,22 +99,24 @@ export default function ParticlesBackground() {
         },
       },
       detectRetina: true,
-    }),
-    []
-  );
+    };
+  }, [theme]);
 
   useEffect(() => {
     document.querySelector("body").style.background = bg[theme];
     options.particles.color = particleColor[theme];
     options.particles.links.color = particleColor[theme];
-    // eslint-disable-next-line
   }, [theme]);
 
   return (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={options}
-    />
+    isInitialized && (
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
+    )
   );
 }
+
+export default ParticlesBackground;
