@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme } from '../../Providers/ThemeProvider';
 import './Settings.css';
+import { NavBar } from './Navbar';
 
 export const Settings = () => {
   const { Currtheme, toggleTheme } = useTheme();
@@ -83,17 +84,31 @@ export const Settings = () => {
       <div class="settings-item">
         <p>Project Search: </p>
         <label class="radio-label">
-          <input type="radio" name="feature" id="feature1Radio" value="feature1" checked/>
-            <span class="radio-custom"></span>
-            Enable 
+          <input type="radio" name="feature" id="feature1Radio" value="feature1" checked />
+          <span class="radio-custom"></span>
+          Enable
         </label>
         <br />
         <label class="radio-label">
-          <input type="radio" name="feature" id="feature2Radio" value="feature2"/>
-            <span class="radio-custom"></span>
-            Disable 
+          <input type="radio" name="feature" id="feature2Radio" value="feature2" />
+          <span class="radio-custom"></span>
+          Disable
         </label>
       </div>
+
+      <div className="settings-item">
+        <p>Upload your data.json: </p>
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        {profilePicture && (
+          <div>
+            <img src={profilePicture} alt="Profile" className="profile-picture" />
+          </div>
+        )}
+      </div>
+      <p>Reorder Nav Buttons: </p>
+      <NavBar />
+
+      <br />
 
       <div class="button-container">
         <button className="view-btn" id="saveButton">Save</button>

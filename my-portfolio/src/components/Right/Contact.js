@@ -22,9 +22,15 @@ export default function Contact() {
         </button>
       </div>
 
-      <Modal isOpen={modalOpen} onClose={closeModal}>
-        <Settings />
-      </Modal>
+      <div style={{
+       
+      }}>
+        <Modal isOpen={modalOpen} onClose={closeModal}>
+          <Settings />
+        </Modal>
+      </div>
+
+
     </section>
   );
 }
