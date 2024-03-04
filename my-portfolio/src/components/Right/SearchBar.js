@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
-import DropDown from "./utils/DropDown";
+import DropDown from "../utils/DropDown";
 
 function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];

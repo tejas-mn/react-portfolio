@@ -1,5 +1,5 @@
 import { Work } from "./Work";
-import Modal from "./utils/Modal";
+import Modal from "../utils/Modal";
 import { useState } from "react";
 
 export default function Contact() {

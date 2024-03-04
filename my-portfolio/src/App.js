@@ -1,5 +1,5 @@
 import "./App.css";
-import ParticlesBackground from "./components/Right/utils/ParticlesBackground";
+import ParticlesBackground from "./components/utils/ParticlesBackground";
 import { LeftComponent } from "./components/Left/LeftComponent";
 import { RightComponent } from "./components/Right/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";

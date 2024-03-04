@@ -1,12 +1,12 @@
 import React from "react";
 import { projects } from "../../Providers/DataProvider";
-import { Pagination } from "./utils/Pagination";
+import { Pagination } from "../utils/Pagination";
 import {
   PaginationProvider,
   usePagination,
 } from "../../Providers/PaginationProvider";
 import { useAutoBoldText } from "../../hooks/customHooks";
-import { GithubProjectSvg, ProjectLinkSvg } from "./utils/Svg";
+import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
 
 function ProjectItem({ currentProject }) {
   return (

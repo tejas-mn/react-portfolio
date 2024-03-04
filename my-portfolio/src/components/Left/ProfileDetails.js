@@ -1,5 +1,5 @@
 import { userInfo } from "../../Providers/DataProvider";
-import { EmailSvg, Locationsvg } from "../Right/utils/Svg";
+import { EmailSvg, Locationsvg } from "../utils/Svg";
 
 export function ProfileDetails() {
   return (

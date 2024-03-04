@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
-import Modal from "./utils/Modal";
+import Modal from "../utils/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
 import ProjectBox from "./ProjectBox";
