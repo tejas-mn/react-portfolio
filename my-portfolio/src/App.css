@@ -79,7 +79,9 @@ p {
   letter-spacing: 0.5px;
   color: var(--text-color-light) !important;
 }
-
+label {
+  color: var(--text-color-light) !important;
+}
 li {
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   color: var(--text-color-light) !important;

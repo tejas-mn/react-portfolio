@@ -104,19 +104,19 @@ function ParticlesBackground() {
 
   useEffect(() => {
     document.querySelector("body").style.background = bg[theme];
-    options.particles.color = particleColor[theme];
-    options.particles.links.color = particleColor[theme];
+    // options.particles.color = particleColor[theme];
+    // options.particles.links.color = particleColor[theme];
   }, [theme]);
 
-  return (
-    isInitialized && (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    )
-  );
+  // return (
+  //   isInitialized && (
+  //     <Particles
+  //       id="tsparticles"
+  //       particlesLoaded={particlesLoaded}
+  //       options={options}
+  //     />
+  //   )
+  // );
 }
 
 export default ParticlesBackground;

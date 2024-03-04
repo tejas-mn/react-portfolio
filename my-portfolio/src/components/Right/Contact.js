@@ -1,4 +1,4 @@
-import { Work } from "./Work";
+import { Settings } from "./Settings";
 import Modal from "../utils/Modal";
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ export default function Contact() {
       </div>
 
       <Modal isOpen={modalOpen} onClose={closeModal}>
-        <Work />
+        <Settings />
       </Modal>
     </section>
   );
