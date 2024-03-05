@@ -110,3 +110,10 @@
   background-color: var(--text-color-light);
   border-radius: 50%;
 }
+#saveButton{
+  width: 100% !important;
+}
+
+#closeButton{
+  width: 100% !important;
+}

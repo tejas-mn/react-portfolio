@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
 import DropDown from "../utils/DropDown";
+import AlertMessage from "../utils/Alert";
+import { useAlert } from "../../Providers/AlertProvider";
 
 function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(false);
+  const {alert, showAlert, hideAlert} = useAlert();
 
   const handleOnFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
@@ -55,7 +58,7 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const handleAddTag = (tag) => {
     if (tag.trim() !== "") {
       if (tagsState.size > 4) {
-        alert("Max Tags Reached");
+        showAlert("Max tags Reached - " + tagsState.size);
         return;
       } else {
         setTags(new Set([...tagsState, tag]));
