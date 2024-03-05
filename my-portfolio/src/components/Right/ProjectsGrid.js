@@ -73,7 +73,7 @@ function ProjectsGrid({ isVisible }) {
             imageUrl={currentProject.imageUrl}
             githubUrl={currentProject.githubUrl}
             liveUrl={currentProject.liveUrl}
-            tags={currentProject.techStack.split(",")}
+            tags={currentProject.techStackList}
             description={currentProject.description}
           />
         </Modal>

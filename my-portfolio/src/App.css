@@ -61,19 +61,7 @@
   margin: 5px;
 }
 
-.project-list {
-  background-color: var(--btn-color-light);
-  border-radius: 8px;
-  padding: 10px;
-}
 
-.proj-link-list-btn {
-  text-decoration: none;
-  color: var(--text-color-light);
-  background-color: var(--skills-color-light);
-  padding: 0px 1px;
-  border-radius: 5px;
-}
 
 p {
   letter-spacing: 0.5px;
@@ -174,7 +162,7 @@ section > p {
 .skills > div:hover {
   cursor: pointer;
   transition: 0.1s;
-  transform: scale(1.03);
+  background-color: var(--btn-color-light-hover);
 }
 
 .view-btn {

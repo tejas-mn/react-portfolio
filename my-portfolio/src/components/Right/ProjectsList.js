@@ -13,7 +13,7 @@ function ProjectItem({ currentProject }) {
     <p className="project-list">
       <b style={styles.title}>{currentProject.title}</b>
       {" | "}
-      <i>{currentProject.techStack}</i>
+      {currentProject.techStackList.map(p => <i className="techStackItem">{p}</i>)}
       <i style={styles.timeline}> ({currentProject.timeline})</i>
       <div>
         <a
@@ -69,4 +69,10 @@ export function ProjectsList() {
 const styles = {
   title: { fontSize: "larger" },
   timeline: { float: "right" },
+  techStackItem: {
+    margin: '2px',
+    borderRadius: '5px',
+    padding: '0px 10px',
+    backgroundColor: 'var(--btn-color-light-hover)'
+  }
 };

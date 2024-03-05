@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
 import DropDown from "../utils/DropDown";
-import AlertMessage from "../utils/Alert";
 import { useAlert } from "../../Providers/AlertProvider";
 
 function SearchBar({ setTags, setFilteredProjects, tagsState }) {
@@ -24,9 +23,10 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   };
 
   const fetchSearchResults = (value) => {
+    const apiKey = process.env.REACT_APP_API_KEY;
     const requestOptions = {
       method: "GET",
-      headers: new Headers({ apikey: "xxxxxx" }),
+      headers: new Headers({ apikey: apiKey }),
     };
 
     fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
