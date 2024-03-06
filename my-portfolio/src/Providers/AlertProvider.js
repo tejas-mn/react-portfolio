@@ -3,18 +3,18 @@ import React, { createContext, useContext, useState } from "react";
 const AlertContext = createContext();
 
 export const AlertProvider = ({children}) => {
-    const [alert, setAlert ] = useState(null);
+    const [alerts, setAlert ] = useState([]);
 
-    const showAlert = (message) => {
-        setAlert(message);
+    const showAlert = (alertObj) => {
+        setAlert([...alerts, alertObj]);
     }
 
-    const hideAlert = () => {
-        setAlert(null);
+    const hideAlert = (index) => {
+        setAlert(alerts.filter((e,i) => i!=index));
     }
 
     return (
-        <AlertContext.Provider value={{alert, showAlert, hideAlert}}>
+        <AlertContext.Provider value={{alerts, showAlert, hideAlert}}>
             {children}
         </AlertContext.Provider>
     )

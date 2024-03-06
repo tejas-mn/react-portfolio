@@ -8,7 +8,7 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(false);
-  const {alert, showAlert, hideAlert} = useAlert();
+  const { alerts, showAlert, hideAlert } = useAlert();
 
   const handleOnFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
@@ -31,9 +31,9 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
     fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
       .then((res) => res.json())
-      .then((data) => setSearchResult(new Set(data.filter((d)=>!tagsState.has(d)))))
+      .then((data) => setSearchResult(new Set(data.filter((d) => !tagsState.has(d)))))
       .catch((err) => {
-        setSearchResult(new Set(defaultTags.filter((tag)=>!tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
+        setSearchResult(new Set(defaultTags.filter((tag) => !tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
         console.error(err)
       });
   };
@@ -58,7 +58,10 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const handleAddTag = (tag) => {
     if (tag.trim() !== "") {
       if (tagsState.size > 4) {
-        showAlert("Max tags Reached - " + tagsState.size);
+        showAlert({
+          message: "Max tags Reached - " + tagsState.size,
+          type: "error"
+        });
         return;
       } else {
         setTags(new Set([...tagsState, tag]));

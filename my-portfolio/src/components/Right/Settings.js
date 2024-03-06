@@ -7,7 +7,7 @@ import { useAlert } from '../../Providers/AlertProvider';
 export const Settings = () => {
   const { Currtheme, toggleTheme } = useTheme();
   const [theme, setTheme] = useState('Light');
-  const {alert, showAlert} = useAlert();
+  const { alert, showAlert } = useAlert();
   const [enableFeature1, setEnableFeature1] = useState(false);
   const [enableFeature2, setEnableFeature2] = useState(false);
   const [profilePicture, setProfilePicture] = useState(null);
@@ -112,7 +112,11 @@ export const Settings = () => {
       <br />
 
       <div class="button-container">
-        <button className="view-btn" id="saveButton" onClick={()=>showAlert("Saved Successfully")}>Save</button>
+        <button className="view-btn" id="saveButton" onClick={() => showAlert({
+          message: "Saved Successfully",
+          type: "success"
+        }
+        )}>Save</button>
         {/* <button className="view-btn" id="closeButton">Close</button> */}
       </div>
     </div>

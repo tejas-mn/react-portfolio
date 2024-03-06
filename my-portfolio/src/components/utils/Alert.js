@@ -1,19 +1,39 @@
-import { useState } from 'react';
 import { useAlert } from '../../Providers/AlertProvider';
 
-function AlertMessage() {
-    const {alert, hideAlert} = useAlert();
+function Alert({ alertObj }) {
+    const { hideAlert } = useAlert();
 
-    return (
-        alert && <div className="alert alert-warning alert-dismissible fade show" role="alert">
+    return <div key={alertObj.id}
+        style={{
+            top: alertObj.id * 50 + "px",
+            backgroundColor: bg[alertObj.type]
+        }}
+        className="alert" role="alert">
         <strong style={{
-            color:'white'
-        }}>{alert}</strong>
-        <button type="button" className="btn-close" onClick={hideAlert} aria-label="Close"><strong style={{
-            color:'white'
-        }}>X</strong></button>
+            color: 'white'
+        }}>{alertObj.message}</strong>
+        <button type="button" className="btn-close" onClick={() => hideAlert(alertObj.id)} aria-label="Close"><strong style={{
+            color: 'white'
+        }}>✖</strong></button>
     </div>
-    );
 }
 
-export default AlertMessage;
+function AlertMessages() {
+    const { alerts } = useAlert();
+
+    if (alerts.length > 0) {
+        return <>
+            {
+                alerts.map((alertObj, index) => <Alert alertObj={{ ...alertObj, id: index }} />)
+            }
+        </>
+    }
+}
+
+const bg = {
+    warning: "#ffa143",
+    success: "#6aa164",
+    error: "#ff242484"
+}
+
+export default AlertMessages;
