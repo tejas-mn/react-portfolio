@@ -61,6 +61,7 @@ function ProjectsGrid({ isVisible }) {
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
         {filteredProjects.map((project) => (
           <ProjectBox
+            key={project.id}
             project={project}
             openModal={openModal}
             setCurrentProject={setCurrentProject}
@@ -69,6 +70,7 @@ function ProjectsGrid({ isVisible }) {
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <ProjectModal
+            key={currentProject.id}
             title={currentProject.title}
             imageUrl={currentProject.imageUrl}
             githubUrl={currentProject.githubUrl}

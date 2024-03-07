@@ -31,7 +31,7 @@ function AlertMessages() {
 const bg = {
     warning: "#ffa143",
     success: "#6aa164",
-    error: "#ff242484"
+    error: "#FF2424"
 }
 
 export default AlertMessages;
