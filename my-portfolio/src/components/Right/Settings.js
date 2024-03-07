@@ -82,17 +82,17 @@ export const Settings = () => {
         </select>
       </div>
 
-      <div class="settings-item">
+      <div className="settings-item">
         <p>Project Search: </p>
-        <label class="radio-label">
+        <label className="radio-label">
           <input type="radio" name="feature" id="feature1Radio" value="feature1" checked />
-          <span class="radio-custom"></span>
+          <span className="radio-custom"></span>
           Enable
         </label>
         <br />
-        <label class="radio-label">
+        <label className="radio-label">
           <input type="radio" name="feature" id="feature2Radio" value="feature2" />
-          <span class="radio-custom"></span>
+          <span className="radio-custom"></span>
           Disable
         </label>
       </div>
@@ -111,7 +111,7 @@ export const Settings = () => {
 
       <br />
 
-      <div class="button-container">
+      <div className="button-container">
         <button className="view-btn" id="saveButton" onClick={() => showAlert({
           message: "Saved Successfully",
           type: "success"

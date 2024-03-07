@@ -21,13 +21,11 @@ function Alert({ alertObj }) {
 function AlertMessages() {
     const { alerts } = useAlert();
 
-    if (alerts.length > 0) {
         return <>
             {
-                alerts.map((alertObj, index) => <Alert alertObj={{ ...alertObj, id: index }} />)
+                alerts.map((alertObj, index) => <Alert  key={alertObj} alertObj={{ ...alertObj, id: index }} />)
             }
         </>
-    }
 }
 
 const bg = {
