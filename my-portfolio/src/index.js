@@ -4,6 +4,7 @@ import "./index.css";
 import { ThemedApp } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
+import { FeatureToggleProvider } from "./Providers/FeatureProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Experience } from "./components/Right/Experience";
 import { About } from "./components/Right/About";
@@ -11,9 +12,11 @@ import { Work } from "./components/Right/Work";
 import Contact from "./components/Right/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <AlertProvider>
+    <FeatureToggleProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ThemedApp />}>
@@ -24,8 +27,8 @@ root.render(
           </Route>
         </Routes>
       </BrowserRouter>
+      </FeatureToggleProvider>
     </AlertProvider>
-
   </React.StrictMode>
 );
 

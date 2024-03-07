@@ -3,9 +3,13 @@ import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
 import { useTheme } from "../../Providers/ThemeProvider";
 import "./Left.css";
+import { useFeatureToggle } from "../../Providers/FeatureProvider";
+import { Features } from "../../Providers/Features";
 
 export function LeftComponent() {
   const { theme, toggleTheme } = useTheme();
+  const { features } = useFeatureToggle();
+
   return (
     <>
       <div className="left">
@@ -14,13 +18,15 @@ export function LeftComponent() {
           <ProfileDetails />
           <ProfileLinks />
         </div>
-        <button
-          style={styles.btn}
-          className="view-btn theme-btn"
-          onClick={() => toggleTheme()}
-        >
-          {theme === "light-theme" ? "🌗" : "🌓"}
-        </button>
+        {
+          features[Features.THEME_TOGGLE] && <button
+            style={styles.btn}
+            className="view-btn theme-btn"
+            onClick={() => toggleTheme()}
+          >
+            {theme === "light-theme" ? "🌗" : "🌓"}
+          </button>
+        }
       </div>
     </>
   );

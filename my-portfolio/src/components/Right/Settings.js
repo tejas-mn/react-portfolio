@@ -3,26 +3,17 @@ import { useTheme } from '../../Providers/ThemeProvider';
 import './Settings.css';
 import { NavBar } from './Navbar';
 import { useAlert } from '../../Providers/AlertProvider';
+import { useFeatureToggle } from '../../Providers/FeatureProvider';
+import { Features } from '../../Providers/Features';
 
 export const Settings = () => {
-  const { Currtheme, toggleTheme } = useTheme();
-  const [theme, setTheme] = useState('Light');
-  const { alert, showAlert } = useAlert();
-  const [enableFeature1, setEnableFeature1] = useState(false);
-  const [enableFeature2, setEnableFeature2] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const { showAlert } = useAlert();
   const [profilePicture, setProfilePicture] = useState(null);
+  const { features, toggleFeature } = useFeatureToggle();
 
   const handleThemeChange = (e) => {
-    setTheme(e.target.value);
     toggleTheme();
-  };
-
-  const handleFeature1Change = () => {
-    setEnableFeature1(!enableFeature1);
-  };
-
-  const handleFeature2Change = () => {
-    setEnableFeature2(!enableFeature2);
   };
 
   const handleImageUpload = (e) => {
@@ -38,8 +29,8 @@ export const Settings = () => {
       <div className="settings-item">
         <p>Theme: </p>
         <select value={theme} onChange={handleThemeChange}>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
+          <option value="light-theme">Light</option>
+          <option value="dark-theme">Dark</option>
         </select>
       </div>
 
@@ -48,21 +39,32 @@ export const Settings = () => {
         <label>
           <input
             type="checkbox"
-            checked={enableFeature1}
-            onChange={handleFeature1Change}
+            checked={features[Features.ENABLE_SETTINGS]}
+            onChange={() => toggleFeature(Features.ENABLE_SETTINGS)}
           />
-          Feature 1
+          Settings
         </label>
         <br />
 
         <label>
           <input
             type="checkbox"
-            checked={enableFeature2}
-            onChange={handleFeature2Change}
+            checked={features[Features.THEME_TOGGLE]}
+            onChange={() => toggleFeature(Features.THEME_TOGGLE)}
           />
-          Feature 2
+          Theme Button
         </label>
+        <br />
+
+        <label>
+          <input
+            type="checkbox"
+            checked={features[Features.PROJECT_SEARCH]}
+            onChange={() => toggleFeature(Features.PROJECT_SEARCH)}
+          />
+          Project Search
+        </label>
+
       </div>
       <div className="settings-item">
         <p>Profile Picture: </p>
@@ -74,7 +76,7 @@ export const Settings = () => {
         )}
       </div>
       <div className="settings-item">
-        <p>Project View: </p>
+        <p>Default Project View: </p>
         <select value={theme} onChange={handleThemeChange}>
           <option value="light">Grid</option>
           <option value="dark">List</option>
@@ -82,20 +84,6 @@ export const Settings = () => {
         </select>
       </div>
 
-      <div className="settings-item">
-        <p>Project Search: </p>
-        <label className="radio-label">
-          <input type="radio" name="feature" id="feature1Radio" value="feature1" checked />
-          <span className="radio-custom"></span>
-          Enable
-        </label>
-        <br />
-        <label className="radio-label">
-          <input type="radio" name="feature" id="feature2Radio" value="feature2" />
-          <span className="radio-custom"></span>
-          Disable
-        </label>
-      </div>
 
       <div className="settings-item">
         <p>Upload your data.json: </p>
