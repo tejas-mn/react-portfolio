@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '../../Providers/ThemeProvider';
 import './Settings.css';
 import { NavBar } from './Navbar';
@@ -10,11 +10,45 @@ export const Settings = () => {
   const { theme, toggleTheme } = useTheme();
   const { showAlert } = useAlert();
   const [profilePicture, setProfilePicture] = useState(null);
-  const { features, toggleFeature } = useFeatureToggle();
+  const { features, toggleFeature, setCurrentFeature } = useFeatureToggle();
+  const [currentProjectView, setCurrentProjectView] = useState(Features.PROJECT_DEFAULT_VIEW);
 
   const handleThemeChange = (e) => {
     toggleTheme();
   };
+
+  const handleViewChange = (e) => {
+    // alert(currentProjectView)
+    setCurrentProjectView(e.target.value);
+    setCurrentFeature(e.target.value, true);
+    switch(e.target.value){
+      case Features.PROJECT_LIST_VIEW : 
+      setCurrentFeature(Features.PROJECT_GRID_VIEW, false);
+      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, false); 
+      setCurrentFeature(Features.PROJECT_LIST_VIEW, true);
+      break;
+      case Features.PROJECT_GRID_VIEW : 
+      setCurrentFeature(Features.PROJECT_LIST_VIEW, false);
+      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, false); 
+      setCurrentFeature(Features.PROJECT_GRID_VIEW, true); 
+      break;
+      default : 
+      setCurrentFeature(Features.PROJECT_GRID_VIEW, false);
+      setCurrentFeature(Features.PROJECT_LIST_VIEW, false); 
+      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, true);  
+      
+    }
+  }
+
+  useEffect(()=>{
+    
+  }, [currentProjectView])
+
+  // function getCurrentProjectView(){
+  //   if(features[Features.PROJECT_LIST_VIEW]) return Features.PROJECT_LIST_VIEW;
+  //   if(features[Features.PROJECT_GRID_VIEW]) return Features.PROJECT_GRID_VIEW;
+  //   if(features[Features.PROJECT_DEFAULT_VIEW]) return Features.PROJECT_DEFAULT_VIEW;
+  // }
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -77,10 +111,10 @@ export const Settings = () => {
       </div>
       <div className="settings-item">
         <p>Default Project View: </p>
-        <select value={theme} onChange={handleThemeChange}>
-          <option value="light">Grid</option>
-          <option value="dark">List</option>
-          <option value="light">Default</option>
+        <select  value={currentProjectView} onChange={handleViewChange}>
+          <option value={Features.PROJECT_GRID_VIEW}>Grid</option>
+          <option value={Features.PROJECT_LIST_VIEW}>List</option>
+          <option value={Features.PROJECT_DEFAULT_VIEW}>Default</option>
         </select>
       </div>
 

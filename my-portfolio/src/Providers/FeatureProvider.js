@@ -10,8 +10,12 @@ export const FeatureToggleProvider = ({ children }) => {
         setFeature({...features, [featureName] : !features[featureName]  })
     }
     
+    const setCurrentFeature = (featureName, isEnabled) => {
+        setFeature({...features, [featureName] : isEnabled  })
+    }
+    
     return (
-        <FeatureToggleContext.Provider value={{features, toggleFeature}}>
+        <FeatureToggleContext.Provider value={{features, toggleFeature, setCurrentFeature}}>
             {children}
         </FeatureToggleContext.Provider>
     );
