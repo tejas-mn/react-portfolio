@@ -7,15 +7,15 @@ export const FeatureToggleProvider = ({ children }) => {
     const [features, setFeature] = useState(featureFlags);
 
     const toggleFeature = (featureName) => {
-        setFeature({...features, [featureName] : !features[featureName]  })
+        setFeature({ ...features, [featureName]: !features[featureName] })
     }
-    
-    const setCurrentFeature = (featureName, isEnabled) => {
-        setFeature({...features, [featureName] : isEnabled  })
+
+    const updateFeatures = (featuresToUpdate) => {
+        setFeature({ ...features, ...featuresToUpdate })
     }
-    
+
     return (
-        <FeatureToggleContext.Provider value={{features, toggleFeature, setCurrentFeature}}>
+        <FeatureToggleContext.Provider value={{ features, toggleFeature, updateFeatures }}>
             {children}
         </FeatureToggleContext.Provider>
     );

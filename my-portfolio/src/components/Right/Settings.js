@@ -10,45 +10,44 @@ export const Settings = () => {
   const { theme, toggleTheme } = useTheme();
   const { showAlert } = useAlert();
   const [profilePicture, setProfilePicture] = useState(null);
-  const { features, toggleFeature, setCurrentFeature } = useFeatureToggle();
-  const [currentProjectView, setCurrentProjectView] = useState(Features.PROJECT_DEFAULT_VIEW);
+  const { features, toggleFeature, updateFeatures } = useFeatureToggle();
+  const [currentProjectView, setCurrentProjectView] = useState(getCurrentProjectView());
 
   const handleThemeChange = (e) => {
     toggleTheme();
   };
 
   const handleViewChange = (e) => {
-    // alert(currentProjectView)
     setCurrentProjectView(e.target.value);
-    setCurrentFeature(e.target.value, true);
-    switch(e.target.value){
-      case Features.PROJECT_LIST_VIEW : 
-      setCurrentFeature(Features.PROJECT_GRID_VIEW, false);
-      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, false); 
-      setCurrentFeature(Features.PROJECT_LIST_VIEW, true);
-      break;
-      case Features.PROJECT_GRID_VIEW : 
-      setCurrentFeature(Features.PROJECT_LIST_VIEW, false);
-      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, false); 
-      setCurrentFeature(Features.PROJECT_GRID_VIEW, true); 
-      break;
-      default : 
-      setCurrentFeature(Features.PROJECT_GRID_VIEW, false);
-      setCurrentFeature(Features.PROJECT_LIST_VIEW, false); 
-      setCurrentFeature(Features.PROJECT_DEFAULT_VIEW, true);  
-      
+    switch (e.target.value) {
+      case Features.PROJECT_LIST_VIEW:
+        updateFeatures({
+          [Features.PROJECT_LIST_VIEW]: true,
+          [Features.PROJECT_GRID_VIEW]: false,
+          [Features.PROJECT_DEFAULT_VIEW]: false
+        });
+        break;
+      case Features.PROJECT_GRID_VIEW:
+        updateFeatures({
+          [Features.PROJECT_LIST_VIEW]: false,
+          [Features.PROJECT_GRID_VIEW]: true,
+          [Features.PROJECT_DEFAULT_VIEW]: false
+        });
+        break;
+      default:
+        updateFeatures({
+          [Features.PROJECT_LIST_VIEW]: false,
+          [Features.PROJECT_GRID_VIEW]: false,
+          [Features.PROJECT_DEFAULT_VIEW]: true
+        });
     }
   }
 
-  useEffect(()=>{
-    
-  }, [currentProjectView])
-
-  // function getCurrentProjectView(){
-  //   if(features[Features.PROJECT_LIST_VIEW]) return Features.PROJECT_LIST_VIEW;
-  //   if(features[Features.PROJECT_GRID_VIEW]) return Features.PROJECT_GRID_VIEW;
-  //   if(features[Features.PROJECT_DEFAULT_VIEW]) return Features.PROJECT_DEFAULT_VIEW;
-  // }
+  function getCurrentProjectView() {
+    if (features[Features.PROJECT_LIST_VIEW]) return Features.PROJECT_LIST_VIEW;
+    if (features[Features.PROJECT_GRID_VIEW]) return Features.PROJECT_GRID_VIEW;
+    if (features[Features.PROJECT_DEFAULT_VIEW]) return Features.PROJECT_DEFAULT_VIEW;
+  }
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -111,22 +110,16 @@ export const Settings = () => {
       </div>
       <div className="settings-item">
         <p>Default Project View: </p>
-        <select  value={currentProjectView} onChange={handleViewChange}>
+        <select value={currentProjectView} onChange={handleViewChange}>
           <option value={Features.PROJECT_GRID_VIEW}>Grid</option>
           <option value={Features.PROJECT_LIST_VIEW}>List</option>
           <option value={Features.PROJECT_DEFAULT_VIEW}>Default</option>
         </select>
       </div>
 
-
       <div className="settings-item">
         <p>Upload your data.json: </p>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
-        {profilePicture && (
-          <div>
-            <img src={profilePicture} alt="Profile" className="profile-picture" />
-          </div>
-        )}
       </div>
       <p>Reorder Nav Buttons: </p>
       <NavBar />
