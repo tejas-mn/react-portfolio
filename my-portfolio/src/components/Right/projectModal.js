@@ -1,7 +1,7 @@
 import React from "react";
 import { useAutoBoldText } from "../../hooks/customHooks";
 import "./projects.css";
-import { GithubProjectSvg, ProjectLinkSvg } from "./utils/Svg";
+import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
 
 export default function ProjectModal({
   imageUrl,

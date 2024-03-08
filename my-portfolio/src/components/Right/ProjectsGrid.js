@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
-import Modal from "./utils/Modal";
+import Modal from "../utils/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
 import ProjectBox from "./ProjectBox";
 import TagContainer from "./TagContainer";
+import { Features } from "../../Providers/Features";
+import { useFeatureToggle } from "../../Providers/FeatureProvider";
 
 function ProjectsGrid({ isVisible }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [modalOpen, setModalOpen] = useState(false);
+  const { features } = useFeatureToggle();
   const [currentProject, setCurrentProject] = useState({
     id: "",
     title: "",
@@ -48,7 +51,7 @@ function ProjectsGrid({ isVisible }) {
 
   return (
     <>
-      <div style={styles.searchContainer}>
+      {features[Features.PROJECT_SEARCH] && <div style={styles.searchContainer}>
         <TagContainer tags={tagsState} handleTagClick={handleTagClick} />
 
         <SearchBar
@@ -57,10 +60,11 @@ function ProjectsGrid({ isVisible }) {
           tagsState={tagsState}
         />
       </div>
-
+      }
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
         {filteredProjects.map((project) => (
           <ProjectBox
+            key={project.id}
             project={project}
             openModal={openModal}
             setCurrentProject={setCurrentProject}
@@ -69,11 +73,12 @@ function ProjectsGrid({ isVisible }) {
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <ProjectModal
+            key={currentProject.id}
             title={currentProject.title}
             imageUrl={currentProject.imageUrl}
             githubUrl={currentProject.githubUrl}
             liveUrl={currentProject.liveUrl}
-            tags={currentProject.techStack.split(",")}
+            tags={currentProject.techStackList}
             description={currentProject.description}
           />
         </Modal>

@@ -1,19 +1,19 @@
 import React from "react";
 import { projects } from "../../Providers/DataProvider";
-import { Pagination } from "./utils/Pagination";
+import { Pagination } from "../utils/Pagination";
 import {
   PaginationProvider,
   usePagination,
 } from "../../Providers/PaginationProvider";
 import { useAutoBoldText } from "../../hooks/customHooks";
-import { GithubProjectSvg, ProjectLinkSvg } from "./utils/Svg";
+import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
 
 function ProjectItem({ currentProject }) {
   return (
-    <p className="project-list">
+    <div className="project-list">
       <b style={styles.title}>{currentProject.title}</b>
       {" | "}
-      <i>{currentProject.techStack}</i>
+      {currentProject.techStackList.map(p => <i key={p} className="techStackItem">{p}</i>)}
       <i style={styles.timeline}> ({currentProject.timeline})</i>
       <div>
         <a
@@ -39,7 +39,7 @@ function ProjectItem({ currentProject }) {
       <ul>
         <li className="auto-format">{currentProject.description}</li>
       </ul>
-    </p>
+    </div>
   );
 }
 
@@ -57,16 +57,20 @@ const PaginatedItemList = () => {
 
 export function ProjectsList() {
   return (
-    <>
-      <PaginationProvider itemsPerPage={4} items={projects}>
-        <PaginatedItemList />
-        <Pagination />
-      </PaginationProvider>
-    </>
+    <PaginationProvider itemsPerPage={4} items={projects}>
+      <PaginatedItemList />
+      <Pagination />
+    </PaginationProvider>
   );
 }
 
 const styles = {
   title: { fontSize: "larger" },
   timeline: { float: "right" },
+  techStackItem: {
+    margin: '2px',
+    borderRadius: '5px',
+    padding: '0px 10px',
+    backgroundColor: 'var(--btn-color-light-hover)'
+  }
 };

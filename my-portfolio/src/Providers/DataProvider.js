@@ -62,6 +62,9 @@ const projects = [
     id: 8,
     title: ".NET Web API",
     techStack: "C# .NET, OOPS, SQL",
+    techStackList: [
+      "C#", ".NET", "OOPS", "SQL"
+    ],
     timeline: "Sep 2023 – Present",
     description:
       "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
@@ -76,6 +79,9 @@ const projects = [
     id: 1,
     title: "Gym Management System",
     techStack: "Flask,Bootstrap,JavaScript,SQL",
+    techStackList: [
+      "Flask", "Bootstrap", "JavaScript", "SQL"
+    ],
     timeline: "Sep 2023 – Present",
     description:
       "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
@@ -90,6 +96,9 @@ const projects = [
     id: 2,
     title: "Sorting Visualizer",
     techStack: "React,JavaScript",
+    techStackList: [
+      "React", "Javascript"
+    ],
     timeline: "Sep 2023 – Present",
     description:
       "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
@@ -104,9 +113,12 @@ const projects = [
     id: 3,
     title: "Leaf Disease Detection using CNN",
     techStack: "Flask,Tensorflow,OpenCv,Javascript,Bootstrap",
+    techStackList: [
+      "Flask", "TensorFlow", "Opencv", "Javascript", "Bootstrap"
+    ],
     timeline: "Sep 2023 – Present",
     description:
-      "A web app to detect potato laef blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
+      "A web app to detect potato leaf blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
     imageUrl:
       "https://github.com/tejas-mn/final-year-project/assets/68629215/9a8e5c08-a7a2-4338-83ca-ba3be4ba462d",
     githubUrl:
@@ -118,6 +130,7 @@ const projects = [
     id: 4,
     title: "Todo App",
     techStack: "Flask,Html & CSS,JavaScript,jQuery",
+    techStackList: ["Flask", "Html", "CSS", "JavaScript", "jQuery"],
     timeline: "Sep 2023 – Present",
     description:
       "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
@@ -132,6 +145,7 @@ const projects = [
     id: 6,
     title: "Web based remote command runner using CGI",
     techStack: "Python,Html,RHEL8,Docker,Flask",
+    techStackList: ["Python", "Html", "RHEL8", "Docker", "Flask"],
     timeline: "Sep 2023 – Present",
     description:
       "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
@@ -146,6 +160,7 @@ const projects = [
     id: 5,
     title: "IR Remote Controller for PC",
     techStack: "Tkinter,Arduino,Pyautogui,Python",
+    techStackList: ["Tkinter", "Arduino", "Pyautogui", "Python"],
     timeline: "Sep 2023 – Present",
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
@@ -160,6 +175,7 @@ const projects = [
     id: 7,
     title: "Weather App",
     techStack: "Html,CSS,JavaScript",
+    techStackList: ["Html", "CSS", "JavaScript"],
     timeline: "Sep 2023 – Present",
     description:
       "A simple weather app that displays weather information using OpenWeather API.",
@@ -172,7 +188,7 @@ const projects = [
   },
 ];
 
-let skills = [
+const skills = [
   "DSA",
   "OOPS",
   "Javascript",
@@ -190,6 +206,16 @@ const pics = [
   "https://i.pinimg.com/736x/a3/96/63/a3966351deb43da383db28f854e2f6b3.jpg",
 ];
 
+const banners = [
+  "https://www.otakukulture.in/wp-content/uploads/2023/09/Op.png",
+  "https://i.pinimg.com/550x/d9/11/96/d91196b3dc2628506dfca2e92ccbf22e.jpg",
+  "https://i.pinimg.com/736x/99/9c/95/999c95488c111f78e8de0298e2510e7f.jpg",
+  "https://i.pinimg.com/736x/12/cd/97/12cd9772e6dad8b7af73c2b0880ddba5.jpg",
+  "https://gifdb.com/images/high/aesthetic-anime-pixelated-background-bnuuk8wf00lrrcvf.gif",
+  "https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif",
+  "https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769"
+];
+
 const userInfo = {
   name: "Tejas M N",
   email: "tejasmn2020@gmail.com",
@@ -197,13 +223,12 @@ const userInfo = {
   profession: "SDET @ CSGI",
   headline: "Aspiring SDET looking for transitioning into SDE Role",
   links: {
-    resume:
-      "https://drive.google.com/file/d/1vZlM2naXPM-dFPVBR1X4JRvv49TKBsKo/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1vZlM2naXPM-dFPVBR1X4JRvv49TKBsKo/view?usp=sharing",
     leetcode: "https://www.leetcode.com/tejasmn",
     github: "https://www.github.com/tejas-mn",
     linkedin: "https://www.linkedin.com/in/tejasmn/",
   },
-  bannerImages : ["https://www.otakukulture.in/wp-content/uploads/2023/09/Op.png", "https://i.pinimg.com/550x/d9/11/96/d91196b3dc2628506dfca2e92ccbf22e.jpg", "https://i.pinimg.com/736x/99/9c/95/999c95488c111f78e8de0298e2510e7f.jpg", "https://i.pinimg.com/736x/12/cd/97/12cd9772e6dad8b7af73c2b0880ddba5.jpg", "https://gifdb.com/images/high/aesthetic-anime-pixelated-background-bnuuk8wf00lrrcvf.gif", "https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif", "https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769"],
+  bannerImages: banners,
   profilePic: pics[1],
   aboutInfo:
     "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET in US based product company. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript, SQL, C#, and React. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies.",

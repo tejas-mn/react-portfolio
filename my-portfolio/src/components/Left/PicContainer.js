@@ -21,7 +21,7 @@ export function PicContainer() {
       width: '100%',
       position: 'relative'
     }}>
-      <img className="banner-img" src={banner}></img>
+      <img className="banner-img" src={banner} alt="Banner"></img>
       <div className="pic-container">
         <div className="pic" style={styles.pic}>
           <img src={userInfo.profilePic} alt={userInfo.name}></img>

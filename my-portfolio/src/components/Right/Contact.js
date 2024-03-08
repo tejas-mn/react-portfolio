@@ -1,9 +1,12 @@
-import { Work } from "./Work";
-import Modal from "./utils/Modal";
+import { Settings } from "./Settings";
+import Modal from "../utils/Modal";
 import { useState } from "react";
+import { useFeatureToggle } from "../../Providers/FeatureProvider";
+import { Features } from "../../Providers/Features";
 
 export default function Contact() {
   const [modalOpen, setModalOpen] = useState(false);
+  const { features } = useFeatureToggle();
 
   const openModal = (p) => {
     setModalOpen(true);
@@ -17,14 +20,19 @@ export default function Contact() {
     <section>
       <div style={styles.contactHeader}>
         <h2>📞 Contact</h2>
-        <button className="view-btn" onClick={openModal}>
-          ⚙️ SETTINGS
-        </button>
+        {features[Features.ENABLE_SETTINGS] &&
+          <button className="view-btn" onClick={openModal}>
+            ⚙️ Settings
+          </button>
+        }
       </div>
 
-      <Modal isOpen={modalOpen} onClose={closeModal}>
-        <Work />
-      </Modal>
+      <div>
+        <Modal isOpen={modalOpen} onClose={closeModal}>
+          <Settings />
+        </Modal>
+      </div>
+
     </section>
   );
 }

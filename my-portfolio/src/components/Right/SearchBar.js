@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
-import DropDown from "./utils/DropDown";
+import DropDown from "../utils/DropDown";
+import { useAlert } from "../../Providers/AlertProvider";
 
-function SearchBar({ setTags, setFilteredProjects, tagsState }) {
+export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(false);
+  const { showAlert } = useAlert();
 
   const handleOnFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
@@ -14,25 +16,10 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const handleSearch = (value) => {
     setSearchText(value);
     if (value.trim() !== "") {
-      fetchSearchResults(value);
+      debouncedSearch(value, setSearchResult, tagsState, defaultTags);
     } else {
       setSearchResult(new Set());
     }
-  };
-
-  const fetchSearchResults = (value) => {
-    const requestOptions = {
-      method: "GET",
-      headers: new Headers({ apikey: "xxxxxx" }),
-    };
-
-    fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
-      .then((res) => res.json())
-      .then((data) => setSearchResult(new Set(data.filter((d)=>!tagsState.has(d)))))
-      .catch((err) => {
-        setSearchResult(new Set(defaultTags.filter((tag)=>!tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
-        console.error(err)
-      });
   };
 
   useEffect(() => {
@@ -55,7 +42,10 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const handleAddTag = (tag) => {
     if (tag.trim() !== "") {
       if (tagsState.size > 4) {
-        alert("Max Tags Reached");
+        showAlert({
+          message: "Max tags Reached - " + tagsState.size,
+          type: "error"
+        });
         return;
       } else {
         setTags(new Set([...tagsState, tag]));
@@ -91,6 +81,34 @@ function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   );
 }
 
+const debouncedSearch = debounce(fetchSearchResults, 500);
+
+function debounce(fn, t) {
+  let id;
+  return function (...args) {
+    clearTimeout(id);
+    id = setTimeout(() => fn(...args), t);
+  }
+};
+
+function fetchSearchResults(value, setSearchResult, tagsState, defaultTags) {
+  const requestOptions = {
+    method: "GET",
+    headers: new Headers({ apikey: process.env.REACT_APP_API_KEY }),
+  };
+
+  fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      setSearchResult(new Set(data.filter((d) => !tagsState.has(d))))
+    })
+    .catch((err) => {
+      setSearchResult(new Set(defaultTags.filter((tag) => !tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
+      console.error(err);
+    });
+};
+
 const styles = {
   searchInput: {
     outline: "none",
@@ -106,5 +124,3 @@ const styles = {
     color: "var(--text-color-light)",
   },
 };
-
-export default SearchBar;

@@ -3,7 +3,7 @@ import {
   PaginationProvider,
   usePagination,
 } from "../../Providers/PaginationProvider";
-import { Pagination } from "./utils/Pagination";
+import { Pagination } from "../utils/Pagination";
 import ExperienceDetail from "./ExperienceDetail";
 
 function PaginatedItemList() {

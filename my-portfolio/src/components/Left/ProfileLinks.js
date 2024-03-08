@@ -3,7 +3,7 @@ import {
   GithubProfileSvg,
   LinkedinProfileSvg,
   LeetCodeProfileSvg,
-} from "../Right/utils/Svg";
+} from "../utils/Svg";
 
 export function ProfileLinks() {
   return (

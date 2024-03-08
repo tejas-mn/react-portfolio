@@ -1,0 +1,51 @@
+{
+    "edu": [
+      {
+        "id": 0,
+        "title": "string",
+        "desc": "string",
+        "timeline": "string"
+      }
+    ],
+    "exp": [
+      {
+        "id": 0,
+        "company": "string",
+        "title": "string",
+        "timeline": "string",
+        "desc": ["string"]
+      }
+    ],
+    "projects": [
+      {
+        "id": 0,
+        "title": "string",
+        "techStack": "string",
+        "techStackList": ["string"],
+        "timeline": "string",
+        "description": "string",
+        "imageUrl": "string",
+        "githubUrl": "string",
+        "liveUrl": "string"
+      }
+    ],
+    "skills": ["string"],
+    "userInfo": {
+      "name": "string",
+      "email": "string",
+      "location": "string",
+      "profession": "string",
+      "headline": "string",
+      "links": {
+        "resume": "string",
+        "leetcode": "string",
+        "github": "string",
+        "linkedin": "string"
+      },
+      "profilePics": ["string"],
+      "bannerImages": ["string"],
+      "aboutInfo": "string",
+      "experienceInfo": "string"
+    }
+  }
+  
