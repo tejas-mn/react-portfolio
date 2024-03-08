@@ -11,24 +11,22 @@ export function LeftComponent() {
   const { features } = useFeatureToggle();
 
   return (
-    <>
-      <div className="left">
-        <PicContainer />
-        <div className="btm-txt">
-          <ProfileDetails />
-          <ProfileLinks />
-        </div>
-        {
-          features[Features.THEME_TOGGLE] && <button
-            style={styles.btn}
-            className="view-btn theme-btn"
-            onClick={() => toggleTheme()}
-          >
-            {theme === "light-theme" ? "🌗" : "🌓"}
-          </button>
-        }
+    <div className="left">
+      <PicContainer />
+      <div className="btm-txt">
+        <ProfileDetails />
+        <ProfileLinks />
       </div>
-    </>
+      {
+        features[Features.THEME_TOGGLE] && <button
+          style={styles.btn}
+          className="view-btn theme-btn"
+          onClick={() => toggleTheme()}
+        >
+          {theme === "light-theme" ? "🌗" : "🌓"}
+        </button>
+      }
+    </div>
   );
 }
 

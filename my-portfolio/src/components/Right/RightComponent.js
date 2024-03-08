@@ -6,13 +6,11 @@ export function RightComponent() {
   const location = useLocation();
 
   return (
-    <>
-      <div className="right">
-        <div className="desktop-nav">
-          <NavBar />
-        </div>
-        {location.pathname === "/" ? <About /> : <Outlet />}
+    <div className="right">
+      <div className="desktop-nav">
+        <NavBar />
       </div>
-    </>
+      {location.pathname === "/" ? <About /> : <Outlet />}
+    </div>
   );
 }

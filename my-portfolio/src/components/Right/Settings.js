@@ -1,10 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../../Providers/ThemeProvider';
 import './Settings.css';
 import { NavBar } from './Navbar';
 import { useAlert } from '../../Providers/AlertProvider';
 import { useFeatureToggle } from '../../Providers/FeatureProvider';
 import { Features } from '../../Providers/Features';
+
+const SettingsItem = ({ label, children }) => (
+  <div className="settings-item">
+    <p>{label}</p>
+    {children}
+  </div>
+);
+
+const Checkbox = ({ checked, onChange, label }) => (
+  <label>
+    <input type="checkbox" checked={checked} onChange={onChange} />
+    {label}
+  </label>
+);
 
 export const Settings = () => {
   const { theme, toggleTheme } = useTheme();
@@ -19,29 +33,13 @@ export const Settings = () => {
 
   const handleViewChange = (e) => {
     setCurrentProjectView(e.target.value);
-    switch (e.target.value) {
-      case Features.PROJECT_LIST_VIEW:
-        updateFeatures({
-          [Features.PROJECT_LIST_VIEW]: true,
-          [Features.PROJECT_GRID_VIEW]: false,
-          [Features.PROJECT_DEFAULT_VIEW]: false
-        });
-        break;
-      case Features.PROJECT_GRID_VIEW:
-        updateFeatures({
-          [Features.PROJECT_LIST_VIEW]: false,
-          [Features.PROJECT_GRID_VIEW]: true,
-          [Features.PROJECT_DEFAULT_VIEW]: false
-        });
-        break;
-      default:
-        updateFeatures({
-          [Features.PROJECT_LIST_VIEW]: false,
-          [Features.PROJECT_GRID_VIEW]: false,
-          [Features.PROJECT_DEFAULT_VIEW]: true
-        });
-    }
-  }
+    const updatedFeatures = {
+      [Features.PROJECT_LIST_VIEW]: e.target.value === Features.PROJECT_LIST_VIEW,
+      [Features.PROJECT_GRID_VIEW]: e.target.value === Features.PROJECT_GRID_VIEW,
+      [Features.PROJECT_DEFAULT_VIEW]: e.target.value === Features.PROJECT_DEFAULT_VIEW
+    };
+    updateFeatures(updatedFeatures);
+  };
 
   function getCurrentProjectView() {
     if (features[Features.PROJECT_LIST_VIEW]) return Features.PROJECT_LIST_VIEW;
@@ -56,83 +54,69 @@ export const Settings = () => {
 
   return (
     <div className="settings-container">
-      <h2 style={{
-        margin: '0px'
-      }}>⚙️ Settings</h2>
-      <div className="settings-item">
-        <p>Theme: </p>
+      <h2 style={{ margin: '0px' }}>⚙️ Settings</h2>
+
+      <SettingsItem label="Theme:">
         <select value={theme} onChange={handleThemeChange}>
           <option value="light-theme">Light</option>
           <option value="dark-theme">Dark</option>
         </select>
-      </div>
+      </SettingsItem>
 
-      <div className="settings-item">
-        <p>Features: </p>
-        <label>
-          <input
-            type="checkbox"
-            checked={features[Features.ENABLE_SETTINGS]}
-            onChange={() => toggleFeature(Features.ENABLE_SETTINGS)}
-          />
-          Settings
-        </label>
+      <SettingsItem label="Features:">
+        <Checkbox
+          checked={features[Features.ENABLE_SETTINGS]}
+          onChange={() => toggleFeature(Features.ENABLE_SETTINGS)}
+          label="Settings"
+        />
         <br />
-
-        <label>
-          <input
-            type="checkbox"
-            checked={features[Features.THEME_TOGGLE]}
-            onChange={() => toggleFeature(Features.THEME_TOGGLE)}
-          />
-          Theme Button
-        </label>
+        <Checkbox
+          checked={features[Features.THEME_TOGGLE]}
+          onChange={() => toggleFeature(Features.THEME_TOGGLE)}
+          label="Theme Button"
+        />
         <br />
+        <Checkbox
+          checked={features[Features.PROJECT_SEARCH]}
+          onChange={() => toggleFeature(Features.PROJECT_SEARCH)}
+          label="Project Search"
+        />
+      </SettingsItem>
 
-        <label>
-          <input
-            type="checkbox"
-            checked={features[Features.PROJECT_SEARCH]}
-            onChange={() => toggleFeature(Features.PROJECT_SEARCH)}
-          />
-          Project Search
-        </label>
-
-      </div>
-      <div className="settings-item">
-        <p>Profile Picture: </p>
+      <SettingsItem label="Profile Picture:">
         <input type="file" accept="image/*" onChange={handleImageUpload} />
         {profilePicture && (
           <div>
             <img src={profilePicture} alt="Profile" className="profile-picture" />
           </div>
         )}
-      </div>
-      <div className="settings-item">
-        <p>Default Project View: </p>
+      </SettingsItem>
+
+      <SettingsItem label="Project View:">
         <select value={currentProjectView} onChange={handleViewChange}>
           <option value={Features.PROJECT_GRID_VIEW}>Grid</option>
           <option value={Features.PROJECT_LIST_VIEW}>List</option>
           <option value={Features.PROJECT_DEFAULT_VIEW}>Default</option>
         </select>
-      </div>
+      </SettingsItem>
 
-      <div className="settings-item">
-        <p>Upload your data.json: </p>
+      <SettingsItem label="Upload your data.json:">
         <input type="file" accept="image/*" onChange={handleImageUpload} />
-      </div>
+      </SettingsItem>
+
       <p>Reorder Nav Buttons: </p>
       <NavBar />
 
       <br />
 
       <div className="button-container">
-        <button className="view-btn" id="saveButton" onClick={() => showAlert({
-          message: "Saved Successfully",
-          type: "success"
-        }
-        )}>Save</button>
-        {/* <button className="view-btn" id="closeButton">Close</button> */}
+        <button
+          className="view-btn"
+          id="saveButton"
+          onClick={() => showAlert({ message: "Saved Successfully", type: "success" })}
+        >
+          Save
+        </button>
       </div>
     </div>
   );

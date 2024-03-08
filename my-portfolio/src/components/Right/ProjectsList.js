@@ -10,10 +10,10 @@ import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
 
 function ProjectItem({ currentProject }) {
   return (
-    <p className="project-list">
+    <div className="project-list">
       <b style={styles.title}>{currentProject.title}</b>
       {" | "}
-      {currentProject.techStackList.map(p => <i className="techStackItem">{p}</i>)}
+      {currentProject.techStackList.map(p => <i key={p} className="techStackItem">{p}</i>)}
       <i style={styles.timeline}> ({currentProject.timeline})</i>
       <div>
         <a
@@ -39,7 +39,7 @@ function ProjectItem({ currentProject }) {
       <ul>
         <li className="auto-format">{currentProject.description}</li>
       </ul>
-    </p>
+    </div>
   );
 }
 
@@ -57,12 +57,10 @@ const PaginatedItemList = () => {
 
 export function ProjectsList() {
   return (
-    <>
-      <PaginationProvider itemsPerPage={4} items={projects}>
-        <PaginatedItemList />
-        <Pagination />
-      </PaginationProvider>
-    </>
+    <PaginationProvider itemsPerPage={4} items={projects}>
+      <PaginatedItemList />
+      <Pagination />
+    </PaginationProvider>
   );
 }
 
