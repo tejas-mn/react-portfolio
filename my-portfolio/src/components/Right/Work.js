@@ -12,7 +12,7 @@ export function Work() {
     <section>
       <div style={styles.projectHeader} className="project-title-container">
         <h2 style={styles.title} className="project-title">
-          🚀 Projects | Blogs
+          🚀 Projects
         </h2>
         {features[Features.PROJECT_DEFAULT_VIEW] && <button
           className="view-btn"

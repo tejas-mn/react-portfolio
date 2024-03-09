@@ -64,7 +64,7 @@ export const Settings = () => {
       </SettingsItem>
 
       <SettingsItem label="Features:">
-        <Checkbox
+        {/* <Checkbox
           checked={features[Features.ENABLE_SETTINGS]}
           onChange={() => toggleFeature(Features.ENABLE_SETTINGS)}
           label="Settings"
@@ -74,7 +74,7 @@ export const Settings = () => {
           checked={features[Features.THEME_TOGGLE]}
           onChange={() => toggleFeature(Features.THEME_TOGGLE)}
           label="Theme Button"
-        />
+        /> */}
         <br />
         <Checkbox
           checked={features[Features.PROJECT_SEARCH]}
@@ -83,14 +83,14 @@ export const Settings = () => {
         />
       </SettingsItem>
 
-      <SettingsItem label="Profile Picture:">
+      {/* <SettingsItem label="Profile Picture:">
         <input type="file" accept="image/*" onChange={handleImageUpload} />
         {profilePicture && (
           <div>
             <img src={profilePicture} alt="Profile" className="profile-picture" />
           </div>
         )}
-      </SettingsItem>
+      </SettingsItem> */}
 
       <SettingsItem label="Project View:">
         <select value={currentProjectView} onChange={handleViewChange}>
@@ -100,14 +100,14 @@ export const Settings = () => {
         </select>
       </SettingsItem>
 
-      <SettingsItem label="Upload your data.json:">
+      {/* <SettingsItem label="Upload your data.json:">
         <input type="file" accept="image/*" onChange={handleImageUpload} />
-      </SettingsItem>
+      </SettingsItem> */}
 
-      <p>Reorder Nav Buttons: </p>
+      {/* <p>Reorder Nav Buttons: </p>
       <NavBar />
 
-      <br />
+      <br /> */}
 
       <div className="button-container">
         <button

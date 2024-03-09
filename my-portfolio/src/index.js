@@ -23,7 +23,7 @@ root.render(
             <Route exact path="about" element={<About />} />
             <Route exact path="experience" element={<Experience />} />
             <Route exact path="work" element={<Work />} />
-            <Route exact path="contact" element={<Contact />} />
+            {/* <Route exact path="contact" element={<Contact />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
