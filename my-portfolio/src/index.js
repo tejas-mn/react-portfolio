@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PageNotFound from "./components/utils/PageNotFound";
 const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/About'));
 const LazyExperience = React.lazy(() => import('./components/Right/Experience'))
@@ -22,6 +23,7 @@ root.render(
               <Route exact path="about" element={<Suspense fallback={<div>Loading...</div>}> <LazyAbout /> </Suspense>} />
               <Route exact path="experience" element={<Suspense fallback={<div>Loading...</div>}> <LazyExperience /> </Suspense>} />
               <Route exact path="work" element={<Suspense fallback={<div>Loading...</div>}> <LazyWork /> </Suspense>} />
+              <Route path="*" element={<PageNotFound />}  />
             </Route>
           </Routes>
         </BrowserRouter>
