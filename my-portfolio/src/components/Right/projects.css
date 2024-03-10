@@ -138,14 +138,6 @@
   background-color: var(--btn-color-light-hover) !important;
 }
 
-.modal {
-  background-color: var(--btn-color-light) !important;
-}
-
-.close-button {
-  color: var(--text-color-light) !important;
-}
-
 .tag {
   color: var(--text-color-light) !important;
 }

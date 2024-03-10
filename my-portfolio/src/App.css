@@ -401,3 +401,10 @@ section > p {
   border: none;
   cursor: pointer;
 }
+
+.modal {
+  background-color: var(--btn-color-light) !important;
+}
+.close-button {
+  color: var(--text-color-light) !important;
+}

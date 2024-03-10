@@ -5,10 +5,6 @@ import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Experience from "./components/Right/Experience";
-// import  About  from "./components/Right/About";
-// import { Work } from "./components/Right/Work";
-
 const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/About'));
 const LazyExperience = React.lazy(() => import('./components/Right/Experience'))
