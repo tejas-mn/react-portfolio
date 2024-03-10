@@ -2,7 +2,7 @@ import { Skills } from "./Skill";
 import Education from "./Education";
 import { userInfo } from "../../Providers/DataProvider";
 
-export function About() {
+export default function About() {
   return (
     <section>
       <AboutMe />

@@ -24,7 +24,7 @@ function App() {
   );
 }
 
-export function ThemedApp() {
+export default function ThemedApp() {
   return (
     <ThemeProvider>
       <App />

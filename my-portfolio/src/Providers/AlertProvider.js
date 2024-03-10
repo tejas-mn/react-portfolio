@@ -10,7 +10,7 @@ export const AlertProvider = ({children}) => {
     }
 
     const hideAlert = (index) => {
-        setAlert(alerts.filter((e,i) => i!=index));
+        setAlert(alerts.filter((e,i) => i!==index));
     }
 
     return (

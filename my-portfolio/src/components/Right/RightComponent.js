@@ -1,4 +1,4 @@
-import { About } from "./About";
+import  About  from "./About";
 import { NavBar } from "./Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 

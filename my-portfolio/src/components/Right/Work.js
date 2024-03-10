@@ -4,7 +4,7 @@ import { ProjectsList } from "./ProjectsList";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
 import { Features } from "../../Providers/Features";
 
-export function Work() {
+export default function Work() {
   const [isGridView, setGridView] = useState(false);
   const [btnText, setbtnText] = useState("☷ Grid view");
   const { features } = useFeatureToggle();

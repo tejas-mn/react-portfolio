@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { Suspense, lazy,useState } from "react";
 import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
 import Modal from "../utils/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
-import ProjectBox from "./ProjectBox";
 import TagContainer from "./TagContainer";
 import { Features } from "../../Providers/Features";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
+
+const ProjectBox = lazy(() => import('./ProjectBox'));
 
 function ProjectsGrid({ isVisible }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -62,6 +63,7 @@ function ProjectsGrid({ isVisible }) {
       </div>
       }
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
+        <Suspense fallback={<p>Loading..</p>}>
         {filteredProjects.map((project) => (
           <ProjectBox
             key={project.id}
@@ -70,6 +72,8 @@ function ProjectsGrid({ isVisible }) {
             setCurrentProject={setCurrentProject}
           />
         ))}
+        </Suspense>
+      
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <ProjectModal
