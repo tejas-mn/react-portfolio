@@ -139,7 +139,7 @@ section > p {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  color: #dddddd;
+  color: var(--text-color-light);
   justify-content: flex-end;
   flex-direction: row-reverse;
   padding: 10px;

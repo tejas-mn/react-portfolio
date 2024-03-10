@@ -18,15 +18,11 @@ function ContactInfo() {
     <>
       <div>
         <a href={`mailto:${userInfo.email}`} style={styles.anchor}>
-          <li>
-            <EmailSvg /> {userInfo.email}
-          </li>
+          <EmailSvg /> {userInfo.email}
         </a>
       </div>
       <div>
-        <li>
-          <Locationsvg /> {userInfo.location}
-        </li>
+        <Locationsvg /> {userInfo.location}
       </div>
     </>
   );
@@ -36,15 +32,13 @@ function ResumeButton() {
   return (
     <div className="resume-btn">
       <a style={styles.anchor} href={userInfo.links.resume} target="blank">
-        <li>
-          <span style={styles.btnText}>📝</span> My Resume
-        </li>
+        <span style={styles.btnText}>📝</span> My Resume
       </a>
     </div>
   );
 }
 
 const styles = {
-  anchor: { textDecoration: "none" },
+  anchor: { textDecoration: "none" , color:'inherit'},
   btnText: { fontSize: "large" },
 };

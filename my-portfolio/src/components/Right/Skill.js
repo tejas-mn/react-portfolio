@@ -3,7 +3,7 @@ import { skills } from "../../Providers/DataProvider";
 function Skill({ skill }) {
   return (
     <div>
-      <li>{skill}</li>
+      {skill}
     </div>
   );
 }

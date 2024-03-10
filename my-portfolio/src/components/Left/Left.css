@@ -26,7 +26,7 @@
 .skills2 {
   display: flex;
   flex-wrap: wrap;
-  color: #dddddd;
+  color: var(--text-color-light);
   justify-content: space-evenly;
   padding: 10px;
 }
