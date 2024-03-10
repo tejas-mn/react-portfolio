@@ -9,8 +9,8 @@ class Features {
 
 const featureFlags = {
     ENABLE_SETTINGS: true,
-    THEME_TOGGLE : true,
-    PROJECT_SEARCH : false,
+    THEME_TOGGLE : false,
+    PROJECT_SEARCH : true,
     PROJECT_LIST_VIEW : false,
     PROJECT_GRID_VIEW : false,
     PROJECT_DEFAULT_VIEW : true

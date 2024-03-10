@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { projects } from "../../Providers/DataProvider";
 import DropDown from "../utils/DropDown";
 import { useAlert } from "../../Providers/AlertProvider";
+import { useDebounce } from "../../hooks/useDebounce";
 
 export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
@@ -12,6 +13,8 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   const handleOnFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
+
+  const debouncedSearch = useDebounce(fetchSearchResults, 500);
 
   const handleSearch = (value) => {
     setSearchText(value);
@@ -81,17 +84,9 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   );
 }
 
-const debouncedSearch = debounce(fetchSearchResults, 500);
+const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
+  if(value===undefined) return;
 
-function debounce(fn, t) {
-  let id;
-  return function (...args) {
-    clearTimeout(id);
-    id = setTimeout(() => fn(...args), t);
-  }
-};
-
-function fetchSearchResults(value, setSearchResult, tagsState, defaultTags) {
   const requestOptions = {
     method: "GET",
     headers: new Headers({ apikey: process.env.REACT_APP_API_KEY }),
