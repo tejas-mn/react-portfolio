@@ -2,8 +2,10 @@ import React from 'react';
 
 function Tag({ tag, onClick }) {
   return (
-    <span className="tag" style={styles.tag} onClick={onClick}>
-      {tag} {"🗑"}
+    <span className="tag" style={styles.tag}>
+      {tag} <span  style={{
+        color:'red'
+      }} onClick={onClick}>{"🗑"}</span>
     </span>
   );
 }

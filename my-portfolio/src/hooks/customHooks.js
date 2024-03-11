@@ -9,7 +9,7 @@ export const useAutoBoldText = () => {
       htmlContent = htmlContent.replace(boldSyntax, '<strong><i>$1</i></strong>');
       element.innerHTML = htmlContent;
     });
-  });
+  }, []);
 };
 
 export const useLocalStorage = (key, defaultValue) => {

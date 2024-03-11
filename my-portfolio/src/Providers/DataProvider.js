@@ -61,7 +61,7 @@ const projects = [
   {
     id: 8,
     title: ".NET Web API",
-    techStack: "C# .NET, OOPS, SQL",
+    techStack: "C# .NET,OOPS,SQL",
     techStackList: [
       "C#", ".NET", "OOPS", "SQL"
     ],

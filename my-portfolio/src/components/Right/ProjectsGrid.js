@@ -77,6 +77,8 @@ function ProjectsGrid({ isVisible }) {
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <ProjectModal
+            setTags={setTags}
+            tagsState={tagsState}
             key={currentProject.id}
             title={currentProject.title}
             imageUrl={currentProject.imageUrl}

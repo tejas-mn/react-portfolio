@@ -2,6 +2,7 @@ import React from "react";
 import { useAutoBoldText } from "../../hooks/customHooks";
 import "./projects.css";
 import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
+import { useAlert } from "../../Providers/AlertProvider";
 
 export default function ProjectModal({
   imageUrl,
@@ -10,8 +11,25 @@ export default function ProjectModal({
   tags,
   githubUrl,
   liveUrl,
+  setTags,
+  tagsState
 }) {
   useAutoBoldText();
+  const {alerts, showAlert} = useAlert();
+
+  const handleAddTag = (tag) => {
+    if (tag.trim() !== "") {
+      if (tagsState.size > 4) {
+        showAlert({
+          message: "Max tags Reached - " + tagsState.size,
+          type: "error"
+        });
+        return;
+      } else {
+        setTags(new Set([...tagsState, tag]));
+      }
+    }
+  };
 
   return (
     <div style={styles.container} className="project-modal-container">
@@ -31,7 +49,7 @@ export default function ProjectModal({
         </p>
         <div style={styles.tagContainer}>
           {tags.map((tag, index) => (
-            <span className="tag" key={index} style={styles.tag}>
+            <span className="tag" key={index} style={styles.tag} onClick={()=>handleAddTag(tag)}>
               {tag}
             </span>
           ))}
