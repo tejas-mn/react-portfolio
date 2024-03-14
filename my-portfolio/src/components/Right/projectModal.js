@@ -15,7 +15,7 @@ export default function ProjectModal({
   tagsState
 }) {
   useAutoBoldText();
-  const {alerts, showAlert} = useAlert();
+  const { alerts, showAlert } = useAlert();
 
   const handleAddTag = (tag) => {
     if (tag.trim() !== "") {
@@ -26,7 +26,7 @@ export default function ProjectModal({
         });
         return;
       } else {
-        setTags(new Set([...tagsState, tag]));
+        setTags((prevTags) => new Set([...prevTags, tag]));
       }
     }
   };
@@ -49,7 +49,7 @@ export default function ProjectModal({
         </p>
         <div style={styles.tagContainer}>
           {tags.map((tag, index) => (
-            <span className="tag" key={index} style={styles.tag} onClick={()=>handleAddTag(tag)}>
+            <span className="tag" key={index} style={styles.tag} onClick={() => handleAddTag(tag)}>
               {tag}
             </span>
           ))}

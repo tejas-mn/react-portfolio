@@ -24,7 +24,7 @@ export const Settings = () => {
   const { theme, toggleTheme } = useTheme();
   const { showAlert } = useAlert();
   const [profilePicture, setProfilePicture] = useState(null);
-  const { features, toggleFeature, updateFeatures } = useFeatureToggle();
+  const { features, toggleFeature, getCurrentProjectView, updateProjectView } = useFeatureToggle();
   const [currentProjectView, setCurrentProjectView] = useState(getCurrentProjectView());
 
   const handleThemeChange = (e) => {
@@ -33,19 +33,8 @@ export const Settings = () => {
 
   const handleViewChange = (e) => {
     setCurrentProjectView(e.target.value);
-    const updatedFeatures = {
-      [Features.PROJECT_LIST_VIEW]: e.target.value === Features.PROJECT_LIST_VIEW,
-      [Features.PROJECT_GRID_VIEW]: e.target.value === Features.PROJECT_GRID_VIEW,
-      [Features.PROJECT_DEFAULT_VIEW]: e.target.value === Features.PROJECT_DEFAULT_VIEW
-    };
-    updateFeatures(updatedFeatures);
+    updateProjectView(e.target.value);
   };
-
-  function getCurrentProjectView() {
-    if (features[Features.PROJECT_LIST_VIEW]) return Features.PROJECT_LIST_VIEW;
-    if (features[Features.PROJECT_GRID_VIEW]) return Features.PROJECT_GRID_VIEW;
-    if (features[Features.PROJECT_DEFAULT_VIEW]) return Features.PROJECT_DEFAULT_VIEW;
-  }
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];

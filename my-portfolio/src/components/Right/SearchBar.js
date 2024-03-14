@@ -17,9 +17,9 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const debouncedSearch = useDebounce(fetchSearchResults, 500);
 
   const handleSearch = (value) => {
-    setSearchText(value);
+    setSearchText(value.trim());
     if (value.trim() !== "") {
-      debouncedSearch(value, setSearchResult, tagsState, defaultTags);
+      debouncedSearch(value.trim(), setSearchResult, tagsState, defaultTags);
     } else {
       setSearchResult(new Set());
     }
@@ -51,7 +51,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
         });
         return;
       } else {
-        setTags(new Set([...tagsState, tag]));
+        setTags(new Set([...tagsState, tag.trim()]));
       }
       setSearchText("");
       setSearchResult(new Set());
@@ -85,7 +85,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 }
 
 const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
-  if(value===undefined) return;
+  if (value === undefined) return;
 
   const requestOptions = {
     method: "GET",

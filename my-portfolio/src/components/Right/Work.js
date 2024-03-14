@@ -27,7 +27,7 @@ export default function Work() {
         </button>
         }
       </div>
-      {(isGridView || features[Features.PROJECT_GRID_VIEW])? <ProjectsGrid isVisible={isGridView} /> : (<ProjectsList />)}
+      {(((isGridView && features[Features.PROJECT_DEFAULT_VIEW]) || features[Features.PROJECT_GRID_VIEW])) ? <ProjectsGrid isVisible={isGridView || features[Features.PROJECT_GRID_VIEW]} /> : (<ProjectsList />)}
     </section>
   );
 }
