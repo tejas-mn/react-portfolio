@@ -6,7 +6,7 @@ export function RightComponent() {
   const location = useLocation();
 
   return (
-    <div className="right">
+    <div className="right-01">
       <div className="desktop-nav">
         <NavBar />
       </div>

@@ -11,11 +11,18 @@ function App() {
 
   return (
     <>
-      <AlertMessages/>
-      <ParticlesBackground/>
+      <AlertMessages />
+      <ParticlesBackground />
       <div className={`App ${theme}`}>
-        <LeftComponent />
-        <RightComponent />
+        <div className="left">
+          <LeftComponent />
+
+        </div>
+
+        <div className="right">
+          <RightComponent />
+        </div>
+
         <div className="mobile-nav">
           <NavBar />
         </div>

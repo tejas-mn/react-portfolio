@@ -23,7 +23,7 @@ export function LeftComponent() {
   };
 
   return (
-    <div className="left">
+    <div className="left-01">
       <PicContainer />
       <div className="btm-txt">
         <ProfileDetails />
@@ -39,11 +39,11 @@ export function LeftComponent() {
         </button>
       }
       {features[Features.ENABLE_SETTINGS] &&
-          <button className="view-btn" style={styles.btn} onClick={openModal}>
-            ⚙️
-          </button>
-        }
-         <div>
+        <button className="view-btn" style={styles.btn} onClick={openModal}>
+          ⚙️
+        </button>
+      }
+      <div>
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <Settings />
         </Modal>

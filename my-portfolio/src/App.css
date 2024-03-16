@@ -2,8 +2,9 @@
 
 .App {
   text-align: center;
-  padding: 10px;
   display: flex;
+  gap: 40px;
+  padding: 10px;
   flex-wrap: wrap;
   margin: auto;
   height: 100%;
@@ -13,31 +14,49 @@
 }
 
 .left {
-  margin-right: 20px;
-  border-radius: 8px;
   width: 20%;
   display: flex;
   align-items: center;
-  padding: 20px;
+  gap: 30px;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  box-shadow: 0.2px 0.2px 50px rgba(0, 0, 0, 0.197);
-  background-color: var(--left-bg-color-light);
   height: 100%;
+}
+
+.left-01 {
+  padding: 20px;
+  width: 100%;
+  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.197);
+  background-color: var(--left-bg-color-light);
+  border-radius: 8px;
   z-index: 1;
 }
 
-.right {
+.right-01 {
   border-radius: 8px;
-  width: 70%;
   padding: 30px;
   background-color: var(--left-bg-color-light);
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.197);
 }
 
+.right-02 {
+  background-color: var(--left-bg-color-light);
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.197);
+  padding: 0px 30px 30px;
+  border-radius: 8px;
+}
+
 .right * {
   animation: fadeInAnimation 0.1s ease-in-out forwards;
+}
+
+.right {
+  border-radius: 8px;
+  width: 75%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-nav {
@@ -56,7 +75,7 @@
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.197);
 }
 
-.right-nav > h2 {
+.right-nav>h2 {
   margin: 5px;
 }
 
@@ -66,16 +85,18 @@ p {
   letter-spacing: 0.5px;
   color: var(--text-color-light) !important;
 }
+
 label {
   color: var(--text-color-light) !important;
 }
+
 li {
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   color: var(--text-color-light) !important;
   /* letter-spacing: 0.7px; */
 }
 
-.btm-txt > p {
+.btm-txt>p {
   color: #dddddd;
   text-align: center;
   margin: 0px;
@@ -87,20 +108,20 @@ li {
   flex-direction: row;
 }
 
-.btm-txt > p > span {
+.btm-txt>p>span {
   margin: 5px;
 }
 
-.btm-txt > p > a:hover {
+.btm-txt>p>a:hover {
   transition: 0.1s ease;
   transform: scale(1.07);
 }
 
-.btm-txt > p > a > span {
+.btm-txt>p>a>span {
   color: var(--text-color-light);
 }
 
-.btm-txt > p > a > span :hover {
+.btm-txt>p>a>span :hover {
   color: rgb(169, 169, 169);
 }
 
@@ -110,7 +131,7 @@ li {
   border-radius: 8px;
 }
 
-.link > h2 {
+.link>h2 {
   color: white !important;
   text-decoration: none;
   margin-top: 0px;
@@ -121,7 +142,7 @@ li {
   border-bottom: 2px solid white;
 }
 
-section > h2 {
+section>h2 {
   display: flex;
   justify-content: flex-start;
   /* padding-left:8px; */
@@ -129,7 +150,7 @@ section > h2 {
   margin-bottom: 2px;
 }
 
-section > p {
+section>p {
   color: white;
   text-align: justify;
   padding: 5px;
@@ -145,7 +166,7 @@ section > p {
   padding: 10px;
 }
 
-.skills > div {
+.skills>div {
   list-style: none;
   border-radius: 10px;
   padding: 5px 20px;
@@ -158,7 +179,7 @@ section > p {
   letter-spacing: 1px;
 }
 
-.skills > div:hover {
+.skills>div:hover {
   cursor: pointer;
   transition: 0.1s;
   background-color: var(--btn-color-light-hover);
@@ -230,6 +251,10 @@ section > p {
     margin-bottom: 10px;
   }
 
+  .left-01 {
+    max-width: -webkit-fill-available;
+  }
+
   .right {
     width: 100%;
   }
@@ -238,6 +263,11 @@ section > p {
 @media only screen and (max-width: 510px) {
   .project-title-container {
     margin-bottom: 12px;
+  }
+
+
+  .left-01 {
+    max-width: -webkit-fill-available;
   }
 
   .project-title {
@@ -288,11 +318,9 @@ section > p {
 
   .right {
     margin-bottom: 60px;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
   }
 
-  section > h2 {
+  section>h2 {
     margin-top: 0px;
     padding-left: 0px;
   }
@@ -305,7 +333,7 @@ section > p {
     padding: 0px 10px 0px 10px;
   }
 
-  .pic > img {
+  .pic>img {
     width: 90px;
     height: 90px;
     border-radius: 108px;
@@ -325,7 +353,7 @@ section > p {
     margin: 10px;
   }
 
-  .pic-desc > p {
+  .pic-desc>p {
     margin-top: 0px;
     margin-bottom: 0px;
   }
@@ -392,7 +420,8 @@ section > p {
   margin: 25px auto;
   left: 25%;
   z-index: 5;
-  animation:  alertAnimation 0.6s ease-in-out forwards; ;
+  animation: alertAnimation 0.6s ease-in-out forwards;
+  ;
 }
 
 .btn-close {
@@ -405,6 +434,7 @@ section > p {
 .modal {
   background-color: var(--btn-color-light) !important;
 }
+
 .close-button {
   color: var(--text-color-light) !important;
 }
