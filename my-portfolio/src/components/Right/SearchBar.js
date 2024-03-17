@@ -93,14 +93,21 @@ const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
   };
 
   fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
-    .then((res) => res.json())
+    .then((res) => {
+      if (res.status === 200)
+        return res.json();
+      return defaultTags;
+    })
     .then((data) => {
-      console.log(data);
-      setSearchResult(new Set(data.filter((d) => !tagsState.has(d))))
+      if (data === defaultTags) {
+        setSearchResult(new Set(defaultTags.filter((tag) => !tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
+      } else {
+        console.log(data);
+        setSearchResult(new Set(data.filter((d) => !tagsState.has(d))));
+      }
     })
     .catch((err) => {
-      setSearchResult(new Set(defaultTags.filter((tag) => !tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
-      console.error(err);
+      console.log('Error:' + err);
     });
 };
 
