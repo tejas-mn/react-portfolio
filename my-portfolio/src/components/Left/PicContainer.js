@@ -24,13 +24,13 @@ export function PicContainer() {
       <img className="banner-img" src={banner} alt="Banner"></img>
       <div className="pic-container">
         <div className="pic" style={styles.pic}>
-          <img src={userInfo.profilePic} alt={userInfo.name}></img>
+          <img src={userInfo.profilePic} alt='Profile picture'></img>
         </div>
         <div className="pic-desc">
           <h2>{userInfo.name}</h2>
           <p>
             <b>
-              <i>💻{userInfo.profession}</i>
+              💻{userInfo.profession}
             </b>
           </p>
         </div>

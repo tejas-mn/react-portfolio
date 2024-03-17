@@ -220,7 +220,7 @@ const userInfo = {
   name: "Tejas M N",
   email: "tejasmn2020@gmail.com",
   location: "Bangalore, India",
-  profession: "SDET @ CSGI",
+  profession: "SDET @ CSGI | Ex-Intern @ Softmantissa ",
   headline: "Aspiring SDET looking for transitioning into SDE Role",
   links: {
     resume: "https://drive.google.com/file/d/1vZlM2naXPM-dFPVBR1X4JRvv49TKBsKo/view?usp=sharing",

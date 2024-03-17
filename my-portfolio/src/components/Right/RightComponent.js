@@ -7,7 +7,7 @@ export function RightComponent() {
 
   return (
     <div className="right-01">
-      <div className="desktop-nav">
+      <div data-testid="desktop-nav" className="desktop-nav">
         <NavBar />
       </div>
       {location.pathname === "/" ? <About /> : <Outlet />}

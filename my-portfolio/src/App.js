@@ -14,12 +14,11 @@ function App() {
       <AlertMessages />
       <ParticlesBackground />
       <div className={`App ${theme}`}>
-        <div className="left">
+        <div data-testid="left" className="left">
           <LeftComponent />
-
         </div>
 
-        <div className="right">
+        <div data-testid="right" className="right">
           <RightComponent />
         </div>
 

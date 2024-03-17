@@ -5,6 +5,7 @@ import { NavBar } from './Navbar';
 import { useAlert } from '../../Providers/AlertProvider';
 import { useFeatureToggle } from '../../Providers/FeatureProvider';
 import { Features } from '../../Providers/Features';
+import { useLocalStorage } from '../../hooks/customHooks';
 
 const SettingsItem = ({ label, children }) => (
   <div className="settings-item">
@@ -26,6 +27,18 @@ export const Settings = () => {
   const [profilePicture, setProfilePicture] = useState(null);
   const { features, toggleFeature, getCurrentProjectView, updateProjectView } = useFeatureToggle();
   const [currentProjectView, setCurrentProjectView] = useState(getCurrentProjectView());
+  
+  const [settings, setSettings] = useState({
+    settings : {
+      general : {
+        theme : 'dark-theme',
+        project_search : true,
+        project_view : 'PROJECT_DEFAULT_VIEW'
+      }
+    }
+  });
+
+  const [localSettings, setLocalSettings] = useLocalStorage("settings", () => JSON.stringify(settings));
 
   const handleThemeChange = (e) => {
     toggleTheme();
