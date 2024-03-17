@@ -320,6 +320,12 @@ section>p {
     margin-bottom: 60px;
   }
 
+  .right-01{
+    padding: 20px;
+  }
+  .App{
+    gap:10px
+  }
   section>h2 {
     margin-top: 0px;
     padding-left: 0px;
@@ -391,6 +397,7 @@ section>p {
 @media (min-width: 768px) {
   html {
     font-size: 14px !important;
+    zoom: 1.2;
   }
 }
 
