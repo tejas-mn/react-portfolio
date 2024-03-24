@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect,forwardRef, useImperativeHandle  } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateTheme, updateFeature, updateProjectView } from '../../Redux/settingsSlice';
 import { useTheme } from '../../Providers/ThemeProvider';
 import './Settings.css';
-import { NavBar } from './Navbar';
 import { useAlert } from '../../Providers/AlertProvider';
 import { useFeatureToggle } from '../../Providers/FeatureProvider';
 import { Features } from '../../Providers/Features';
-import { useLocalStorage } from '../../hooks/customHooks';
+import { SettingsItem, Checkbox } from '../utils/SettingsUtils';
 
-const SettingsItem = ({ label, children }) => (
-  <div className="settings-item">
-    <p>{label}</p>
-    {children}
-  </div>
-);
+export const Settings = forwardRef((props, ref) => {
+  const dispatch = useDispatch();
 
-const Checkbox = ({ checked, onChange, label }) => (
-  <label>
-    <input type="checkbox" checked={checked} onChange={onChange} />
-    {label}
-  </label>
-);
-
-export const Settings = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { 
+    theme: currentTheme, 
+    project_search: ProjectSearch, 
+    currentProjectView: currentView 
+  } = useSelector((state) => state.settings);
+  
+  const { theme, toggleTheme, setTheme } = useTheme();
   const { showAlert } = useAlert();
-  const [profilePicture, setProfilePicture] = useState(null);
   const { features, toggleFeature, getCurrentProjectView, updateProjectView } = useFeatureToggle();
   const [currentProjectView, setCurrentProjectView] = useState(getCurrentProjectView());
   
-  const [settings, setSettings] = useState({
-    settings : {
-      general : {
-        theme : 'dark-theme',
-        project_search : true,
-        project_view : 'PROJECT_DEFAULT_VIEW'
-      }
+  useEffect(() => {
+    const savedSettings = JSON.parse(localStorage.getItem('settings'));
+    if (savedSettings) {
+      setTheme(savedSettings.theme)
+      console.log(savedSettings);
     }
-  });
-
-  const [localSettings, setLocalSettings] = useLocalStorage("settings", () => JSON.stringify(settings));
+  }, []);
 
   const handleThemeChange = (e) => {
     toggleTheme();
@@ -49,10 +39,21 @@ export const Settings = () => {
     updateProjectView(e.target.value);
   };
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    setProfilePicture(URL.createObjectURL(file));
+  const handleSave = () => {
+    dispatch(updateTheme(theme));
+    // dispatch(updateFeature(features[Features.PROJECT_SEARCH]));
+    // dispatch(updateProjectView(currentProjectView));
   };
+
+  const handleCancel = () => {
+    setTheme(currentTheme);
+    // toggleFeature(features[Features.PROJECT_SEARCH]);
+    // setCurrentProjectView(currentView);
+  };
+
+  useImperativeHandle(ref, () => ({
+    handleCancel
+  }));
 
   return (
     <div className="settings-container">
@@ -115,11 +116,24 @@ export const Settings = () => {
         <button
           className="view-btn"
           id="saveButton"
-          onClick={() => showAlert({ message: "Saved Successfully", type: "success" })}
+          
+          onClick={() => {
+            handleSave();
+            showAlert({ message: "Saved Successfully", type: "success" })
+           }
+          }
         >
           Save
+        </button>
+        <button
+          className="view-btn"
+          id="saveButton"
+          
+          onClick={handleCancel}
+        >
+          Cancel
         </button>
       </div>
     </div>
   );
-};
+});
