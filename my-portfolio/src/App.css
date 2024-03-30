@@ -445,3 +445,7 @@ section>p {
 .close-button {
   color: var(--text-color-light) !important;
 }
+
+.edu-p1{
+  margin-top: 20px !important;
+}
