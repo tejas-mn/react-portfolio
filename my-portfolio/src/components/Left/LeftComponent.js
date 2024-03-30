@@ -35,7 +35,7 @@ export function LeftComponent() {
           className="view-btn theme-btn"
           onClick={() => toggleTheme()}
         >
-          {theme === "light-theme" ? "⚙️" : "⚙️"}
+          {theme === "light-theme" ? "🌗" : "🌓"}
         </button>
       }
       {features[Features.ENABLE_SETTINGS] &&

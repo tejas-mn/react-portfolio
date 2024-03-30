@@ -397,7 +397,7 @@ section>p {
 @media (min-width: 768px) {
   html {
     font-size: 14px !important;
-    zoom: 1.2;
+    zoom: 1.1;
   }
 }
 
@@ -444,4 +444,8 @@ section>p {
 
 .close-button {
   color: var(--text-color-light) !important;
+}
+
+.edu-p1{
+  margin-top: 20px !important;
 }
