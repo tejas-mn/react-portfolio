@@ -1,47 +1,45 @@
-import { useState,useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { userInfo } from "../../Providers/DataProvider";
 import { useTheme } from "../../Providers/ThemeProvider";
-import {useRef} from 'react';
 
-export function PicContainer() {
+const bg = {
+  "light-theme": userInfo.bannerImages[6],
+  "dark-theme": userInfo.bannerImages[5]
+};
+
+export const PicContainer = () => {
   const { theme } = useTheme();
   const banner = useRef();
 
-  const bg = {
-    "light-theme": userInfo.bannerImages[6],
-    "dark-theme": userInfo.bannerImages[5]
-  }
-
   useEffect(() => {
-    banner.current.src = bg[theme] 
-    // eslint-disable-next-line
+    banner.current.src = bg[theme];
   }, [theme]);
 
   return (
-    <div style={{
-      width: '100%',
-      position: 'relative'
-    }}>
-      <img className="banner-img" ref = {banner} alt="Banner"></img>
+    <div style={styles.containerStyle}>
+      <img className="banner-img" ref={banner} alt="Banner" />
       <div className="pic-container">
-        <div className="pic" style={styles.pic}>
-          <img src={userInfo.profilePic} alt='Profile picture'></img>
+        <div className="pic" style={styles.picStyle}>
+          <img src={userInfo.profilePic} alt="Profile picture" />
         </div>
         <div className="pic-desc">
           <h2>{userInfo.name}</h2>
           <p>
-            <b>
-              💻{userInfo.profession}
-            </b>
+            <b>💻{userInfo.profession}</b>
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
 const styles = {
-  pic: {
-    boxShadow: "rgb(255 255 255 / 31%) 0px 0px 30px",
+  containerStyle: {
+    width: '100%',
+    position: 'relative'
   },
-};
+
+  picStyle: {
+    boxShadow: "rgb(255 255 255 / 31%) 0px 0px 30px"
+  }
+}

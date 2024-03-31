@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
@@ -6,18 +7,15 @@ import Modal from "../utils/Modal";
 import { Settings } from "../Right/Settings";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
 import { Features } from "../../Providers/Features";
-import { useState, useRef } from "react";
 import "./Left.css";
 
-export function LeftComponent() {
+export const LeftComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { features } = useFeatureToggle();
   const childRef = useRef(null);
 
-  const openModal = (p) => {
-    setModalOpen(true);
-  };
+  const openModal = () => setModalOpen(true);
 
   const closeModal = () => {
     if (childRef.current) {
@@ -26,6 +24,22 @@ export function LeftComponent() {
     setModalOpen(false);
   };
 
+  const themeToggleButton = features[Features.THEME_TOGGLE] && (
+    <button
+      style={styles.btn}
+      className="view-btn theme-btn"
+      onClick={toggleTheme}
+    >
+      {theme === "light-theme" ? "🌗" : "🌓"}
+    </button>
+  );
+
+  const settingsButton = features[Features.ENABLE_SETTINGS] && (
+    <button className="view-btn" style={styles.btn} onClick={openModal}>
+      ⚙️
+    </button>
+  );
+
   return (
     <div className="left-01">
       <PicContainer />
@@ -33,29 +47,14 @@ export function LeftComponent() {
         <ProfileDetails />
         <ProfileLinks />
       </div>
-      {
-        features[Features.THEME_TOGGLE] && <button
-          style={styles.btn}
-          className="view-btn theme-btn"
-          onClick={() => toggleTheme()}
-        >
-          {theme === "light-theme" ? "🌗" : "🌓"}
-        </button>
-      }
-      {features[Features.ENABLE_SETTINGS] &&
-        <button className="view-btn" style={styles.btn} onClick={openModal}>
-          ⚙️
-        </button>
-      }
-
-      <div>
-        <Modal isOpen={modalOpen} onClose={closeModal}>
-          <Settings ref={childRef}/>
-        </Modal>
-      </div>
+      {themeToggleButton}
+      {settingsButton}
+      <Modal isOpen={modalOpen} onClose={closeModal}>
+        <Settings ref={childRef} />
+      </Modal>
     </div>
   );
-}
+};
 
 const styles = {
   btn: { marginTop: "30px", borderRadius: "100px" },
