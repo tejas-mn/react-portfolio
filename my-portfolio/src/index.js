@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 import PageNotFound from "./components/utils/PageNotFound";
 const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/About'));
@@ -15,6 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <AlertProvider>
       <FeatureToggleProvider>
         <BrowserRouter>
@@ -29,6 +32,7 @@ root.render(
         </BrowserRouter>
       </FeatureToggleProvider>
     </AlertProvider>
+    </Provider>
   </React.StrictMode>
 );
 

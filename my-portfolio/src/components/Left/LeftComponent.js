@@ -6,19 +6,23 @@ import Modal from "../utils/Modal";
 import { Settings } from "../Right/Settings";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
 import { Features } from "../../Providers/Features";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Left.css";
 
 export function LeftComponent() {
   const [modalOpen, setModalOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { features } = useFeatureToggle();
+  const childRef = useRef(null);
 
   const openModal = (p) => {
     setModalOpen(true);
   };
 
   const closeModal = () => {
+    if (childRef.current) {
+      childRef.current.handleCancel();
+    }
     setModalOpen(false);
   };
 
@@ -43,9 +47,10 @@ export function LeftComponent() {
           ⚙️
         </button>
       }
+
       <div>
         <Modal isOpen={modalOpen} onClose={closeModal}>
-          <Settings />
+          <Settings ref={childRef}/>
         </Modal>
       </div>
     </div>

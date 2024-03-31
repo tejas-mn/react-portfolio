@@ -264,7 +264,10 @@ section>p {
   .project-title-container {
     margin-bottom: 12px;
   }
-
+  
+  .tech-skills-heading {
+    margin-top: revert;
+  }
 
   .left-01 {
     max-width: -webkit-fill-available;
