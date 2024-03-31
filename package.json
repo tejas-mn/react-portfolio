@@ -3,6 +3,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "create-react-app": "^5.0.1"
+    "create-react-app": "^5.0.1",
+    "react-loader-spinner": "^6.1.6"
   }
 }
