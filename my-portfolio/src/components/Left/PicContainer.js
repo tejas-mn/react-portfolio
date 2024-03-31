@@ -1,10 +1,11 @@
 import { useState,useEffect } from "react";
 import { userInfo } from "../../Providers/DataProvider";
 import { useTheme } from "../../Providers/ThemeProvider";
+import {useRef} from 'react';
 
 export function PicContainer() {
   const { theme } = useTheme();
-  const [banner, setBanner] = useState(userInfo.bannerImages[6]);
+  const banner = useRef();
 
   const bg = {
     "light-theme": userInfo.bannerImages[6],
@@ -12,7 +13,7 @@ export function PicContainer() {
   }
 
   useEffect(() => {
-    setBanner(bg[theme])
+    banner.current.src = bg[theme] 
     // eslint-disable-next-line
   }, [theme]);
 
@@ -21,7 +22,7 @@ export function PicContainer() {
       width: '100%',
       position: 'relative'
     }}>
-      <img className="banner-img" src={banner} alt="Banner"></img>
+      <img className="banner-img" ref = {banner} alt="Banner"></img>
       <div className="pic-container">
         <div className="pic" style={styles.pic}>
           <img src={userInfo.profilePic} alt='Profile picture'></img>

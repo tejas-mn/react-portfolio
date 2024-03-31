@@ -16,13 +16,16 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   const debouncedSearch = useDebounce(fetchSearchResults, 500);
 
-  const handleSearch = (value) => {
-    setSearchText(value);
-    if (value.trim() !== "") {
-      debouncedSearch(value.trim(), setSearchResult, tagsState, defaultTags);
+  useEffect(()=>{
+    if (searchText.trim() !== "") {
+      debouncedSearch(searchText.trim(), setSearchResult, tagsState, defaultTags);
     } else {
       setSearchResult(new Set());
     }
+  }, [searchText]);
+
+  const handleSearch = (value) => {
+    setSearchText(value);
   };
 
   useEffect(() => {
