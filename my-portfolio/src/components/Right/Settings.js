@@ -19,16 +19,16 @@ export const Settings = forwardRef((props, ref) => {
   
   const { theme, toggleTheme, setTheme } = useTheme();
   const { showAlert } = useAlert();
-  const { features, toggleFeature, getCurrentProjectView, updateProjectView } = useFeatureToggle();
+  const { features, toggleFeature, getCurrentProjectView, updateProjectView, updateFeatures } = useFeatureToggle();
   const [currentProjectView, setCurrentProjectView] = useState(getCurrentProjectView());
   
-  useEffect(() => {
-    const savedSettings = JSON.parse(localStorage.getItem('settings'));
-    if (savedSettings) {
-      setTheme(savedSettings.theme)
-      console.log(savedSettings);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedSettings = JSON.parse(localStorage.getItem('settings'));
+  //   if (savedSettings) {
+  //     setTheme(savedSettings.theme)
+  //     console.log(savedSettings);
+  //   }
+  // }, []);
 
   const handleThemeChange = (e) => {
     toggleTheme();
@@ -41,13 +41,13 @@ export const Settings = forwardRef((props, ref) => {
 
   const handleSave = () => {
     dispatch(updateTheme(theme));
-    // dispatch(updateFeature(features[Features.PROJECT_SEARCH]));
+    dispatch(updateFeature(features[Features.PROJECT_SEARCH]));
     // dispatch(updateProjectView(currentProjectView));
   };
 
   const handleCancel = () => {
     setTheme(currentTheme);
-    // toggleFeature(features[Features.PROJECT_SEARCH]);
+    updateFeatures({[Features.PROJECT_SEARCH] : ProjectSearch});
     // setCurrentProjectView(currentView);
   };
 

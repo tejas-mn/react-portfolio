@@ -3,7 +3,7 @@ import { featureFlags } from '../Providers/Features';
 import { Features } from '../Providers/Features';
 
 const initialState = {
-  theme: 'light-theme',
+  theme: localStorage.getItem('theme'),
   project_search: featureFlags[Features.PROJECT_SEARCH],
   currentProjectView: Features.PROJECT_DEFAULT_VIEW,
 };
