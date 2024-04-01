@@ -4,6 +4,7 @@ import { projects } from "../../Providers/DataProvider";
 import Modal from "../utils/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
+import FallbackLoader from "../utils/FallbackLoader";
 import TagContainer from "./TagContainer";
 import { Features } from "../../Providers/Features";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
@@ -63,7 +64,7 @@ function ProjectsGrid({ isVisible }) {
       </div>
       }
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
-        <Suspense fallback={<p>Loading..</p>}>
+        <Suspense fallback={<FallbackLoader/>}>
         {filteredProjects.map((project) => (
           <ProjectBox
             key={project.id}

@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import FallbackLoader from "./components/utils/FallbackLoader";
 import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
@@ -22,10 +23,10 @@ root.render(
       <FeatureToggleProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Suspense fallback={<div>Loading...</div>}> <ThemedApp /> </Suspense>}>
-              <Route exact path="about" element={<Suspense fallback={<div>Loading...</div>}> <LazyAbout /> </Suspense>} />
-              <Route exact path="experience" element={<Suspense fallback={<div>Loading...</div>}> <LazyExperience /> </Suspense>} />
-              <Route exact path="work" element={<Suspense fallback={<div>Loading...</div>}> <LazyWork /> </Suspense>} />
+            <Route path="/" element={<Suspense fallback={<FallbackLoader/>}> <ThemedApp /> </Suspense>}>
+              <Route exact path="about" element={<Suspense fallback={<FallbackLoader/>}> <LazyAbout /> </Suspense>} />
+              <Route exact path="experience" element={<Suspense fallback={<FallbackLoader/>}> <LazyExperience /> </Suspense>} />
+              <Route exact path="work" element={<Suspense fallback={<FallbackLoader/>}> <LazyWork /> </Suspense>} />
               <Route path="*" element={<PageNotFound />}  />
             </Route>
           </Routes>
