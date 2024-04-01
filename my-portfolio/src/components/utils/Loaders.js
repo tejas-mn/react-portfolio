@@ -54,6 +54,7 @@ export const CirclesLoader = {
 export const GridLoader = {
   Component: Grid,
   props: {
+    background:"red",
     color: "black",
     height: 100,
     width: 110
