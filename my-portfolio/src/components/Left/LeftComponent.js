@@ -4,6 +4,7 @@ import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
 import { useTheme } from "../../Providers/ThemeProvider";
 import Modal from "../utils/Modal";
+import { Toggle } from "../utils/Toggle";
 import { Settings } from "../Right/Settings";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
 import { Features } from "../../Providers/Features";
@@ -47,7 +48,12 @@ export const LeftComponent = () => {
         <ProfileDetails />
         <ProfileLinks />
       </div>
-      {themeToggleButton}
+      {/* {themeToggleButton} */}
+      <Toggle
+            label={theme === "light-theme" ? "Dark" : "Light"}
+            toggled={theme === "dark-theme"}
+            onClick={toggleTheme}
+        />
       {settingsButton}
       <Modal isOpen={modalOpen} onClose={closeModal}>
         <Settings ref={childRef} />
