@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";
 import { ProfileLinks } from "./ProfileLinks";
@@ -9,12 +9,19 @@ import { Settings } from "../Right/Settings";
 import { useFeatureToggle } from "../../Providers/FeatureProvider";
 import { Features } from "../../Providers/Features";
 import "./Left.css";
+import CustomizedSnackbars from "../utils/MUIAlert";
 
 export const LeftComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const [show, setShow] = useState(null);
   const { features } = useFeatureToggle();
   const childRef = useRef(null);
+
+  const handleClick = () => {
+    toggleTheme();
+    setShow((prev)=>prev!==null?!prev:true);
+  }
 
   const openModal = () => setModalOpen(true);
 
@@ -52,12 +59,14 @@ export const LeftComponent = () => {
       <Toggle
             label={theme === "light-theme" ? "Dark" : "Light"}
             toggled={theme === "dark-theme"}
-            onClick={toggleTheme}
+            onClick={handleClick}
         />
       {settingsButton}
       <Modal isOpen={modalOpen} onClose={closeModal}>
         <Settings ref={childRef} />
       </Modal>
+
+      <CustomizedSnackbars theme={theme} showAlert={show}/>
     </div>
   );
 };
