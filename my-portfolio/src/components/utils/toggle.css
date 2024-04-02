@@ -46,7 +46,12 @@
 
 .toggle-text:before {
     position: absolute;
-    content: "";
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: var(--btn-color-light);
+    display: flex;
+    content: var(--theme-emoji-light); /*🌑 ☀️, 🌙, 🌕, */
     height: 25px;
     width: 25px;
     outline: 2px solid var(--btn-color-light-hover);
