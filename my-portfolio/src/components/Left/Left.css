@@ -39,7 +39,6 @@
   width: 200px;
   height: fit-content;
   background-color: var(--skills-color-light);
-  transition: 0.1s;
   letter-spacing: 1px;
 }
 

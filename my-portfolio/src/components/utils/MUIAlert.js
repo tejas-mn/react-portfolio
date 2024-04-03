@@ -8,7 +8,7 @@ export default function CustomizedSnackbars({theme, showAlert}) {
   const [open, setOpen] = React.useState(false);
 
   function SlideTransition(props) {
-    return <Slide {...props} direction="right" />;
+    return <Slide {...props} direction="left" />;
   }
 
   React.useEffect(()=>{

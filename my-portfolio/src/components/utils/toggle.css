@@ -27,7 +27,7 @@
     bottom: 0;
     color: var(--text-color-light);
     background-color: var(--btn-color-light);
-    transition: 0.2s;
+    /* transition: 0.2s; */
     border-radius: 30px;
     align-items: center;
     justify-content: flex-end;
@@ -59,7 +59,7 @@
     bottom: 2.6px;
     background-color: var(--text-color-light);
     border-radius: 50%;
-    transition: 0.2s;
+    /* transition: 0.2s; */
 }
 
 .toggle-input:checked + .toggle-text {

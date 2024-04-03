@@ -15,9 +15,9 @@
   );
 }
 
-* {
+/* * {
   transition: none !important;
-}
+} */
 
 body {
   box-sizing: border-box;
