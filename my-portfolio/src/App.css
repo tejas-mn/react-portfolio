@@ -175,7 +175,6 @@ section>p {
   width: fit-content;
   height: fit-content;
   background-color: var(--skills-color-light);
-  transition: 0.1s;
   letter-spacing: 1px;
 }
 
@@ -193,7 +192,6 @@ section>p {
   padding: 8px 20px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.1s ease;
   margin: 5px;
   border-bottom: 1px solid var(--text-color-dark);
 }
