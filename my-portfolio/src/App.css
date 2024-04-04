@@ -267,6 +267,11 @@ section>p {
     bottom: initial !important;
     top: 10px !important;
   }
+
+  .MuiSnackbar-root {
+    bottom: initial !important;
+    top: 10px !important;
+  }
   
   .tech-skills-heading {
     margin-top: revert;
