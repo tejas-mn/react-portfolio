@@ -65,45 +65,11 @@ const projects = [
     techStackList: [
       "C#", ".NET", "OOPS", "SQL"
     ],
-    timeline: "Sep 2023 – Present",
+    timeline: "Sep 2023",
     description:
       "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
     imageUrl:
       "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
-    githubUrl:
-      "https://github.com/tejas-mn/Sorto-Viz",
-    liveUrl:
-      "https://algo-viz-tej.netlify.app/"
-  },
-  {
-    id: 1,
-    title: "Gym Management System",
-    techStack: "Flask,Bootstrap,JavaScript,SQL",
-    techStackList: [
-      "Flask", "Bootstrap", "JavaScript", "SQL"
-    ],
-    timeline: "Sep 2023 – Present",
-    description:
-      "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
-    imageUrl:
-      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
-    githubUrl:
-      "https://github.com/tejas-mn/Gym-Management-System-Flask",
-    liveUrl:
-      "https://algo-viz-tej.netlify.app/"
-  },
-  {
-    id: 2,
-    title: "Sorting Visualizer",
-    techStack: "React,JavaScript",
-    techStackList: [
-      "React", "Javascript"
-    ],
-    timeline: "Sep 2023 – Present",
-    description:
-      "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
-    imageUrl:
-      "https://github.com/tejas-mn/Sorto-Viz/assets/68629215/4c511869-ff49-4de6-bc1a-d751ddf814ff",
     githubUrl:
       "https://github.com/tejas-mn/Sorto-Viz",
     liveUrl:
@@ -116,7 +82,7 @@ const projects = [
     techStackList: [
       "Flask", "TensorFlow", "Opencv", "Javascript", "Bootstrap"
     ],
-    timeline: "Sep 2023 – Present",
+    timeline: "May 2023",
     description:
       "A web app to detect potato leaf blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
     imageUrl:
@@ -127,41 +93,45 @@ const projects = [
       "https://tejasmn.pythonanywhere.com/"
   },
   {
-    id: 4,
-    title: "Todo App",
-    techStack: "Flask,Html & CSS,JavaScript,jQuery",
-    techStackList: ["Flask", "Html", "CSS", "JavaScript", "jQuery"],
-    timeline: "Sep 2023 – Present",
+    id: 2,
+    title: "Sorting Visualizer",
+    techStack: "React,JavaScript",
+    techStackList: [
+      "React", "Javascript"
+    ],
+    timeline: "Aug 2022",
     description:
-      "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
+      "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
     imageUrl:
-      "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
+      "https://github.com/tejas-mn/Sorto-Viz/assets/68629215/4c511869-ff49-4de6-bc1a-d751ddf814ff",
     githubUrl:
-      "https://github.com/tejas-mn/Flask-App/tree/master",
+      "https://github.com/tejas-mn/Sorto-Viz",
     liveUrl:
-      "https://github.com/tejas-mn/Flask-App/tree/master"
+      "https://algo-viz-tej.netlify.app/"
   },
   {
-    id: 6,
-    title: "Web based remote command runner using CGI",
-    techStack: "Python,Html,RHEL8,Docker,Flask",
-    techStackList: ["Python", "Html", "RHEL8", "Docker", "Flask"],
-    timeline: "Sep 2023 – Present",
+    id: 1,
+    title: "Gym Management System",
+    techStack: "Flask,Bootstrap,JavaScript,SQL",
+    techStackList: [
+      "Flask", "Bootstrap", "JavaScript", "SQL"
+    ],
+    timeline: "Jan 2022",
     description:
-      "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
+      "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
     imageUrl:
-      "https://github.com/tejas-mn/SSH-Remote-Access/assets/68629215/d7dd336a-3fce-4006-8fcf-04d54392c55b",
+      "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
     githubUrl:
-      "https://github.com/tejas-mn/SSH-Remote-Access",
+      "https://github.com/tejas-mn/Gym-Management-System-Flask",
     liveUrl:
-      "https://www.youtube.com/playlist?list=PLGmZIPUNEgq-Mcfrd6fTkiifT_H6cM92B"
+      "https://algo-viz-tej.netlify.app/"
   },
   {
     id: 5,
     title: "IR Remote Controller for PC",
     techStack: "Tkinter,Arduino,Pyautogui,Python",
     techStackList: ["Tkinter", "Arduino", "Pyautogui", "Python"],
-    timeline: "Sep 2023 – Present",
+    timeline: "Jul 2022",
     description:
       "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
     imageUrl:
@@ -172,11 +142,42 @@ const projects = [
       "https://github.com/tejas-mn/mp-final"
   },
   {
+    id: 4,
+    title: "Todo App",
+    techStack: "Flask,Html & CSS,JavaScript,jQuery",
+    techStackList: ["Flask", "Html", "CSS", "JavaScript", "jQuery"],
+    timeline: "Sep 2021",
+    description:
+      "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
+    imageUrl:
+      "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
+    githubUrl:
+      "https://github.com/tejas-mn/Flask-App/tree/master",
+    liveUrl:
+      "https://github.com/tejas-mn/Flask-App/tree/master"
+  },
+
+  {
+    id: 6,
+    title: "Web based remote command runner using CGI",
+    techStack: "Python,Html,RHEL8,Docker,Flask",
+    techStackList: ["Python", "Html", "RHEL8", "Docker", "Flask"],
+    timeline: "Sep 2020",
+    description:
+      "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
+    imageUrl:
+      "https://github.com/tejas-mn/SSH-Remote-Access/assets/68629215/d7dd336a-3fce-4006-8fcf-04d54392c55b",
+    githubUrl:
+      "https://github.com/tejas-mn/SSH-Remote-Access",
+    liveUrl:
+      "https://www.youtube.com/playlist?list=PLGmZIPUNEgq-Mcfrd6fTkiifT_H6cM92B"
+  },
+  {
     id: 7,
     title: "Weather App",
     techStack: "Html,CSS,JavaScript",
     techStackList: ["Html", "CSS", "JavaScript"],
-    timeline: "Sep 2023 – Present",
+    timeline: "Oct 2022",
     description:
       "A simple weather app that displays weather information using OpenWeather API.",
     imageUrl:

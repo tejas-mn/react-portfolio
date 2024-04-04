@@ -262,6 +262,11 @@ section>p {
   .project-title-container {
     margin-bottom: 12px;
   }
+
+  .css-sfbrjq-MuiSnackbar-root {
+    bottom: initial !important;
+    top: 10px !important;
+  }
   
   .tech-skills-heading {
     margin-top: revert;
