@@ -23,6 +23,7 @@ export default function CustomizedSnackbars({theme, showAlert}) {
     if (reason === 'clickaway') {
       return;
     }
+    document.getElementById('mui-alert').style.display = 'none';
     setOpen(false);
   };
 
@@ -32,12 +33,14 @@ export default function CustomizedSnackbars({theme, showAlert}) {
       <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose} TransitionComponent={SlideTransition} >
         <Alert
           onClose={handleClose}
+          id='mui-alert'
           severity="success"
           variant="filled"
           sx={{ width: '100%' }}
           style={{
             backgroundColor:'var(--btn-color-light)',
-            color:'var(--text-color-light)'
+            color:'var(--text-color-light)',
+            display : 'inherit'
           }}
         >
           Changed theme to {theme=="dark-theme"?"Dark Mode":"Light Mode"}!
