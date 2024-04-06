@@ -190,17 +190,17 @@ const projects = [
 ];
 
 const skills = [
-  "DSA",
-  "OOPS",
-  "Javascript",
-  "C#",
-  ".NET WEB API",
-  "React",
-  "C++",
-  "Python",
-  "Flask",
-  "AWS",
-];
+  { id: 1, name: 'DSA', level: 'Intermediate' },
+  { id: 2, name: 'OOPS', level: 'Intermediate' },
+  { id: 7, name: 'C++', level: 'Intermediate' },
+  { id: 6, name: 'React', level: 'Intermediate' },
+  { id: 3, name: 'Javascript', level: 'Intermediate' },
+  { id: 4, name: 'C#', level: 'Beginner' },
+  { id: 5, name: '.NET WEB API', level: 'Beginner' },
+  { id: 8, name: 'Python', level: 'Intermediate' },
+  { id: 9, name: 'Flask', level: 'Intermediate' },
+  { id: 10, name: 'AWS', level: 'Beginner' }
+]
 
 const pics = [
   "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/334384092/original/56bd04ca9f50033757525fc41e9fbed0a08e460e/design-a-custom-logo.png",

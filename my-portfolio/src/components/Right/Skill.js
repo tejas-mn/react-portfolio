@@ -1,10 +1,14 @@
 import { skills } from "../../Providers/DataProvider";
+import "../../tooltip.css";
 
-function Skill({ skill }) {
+function Skill({ skill, level }) {
   return (
-    <div>
-      {skill}
-    </div>
+    <>
+      <div class="tooltip">
+        {skill}
+        <span class="tooltiptext">{level}</span>
+      </div>
+    </>
   );
 }
 
@@ -14,7 +18,7 @@ export function Skills() {
       <h2 className="tech-skills-heading">⚡ Tech Skills</h2>
       <div className="skills">
         {skills.map((ele) => (
-          <Skill key={ele} skill={ele} />
+          <Skill key={ele.id} skill={ele.name} level={ele.level} />
         ))}
       </div>
     </section>

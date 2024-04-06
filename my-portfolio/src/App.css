@@ -181,7 +181,7 @@ section>p {
 .skills>div:hover {
   cursor: pointer;
   transition: 0.1s;
-  background-color: var(--btn-color-light-hover);
+  z-index: 1;
 }
 
 .view-btn {
@@ -272,7 +272,7 @@ section>p {
     bottom: initial !important;
     top: 10px !important;
   }
-  
+
   .tech-skills-heading {
     margin-top: revert;
   }
@@ -285,9 +285,16 @@ section>p {
     margin: 0px;
   }
 
+  .search-container {
+    padding: 5px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
   .edu-timeline {
     float: none !important;
-    /* display: block; */
+    display: block;
   }
 
   .exp-ul {
@@ -296,6 +303,8 @@ section>p {
 
   .right-nav {
     /*display: none;*/
+    width: 100%;
+    justify-content: center;
     padding: 8px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -322,7 +331,7 @@ section>p {
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: auto !important;
+    width: 100% !important;
     bottom: 0;
     z-index: 4;
   }
@@ -331,12 +340,14 @@ section>p {
     margin-bottom: 60px;
   }
 
-  .right-01{
+  .right-01 {
     padding: 20px;
   }
-  .App{
-    gap:10px
+
+  .App {
+    gap: 10px
   }
+
   section>h2 {
     margin-top: 0px;
     padding-left: 0px;
@@ -457,6 +468,6 @@ section>p {
   color: var(--text-color-light) !important;
 }
 
-.edu-p1{
+.edu-p1 {
   margin-top: 20px !important;
 }

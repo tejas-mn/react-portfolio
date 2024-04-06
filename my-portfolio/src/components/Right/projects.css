@@ -58,17 +58,17 @@
 }
 
 .project-box {
-  background-color: var(--btn-color-light);
+  /* background-color: var(--btn-color-light); */
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.1);
   /* border:1px solid  #61dafbb9; */
   animation: fadeInAnimation 0.3s ease-in-out forwards;
 }
 
 .project-box:hover {
   transition: box-shadow 0.2s ease !important;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.637);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -83,6 +83,7 @@
   color: var(--text-color-light);
   margin-top: 0px;
   margin-bottom: 0px;
+  text-align: left;
   font-size: large !important;
 }
 
@@ -143,11 +144,11 @@
 }
 
 .pr-title::before {
-  content: '<';
+  /* content: '<'; */
 }
 
 .pr-title::after {
-  content: '/>';
+  /* content: '/>'; */
 }
 
 .project-list {
@@ -168,7 +169,7 @@
   border-radius: 5px;
 }
 
-.proj-link-list-btn:hover{
+.proj-link-list-btn:hover {
   border-bottom: 1px solid var(--text-color-light);
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
@@ -183,7 +184,7 @@
   display: inline-block;
 }
 
-.techStackItem:hover{
-  background-color: var(--btn-color-light-hover); 
+.techStackItem:hover {
+  background-color: var(--btn-color-light-hover);
   cursor: pointer;
 }
