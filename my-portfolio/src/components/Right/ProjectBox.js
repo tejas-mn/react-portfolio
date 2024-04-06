@@ -40,6 +40,7 @@ function ProjectBox({ project, setCurrentProject, openModal }) {
           }
           alt={project.title}
           style={styles.gridImage}
+          loading="lazy"
         />
       </div>
       <h3 className="pr-title">{project.title}</h3>

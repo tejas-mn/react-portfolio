@@ -1,4 +1,4 @@
-import React, { Suspense, lazy,useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import "./projects.css";
 import { projects } from "../../Providers/DataProvider";
 import Modal from "../utils/Modal";
@@ -53,7 +53,7 @@ function ProjectsGrid({ isVisible }) {
 
   return (
     <>
-      {features[Features.PROJECT_SEARCH] && <div style={styles.searchContainer}>
+      {features[Features.PROJECT_SEARCH] && <div style={styles.searchContainer} className="search-container">
         <TagContainer tags={tagsState} handleTagClick={handleTagClick} />
 
         <SearchBar
@@ -64,17 +64,17 @@ function ProjectsGrid({ isVisible }) {
       </div>
       }
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
-        <Suspense fallback={<FallbackLoader/>}>
-        {filteredProjects.map((project) => (
-          <ProjectBox
-            key={project.id}
-            project={project}
-            openModal={openModal}
-            setCurrentProject={setCurrentProject}
-          />
-        ))}
+        <Suspense fallback={<FallbackLoader />}>
+          {filteredProjects.map((project) => (
+            <ProjectBox
+              key={project.id}
+              project={project}
+              openModal={openModal}
+              setCurrentProject={setCurrentProject}
+            />
+          ))}
         </Suspense>
-      
+
 
         <Modal isOpen={modalOpen} onClose={closeModal}>
           <ProjectModal
