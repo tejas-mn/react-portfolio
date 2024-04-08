@@ -4,9 +4,9 @@ import "../../tooltip.css";
 function Skill({ skill, level }) {
   return (
     <>
-      <div class="tooltip">
+      <div className="tooltip">
         {skill}
-        <span class="tooltiptext">{level}</span>
+        <span className="tooltiptext">{level}</span>
       </div>
     </>
   );

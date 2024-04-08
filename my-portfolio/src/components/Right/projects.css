@@ -3,7 +3,7 @@
   --app-bg-color-light: #f9f9f7;
   --left-bg-color-dark: hsl(240, 2%, 10%);
   --left-bg-color-light: #f4f3ef;
-  --right-nav-color-dark: rgba(37, 36, 36, 0.671);
+  --right-nav-color-dark: rgb(37, 36, 36);
   --right-nav-color-light: #efeee8;
   --btn-color-light: #ffffff;
   --btn-color-dark: #2d2d2d;
