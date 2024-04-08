@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { projects } from "../../Providers/DataProvider";
 import DropDown from "../utils/DropDown";
 import { useAlert } from "../../Providers/AlertProvider";
@@ -8,15 +8,21 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(true);
   const { showAlert } = useAlert();
+  const index = useRef(-1);
 
-  const handleOnFocus = () => setIsFocused(true);
-  const handleBlur = () => setIsFocused(false);
-
+  const handleOnFocus = () => {
+    index.current = -1;
+    setIsFocused(true);
+  }
+  const handleBlur = () => {
+    index.current = -1;
+    setIsFocused(false);
+  }
   const debouncedSearch = useDebounce(fetchSearchResults, 500);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (searchText.trim() !== "") {
       debouncedSearch(searchText.trim(), setSearchResult, tagsState, defaultTags);
     } else {
@@ -61,6 +67,29 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      if (index.current >= 0) {
+        handleAddTag(Array.from(searchResult)[index.current])
+        index.current = -1;
+      } else {
+        handleAddTag(searchText);
+      }
+    }
+    if (event.key === 'ArrowDown') {
+      if (searchResult.size > 0) {
+        index.current = Math.min(index.current + 1, searchResult.size - 1);
+      }
+      console.log(document.getElementById('drop-down').childNodes.item(index.current));
+    }
+    if (event.key === 'ArrowUp') {
+      if (searchResult.size > 0) {
+        index.current = Math.max(index.current - 1, 0);
+      }
+      console.log(document.getElementById('drop-down').childNodes.item(index.current));
+    }
+  };
+
   return (
     <div style={{ position: "relative" }}>
       <input
@@ -69,6 +98,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
         value={searchText}
         onFocus={handleOnFocus}
         onBlur={handleBlur}
+        onKeyDown={handleKeyPress}
         onChange={(e) => handleSearch(e.target.value)}
         style={styles.searchInput}
       />
@@ -81,7 +111,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
       </button>
 
       {isFocused && (
-        <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} />
+        <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} selectedIndex={index.current} />
       )}
     </div>
   );

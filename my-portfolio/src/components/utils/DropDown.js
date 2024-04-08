@@ -1,13 +1,13 @@
 import React from "react";
 
-function DropDown({ options, onSelect }) {
+function DropDown({ options, onSelect,selectedIndex }) {
   return (
-    <ul style={styles.searchResultList}>
+    <ul style={styles.searchResultList} id='drop-down'>
       {options.map((option, index) => (
         <li
           key={index}
           className="search-list-item"
-          style={styles.searchListItem}
+          style={(selectedIndex===index)?styles.hover:styles.searchListItem}
           onMouseDown={() => onSelect(option)}
         >
           {option}
@@ -30,6 +30,11 @@ const styles = {
     borderRadius: "5px",
   },
   searchListItem: {
+    cursor: "pointer",
+    border: "1px solid var(--btn-color-light-hover)",
+  },
+  hover:{
+    backgroundColor:'var(--btn-color-light-hover)',
     cursor: "pointer",
     border: "1px solid var(--btn-color-light-hover)",
   }
