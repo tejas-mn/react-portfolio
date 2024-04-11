@@ -15,6 +15,7 @@ const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/About'));
 const LazyExperience = React.lazy(() => import('./components/Right/Experience'))
 const LazyWork = React.lazy(() => import('./components/Right/Work'))
+const LazyContact = React.lazy(()=>import('./components/Right/Contact'))
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -30,6 +31,7 @@ root.render(
               <Route exact path="about" element={<Suspense fallback={<FallbackLoader/>}> <LazyAbout /> </Suspense>} />
               <Route exact path="experience" element={<Suspense fallback={<FallbackLoader/>}> <LazyExperience /> </Suspense>} />
               <Route exact path="work" element={<Suspense fallback={<FallbackLoader/>}> <LazyWork /> </Suspense>} />
+              <Route exact path="contact" element={<Suspense fallback={<FallbackLoader/>}> <LazyContact /> </Suspense>} />
               <Route path="*" element={<PageNotFound />}  />
             </Route>
           </Routes>
