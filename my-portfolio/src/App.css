@@ -49,6 +49,7 @@
 
 .right * {
   animation: fadeInAnimation 0.1s ease-in-out forwards;
+  box-sizing: border-box;
 }
 
 .right {

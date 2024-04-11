@@ -23,7 +23,8 @@
       rgba(255, 255, 255, 1) 0%,
       rgba(255, 251, 251, 0.715) 100%,
       rgba(255, 255, 255, 1) 100%);
-  --theme-emoji-light: "🌙"
+  --theme-emoji-light: "🌙";
+  --map-theme: grayscale(1) invert(1)
 }
 
 .light-theme {
@@ -34,6 +35,7 @@
   --bg-navbar: var(--bg-navbar-light);
   --text-color-light: rgb(0, 0, 0);
   --theme-emoji-light: "☀";
+  --map-theme: grayscale(1);
 }
 
 .dark-theme {
@@ -46,7 +48,8 @@
   --right-nav-color-light: var(--right-nav-color-dark);
   --skills-color-light: var(--skills-color-dark);
   --index-bg-light: var(--index-bg-dark);
-  --theme-emoji-light: "☀"
+  --theme-emoji-light: "☀";
+  --map-theme: grayscale(1) invert(1);
 }
 
 h1 {

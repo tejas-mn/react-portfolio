@@ -14,7 +14,7 @@ export function NavBar() {
     {name:"🖋️ About", link:"/about"},
     {name:"💼 Experience", link:"/experience"},
     {name:"🚀 Projects", link:"/work"},
-    // {name:"📞 Contact", link:"/contact"}
+    {name:"📞 Contact", link:"/contact"}
   ]
 
   return (
