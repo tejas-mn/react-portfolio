@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { userInfo } from "../../Providers/DataProvider";
 import { useTheme } from "../../Providers/ThemeProvider";
+import { useUser } from "../../Providers/UserProvider";
 
 const bg = {
   "light-theme": userInfo.bannerImages[6],
@@ -9,6 +10,8 @@ const bg = {
 
 export const PicContainer = () => {
   const { theme } = useTheme();
+  const { data } = useUser();
+
   const banner = useRef();
 
   useEffect(() => {
@@ -23,9 +26,9 @@ export const PicContainer = () => {
           <img src={userInfo.profilePic} alt="Profile picture" />
         </div>
         <div className="pic-desc">
-          <h2>{userInfo.name}</h2>
+          <h2>{data.userInfo.name}</h2>
           <p>
-            <b>💻{userInfo.profession}</b>
+            <b>💻{data.userInfo.profession}</b>
           </p>
         </div>
       </div>

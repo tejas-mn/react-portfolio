@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import {useUser, UserProvider} from "./Providers/UserProvider";
+
 import FallbackLoader from "./components/utils/FallbackLoader";
 import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
@@ -18,6 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <UserProvider>
     <Provider store={store}>
     <AlertProvider>
       <FeatureToggleProvider>
@@ -34,6 +37,7 @@ root.render(
       </FeatureToggleProvider>
     </AlertProvider>
     </Provider>
+    </UserProvider>
   </React.StrictMode>
 );
 

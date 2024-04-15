@@ -1,10 +1,13 @@
 import { userInfo } from "../../Providers/DataProvider";
+import { useUser } from "../../Providers/UserProvider";
 import { EmailSvg, Locationsvg } from "../utils/Svg";
 
 export function ProfileDetails() {
+  const {data} = useUser();
+
   return (
     <>
-      <p>{userInfo.headline}</p>
+      <p>{data.userInfo.headline}</p>
       <div className="skills2">
         <ContactInfo />
         <ResumeButton />
@@ -14,24 +17,27 @@ export function ProfileDetails() {
 }
 
 function ContactInfo() {
+  const {data} = useUser();
+
   return (
     <>
       <div>
-        <a href={`mailto:${userInfo.email}`} style={styles.anchor}>
-          <EmailSvg /> {userInfo.email}
+        <a href={`mailto:${data.userInfo.email}`} style={styles.anchor}>
+          <EmailSvg /> {data.userInfo.email}
         </a>
       </div>
       <div>
-        <Locationsvg /> {userInfo.location}
+        <Locationsvg /> {data.userInfo.location}
       </div>
     </>
   );
 }
 
 function ResumeButton() {
+  const {data} = useUser();
   return (
     <div className="resume-btn">
-      <a style={styles.anchor} href={userInfo.links.resume} target="blank">
+      <a style={styles.anchor} href={data.userInfo.links.resume} target="blank">
         <span style={styles.btnText}>📝</span> My Resume
       </a>
     </div>
