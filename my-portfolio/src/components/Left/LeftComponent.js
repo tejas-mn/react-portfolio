@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import React from "react";
 import { PicContainer } from "./PicContainer";
 import { ProfileDetails } from "./ProfileDetails";

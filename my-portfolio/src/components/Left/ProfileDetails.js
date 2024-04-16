@@ -1,4 +1,3 @@
-import { userInfo } from "../../Providers/DataProvider";
 import { useUser } from "../../Providers/UserProvider";
 import { EmailSvg, Locationsvg } from "../utils/Svg";
 

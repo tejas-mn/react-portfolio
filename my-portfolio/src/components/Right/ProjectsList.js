@@ -1,5 +1,5 @@
 import React from "react";
-import { projects } from "../../Providers/DataProvider";
+import { useUser } from "../../Providers/UserProvider";
 import { Pagination } from "../utils/Pagination";
 import {
   PaginationProvider,
@@ -56,8 +56,9 @@ const PaginatedItemList = () => {
 };
 
 export function ProjectsList() {
+  const {data} = useUser();
   return (
-    <PaginationProvider itemsPerPage={4} items={projects}>
+    <PaginationProvider itemsPerPage={4} items={data.projects}>
       <PaginatedItemList />
       <Pagination />
     </PaginationProvider>

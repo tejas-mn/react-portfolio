@@ -1,16 +1,15 @@
 import { useEffect, useRef } from "react";
-import { userInfo } from "../../Providers/DataProvider";
 import { useTheme } from "../../Providers/ThemeProvider";
 import { useUser } from "../../Providers/UserProvider";
-
-const bg = {
-  "light-theme": userInfo.bannerImages[6],
-  "dark-theme": userInfo.bannerImages[5]
-};
 
 export const PicContainer = () => {
   const { theme } = useTheme();
   const { data } = useUser();
+
+  const bg = {
+    "light-theme": data.userInfo.bannerImages.lightBanner,
+    "dark-theme": data.userInfo.bannerImages.darkBanner
+  }
 
   const banner = useRef();
 
@@ -23,7 +22,7 @@ export const PicContainer = () => {
       <img className="banner-img" ref={banner} alt="Banner" />
       <div className="pic-container">
         <div className="pic" style={styles.picStyle}>
-          <img src={userInfo.profilePic} alt="Profile picture" />
+          <img src={data.userInfo.profilePic} alt="Profile" />
         </div>
         <div className="pic-desc">
           <h2>{data.userInfo.name}</h2>

@@ -210,10 +210,12 @@
       "github": "https://www.github.com/tejas-mn",
       "linkedin": "https://www.linkedin.com/in/tejasmn/"
     },
-    "profilePic": "string",
-    "bannerImages": [
-      "dark-theme", "light-theme"
-    ],
+    "profilePic": "https://i.pinimg.com/736x/a3/96/63/a3966351deb43da383db28f854e2f6b3.jpg",
+    "bannerImages": {
+      "darkBanner": "https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif",
+      "lightBanner" : "https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769",
+      "single" : ""
+    },
     "aboutInfo": "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET in US based product company. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript, SQL, C#, and React. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies.",
     "experienceInfo": "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET in US based product company. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript, SQL, C#, and React. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies."
   }

@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import {useUser, UserProvider} from "./Providers/UserProvider";
-
+import { UserProvider } from "./Providers/UserProvider";
+import { GridLoader } from "./components/utils/Loaders";
 import FallbackLoader from "./components/utils/FallbackLoader";
 import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
@@ -15,30 +15,30 @@ const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/About'));
 const LazyExperience = React.lazy(() => import('./components/Right/Experience'))
 const LazyWork = React.lazy(() => import('./components/Right/Work'))
-const LazyContact = React.lazy(()=>import('./components/Right/Contact'))
+const LazyContact = React.lazy(() => import('./components/Right/Contact'))
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <UserProvider>
-    <Provider store={store}>
-    <AlertProvider>
-      <FeatureToggleProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Suspense fallback={<FallbackLoader/>}> <ThemedApp /> </Suspense>}>
-              <Route exact path="about" element={<Suspense fallback={<FallbackLoader/>}> <LazyAbout /> </Suspense>} />
-              <Route exact path="experience" element={<Suspense fallback={<FallbackLoader/>}> <LazyExperience /> </Suspense>} />
-              <Route exact path="work" element={<Suspense fallback={<FallbackLoader/>}> <LazyWork /> </Suspense>} />
-              <Route exact path="contact" element={<Suspense fallback={<FallbackLoader/>}> <LazyContact /> </Suspense>} />
-              <Route path="*" element={<PageNotFound />}  />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </FeatureToggleProvider>
-    </AlertProvider>
-    </Provider>
+      <Provider store={store}>
+        <AlertProvider>
+          <FeatureToggleProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <ThemedApp /> </Suspense>}>
+                  <Route exact path="about" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <LazyAbout /> </Suspense>} />
+                  <Route exact path="experience" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <LazyExperience /> </Suspense>} />
+                  <Route exact path="work" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <LazyWork /> </Suspense>} />
+                  <Route exact path="contact" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <LazyContact /> </Suspense>} />
+                  <Route path="*" element={<PageNotFound />} />
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </FeatureToggleProvider>
+        </AlertProvider>
+      </Provider>
     </UserProvider>
   </React.StrictMode>
 );

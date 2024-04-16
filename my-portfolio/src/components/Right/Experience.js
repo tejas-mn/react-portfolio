@@ -1,4 +1,5 @@
-import { exp, userInfo } from "../../Providers/DataProvider";
+import { useUser } from "../../Providers/UserProvider";
+
 import {
   PaginationProvider,
   usePagination,
@@ -18,11 +19,13 @@ function PaginatedItemList() {
 }
 
 export default function Experience() {
+  const {data} = useUser();
+
   return (
     <section>
       <h2>💼 Experience</h2>
-      <p>{userInfo.experienceInfo}</p>
-      <PaginationProvider items={exp} itemsPerPage={2}>
+      <p>{data.userInfo.experienceInfo}</p>
+      <PaginationProvider items={data.exp} itemsPerPage={2}>
         <PaginatedItemList />
         <Pagination />
       </PaginationProvider>

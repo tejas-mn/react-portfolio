@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { projects } from "../../Providers/DataProvider";
 import DropDown from "../utils/DropDown";
 import { useAlert } from "../../Providers/AlertProvider";
 import { useDebounce } from "../../hooks/useDebounce";
+import { useUser } from "../../Providers/UserProvider";
 
 export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
+  const {data} = useUser();
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
@@ -36,10 +37,10 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   useEffect(() => {
     if (tagsState.size === 0) {
-      setFilteredProjects(projects);
+      setFilteredProjects(data.projects);
     } else {
       setFilteredProjects(
-        projects.filter((project) =>
+        data.projects.filter((project) =>
           Array.from(tagsState).some((tag) =>
             project.techStack
               .toLowerCase()
