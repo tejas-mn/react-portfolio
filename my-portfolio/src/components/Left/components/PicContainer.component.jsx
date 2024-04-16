@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import { useTheme } from "../../Providers/ThemeProvider";
-import { useUser } from "../../Providers/UserProvider";
+import { useTheme } from "../../../Providers/ThemeProvider";
+import { useUser } from "../../../Providers/UserProvider";
+import styles from "../styles/Left.module.css";
 
 export const PicContainer = () => {
   const { theme } = useTheme();
@@ -18,13 +19,13 @@ export const PicContainer = () => {
   }, [theme]);
 
   return (
-    <div style={styles.containerStyle}>
-      <img className="banner-img" ref={banner} alt="Banner" />
-      <div className="pic-container">
-        <div className="pic" style={styles.picStyle}>
+    <div className={styles.containerStyle}>
+      <img className={styles.bannerImg} ref={banner} alt="Banner" />
+      <div className={styles.picContainer}>
+        <div className={ styles.pic + " " + styles.picStyle}>
           <img src={data.userInfo.profilePic} alt="Profile" />
         </div>
-        <div className="pic-desc">
+        <div className={styles.picDesc}>
           <h2>{data.userInfo.name}</h2>
           <p>
             <b>💻{data.userInfo.profession}</b>
@@ -34,14 +35,3 @@ export const PicContainer = () => {
     </div>
   );
 };
-
-const styles = {
-  containerStyle: {
-    width: '100%',
-    position: 'relative'
-  },
-
-  picStyle: {
-    boxShadow: "rgb(255 255 255 / 31%) 0px 0px 30px"
-  }
-}

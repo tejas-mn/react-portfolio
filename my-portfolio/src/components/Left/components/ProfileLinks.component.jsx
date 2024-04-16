@@ -1,9 +1,9 @@
-import { useUser } from "../../Providers/UserProvider";
+import { useUser } from "../../../Providers/UserProvider";
 import {
   GithubProfileSvg,
   LinkedinProfileSvg,
   LeetCodeProfileSvg,
-} from "../utils/Svg";
+} from "../../utils/Svg";
 
 export function ProfileLinks() {
   const {data} = useUser();

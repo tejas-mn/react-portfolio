@@ -1,11 +1,11 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import ParticlesBackground from "./components/utils/ParticlesBackground";
-import { LeftComponent } from "./components/Left/LeftComponent";
+import { LeftComponent } from "./components/Left/components/Left.component";
 import { RightComponent } from "./components/Right/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
 import { NavBar } from "./components/Right/Navbar";
-import AlertMessages from "./components/utils/Alert";
+import AlertMessages from "./components/utils/components/Alert";
 import Progress from "./components/utils/Progress";
 
 function App() {

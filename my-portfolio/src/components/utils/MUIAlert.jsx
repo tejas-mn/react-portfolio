@@ -12,7 +12,7 @@ export default function CustomizedSnackbars({theme, showAlert}) {
   }
 
   React.useEffect(()=>{
-    if(showAlert!==null)setOpen(true);
+    if(showAlert!==null) setOpen(true);
   }, [showAlert])
 
   const handleClick = () => {

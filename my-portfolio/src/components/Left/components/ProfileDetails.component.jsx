@@ -1,5 +1,6 @@
-import { useUser } from "../../Providers/UserProvider";
-import { EmailSvg, Locationsvg } from "../utils/Svg";
+import { useUser } from "../../../Providers/UserProvider";
+import { EmailSvg, Locationsvg } from "../../utils/Svg";
+import styles from "../styles/Left.module.css";
 
 export function ProfileDetails() {
   const {data} = useUser();
@@ -7,7 +8,7 @@ export function ProfileDetails() {
   return (
     <>
       <p>{data.userInfo.headline}</p>
-      <div className="skills2">
+      <div className={styles.skills2}>
         <ContactInfo />
         <ResumeButton />
       </div>
@@ -21,7 +22,7 @@ function ContactInfo() {
   return (
     <>
       <div>
-        <a href={`mailto:${data.userInfo.email}`} style={styles.anchor}>
+        <a href={`mailto:${data.userInfo.email}`} className={styles.anchor}>
           <EmailSvg /> {data.userInfo.email}
         </a>
       </div>
@@ -36,14 +37,10 @@ function ResumeButton() {
   const {data} = useUser();
   return (
     <div className="resume-btn">
-      <a style={styles.anchor} href={data.userInfo.links.resume} target="blank">
-        <span style={styles.btnText}>📝</span> My Resume
+      <a className={styles.anchor} href={data.userInfo.links.resume} target="blank">
+        <span className={styles.btnText}>📝</span> My Resume
       </a>
     </div>
   );
 }
 
-const styles = {
-  anchor: { textDecoration: "none" , color:'inherit'},
-  btnText: { fontSize: "large" },
-};
