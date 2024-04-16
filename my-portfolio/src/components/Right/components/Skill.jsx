@@ -1,5 +1,5 @@
-import { useUser } from "../../Providers/UserProvider";
-import "../../tooltip.css";
+import { useUser } from "../../../Providers/UserProvider";
+import "../../../tooltip.css";
 
 function Skill({ skill, level }) {
   return (

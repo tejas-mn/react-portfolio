@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useState, useContext } from "react";
-import { useLocalStorage } from "../hooks/customHooks";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const ThemeContext = createContext();
 

@@ -1,6 +1,6 @@
 import { Skills } from "./Skill";
 import Education from "./Education";
-import { useUser } from "../../Providers/UserProvider";
+import { useUser } from "../../../Providers/UserProvider";
 
 export default function About() {
   return (

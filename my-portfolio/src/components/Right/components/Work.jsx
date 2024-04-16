@@ -1,8 +1,8 @@
 import ProjectsGrid from "./ProjectsGrid";
 import React, { useState } from "react";
 import { ProjectsList } from "./ProjectsList";
-import { useFeatureToggle } from "../../Providers/FeatureProvider";
-import { Features } from "../../Providers/Features";
+import { useFeatureToggle } from "../../../Providers/FeatureProvider";
+import { Features } from "../../../Providers/Features";
 
 export default function Work() {
   const [isGridView, setGridView] = useState(false);

@@ -1,12 +1,12 @@
 import React, { useState, useEffect,forwardRef, useImperativeHandle  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateTheme, updateFeature, updateProjectView } from '../../Redux/settingsSlice';
-import { useTheme } from '../../Providers/ThemeProvider';
-import './Settings.css';
-import { useAlert } from '../../Providers/AlertProvider';
-import { useFeatureToggle } from '../../Providers/FeatureProvider';
-import { Features } from '../../Providers/Features';
-import { SettingsItem, Checkbox } from '../utils/SettingsUtils';
+import { updateTheme, updateFeature, updateProjectView } from '../../../Redux/settingsSlice';
+import { useTheme } from '../../../Providers/ThemeProvider';
+import '../styles/Settings.css';
+import { useAlert } from '../../../Providers/AlertProvider';
+import { useFeatureToggle } from '../../../Providers/FeatureProvider';
+import { Features } from '../../../Providers/Features';
+import { SettingsItem, Checkbox } from '../../utils/components/SettingsUtils';
 
 export const Settings = forwardRef((props, ref) => {
   const dispatch = useDispatch();

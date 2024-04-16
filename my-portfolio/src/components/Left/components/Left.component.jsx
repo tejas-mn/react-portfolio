@@ -4,13 +4,13 @@ import { PicContainer } from "./PicContainer.component";
 import { ProfileDetails } from "./ProfileDetails.component";
 import { ProfileLinks } from "./ProfileLinks.component";
 import { useTheme } from "../../../Providers/ThemeProvider";
-import Modal from "../../utils/Modal";
-import { Toggle } from "../../utils/Toggle";
-import { Settings } from "../../Right/Settings";
+import Modal from "../../utils/components/Modal";
+import { Toggle } from "../../utils/components/Toggle";
+import { Settings } from "../../Right/components/Settings";
 import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 import { Features } from "../../../Providers/Features";
 import styles from '../styles/Left.module.css'
-import CustomizedSnackbars from "../../utils/MUIAlert";
+import CustomizedSnackbars from "../../utils/components/MUIAlert";
 
 export const LeftComponent = React.memo(() => {            //memoized this as whenever we scroll in app compo child components like this one gets re rendering and was causing Snackbar transition on each scroll
   const [modalOpen, setModalOpen] = useState(false);

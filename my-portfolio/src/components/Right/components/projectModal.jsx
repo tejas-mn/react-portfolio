@@ -1,8 +1,8 @@
 import React from "react";
-import { useAutoBoldText } from "../../hooks/customHooks";
-import "./projects.css";
-import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
-import { useAlert } from "../../Providers/AlertProvider";
+import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
+import "../styles/projects.css";
+import { GithubProjectSvg, ProjectLinkSvg } from "../../utils/components/Svg";
+import { useAlert } from "../../../Providers/AlertProvider";
 
 export default function ProjectModal({
   imageUrl,

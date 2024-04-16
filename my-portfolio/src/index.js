@@ -2,20 +2,20 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { UserProvider } from "./Providers/UserProvider";
-import { GridLoader } from "./components/utils/Loaders";
-import FallbackLoader from "./components/utils/FallbackLoader";
+import { GridLoader } from "./components/utils/components/Loaders";
+import FallbackLoader from "./components/utils/components/FallbackLoader";
 import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './Redux/store';
-import PageNotFound from "./components/utils/PageNotFound";
+import PageNotFound from "./components/utils/components/PageNotFound";
 const ThemedApp = React.lazy(() => import('./App'));
-const LazyAbout = React.lazy(() => import('./components/Right/About'));
-const LazyExperience = React.lazy(() => import('./components/Right/Experience'))
-const LazyWork = React.lazy(() => import('./components/Right/Work'))
-const LazyContact = React.lazy(() => import('./components/Right/Contact'))
+const LazyAbout = React.lazy(() => import('./components/Right/components/About'));
+const LazyExperience = React.lazy(() => import('./components/Right/components/Experience'))
+const LazyWork = React.lazy(() => import('./components/Right/components/Work'))
+const LazyContact = React.lazy(() => import('./components/Right/components/Contact'))
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

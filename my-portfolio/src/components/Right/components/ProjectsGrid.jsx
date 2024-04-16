@@ -1,14 +1,14 @@
 import React, { Suspense, lazy, useState } from "react";
-import "./projects.css";
-import { useUser } from "../../Providers/UserProvider";
-import Modal from "../utils/Modal";
+import "../styles/projects.css";
+import { useUser } from "../../../Providers/UserProvider";
+import Modal from "../../utils/components/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
-import { GridLoader } from "../utils/Loaders";
-import FallbackLoader from "../utils/FallbackLoader";
+import { GridLoader } from "../../utils/components/Loaders";
+import FallbackLoader from "../../utils/components/FallbackLoader";
 import TagContainer from "./TagContainer";
-import { Features } from "../../Providers/Features";
-import { useFeatureToggle } from "../../Providers/FeatureProvider";
+import { Features } from "../../../Providers/Features";
+import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 
 const ProjectBox = lazy(() => import('./ProjectBox'));
 

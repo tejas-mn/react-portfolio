@@ -1,10 +1,10 @@
-import { useUser } from "../../Providers/UserProvider";
+import { useUser } from "../../../Providers/UserProvider";
 
 import {
   PaginationProvider,
   usePagination,
-} from "../../Providers/PaginationProvider";
-import { Pagination } from "../utils/Pagination";
+} from "../../../Providers/PaginationProvider";
+import { Pagination } from "../../utils/components/Pagination";
 import ExperienceDetail from "./ExperienceDetail";
 
 function PaginatedItemList() {

@@ -1,6 +1,6 @@
-import { usePagination } from "../../Providers/PaginationProvider";
-import { useTheme } from "../../Providers/ThemeProvider";
-import './Pagination.css';
+import { usePagination } from "../../../Providers/PaginationProvider";
+import { useTheme } from "../../../Providers/ThemeProvider";
+import '../styles/Pagination.css';
 export const Pagination = () => {
   const { currentPage, nextPage, prevPage, totalPages, setCurrentPage } =
     usePagination();

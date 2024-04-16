@@ -3,7 +3,7 @@ import {
   GithubProfileSvg,
   LinkedinProfileSvg,
   LeetCodeProfileSvg,
-} from "../../utils/Svg";
+} from "../../utils/components/Svg";
 
 export function ProfileLinks() {
   const {data} = useUser();

@@ -1,5 +1,5 @@
 import { useUser } from "../../../Providers/UserProvider";
-import { EmailSvg, Locationsvg } from "../../utils/Svg";
+import { EmailSvg, Locationsvg } from "../../utils/components/Svg";
 import styles from "../styles/Left.module.css";
 
 export function ProfileDetails() {
@@ -36,7 +36,7 @@ function ContactInfo() {
 function ResumeButton() {
   const {data} = useUser();
   return (
-    <div className="resume-btn">
+    <div className={styles.resumeBtn}>
       <a className={styles.anchor} href={data.userInfo.links.resume} target="blank">
         <span className={styles.btnText}>📝</span> My Resume
       </a>

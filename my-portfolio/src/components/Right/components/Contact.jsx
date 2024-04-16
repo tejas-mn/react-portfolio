@@ -1,5 +1,5 @@
-import { ProjectLinkSvg } from "../utils/Svg";
-import './contact.css';
+import { ProjectLinkSvg } from "../../utils/components/Svg";
+import '../styles/contact.css';
 
 export default function Contact() {
 

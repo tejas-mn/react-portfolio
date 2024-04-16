@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import DropDown from "../utils/DropDown";
-import { useAlert } from "../../Providers/AlertProvider";
-import { useDebounce } from "../../hooks/useDebounce";
-import { useUser } from "../../Providers/UserProvider";
+import DropDown from "../../utils/components/DropDown";
+import { useAlert } from "../../../Providers/AlertProvider";
+import { useDebounce } from "../../../hooks/useDebounce";
+import { useUser } from "../../../Providers/UserProvider";
 
 export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
   const {data} = useUser();

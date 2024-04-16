@@ -1,4 +1,4 @@
-import { useUser } from "../../Providers/UserProvider";
+import { useUser } from "../../../Providers/UserProvider";
 
 function EducationDetail({ e }) {
   return (

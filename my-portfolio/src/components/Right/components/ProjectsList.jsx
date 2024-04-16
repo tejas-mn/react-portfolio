@@ -1,12 +1,12 @@
 import React from "react";
-import { useUser } from "../../Providers/UserProvider";
-import { Pagination } from "../utils/Pagination";
+import { useUser } from "../../../Providers/UserProvider";
+import { Pagination } from "../../utils/components/Pagination";
 import {
   PaginationProvider,
   usePagination,
-} from "../../Providers/PaginationProvider";
-import { useAutoBoldText } from "../../hooks/customHooks";
-import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
+} from "../../../Providers/PaginationProvider";
+import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
+import { GithubProjectSvg, ProjectLinkSvg } from "../../utils/components/Svg";
 
 function ProjectItem({ currentProject }) {
   return (

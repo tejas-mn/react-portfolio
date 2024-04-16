@@ -47,13 +47,13 @@
   letter-spacing: 1px;
 }
 
-.resume-btn {
+.resumeBtn {
   background: linear-gradient(343deg, #bffaff6e, #fdffbc5d);
   box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127);
   padding: 7px 20px !important;
 }
 
-.resume-btn:hover {
+.resumeBtn:hover {
   cursor: pointer;
   transition: 0.1s;
   transform: scale(1.03);
