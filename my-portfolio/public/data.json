@@ -187,16 +187,16 @@
     }
   ],
   "skills": [
-    "DSA",
-    "OOPS",
-    "Javascript",
-    "C#",
-    ".NET WEB API",
-    "React",
-    "C++",
-    "Python",
-    "Flask",
-    "AWS"
+    { "id": 1, "name": "DSA", "level": "Intermediate" },
+    { "id": 2, "name": "OOPS", "level": "Intermediate" },
+    { "id": 7, "name": "C++", "level": "Intermediate" },
+    { "id": 6, "name": "React", "level": "Intermediate" },
+    { "id": 3, "name": "Javascript", "level": "Intermediate" },
+    { "id": 4, "name": "C#", "level": "Beginner" },
+    { "id": 5, "name": ".NET WEB API", "level": "Beginner" },
+    { "id": 8, "name": "Python", "level": "Intermediate" },
+    { "id": 9, "name": "Flask", "level": "Intermediate" },
+    { "id": 10, "name": "AWS", "level": "Beginner" }
   ],
   "userInfo": {
     "name": "Tejas M N",
