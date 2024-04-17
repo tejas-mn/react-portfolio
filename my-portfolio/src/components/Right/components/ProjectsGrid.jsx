@@ -1,18 +1,20 @@
 import React, { Suspense, lazy, useState } from "react";
-import "./projects.css";
-import { projects } from "../../Providers/DataProvider";
-import Modal from "../utils/Modal";
+import "../styles/projects.css";
+import { useUser } from "../../../Providers/UserProvider";
+import Modal from "../../utils/components/Modal";
 import ProjectModal from "./projectModal";
 import SearchBar from "./SearchBar";
-import FallbackLoader from "../utils/FallbackLoader";
+import { GridLoader } from "../../utils/components/Loaders";
+import FallbackLoader from "../../utils/components/FallbackLoader";
 import TagContainer from "./TagContainer";
-import { Features } from "../../Providers/Features";
-import { useFeatureToggle } from "../../Providers/FeatureProvider";
+import { Features } from "../../../Providers/Features";
+import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 
 const ProjectBox = lazy(() => import('./ProjectBox'));
 
 function ProjectsGrid({ isVisible }) {
-  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const { data } = useUser();
+  const [filteredProjects, setFilteredProjects] = useState(data.projects);
   const [modalOpen, setModalOpen] = useState(false);
   const { features } = useFeatureToggle();
   const [currentProject, setCurrentProject] = useState({
@@ -64,7 +66,7 @@ function ProjectsGrid({ isVisible }) {
       </div>
       }
       <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
-        <Suspense fallback={<FallbackLoader />}>
+        <Suspense fallback={<FallbackLoader loader={GridLoader} />}>
           {filteredProjects.map((project) => (
             <ProjectBox
               key={project.id}

@@ -1,4 +1,4 @@
-import { useAlert } from '../../Providers/AlertProvider';
+import { useAlert } from '../../../Providers/AlertProvider';
 
 function Alert({ alertObj }) {
     const { hideAlert } = useAlert();

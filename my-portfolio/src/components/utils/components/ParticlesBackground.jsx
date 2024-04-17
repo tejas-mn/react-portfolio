@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 // import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadFull } from "tsparticles";
-import { useTheme } from "../../Providers/ThemeProvider";
+import { useTheme } from "../../../Providers/ThemeProvider";
 
 function ParticlesBackground() {
   // const [isInitialized, setIsInitialized] = useState(false);

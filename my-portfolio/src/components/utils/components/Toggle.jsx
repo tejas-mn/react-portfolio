@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import "./toggle.css"
+import "../styles/toggle.css"
 
 export const Toggle = ({ label, toggled, onClick }) => {
     const [isToggled, toggle] = useState(toggled)

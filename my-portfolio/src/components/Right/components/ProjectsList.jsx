@@ -1,12 +1,12 @@
 import React from "react";
-import { projects } from "../../Providers/DataProvider";
-import { Pagination } from "../utils/Pagination";
+import { useUser } from "../../../Providers/UserProvider";
+import { Pagination } from "../../utils/components/Pagination";
 import {
   PaginationProvider,
   usePagination,
-} from "../../Providers/PaginationProvider";
-import { useAutoBoldText } from "../../hooks/customHooks";
-import { GithubProjectSvg, ProjectLinkSvg } from "../utils/Svg";
+} from "../../../Providers/PaginationProvider";
+import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
+import { GithubProjectSvg, ProjectLinkSvg } from "../../utils/components/Svg";
 
 function ProjectItem({ currentProject }) {
   return (
@@ -56,8 +56,9 @@ const PaginatedItemList = () => {
 };
 
 export function ProjectsList() {
+  const {data} = useUser();
   return (
-    <PaginationProvider itemsPerPage={4} items={projects}>
+    <PaginationProvider itemsPerPage={4} items={data.projects}>
       <PaginatedItemList />
       <Pagination />
     </PaginationProvider>

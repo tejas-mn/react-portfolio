@@ -1,6 +1,6 @@
 import { Skills } from "./Skill";
 import Education from "./Education";
-import { userInfo } from "../../Providers/DataProvider";
+import { useUser } from "../../../Providers/UserProvider";
 
 export default function About() {
   return (
@@ -13,10 +13,12 @@ export default function About() {
 }
 
 function AboutMe() {
+  const {data} = useUser();
+
   return (
     <section>
       <h2>🖋️ About Me</h2>
-      <p>{userInfo.aboutInfo}</p>
+      <p>{data.userInfo.aboutInfo}</p>
     </section>
   );
 }

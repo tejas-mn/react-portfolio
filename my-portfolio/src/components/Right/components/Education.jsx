@@ -1,4 +1,4 @@
-import { edu } from "../../Providers/DataProvider";
+import { useUser } from "../../../Providers/UserProvider";
 
 function EducationDetail({ e }) {
   return (
@@ -15,10 +15,11 @@ function EducationDetail({ e }) {
 }
 
 export default function Education() {
+  const {data} = useUser();
   return (
     <section className="">
       <h2>🎓 Education</h2>
-      {edu.map((e) => (
+      {data.edu.map((e) => (
         <EducationDetail key={e.id} e={e} />
       ))}
     </section>

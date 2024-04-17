@@ -1,12 +1,12 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import ParticlesBackground from "./components/utils/ParticlesBackground";
-import { LeftComponent } from "./components/Left/LeftComponent";
-import { RightComponent } from "./components/Right/RightComponent";
+import ParticlesBackground from "./components/utils/components/ParticlesBackground";
+import { LeftComponent } from "./components/Left/components/Left.component";
+import { RightComponent } from "./components/Right/components/RightComponent";
 import { ThemeProvider, useTheme } from "./Providers/ThemeProvider";
-import { NavBar } from "./components/Right/Navbar";
-import AlertMessages from "./components/utils/Alert";
-import Progress from "./components/utils/Progress";
+import { NavBar } from "./components/Right/components/Navbar";
+import AlertMessages from "./components/utils/components/Alert";
+import Progress from "./components/utils/components/Progress";
 
 function App() {
   const { theme } = useTheme();

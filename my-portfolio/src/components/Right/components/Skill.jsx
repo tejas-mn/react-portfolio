@@ -1,5 +1,5 @@
-import { skills } from "../../Providers/DataProvider";
-import "../../tooltip.css";
+import { useUser } from "../../../Providers/UserProvider";
+import "../../../tooltip.css";
 
 function Skill({ skill, level }) {
   return (
@@ -13,11 +13,12 @@ function Skill({ skill, level }) {
 }
 
 export function Skills() {
+  const {data} = useUser();
   return (
     <section>
       <h2 className="tech-skills-heading">⚡ Tech Skills</h2>
       <div className="skills">
-        {skills.map((ele) => (
+        {data.skills.map((ele) => (
           <Skill key={ele.id} skill={ele.name} level={ele.level} />
         ))}
       </div>

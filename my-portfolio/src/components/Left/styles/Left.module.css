@@ -1,3 +1,8 @@
+.btn{
+  margin-top: 30px;
+  border-radius: 100px; 
+}
+
 .pic {
   width: 120px;
   height: 120px;
@@ -11,15 +16,15 @@
   border-radius: 108px;
 }
 
-.pic-desc {
+.picDesc {
   color: rgb(255, 255, 255);
 }
 
-.pic-desc > h2 {
+.picDesc > h2 {
   margin: 0px;
 }
 
-.pic-desc > p {
+.picDesc > p {
   margin-top: 0px;
 }
 
@@ -42,19 +47,19 @@
   letter-spacing: 1px;
 }
 
-.resume-btn {
+.resumeBtn {
   background: linear-gradient(343deg, #bffaff6e, #fdffbc5d);
   box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127);
   padding: 7px 20px !important;
 }
 
-.resume-btn:hover {
+.resumeBtn:hover {
   cursor: pointer;
   transition: 0.1s;
   transform: scale(1.03);
 }
 
-.banner-img {
+.bannerImg {
   width: -webkit-fill-available;
   position: absolute;
   top: -20px;
@@ -66,9 +71,27 @@
   border-top-right-radius: 10px;
 }
 
-.pic-container {
+.picContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.containerStyle {
+  width: 100%;
+  position: relative;
+}
+
+.picStyle {
+  box-shadow: rgb(255 255 255 / 31%) 0px 0px 30px;
+}
+
+.anchor {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btnText {
+  font-size: large;
 }
