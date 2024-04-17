@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import { createContext } from 'react';
 import FallbackLoader from '../components/utils/components/FallbackLoader';
@@ -17,7 +17,14 @@ const UserProvider = ({ children }) => {
         console.log("Loading Data..")
         return <FallbackLoader loader={CirclesLoader} />
     } else {
-        console.log(data);
+
+        //preload project images 
+        data.projects.forEach(project => {
+            const img = new Image();
+            img.src = project.imageUrl;
+            data.projects.imageUrl = img.src;
+        });
+
         return (
             <userContext.Provider value={{
                 data
