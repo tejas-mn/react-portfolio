@@ -13,7 +13,7 @@ import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 const ProjectBox = lazy(() => import('./ProjectBox'));
 
 function ProjectsGrid({ isVisible }) {
-  const {data} = useUser();
+  const { data } = useUser();
   const [filteredProjects, setFilteredProjects] = useState(data.projects);
   const [modalOpen, setModalOpen] = useState(false);
   const { features } = useFeatureToggle();
