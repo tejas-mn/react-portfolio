@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function ProjectBox({ project, setCurrentProject, openModal }) {
+function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
   const [loading, setLoading] = useState(true);
   const imageRef = useRef(null);
 
@@ -22,6 +22,7 @@ function ProjectBox({ project, setCurrentProject, openModal }) {
 
   return (
     <div
+      ref={mesureRef}
       key={project.id}
       className="project-box"
       id={project.id}
