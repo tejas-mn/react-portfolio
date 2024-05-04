@@ -2,23 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import DropDown from "../../utils/components/DropDown";
 import { useAlert } from "../../../Providers/AlertProvider";
 import { useDebounce } from "../../../hooks/useDebounce";
-import { useUser } from "../../../Providers/UserProvider";
 
-export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
-  const {data} = useUser();
+export default function SearchBar({ setTags, setFilteredProjects, tagsState, initialProjects }) {
   const defaultTags = ["React", "C# .NET", "Flask", "Python"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(true);
   const { showAlert } = useAlert();
-  const index = useRef(-1);
+  const [index, setIndex] = useState(-1);
 
   const handleOnFocus = () => {
-    index.current = -1;
+    setIndex(-1);
     setIsFocused(true);
   }
   const handleBlur = () => {
-    index.current = -1;
+    setIndex(-1);
     setIsFocused(false);
   }
   const debouncedSearch = useDebounce(fetchSearchResults, 500);
@@ -37,10 +35,10 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   useEffect(() => {
     if (tagsState.size === 0) {
-      setFilteredProjects(data.projects);
+      setFilteredProjects(initialProjects);
     } else {
       setFilteredProjects(
-        data.projects.filter((project) =>
+        initialProjects.filter((project) =>
           Array.from(tagsState).some((tag) =>
             project.techStack
               .toLowerCase()
@@ -70,24 +68,32 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      if (index.current >= 0) {
-        handleAddTag(Array.from(searchResult)[index.current])
-        index.current = -1;
+      if (index >= 0) {
+        handleAddTag(Array.from(searchResult)[index])
+        setIndex(-1);
       } else {
         handleAddTag(searchText);
       }
     }
     if (event.key === 'ArrowDown') {
       if (searchResult.size > 0) {
-        index.current = Math.min(index.current + 1, searchResult.size - 1);
+        setIndex((index) => Math.min(index + 1, searchResult.size - 1));
       }
-      console.log(document.getElementById('drop-down').childNodes.item(index.current));
+      // console.log(document.getElementById('drop-down').childNodes.item(index));
     }
     if (event.key === 'ArrowUp') {
       if (searchResult.size > 0) {
-        index.current = Math.max(index.current - 1, 0);
+        setIndex((index) => Math.max(index - 1, 0));
       }
-      console.log(document.getElementById('drop-down').childNodes.item(index.current));
+      // console.log(document.getElementById('drop-down').childNodes.item(index));
+    }
+    if(event.key === 'Backspace'){
+      if(searchText===''){
+        if(tagsState.size<=0) return;
+        const arr = Array.from(tagsState);
+        arr.pop();
+        setTags(new Set(arr));
+      }
     }
   };
 
@@ -112,7 +118,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState }) {
       </button>
 
       {isFocused && (
-        <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} selectedIndex={index.current} />
+        <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} selectedIndex={index} />
       )}
     </div>
   );
