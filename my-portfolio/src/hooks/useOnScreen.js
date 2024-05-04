@@ -1,11 +1,11 @@
 import { useCallback, useState } from "react";
 
 const useOnScreen = ({
-  root = null,
-  rootMargin = "",
-  threshold = 0
+  root = document.querySelector('.project-grid'),
+  rootMargin = '0px',
+  threshold = 0.5
 } = {}) => {
-  const [observer, setOserver] = useState();
+  const [observer, setObserver] = useState();
   const [isIntersecting, setIntersecting] = useState(false);
 
   const measureRef = useCallback(
@@ -18,8 +18,11 @@ const useOnScreen = ({
           { root, rootMargin, threshold }
         );
         //observer.observe(node);
-        observer.observe(document.querySelector('.project-box:last-child'));
-        setOserver(observer);
+        const ele = document.querySelector('.project-box:nth-last-child(1)');
+        if (ele) { //to prevent error when modal is clicked while observing bcoz ele will be covered by modal
+          observer.observe(ele);
+          setObserver(observer);
+        }
       }
     },
     [root, rootMargin, threshold]
@@ -29,5 +32,3 @@ const useOnScreen = ({
 };
 
 export default useOnScreen;
-
-//https://codesandbox.io/p/sandbox/infinite-scroll-with-intersection-observer-3bps7?file=%2Fsrc%2FApp.js%3A9%2C1-10%2C53

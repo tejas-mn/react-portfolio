@@ -9,6 +9,7 @@ import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
 import { GithubProjectSvg, ProjectLinkSvg } from "../../utils/components/Svg";
 
 function ProjectItem({ currentProject }) {
+  useAutoBoldText();
   return (
     <div className="project-list">
       <b style={styles.title}>{currentProject.title}</b>

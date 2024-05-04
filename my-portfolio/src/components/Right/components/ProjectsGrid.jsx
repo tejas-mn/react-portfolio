@@ -12,52 +12,39 @@ import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 import useOnScreen from "../../../hooks/useOnScreen";
 
 const ProjectBox = lazy(() => import('./ProjectBox'));
+const PER_PAGE = 7;
 
-function ProjectsGrid() {
+const ProjectsGrid = () => {
   const { data } = useUser();
   const { features } = useFeatureToggle();
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [initialProjects, setInitialProjects] = useState([]);
   const [tagsState, setTags] = useState(new Set());
-
-  const [page, setPage] = useState(1);
+  const [pageNum, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-
   useEffect(() => {
     (() => {
-      const newProjects = Array.from(data.projects).slice(0, 8 * page);
-      console.log(page);
-      // setComments((prevComments) => [...prevComments, ...newComments]);
+      const newProjects = Array.from(data.projects).slice(0, PER_PAGE * pageNum);
+      // console.log(pageNum, hasMore);
+      setHasMore(newProjects.length > filteredProjects.length);
       setFilteredProjects([...newProjects]);
-      setHasMore(newProjects.length > 0);
+      setInitialProjects([...newProjects]);
       setIsLoading(false);
     })();
-  }, [page]);
+  }, [pageNum]);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(hasMore);
   }, [hasMore])
 
   const loadMore = useCallback(() => {
     setIsLoading(true);
     setTimeout(() => {
-      setPage((page) => page + 1);
+      setPage((pageNum) => pageNum + 1);
     }, 2000)
   }, []);
-
-  const handleTagClick = (tagToRemove) => {
-    const updatedTags = Array.from(tagsState).filter((tag) => tag !== tagToRemove);
-    const updatedProjects = filteredProjects.filter(
-      (project) =>
-        !project.techStack
-          .toLowerCase()
-          .split(",")
-          .includes(tagToRemove.toLowerCase())
-    );
-    setTags(new Set(updatedTags));
-    setFilteredProjects(updatedProjects);
-  };
 
   return (
     <>
@@ -66,7 +53,8 @@ function ProjectsGrid() {
           tagsState={tagsState}
           setTags={setTags}
           setFilteredProjects={setFilteredProjects}
-          handleTagClick={handleTagClick}
+          filteredProjects={filteredProjects}
+          initialProjects={initialProjects}
         />
       )}
 
@@ -85,7 +73,21 @@ function ProjectsGrid() {
   );
 }
 
-function SearchSection({ tagsState, setTags, setFilteredProjects, handleTagClick }) {
+const SearchSection = ({ tagsState, setTags, setFilteredProjects, filteredProjects, initialProjects }) => {
+
+  const handleTagClick = (tagToRemove) => {
+    const updatedTags = Array.from(tagsState).filter((tag) => tag !== tagToRemove);
+    const updatedProjects = filteredProjects.filter(
+      (project) =>
+        !project.techStack
+          .toLowerCase()
+          .split(",")
+          .includes(tagToRemove.toLowerCase())
+    );
+    setTags(new Set(updatedTags));
+    setFilteredProjects(updatedProjects);
+  };
+
   return (
     <div style={styles.searchContainer} className="search-container">
       <TagContainer tags={tagsState} handleTagClick={handleTagClick} />
@@ -93,12 +95,13 @@ function SearchSection({ tagsState, setTags, setFilteredProjects, handleTagClick
         setTags={setTags}
         setFilteredProjects={setFilteredProjects}
         tagsState={tagsState}
+        initialProjects = {initialProjects}
       />
     </div>
   );
 }
 
-function ProjectsGridContainer({ filteredProjects, tagsState, setTags, isVisible, hasMore, isLoading, loadMore }) {
+const ProjectsGridContainer = ({ filteredProjects, tagsState, setTags, isVisible, hasMore, isLoading, loadMore }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState({
     id: "",
@@ -112,13 +115,13 @@ function ProjectsGridContainer({ filteredProjects, tagsState, setTags, isVisible
   const { measureRef, isIntersecting, observer } = useOnScreen();
 
   useEffect(() => {
-    if (isIntersecting && hasMore) {
+    if (isIntersecting && hasMore && tagsState.size==0) { //load only when there are no tags set (user is not searching)
       loadMore();
       observer.disconnect();
     }
   }, [isIntersecting, hasMore, loadMore]);
 
-  const openModal = (p) => {
+  const openModal = () => {
     document.querySelector(".project-grid").scrollTo({
       top: 0,
       behavior: "smooth",
@@ -141,8 +144,9 @@ function ProjectsGridContainer({ filteredProjects, tagsState, setTags, isVisible
             openModal={openModal}
             setCurrentProject={setCurrentProject}
           />
-
         ))}
+
+        {isLoading && <div style={styles.load}>Loading..</div>}
 
       </Suspense>
 
@@ -159,12 +163,6 @@ function ProjectsGridContainer({ filteredProjects, tagsState, setTags, isVisible
           description={currentProject.description}
         />
       </Modal>
-      {isLoading && <div className="project-box" style={{
-        display: 'flex',
-        color: 'white',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>Loading..</div>}
     </div>
   );
 }
@@ -178,6 +176,12 @@ const styles = {
     borderRadius: "10px",
     marginBottom: "10px",
   },
+  load: {
+    display: 'flex',
+    color: 'var(--text-color-light)',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 };
 
 export default ProjectsGrid;

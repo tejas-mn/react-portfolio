@@ -184,6 +184,21 @@
         "https://github.com/tejas-mn/weather-app-gcloud-lab",
       "liveUrl":
         "https://github.com/tejas-mn/weather-app-gcloud-lab"
+    },
+    {
+      "id": 9,
+      "title": "Portfolio",
+      "techStack": "React,JavaScript",
+      "techStackList": ["React", "JavaScript"],
+      "timeline": "Jan 2024 – Present",
+      "description":
+        "A portfolio built using React",
+      "imageUrl":
+        "image.png",
+      "githubUrl":
+        "",
+      "liveUrl":
+        ""
     }
   ],
   "skills": [
