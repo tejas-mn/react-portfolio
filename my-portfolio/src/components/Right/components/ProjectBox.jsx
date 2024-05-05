@@ -1,24 +1,36 @@
 import React, { useState, useEffect, useRef } from "react";
+import ProjectBoxSkeleton from "./Skeletons/ProjectBoxSkeleton";
 
 function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const imageRef = useRef(null);
 
-  useEffect(() => {
-    const checkIfImageIsPainted = () => {
-      if (
-        imageRef.current &&
-        imageRef.current.complete &&
-        imageRef.current.naturalHeight !== 0
-      ) {
-        setLoading(false);
-      } else {
-        requestAnimationFrame(checkIfImageIsPainted);
-      }
-    };
+  // useEffect(() => {
+  //   const checkIfImageIsPainted = () => {
+  //     if (
+  //       imageRef.current &&
+  //       imageRef.current.complete &&
+  //       imageRef.current.naturalHeight !== 0
+  //     ) {
+  //       setLoading(false);
+  //     } else {
+  //       requestAnimationFrame(checkIfImageIsPainted);
+  //     }
+  //   };
 
-    requestAnimationFrame(checkIfImageIsPainted);
-  }, []);
+  //   requestAnimationFrame(checkIfImageIsPainted);
+  // }, []);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  })
+
+  if(loading){
+    return <ProjectBoxSkeleton/>
+  }
 
   return (
     <div
@@ -33,14 +45,12 @@ function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
     >
       <div style={styles.gridImageContainer}>
         <img
+          style={styles.gridImage}
           ref={imageRef}
           src={
-            !loading
-              ? project.imageUrl
-              : "https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"
+            project.imageUrl
           }
           alt={project.title}
-          style={styles.gridImage}
           loading="lazy"
         />
       </div>
