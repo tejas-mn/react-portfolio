@@ -10,6 +10,7 @@ import TagContainer from "./TagContainer";
 import { Features } from "../../../Providers/Features";
 import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 import useOnScreen from "../../../hooks/useOnScreen";
+import ProjectBoxSkeleton from "./Skeletons/ProjectBoxSkeleton";
 
 const ProjectBox = lazy(() => import('./ProjectBox'));
 const PER_PAGE = 7;
@@ -35,9 +36,9 @@ const ProjectsGrid = () => {
     })();
   }, [pageNum]);
 
-  useEffect(() => {
-    console.log(hasMore);
-  }, [hasMore])
+  // useEffect(() => {
+  //   console.log(hasMore);
+  // }, [hasMore])
 
   const loadMore = useCallback(() => {
     setIsLoading(true);
@@ -95,7 +96,7 @@ const SearchSection = ({ tagsState, setTags, setFilteredProjects, filteredProjec
         setTags={setTags}
         setFilteredProjects={setFilteredProjects}
         tagsState={tagsState}
-        initialProjects = {initialProjects}
+        initialProjects={initialProjects}
       />
     </div>
   );
@@ -115,7 +116,7 @@ const ProjectsGridContainer = ({ filteredProjects, tagsState, setTags, isVisible
   const { measureRef, isIntersecting, observer } = useOnScreen();
 
   useEffect(() => {
-    if (isIntersecting && hasMore && tagsState.size==0) { //load only when there are no tags set (user is not searching)
+    if (isIntersecting && hasMore && tagsState.size == 0) { //load only when there are no tags set (user is not searching)
       loadMore();
       observer.disconnect();
     }
@@ -135,18 +136,21 @@ const ProjectsGridContainer = ({ filteredProjects, tagsState, setTags, isVisible
 
   return (
     <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
-      <Suspense fallback={<FallbackLoader loader={GridLoader} />}>
+      <Suspense>
         {filteredProjects.map((project) => (
-          <ProjectBox
-            mesureRef={measureRef}
-            key={project.id}
-            project={project}
-            openModal={openModal}
-            setCurrentProject={setCurrentProject}
-          />
+          <>
+            <ProjectBox
+                mesureRef={measureRef}
+                key={project.id}
+                project={project}
+                openModal={openModal}
+                setCurrentProject={setCurrentProject}
+              />
+          </>
+
         ))}
 
-        {isLoading && <div style={styles.load}>Loading..</div>}
+        {isLoading && <div><ProjectBoxSkeleton /></div>}
 
       </Suspense>
 
