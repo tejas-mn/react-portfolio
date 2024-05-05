@@ -472,3 +472,7 @@ section>p {
 .edu-p1 {
   margin-top: 20px !important;
 }
+
+.MuiSkeleton-root {
+  background-color: var(--right-nav-color-light) !important;
+}

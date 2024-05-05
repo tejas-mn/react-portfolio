@@ -11,16 +11,16 @@ function NavBtn({ name, link }) {
 export function NavBar() {
   
   const navBtns = [
-    {name:"🖋️ About", link:"/about"},
-    {name:"💼 Experience", link:"/experience"},
-    {name:"🚀 Projects", link:"/work"},
-    {name:"📞 Contact", link:"/contact"}
+    { name: "🖋️ About", link: "/about" },
+    { name: "💼 Experience", link: "/experience" },
+    { name: "🚀 Projects", link: "/work" },
+    { name: "📞 Contact", link: "/contact" }
   ]
 
   return (
     <div className="nav-container">
       <div className="right-nav">
-        { navBtns.map(btn => <NavBtn key={btn.link} name={btn.name} link={btn.link}/>) }
+        {navBtns.map(btn => <NavBtn key={btn.link} name={btn.name} link={btn.link} />)}
       </div>
     </div>
   );

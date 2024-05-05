@@ -19,7 +19,7 @@ function PaginatedItemList() {
 }
 
 export default function Experience() {
-  const {data} = useUser();
+  const { data } = useUser();
 
   return (
     <section>
