@@ -25,11 +25,11 @@ function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 200)
   })
 
-  if(loading){
-    return <ProjectBoxSkeleton/>
+  if (loading) {
+    return <ProjectBoxSkeleton />
   }
 
   return (

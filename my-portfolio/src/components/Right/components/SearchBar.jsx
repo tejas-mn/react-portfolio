@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import DropDown from "../../utils/components/DropDown";
 import { useAlert } from "../../../Providers/AlertProvider";
 import { useDebounce } from "../../../hooks/useDebounce";
@@ -87,9 +87,9 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
       }
       // console.log(document.getElementById('drop-down').childNodes.item(index));
     }
-    if(event.key === 'Backspace'){
-      if(searchText===''){
-        if(tagsState.size<=0) return;
+    if (event.key === 'Backspace') {
+      if (searchText === '') {
+        if (tagsState.size <= 0) return;
         const arr = Array.from(tagsState);
         arr.pop();
         setTags(new Set(arr));
