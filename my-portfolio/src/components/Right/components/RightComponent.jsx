@@ -1,6 +1,8 @@
-import  About  from "./About";
 import { NavBar } from "./Navbar";
 import { Outlet, useLocation } from "react-router-dom";
+import { lazy } from "react";
+
+const LazyAbout = lazy(() => import("./About"));
 
 export function RightComponent() {
   const location = useLocation();
@@ -10,7 +12,7 @@ export function RightComponent() {
       <div data-testid="desktop-nav" className="desktop-nav">
         <NavBar />
       </div>
-      {location.pathname === "/" ? <About /> : <Outlet />}
+      {location.pathname === "/" ? <LazyAbout /> : <Outlet />}
     </div>
   );
 }

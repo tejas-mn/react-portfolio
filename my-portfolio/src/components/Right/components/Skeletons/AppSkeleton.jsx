@@ -2,8 +2,6 @@ import * as React from 'react';
 import './../../../../App.css';
 import LeftSkeleton from './LeftSkeleton';
 import { useTheme } from '../../../../Providers/ThemeProvider';
-import { NavBar } from '../Navbar';
-import { RightComponent } from '../RightComponent';
 import { useEffect } from 'react';
 import { RightSkeleton } from './RightSkeleton';
 import { NavBarSkeleton } from './NavBarSkeleton';

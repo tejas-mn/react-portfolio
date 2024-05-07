@@ -1,21 +1,20 @@
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from 'react-redux';
 import { UserProvider } from "./Providers/UserProvider";
-import { GridLoader } from "./components/utils/components/Loaders";
-import FallbackLoader from "./components/utils/components/FallbackLoader";
-import reportWebVitals from "./reportWebVitals";
 import { AlertProvider } from "./Providers/AlertProvider";
 import { FeatureToggleProvider } from "./Providers/FeatureProvider";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Provider } from 'react-redux';
+import { ThemeProvider } from "./Providers/ThemeProvider";
 import store from './Redux/store';
+import reportWebVitals from "./reportWebVitals";
 import PageNotFound from "./components/utils/components/PageNotFound";
 import AppSkeleton from "./components/Right/components/Skeletons/AppSkeleton";
-import { ThemeProvider } from "./Providers/ThemeProvider";
 import AboutSkeleton from "./components/Right/components/Skeletons/AboutSkeleton";
 import ExperienceSkeleton from "./components/Right/components/Skeletons/ExperienceSkeleton";
 import WorkSkeleton from "./components/Right/components/Skeletons/WorkSkeleton";
+import ContactSkeleton from "./components/Right/components/Skeletons/ContactSkeleton";
 const ThemedApp = React.lazy(() => import('./App'));
 const LazyAbout = React.lazy(() => import('./components/Right/components/About'));
 const LazyExperience = React.lazy(() => import('./components/Right/components/Experience'))
@@ -24,29 +23,72 @@ const LazyContact = React.lazy(() => import('./components/Right/components/Conta
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(
+const App = () => (
   <React.StrictMode>
-    <UserProvider>
-      <Provider store={store}>
-        <AlertProvider>
-          <FeatureToggleProvider>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Suspense fallback={<ThemeProvider><AppSkeleton/></ThemeProvider>}> <ThemedApp /> </Suspense>}>
-                  <Route exact path="about" element={<Suspense fallback={<AboutSkeleton/>}> <LazyAbout /> </Suspense>} />
-                  <Route exact path="experience" element={<Suspense fallback={<ExperienceSkeleton/>}> <LazyExperience /> </Suspense>} />
-                  <Route exact path="work" element={<Suspense fallback={<WorkSkeleton/>}> <LazyWork /> </Suspense>} />
-                  <Route exact path="contact" element={<Suspense fallback={<FallbackLoader loader={GridLoader} />}> <LazyContact /> </Suspense>} />
-                  <Route path="*" element={<PageNotFound />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
-          </FeatureToggleProvider>
-        </AlertProvider>
-      </Provider>
-    </UserProvider>
+
+    <Provider store={store}>
+      <AlertProvider>
+        <FeatureToggleProvider>
+          <UserProvider>
+            <RouterProvider router={AppRoutes} />
+          </UserProvider>
+        </FeatureToggleProvider>
+      </AlertProvider>
+    </Provider>
+
   </React.StrictMode>
 );
 
+const routes = [
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={<ThemeProvider><AppSkeleton /></ThemeProvider>}>
+        <ThemedApp />
+      </Suspense>
+    ),
+    children: [
+      {
+        path: "about",
+        element: (
+          <Suspense fallback={<AboutSkeleton />}>
+            <LazyAbout />
+          </Suspense>
+        )
+      },
+      {
+        path: "experience",
+        element: (
+          <Suspense fallback={<ExperienceSkeleton />}>
+            <LazyExperience />
+          </Suspense>
+        )
+      },
+      {
+        path: "work",
+        element: (
+          <Suspense fallback={<WorkSkeleton />}>
+            <LazyWork />
+          </Suspense>
+        )
+      },
+      {
+        path: "contact",
+        element: (
+          <Suspense fallback={<ContactSkeleton />} >
+            <LazyContact />
+          </Suspense>
+        )
+      },
+      {
+        path: "*",
+        element: <PageNotFound />
+      }
+    ]
+  }
+];
 
+const AppRoutes = createBrowserRouter(routes);
+
+root.render(<App />);
 reportWebVitals();
