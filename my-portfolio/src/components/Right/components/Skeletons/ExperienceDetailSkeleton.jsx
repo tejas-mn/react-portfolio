@@ -1,9 +1,18 @@
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
-import { exp } from '../../../../Providers/DataProvider';
 
 export default function ExperienceDetailSkeleton() {
+
+    const descriptionSkeletons = Array.from({ length: 4 }, (_, index) => {
+        const groupId = index + 1;
+        return (
+            <React.Fragment key={groupId}>
+                <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
+                <Skeleton animation="wave" variant="text" sx={{ ...styles.skeletonText, width: '90%' }} />
+            </React.Fragment>
+        );
+    });
 
     return (
         <Stack spacing={1} style={styles.container}>
@@ -13,14 +22,7 @@ export default function ExperienceDetailSkeleton() {
                 <Skeleton animation="wave" variant="text" sx={styles.firstSkeletonText} width={200} />
             </div>
 
-            {
-                exp[0].desc.map(() => {
-                    return <>
-                        <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
-                        <Skeleton animation="wave" variant="text" sx={{ ...styles.skeletonText, width: '90%' }} />
-                    </>
-                })
-            }
+            {descriptionSkeletons}
 
         </Stack>
     );

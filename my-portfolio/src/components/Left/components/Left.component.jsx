@@ -21,7 +21,7 @@ export const LeftComponent = React.memo(() => {            //memoized this as wh
 
   const handleClick = () => {
     toggleTheme();
-    setShow((prev)=>prev!==null?!prev:true);
+    setShow((prev) => prev !== null ? !prev : true);
   }
 
   const openModal = () => setModalOpen(true);
@@ -58,16 +58,16 @@ export const LeftComponent = React.memo(() => {            //memoized this as wh
       </div>
       {/* {themeToggleButton} */}
       <Toggle
-            label={theme === "light-theme" ? "Dark" : "Light"}
-            toggled={theme === "dark-theme"}
-            onClick={handleClick}
-        />
+        label={theme === "light-theme" ? "Dark" : "Light"}
+        toggled={theme === "dark-theme"}
+        onClick={handleClick}
+      />
       {settingsButton}
       <Modal isOpen={modalOpen} onClose={closeModal}>
         <Settings ref={childRef} />
       </Modal>
 
-      <CustomizedSnackbars theme={theme} showAlert={show}/>
+      <CustomizedSnackbars showAlert={show} message={`Changed theme to ${theme === "dark-theme" ? "Dark Mode" : "Light Mode"}!`} />
     </div>
   );
 });

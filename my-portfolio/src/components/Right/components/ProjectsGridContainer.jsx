@@ -42,18 +42,15 @@ export default function ProjectsGridContainer({ filteredProjects, tagsState, set
     return (
         <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
             <Suspense fallback={<ProjectGridSkeleton />}>
-                {filteredProjects.map((project) => (
-                    <>
-                        <ProjectBox
-                            mesureRef={measureRef}
-                            key={project.id}
-                            project={project}
-                            openModal={openModal}
-                            setCurrentProject={setCurrentProject}
-                        />
-                    </>
-
-                ))}
+                {filteredProjects.map((project) =>
+                    <ProjectBox
+                        mesureRef={measureRef}
+                        key={project.id}
+                        project={project}
+                        openModal={openModal}
+                        setCurrentProject={setCurrentProject}
+                    />
+                )}
 
                 {isLoading && <div><ProjectBoxSkeleton /></div>}
 

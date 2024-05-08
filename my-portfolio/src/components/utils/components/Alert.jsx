@@ -7,6 +7,7 @@ function Alert({ alertObj }) {
         <div key={alertObj.id}
             style={{
                 top: alertObj.id * 50 + "px",
+                position: 'fixed',
                 backgroundColor: bg[alertObj.type]
             }}
             className="alert" role="alert">

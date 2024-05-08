@@ -1,7 +1,46 @@
 import { ProjectLinkSvg } from "../../utils/components/Svg";
 import '../styles/contact.css';
+import { useRef } from "react";
+import { useAlert } from "../../../Providers/AlertProvider";
+import { useFeatureToggle } from "../../../Providers/FeatureProvider";
+import { Features } from "../../../Providers/Features";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const form = useRef();
+  const { showAlert } = useAlert();
+  const { features } = useFeatureToggle();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (features[Features.ENABLE_EMAIL]) {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            showAlert({
+              message: "Message sent successfully",
+              type: "success"
+            });
+            console.log(result.text);
+          },
+          (error) => {
+            showAlert({
+              message: "Error sending message",
+              type: "error"
+            });
+            console.log(error.text);
+          }
+        );
+    } else {
+      console.log('Email disabled');
+    }
+  };
 
   return (
     <section>
@@ -15,14 +54,14 @@ export default function Contact() {
 
       <section className="contact-form">
         <h2 className="form-title">📠 Contact Form</h2>
-        <form action="#" className="form" data-form="">
+        <form action="#" className="form" data-form="" ref={form} onSubmit={sendEmail}>
           <div className="input-wrapper">
-            <input type="text" name="fullname" className="form-input" placeholder="Full name" required data-form-input="" />
-            <input type="email" name="email" className="form-input" placeholder="Email address" required data-form-input="" />
+            <input type="text" name='from_name' className="form-input" placeholder="Full name" required data-form-input="" />
+            <input type="email" name='from_email' className="form-input" placeholder="Email address" required data-form-input="" />
           </div>
           <textarea name="message" className="form-input" placeholder="Your Message" required data-form-input=""></textarea>
           <button className="view-btn form-btn" type="submit" data-form-btn="">
-            <span> 
+            <span>
               <ProjectLinkSvg /> Send Message
             </span>
           </button>

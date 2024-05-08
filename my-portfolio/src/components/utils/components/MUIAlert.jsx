@@ -1,19 +1,22 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { Slide } from '@mui/material';
 
-export default function CustomizedSnackbars({theme, showAlert}) {
+const CustomizedSnackbars = ({ showAlert, message }) => {
   const [open, setOpen] = React.useState(false);
 
   function SlideTransition(props) {
     return <Slide {...props} direction="left" />;
   }
 
-  React.useEffect(()=>{
-    if(showAlert!==null) setOpen(true);
+  React.useEffect(() => {
+    if (showAlert !== null) setOpen(true);
   }, [showAlert])
+
+  React.useEffect(() => {
+    if (open) document.querySelector('.MuiSnackbar-root').style.display = 'flex';
+  }, [open])
 
   const handleClick = () => {
     setOpen(true);
@@ -23,7 +26,7 @@ export default function CustomizedSnackbars({theme, showAlert}) {
     if (reason === 'clickaway') {
       return;
     }
-    document.getElementById('mui-alert').style.display = 'none';
+    document.querySelector('.MuiSnackbar-root').style.display = 'none';
     setOpen(false);
   };
 
@@ -38,14 +41,16 @@ export default function CustomizedSnackbars({theme, showAlert}) {
           variant="filled"
           sx={{ width: '100%' }}
           style={{
-            backgroundColor:'var(--btn-color-light)',
-            color:'var(--text-color-light)',
-            display : 'inherit'
+            backgroundColor: 'var(--btn-color-light)',
+            color: 'var(--text-color-light)',
+            display: 'inherit'
           }}
         >
-          Changed theme to {theme=="dark-theme"?"Dark Mode":"Light Mode"}!
+          {message}
         </Alert>
       </Snackbar>
     </div>
   );
 }
+
+export default CustomizedSnackbars;

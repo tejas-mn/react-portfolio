@@ -6,13 +6,13 @@ import { Typography } from '@mui/material';
 export default function ContactSkeleton() {
     return (
         <Stack spacing={1}>
-            <Typography component="div" key={'h2'} variant={'h2'}>
+            <Typography component="div" variant={'h2'}>
                 <Skeleton animation="wave" width={190} sx={{ margin: '10px 0px 0px' }} />
             </Typography>
 
             <Skeleton variant='rectangular' height={'380px'} />
 
-            <Typography component="div" key={'h2'} variant={'h2'}>
+            <Typography component="div" variant={'h2'}>
                 <Skeleton animation="wave" width={190} sx={{ margin: '10px 0px 0px' }} />
             </Typography>
 
@@ -23,9 +23,7 @@ export default function ContactSkeleton() {
                 </div>
                 <Skeleton animation="wave" width={'100%'} height={80} />
 
-                <Skeleton animation="wave" width={100} height={60} sx={
-                    styles.btn
-                } />
+                <Skeleton animation="wave" width={100} height={60} sx={styles.btn} />
             </div>
         </Stack>
     );

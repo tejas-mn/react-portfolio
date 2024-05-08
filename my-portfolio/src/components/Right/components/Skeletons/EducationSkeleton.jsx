@@ -2,27 +2,28 @@ import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
-import { edu } from '../../../../Providers/DataProvider';
 
 export default function EducationSkeleton() {
 
+  const educationSkeletons = Array.from({ length: 3 }, (_, index) => {
+    const itemId = index + 1;
+    return (
+      <React.Fragment key={itemId}>
+        <div style={styles.flexContainer}>
+          <Skeleton animation="wave" variant="rectangular" sx={styles.skeletonRect} width={300} height={20} />
+          <Skeleton animation="wave" variant="text" sx={styles.skeletonText} width={200} />
+        </div>
+        <Skeleton animation="wave" variant="rectangular" width={190} sx={styles.skeletonRect} />
+      </React.Fragment>
+    );
+  });
+
   return (
     <Stack spacing={1}>
-      <Typography component="div" key={'h2'} variant={'h2'} sx={styles.heading}>
+      <Typography component="div" variant={'h2'} sx={styles.heading}>
         <Skeleton animation="wave" width={190} />
       </Typography>
-
-      {edu.map(() => {
-        return (
-          <>
-            <div style={styles.flexContainer}>
-              <Skeleton animation="wave" variant="rectangular" sx={styles.skeletonRect} width={300} height={20} />
-              <Skeleton animation="wave" variant="text" sx={styles.skeletonText} width={200} />
-            </div>
-            <Skeleton animation="wave" variant="rectangular" width={190} sx={styles.skeletonRect} />
-          </>
-        );
-      })}
+      {educationSkeletons}
     </Stack>
   );
 }
