@@ -46,6 +46,7 @@ function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
       <div style={styles.gridImageContainer}>
         <img
           style={styles.gridImage}
+          rel="dns-prefetch"
           ref={imageRef}
           src={
             project.imageUrl

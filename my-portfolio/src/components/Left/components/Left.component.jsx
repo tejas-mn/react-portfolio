@@ -11,6 +11,7 @@ import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 import { Features } from "../../../Providers/Features";
 import styles from '../styles/Left.module.css'
 import CustomizedSnackbars from "../../utils/components/MUIAlert";
+import { createPortal } from 'react-dom';
 
 export const LeftComponent = React.memo(() => {            //memoized this as whenever we scroll in app compo child components like this one gets re rendering and was causing Snackbar transition on each scroll
   const [modalOpen, setModalOpen] = useState(false);
@@ -67,7 +68,13 @@ export const LeftComponent = React.memo(() => {            //memoized this as wh
         <Settings ref={childRef} />
       </Modal>
 
-      <CustomizedSnackbars showAlert={show} message={`Changed theme to ${theme === "dark-theme" ? "Dark Mode" : "Light Mode"}!`} />
+      {createPortal(
+        <CustomizedSnackbars
+          showAlert={show}
+          message={`Changed theme to ${theme === "dark-theme" ? "Dark Mode" : "Light Mode"}!`} />,
+        document.querySelector(".App")
+      )}
+
     </div>
   );
 });

@@ -20,10 +20,10 @@ export const PicContainer = () => {
 
   return (
     <div className={styles.containerStyle}>
-      <img className={styles.bannerImg} ref={banner} alt="Banner" />
+      <img className={styles.bannerImg} ref={banner} alt="Banner" rel="dns-prefetch" />
       <div className={styles.picContainer}>
         <div className={ styles.pic + " " + styles.picStyle}>
-          <img src={data.userInfo.profilePic} alt="Profile" />
+          <img src={data.userInfo.profilePic} alt="Profile" rel="dns-prefetch" />
         </div>
         <div className={styles.picDesc}>
           <h2>{data.userInfo.name}</h2>

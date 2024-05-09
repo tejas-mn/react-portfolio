@@ -1,8 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import useFetch from '../hooks/useFetch';
 import { createContext } from 'react';
-import FallbackLoader from '../components/utils/components/FallbackLoader';
-import { CirclesLoader } from '../components/utils/components/Loaders';
 
 const preloadImage = (url) => {
     return new Promise((resolve, reject) => {
@@ -30,7 +28,6 @@ const UserProvider = ({ children }) => {
     }
     else if (loading) {
         console.log("Loading Data..")
-        // return <FallbackLoader loader={CirclesLoader} />
     } else {
 
         preloadProjectImages(data.projects)
