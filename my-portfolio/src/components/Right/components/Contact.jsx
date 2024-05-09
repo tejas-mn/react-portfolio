@@ -7,6 +7,14 @@ import { Features } from "../../../Providers/Features";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  return (
+    <>
+      <ContactSection />
+    </>
+  )
+}
+
+function ContactSection() {
   const form = useRef();
   const { showAlert } = useAlert();
   const { features } = useFeatureToggle();
@@ -43,7 +51,7 @@ export default function Contact() {
   };
 
   return (
-    <section>
+    <section className="right-01">
       <h2>📞 Contact</h2>
 
       <section className="map" data-mapbox="">

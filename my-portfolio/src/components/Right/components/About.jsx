@@ -4,16 +4,18 @@ import { useUser } from "../../../Providers/UserProvider";
 
 export default function About() {
   return (
-    <section>
-      <AboutMe />
-      <Education />
-      <Skills />
-    </section>
+    <>
+      <section className="right-01">
+        <AboutMe />
+        <Education />
+        <Skills />
+      </section>
+    </>
   );
 }
 
 function AboutMe() {
-  const {data} = useUser();
+  const { data } = useUser();
 
   return (
     <section>

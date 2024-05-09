@@ -23,6 +23,9 @@ export default function AppSkeleton() {
             </div>
 
             <div data-testid="right" className="right">
+                <div data-testid="desktop-nav" className="desktop-nav">
+                    <NavBarSkeleton />
+                </div>
                 <RightSkeleton />
             </div>
 

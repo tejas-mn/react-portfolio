@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   display: flex;
-  gap: 40px;
+  gap: 35px;
   padding: 10px;
   flex-wrap: wrap;
   margin: auto;
@@ -36,7 +36,7 @@
 
 .right-01 {
   border-radius: 8px;
-  padding: 30px;
+  padding: 20px 20px 15px 20px;
   background-color: var(--left-bg-color-light);
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.197);
 }
@@ -56,7 +56,8 @@
 .right {
   border-radius: 8px;
   width: 75%;
-  gap: 30px;
+  padding: 5px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -74,7 +75,7 @@
   background-color: var(--right-nav-color-light);
 
   border-radius: 6px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.197);
+  box-shadow: 0px 1px 5px 1px rgb(0 0 0 / 17%);
 }
 
 .right-nav>h2 {
@@ -149,6 +150,7 @@ section>h2 {
   justify-content: flex-start;
   /* padding-left:8px; */
   color: white;
+  margin: 0;
   margin-bottom: 2px;
 }
 
@@ -165,7 +167,7 @@ section>p {
   color: var(--text-color-light);
   justify-content: flex-end;
   flex-direction: row-reverse;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
 }
 
 .skills>div {
@@ -209,6 +211,7 @@ section>p {
 
 .project-title {
   margin-bottom: 10px !important;
+  margin: 0;
 }
 
 .exp-list {
@@ -483,4 +486,13 @@ section>p {
 
 .MuiSkeleton-root {
   background-color: var(--right-nav-color-light) !important;
+}
+
+.work-toggle-btn{
+  /* font-size:medium; */
+  padding: 8px 20px;
+}
+
+.tech-skills-heading{
+  margin-top: 20px;
 }

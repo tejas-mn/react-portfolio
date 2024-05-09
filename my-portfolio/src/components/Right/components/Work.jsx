@@ -5,17 +5,25 @@ import { useFeatureToggle } from "../../../Providers/FeatureProvider";
 import { Features } from "../../../Providers/Features";
 
 export default function Work() {
+  return (
+    <>
+      <WorkSection />
+    </>
+  )
+}
+
+function WorkSection() {
   const [isGridView, setGridView] = useState(false);
   const [btnText, setbtnText] = useState("☷ Grid view");
   const { features } = useFeatureToggle();
   return (
-    <section>
+    <section className="right-01">
       <div style={styles.projectHeader} className="project-title-container">
         <h2 style={styles.title} className="project-title">
           🚀 Projects
         </h2>
         {features[Features.PROJECT_DEFAULT_VIEW] && <button
-          className="view-btn"
+          className="view-btn work-toggle-btn"
           onClick={() => {
             setGridView((prev) => !prev);
             !isGridView

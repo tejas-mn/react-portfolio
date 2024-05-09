@@ -6,14 +6,14 @@ import ProjectListSkeleton from './ProjectListSkeleton';
 
 export default function WorkSkeleton() {
   return (
-    <Stack spacing={1}>
+    <Stack spacing={1} className='right-01'>
       <Typography component="div" key={'h2'} variant={'h2'}>
-          <Skeleton animation="wave" width={190}  sx={{margin:'10px 0px 0px'}}/> 
-     </Typography>
-     <ProjectListSkeleton/>
-     <ProjectListSkeleton/>
-     <ProjectListSkeleton/>
-     <ProjectListSkeleton/>
+        <Skeleton animation="wave" width={190} sx={{ margin: '10px 0px 0px' }} />
+      </Typography>
+      <ProjectListSkeleton />
+      <ProjectListSkeleton />
+      <ProjectListSkeleton />
+      <ProjectListSkeleton />
     </Stack>
   );
 }

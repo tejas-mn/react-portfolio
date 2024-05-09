@@ -5,7 +5,7 @@ import { Typography } from '@mui/material';
 
 export default function ContactSkeleton() {
     return (
-        <Stack spacing={1}>
+        <Stack spacing={1} className='right-01'>
             <Typography component="div" variant={'h2'}>
                 <Skeleton animation="wave" width={190} sx={{ margin: '10px 0px 0px' }} />
             </Typography>

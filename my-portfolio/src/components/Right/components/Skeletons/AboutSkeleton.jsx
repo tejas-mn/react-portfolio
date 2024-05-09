@@ -4,10 +4,10 @@ import SkillsSkeleton from "./SkillsSkeleton";
 
 export default function AboutSkeleton() {
   return (
-    <>
-      <AboutMeSkeleton/>
-      <EducationSkeleton/>
-      <SkillsSkeleton/>
-    </>
+    <section className="right-01">
+      <AboutMeSkeleton />
+      <EducationSkeleton />
+      <SkillsSkeleton />
+    </section>
   );
 }

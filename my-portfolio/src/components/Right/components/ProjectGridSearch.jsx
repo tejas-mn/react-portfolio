@@ -31,11 +31,11 @@ export default function ProjectGridSearch({ tagsState, setTags, setFilteredProje
 
 const styles = {
     searchContainer: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "end",
-      backgroundColor: "var(--right-nav-color-light)",
-      borderRadius: "10px",
-      marginBottom: "10px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "end",
+        backgroundColor: "var(--right-nav-color-light)",
+        borderRadius: "10px",
+        margin: "10px 0",
     }
 };

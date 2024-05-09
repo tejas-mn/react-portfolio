@@ -23,6 +23,9 @@ function App() {
         </div>
 
         <div data-testid="right" className="right">
+          <div data-testid="desktop-nav" className="desktop-nav">
+            <NavBar />
+          </div>
           <RightComponent />
         </div>
 

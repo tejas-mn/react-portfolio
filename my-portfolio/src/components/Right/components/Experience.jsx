@@ -18,17 +18,24 @@ function PaginatedItemList() {
   );
 }
 
-export default function Experience() {
+function ExperienceSection() {
   const { data } = useUser();
+  return (<section className="right-01">
+    <h2 style={{
+      margin: 0
+    }}>💼 Experience</h2>
+    <p>{data.userInfo.experienceInfo}</p>
+    <PaginationProvider items={data.exp} itemsPerPage={2}>
+      <PaginatedItemList />
+      <Pagination />
+    </PaginationProvider>
+  </section>)
+}
 
+export default function Experience() {
   return (
-    <section>
-      <h2>💼 Experience</h2>
-      <p>{data.userInfo.experienceInfo}</p>
-      <PaginationProvider items={data.exp} itemsPerPage={2}>
-        <PaginatedItemList />
-        <Pagination />
-      </PaginationProvider>
-    </section>
+    <>
+      <ExperienceSection />
+    </>
   );
 }
