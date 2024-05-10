@@ -1,8 +1,10 @@
 import ProjectsGrid from "./ProjectsGrid";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { ProjectsList } from "./ProjectsList";
-import { useFeatureToggle } from "../../../Providers/FeatureProvider";
-import { Features } from "../../../Providers/Features";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowDown';
+
+import DropDown from "../../utils/components/DropDown";
 
 export default function Work() {
   return (
@@ -13,29 +15,65 @@ export default function Work() {
 }
 
 function WorkSection() {
-  const [isGridView, setGridView] = useState(false);
-  const [btnText, setbtnText] = useState("☷ Grid view");
-  const { features } = useFeatureToggle();
+
+  const [activeSection, setActiveSection] = useState('PROJECTS');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const activeSectionComponent = useMemo(() => {
+    switch (activeSection) {
+      case 'PROJECTS': return <ProjectsGrid isVisible={true} />;
+      case 'ARTICLES': return <ProjectsList />;
+      default: return <ProjectsGrid isVisible={true} />;
+    }
+  }, [activeSection])
+
   return (
     <section className="right-01">
       <div style={styles.projectHeader} className="project-title-container">
-        <h2 style={styles.title} className="project-title">
-          🚀 Projects
-        </h2>
-        {features[Features.PROJECT_DEFAULT_VIEW] && <button
-          className="view-btn work-toggle-btn"
-          onClick={() => {
-            setGridView((prev) => !prev);
-            !isGridView
-              ? setbtnText("≡ List View")
-              : setbtnText("☷  Grid View");
-          }}
-        >
-          {btnText}
-        </button>
-        }
+
+        <div className="btn-group" style={{ display: 'flex', gap: '10px' }}>
+
+          <div style={{
+            position: 'relative'
+          }}>
+            <div
+              style={{ ...styles.tab, backgroundColor: (activeSection === 'PROJECTS') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
+              className="project-title"
+              onClick={() => {
+                setActiveSection('PROJECTS')
+                setIsFocused((prev) => !prev)
+              }}
+            >
+              <span className="rocket">{"🚀 "}</span> Projects  <KeyboardArrowDownIcon id="kbd-dwn-arrow" style={{
+                transform: isFocused && 'rotate(180deg)',
+                transition: 'transform 0.4s',
+                fontSize: 'x-large',
+                display: 'none'
+              }} />
+            </div>
+            {isFocused && (
+              <div className="drp-dwn">
+                <DropDown options={["Articles"]} onSelect={() => { setActiveSection('ARTICLES') }} />
+              </div>
+            )}
+
+          </div>
+
+          <div
+            style={{ ...styles.tab, backgroundColor: (activeSection === 'ARTICLES') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
+            className="project-title"
+            id="articles-tab"
+            onClick={() => setActiveSection('ARTICLES')}
+          >
+            📰 Articles
+          </div>
+
+        </div>
+
       </div>
-      {(((isGridView && features[Features.PROJECT_DEFAULT_VIEW]) || features[Features.PROJECT_GRID_VIEW])) ? <ProjectsGrid isVisible={isGridView || features[Features.PROJECT_GRID_VIEW]} /> : (<ProjectsList />)}
+
+      {activeSectionComponent}
+
     </section>
   );
 }
@@ -45,6 +83,21 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    margin: '0 10px 10px'
   },
   title: { color: "white" },
+  tab: {
+    color: 'var(--text-color-light)',
+    borderRadius: '8px',
+    textAlign: 'center',
+    display: 'flex',
+    height: 'min-content',
+    fontSize: 'large',
+    boxShadow: '0px 1px 11px 0px rgba(0, 0, 0, 0.08)',
+    padding: '6px 15px',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer'
+  }
 };

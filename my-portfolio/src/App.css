@@ -210,7 +210,6 @@ section>p {
 }
 
 .project-title {
-  margin-bottom: 10px !important;
   margin: 0;
 }
 
@@ -247,8 +246,8 @@ section>p {
 
 /*******MEDIA QUERIES**********/
 
-@media only screen and (width >= 1451px){
-  .left{
+@media only screen and (width >=1451px) {
+  .left {
     position: sticky !important;
     top: 25px;
   }
@@ -270,9 +269,62 @@ section>p {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .project-title-container {
+    margin-bottom: 12px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    /* margin: 0px 10px 10px; */
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  #articles-tab {
+    display: none !important;
+  }
+
+  .view-btn {
+    padding: 8px 10px !important;
+  }
+
+  .project-title {
+    font-size: small !important;
+    padding: 6px 12px !important;
+  }
+
+  #kbd-dwn-arrow {
+    display: initial !important;
+  }
+
+  .drp-dwn>ul {
+    display: initial !important;
+    left: 0px;
+  }
+}
+
 @media only screen and (max-width: 510px) {
   .project-title-container {
     margin-bottom: 12px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    /* margin: 0px 10px 10px; */
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  #articles-tab {
+    display: none !important;
+  }
+
+  .rocket {
+    display: none !important;
+  }
+
+  .drp-dwn>ul {
+    display: initial !important;
+    left: 0px;
   }
 
   .css-sfbrjq-MuiSnackbar-root {
@@ -407,7 +459,12 @@ section>p {
   }
 
   .view-btn {
-    padding: 4px 8px !important;
+    padding: 8px 10px !important;
+  }
+
+  .project-title {
+    font-size: small !important;
+    padding: 6px 12px !important;
   }
 
   .theme-btn {
@@ -488,11 +545,15 @@ section>p {
   background-color: var(--right-nav-color-light) !important;
 }
 
-.work-toggle-btn{
+.work-toggle-btn {
   /* font-size:medium; */
   padding: 8px 20px;
 }
 
-.tech-skills-heading{
+.tech-skills-heading {
   margin-top: 20px;
+}
+
+.drp-dwn>ul {
+  display: none;
 }

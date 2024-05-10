@@ -48,16 +48,18 @@ const PaginatedItemList = () => {
   const paginatedItems = usePagination().getPaginatedItems();
   useAutoBoldText();
   return (
-    <>
+    <div style={{
+      marginTop: '20px'
+    }}>
       {paginatedItems.map((currentProject) => (
         <ProjectItem key={currentProject.id} currentProject={currentProject} />
       ))}
-    </>
+    </div>
   );
 };
 
 export function ProjectsList() {
-  const {data} = useUser();
+  const { data } = useUser();
   return (
     <PaginationProvider itemsPerPage={4} items={data.projects}>
       <PaginatedItemList />

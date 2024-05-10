@@ -24,7 +24,9 @@
       rgba(255, 251, 251, 0.715) 100%,
       rgba(255, 255, 255, 1) 100%);
   --theme-emoji-light: "🌙";
-  --map-theme: grayscale(1) invert(1)
+  --map-theme: grayscale(1) invert(1);
+  --active-tab-light: #ffffff;
+  --inactive-tab-light: #f7f7f7;
 }
 
 .light-theme {
@@ -50,6 +52,8 @@
   --index-bg-light: var(--index-bg-dark);
   --theme-emoji-light: "☀";
   --map-theme: grayscale(1) invert(1);
+  --active-tab-light: var(--btn-color-dark-hover);
+  --inactive-tab-light: var(--btn-color-dark);
 }
 
 h1 {

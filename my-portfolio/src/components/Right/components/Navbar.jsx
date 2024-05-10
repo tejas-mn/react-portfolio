@@ -13,7 +13,7 @@ export function NavBar() {
   const navBtns = [
     { name: "🖋️ About", link: "/about" },
     { name: "💼 Experience", link: "/experience" },
-    { name: "👨🏼‍💻 My Work", link: "/work" },
+    { name: "👨🏼‍💻 Work", link: "/work" },
     { name: "📞 Contact", link: "/contact" }
   ]
 

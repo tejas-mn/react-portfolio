@@ -39,8 +39,8 @@ export const Pagination = () => {
             style={{
               backgroundColor:
                 currentPage === number
-                  ? "var(--btn-color-light)"
-                  : "var(--btn-color-light-hover)",
+                  ? "var(--active-tab-light)"
+                  : "var(--inactive-tab-light)",
               color: theme === "dark-theme" ? "#fff" : "#333",
             }}
             onClick={() => setCurrentPage(number)}

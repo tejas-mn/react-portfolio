@@ -98,7 +98,12 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{
+      position: "relative",
+      display: 'flex',
+      alignContent: 'center',
+      alignItems: 'center'
+    }}>
       <input
         placeholder="Search Eg.React.."
         type="text"
@@ -154,7 +159,7 @@ const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
 const styles = {
   searchInput: {
     outline: "none",
-    padding: "2px",
+    padding: "17px",
     borderBottomLeftRadius: "5px",
     borderTopRightRadius: "5px",
     borderBottom: "1px solid black",
