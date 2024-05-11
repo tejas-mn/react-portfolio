@@ -37,6 +37,7 @@ const styles = {
     backgroundColor: 'var(--btn-color-light-hover)',
     cursor: "pointer",
     border: "1px solid var(--btn-color-light-hover)",
+    padding: '6px 0px'
   }
 };
 

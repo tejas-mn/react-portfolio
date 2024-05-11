@@ -310,15 +310,11 @@ section>p {
     align-items: center !important;
     gap: 10px !important;
     /* margin: 0px 10px 10px; */
-    flex-direction: row !important;
+    flex-direction: column-reverse !important;
     justify-content: space-between !important;
   }
 
   #articles-tab {
-    display: none !important;
-  }
-
-  .rocket {
     display: none !important;
   }
 
@@ -354,6 +350,8 @@ section>p {
     flex-wrap: wrap;
     flex-direction: column-reverse;
     justify-content: center;
+    position: relative;
+    z-index: -1;
   }
 
   .edu-timeline {

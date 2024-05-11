@@ -25,6 +25,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
     if (searchText.trim() !== "") {
       debouncedSearch(searchText.trim(), setSearchResult, tagsState, defaultTags);
     } else {
+      setIndex(-1);
       setSearchResult(new Set());
     }
   }, [searchText]);

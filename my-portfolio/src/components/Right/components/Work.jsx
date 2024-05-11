@@ -53,7 +53,7 @@ function WorkSection() {
             </div>
             {isFocused && (
               <div className="drp-dwn">
-                <DropDown options={["Articles"]} onSelect={() => { setActiveSection('ARTICLES') }} />
+                <DropDown options={["Articles"]} onSelect={() => { setActiveSection('ARTICLES'); setIsFocused(false) }} />
               </div>
             )}
 
