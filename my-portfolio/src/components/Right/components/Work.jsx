@@ -1,10 +1,26 @@
 import ProjectsGrid from "./ProjectsGrid";
-import React, { useMemo, useState } from "react";
-import { ProjectsList } from "./ProjectsList";
+import React, { Suspense, useMemo, useState } from "react";
+import { lazy } from "react";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowDown';
-
 import DropDown from "../../utils/components/DropDown";
+import ProjectListSkeleton from "./Skeletons/ProjectListSkeleton";
+import ProjectGridSkeleton from "./Skeletons/ProjectGridSkeleton";
+
+const ProjectsList = lazy(() => import('./ProjectsList'));
+
+const sectionsConfig = {
+  PROJECTS: {
+    component: ProjectsGrid,
+    skeleton: ProjectGridSkeleton,
+    label: "🚀 Projects",
+  },
+  ARTICLES: {
+    component: ProjectsList,
+    skeleton: ProjectListSkeleton,
+    label: "📰 Articles",
+  }
+};
 
 export default function Work() {
   return (
@@ -72,7 +88,14 @@ function WorkSection() {
 
       </div>
 
-      {activeSectionComponent}
+      <Suspense fallback={
+        (activeSection === 'ARTICLES') ? <ProjectListSkeleton /> : <div className="project-grid"><ProjectGridSkeleton /></div>
+      }>
+
+        {activeSectionComponent}
+
+      </Suspense>;
+
 
     </section>
   );

@@ -58,7 +58,7 @@ const PaginatedItemList = () => {
   );
 };
 
-export function ProjectsList() {
+export default function ProjectsList() {
   const { data } = useUser();
   return (
     <PaginationProvider itemsPerPage={4} items={data.projects}>

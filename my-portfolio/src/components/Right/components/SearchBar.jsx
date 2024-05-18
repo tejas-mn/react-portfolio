@@ -104,7 +104,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
       display: 'flex',
       alignContent: 'center',
       alignItems: 'center'
-    }}>
+    }} id="search-bar">
       <input
         placeholder="Search Eg.React.."
         type="text"

@@ -1,23 +1,40 @@
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import { useEffect } from 'react';
 
 export default function ProjectListSkeleton() {
 
+    const ListItemSkeleton = Array.from({ length: 5 }, (_, index) => {
+        const itemId = index + 1;
+        return (
+            <React.Fragment key={itemId}>
+
+                <Stack spacing={1} style={styles.container}>
+
+                    <div style={styles.flexContainer}>
+                        <Skeleton animation="wave" variant="rectangular" width={250} height={40} />
+                        <Skeleton animation="wave" variant="text" sx={styles.firstSkeletonRect} width={200} />
+                    </div>
+
+                    <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
+                    <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
+                    <Skeleton animation="wave" width={'90%'} variant="text" sx={styles.skeletonText} />
+
+                </Stack>
+            </React.Fragment>
+
+        );
+    });
+
     return (
-        <Stack spacing={1} style={styles.container}>
+        <div style={{
+            marginTop: '15px'
+        }}>
+            {ListItemSkeleton}
+        </div>
+    )
 
-            <div style={styles.flexContainer}>
-                <Skeleton animation="wave" variant="rectangular" width={250} height={40} />
-                <Skeleton animation="wave" variant="text" sx={styles.firstSkeletonRect} width={200} />
-            </div>
-
-            <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
-            <Skeleton animation="wave" variant="text" sx={styles.skeletonText} />
-            <Skeleton animation="wave" width={'90%'} variant="text" sx={styles.skeletonText} />
-
-        </Stack>
-    );
 }
 
 const styles = {

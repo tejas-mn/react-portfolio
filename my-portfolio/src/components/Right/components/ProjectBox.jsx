@@ -21,7 +21,7 @@ function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
   //   requestAnimationFrame(checkIfImageIsPainted);
   // }, []);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)

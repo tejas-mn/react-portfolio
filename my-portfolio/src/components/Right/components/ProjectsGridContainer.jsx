@@ -1,9 +1,8 @@
-import { useState, Suspense, lazy, useEffect } from "react";
+import { useState, lazy, useEffect } from "react";
 import useOnScreen from "../../../hooks/useOnScreen";
 import ProjectBoxSkeleton from "./Skeletons/ProjectBoxSkeleton";
 import ProjectModal from "./ProjectModal";
 import Modal from "../../utils/components/Modal";
-import ProjectGridSkeleton from "./Skeletons/ProjectGridSkeleton";
 
 const ProjectBox = lazy(() => import('./ProjectBox'));
 
@@ -41,20 +40,17 @@ export default function ProjectsGridContainer({ filteredProjects, tagsState, set
 
     return (
         <div className={`project-grid ${isVisible ? " fade-in" : ""}`}>
-            <Suspense fallback={<ProjectGridSkeleton />}>
-                {filteredProjects.map((project) =>
-                    <ProjectBox
-                        mesureRef={measureRef}
-                        key={project.id}
-                        project={project}
-                        openModal={openModal}
-                        setCurrentProject={setCurrentProject}
-                    />
-                )}
+            {filteredProjects.map((project) =>
+                <ProjectBox
+                    mesureRef={measureRef}
+                    key={project.id}
+                    project={project}
+                    openModal={openModal}
+                    setCurrentProject={setCurrentProject}
+                />
+            )}
 
-                {isLoading && <div><ProjectBoxSkeleton /></div>}
-
-            </Suspense>
+            {isLoading && <div><ProjectBoxSkeleton /></div>}
 
             <Modal isOpen={modalOpen} onClose={closeModal}>
                 <ProjectModal

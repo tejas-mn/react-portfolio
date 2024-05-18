@@ -1,19 +1,33 @@
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
-import { Typography } from '@mui/material';
-import ProjectListSkeleton from './ProjectListSkeleton';
+import ProjectGridSkeleton from './ProjectGridSkeleton';
+import '../../../Right/styles/projects.css'
 
 export default function WorkSkeleton() {
   return (
     <Stack spacing={1} className='right-01'>
-      <Typography component="div" key={'h2'} variant={'h2'}>
-        <Skeleton animation="wave" width={190} sx={{ margin: '10px 0px 0px' }} />
-      </Typography>
-      <ProjectListSkeleton />
-      <ProjectListSkeleton />
-      <ProjectListSkeleton />
-      <ProjectListSkeleton />
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: '0px 15px',
+        padding: '0'
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          gap: '20px',
+          padding: '0'
+        }}>
+          <Skeleton animation="wave" height={60} width={130} />
+          <Skeleton animation="wave" height={60} width={130} />
+        </div>
+      </div>
+      <div className='project-grid'>
+        <ProjectGridSkeleton />
+      </div>
     </Stack>
   );
 }
