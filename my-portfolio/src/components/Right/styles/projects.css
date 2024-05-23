@@ -64,12 +64,16 @@
   box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.1);
   /* border:1px solid  #61dafbb9; */
   animation: fadeInAnimation 0.3s ease-in-out forwards;
+  transition: transform 0.3s;
 }
 
 .project-box:hover {
-  transition: box-shadow 0.2s ease !important;
+  /* transition: box-shadow 0.2s ease !important; */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transform: translateY(-10px);
+  /* background-color: #555; */
+  transition: transform 0.3s;
 }
 
 .project-box img {

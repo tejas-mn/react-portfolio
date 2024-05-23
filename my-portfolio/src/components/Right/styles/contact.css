@@ -1,6 +1,6 @@
 .map {
     position: relative;
-    height: 380px;
+    height: 250px;
     border-radius: 16px;
     margin: 25px 0;
     border: 1px solid var(--btn-color-light);
