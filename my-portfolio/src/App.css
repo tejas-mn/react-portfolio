@@ -204,6 +204,10 @@ section>p {
   background-color: var(--btn-color-light-hover);
 }
 
+.view-btn:active {
+  background-color:var(--btn-color-light);
+}
+
 .view-btn:focus {
   outline: none;
   border-bottom: 1px solid var(--skills-color-dark);

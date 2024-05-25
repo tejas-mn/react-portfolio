@@ -2,7 +2,7 @@
     position: relative;
     height: 250px;
     border-radius: 16px;
-    margin: 25px 0;
+    margin: 25px 0px 0px;
     border: 1px solid var(--btn-color-light);
     overflow: hidden;
 }
