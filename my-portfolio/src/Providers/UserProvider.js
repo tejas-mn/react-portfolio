@@ -21,7 +21,7 @@ const userContext = createContext();
 
 const UserProvider = ({ children }) => {
 
-    const { data, error, loading } = useFetch('data.json');
+    const { data, error, loading } = useFetch('/data.json');
 
     if (error) {
         return "Error Loading data";
