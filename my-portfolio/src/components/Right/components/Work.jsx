@@ -3,9 +3,10 @@ import React, { Suspense, useMemo, useState } from "react";
 import { lazy } from "react";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowDown';
-import DropDown from "../../utils/components/DropDown";
+import Dropdown2 from "../../utils/components/DropDown2";
 import ProjectListSkeleton from "./Skeletons/ProjectListSkeleton";
 import ProjectGridSkeleton from "./Skeletons/ProjectGridSkeleton";
+import zIndex from "@mui/material/styles/zIndex";
 
 const ProjectsList = lazy(() => import('./ProjectsList'));
 
@@ -14,6 +15,11 @@ const sectionsConfig = {
     component: ProjectsGrid,
     skeleton: ProjectGridSkeleton,
     label: "🚀 Projects",
+  },
+  ARTICLES: {
+    component: ProjectsList,
+    skeleton: ProjectListSkeleton,
+    label: "📰 Articles",
   },
   ARTICLES: {
     component: ProjectsList,
@@ -37,8 +43,8 @@ function WorkSection() {
 
   const activeSectionComponent = useMemo(() => {
     switch (activeSection) {
-      case 'PROJECTS': return <ProjectsGrid isVisible={true} />;
-      case 'ARTICLES': return <ProjectsList />;
+      case '🚀 Projects': return <ProjectsGrid isVisible={true} />;
+      case '📰 Articles': return <ProjectsList />;
       default: return <ProjectsGrid isVisible={true} />;
     }
   }, [activeSection])
@@ -49,7 +55,7 @@ function WorkSection() {
 
         <div className="btn-group" style={{ display: 'flex', gap: '10px' }}>
 
-          <div style={{
+          {/* <div style={{
             position: 'relative'
           }}>
             <div
@@ -82,7 +88,9 @@ function WorkSection() {
             onClick={() => setActiveSection('ARTICLES')}
           >
             📰 Articles
-          </div>
+          </div> */}
+    
+          <Dropdown2 items={['🚀 Projects', '📰 Articles']} onSelect={setActiveSection} />
 
         </div>
 
@@ -105,6 +113,8 @@ const styles = {
   projectHeader: {
     display: "flex",
     justifyContent: "space-between",
+    zIndex:1,
+    position:"relative",
     alignItems: "center",
     margin: '0 10px 10px'
   },

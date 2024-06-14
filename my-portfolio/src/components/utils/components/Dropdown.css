@@ -1,0 +1,49 @@
+/* src/Dropdown.css */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 11px 0px;
+  }
+  
+  .dropdown-toggle {
+    background-color: var(--active-tab-light);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 20px;
+  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  .dropdown-toggle span {
+    margin-right: 10px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    border-radius: 8px;
+    top: 110%;
+    left: 0;
+    border-radius: 8px;
+    background-color: var(--active-tab-light);
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 100%;
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    margin: 3px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: var(--active-tab-light);
+    color: var(--text-color-light);
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--inactive-tab-light);
+  }
+  
