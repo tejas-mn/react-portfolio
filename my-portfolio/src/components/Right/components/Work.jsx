@@ -90,14 +90,14 @@ function WorkSection() {
             📰 Articles
           </div> */}
     
-          <Dropdown2 items={['🚀 Projects', '📰 Articles']} onSelect={setActiveSection} />
+          <Dropdown2 items={['🚀 Projects', '📰 Articles', '🏅 Achievements', '✨ Certifications']} onSelect={setActiveSection} />
 
         </div>
 
       </div>
 
       <Suspense fallback={
-        (activeSection === 'ARTICLES') ? <ProjectListSkeleton /> : <div className="project-grid"><ProjectGridSkeleton /></div>
+        (activeSection === '📰 Articles') ? <ProjectListSkeleton /> : <div className="project-grid"><ProjectGridSkeleton /></div>
       }>
 
         {activeSectionComponent}
