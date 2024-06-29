@@ -17,7 +17,7 @@ function ProjectItem({ currentProject }) {
       {currentProject.techStackList.map(p => <i key={p} className="techStackItem">{p}</i>)}
       <i style={styles.timeline}> ({currentProject.timeline})</i>
       <div>
-        <a
+        {/* <a
           className="proj-link-list-btn"
           href={currentProject.githubUrl}
           target="blank"
@@ -27,14 +27,14 @@ function ProjectItem({ currentProject }) {
           {"  "}
           Github
         </a>{" "}
-        |{" "}
+        |{" "} */}
         <a
           className="proj-link-list-btn"
           href={currentProject.liveUrl}
           target="blank"
         >
           <ProjectLinkSvg />
-          Live Link
+          Read More on HashNode
         </a>
       </div>
       <ul>
@@ -61,7 +61,7 @@ const PaginatedItemList = () => {
 export default function ProjectsList() {
   const { data } = useUser();
   return (
-    <PaginationProvider itemsPerPage={4} items={data.projects}>
+    <PaginationProvider itemsPerPage={4} items={data.blogs}>
       <PaginatedItemList />
       <Pagination />
     </PaginationProvider>

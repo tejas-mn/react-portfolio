@@ -216,6 +216,21 @@
       "liveUrl": "https://codepen.io/collection/zxEjMY"
     }
   ],
+  "blogs" : [
+    {
+      "id": 8,
+      "title": "Essential Git Commands Cheat Sheet",
+      "techStack": "Git",
+      "techStackList": [
+        "Git"
+      ],
+      "timeline": "Jun 10, 2024",
+      "description": "Git is a powerful version control system that is widely used in software development to track changes, collaborate with others, and manage project versions...",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "githubUrl": "https://github.com/tejas-mn/Sorto-Viz",
+      "liveUrl": "https://tejasmn.hashnode.dev/essential-git-commands-cheat-sheet"
+    }
+  ],
   "skills": [
     {
       "id": 1,
