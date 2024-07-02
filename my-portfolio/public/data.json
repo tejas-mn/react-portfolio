@@ -23,7 +23,7 @@
     {
       "id": 1,
       "company": "CSG International",
-      "title": "SDET/Test Engineer",
+      "title": "SDET",
       "timeline": "Sep 2023 – Present",
       "desc": [
         "Writing component tests for APIs developed in the feature utilizing *C#* libraries like *Xunit*, *FluentAssertions* and mocking microservices through *WireMock* integrated into *Docker* & *Azure DevOps* pipeline.",
