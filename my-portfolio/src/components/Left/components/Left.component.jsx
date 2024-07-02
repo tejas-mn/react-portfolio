@@ -68,12 +68,12 @@ export const LeftComponent = React.memo(() => {            //memoized this as wh
         <Settings ref={childRef} />
       </Modal>
 
-      {createPortal(
+      {/* {createPortal(
         <CustomizedSnackbars
           showAlert={show}
           message={`Changed theme to ${theme === "dark-theme" ? "Dark Mode" : "Light Mode"}!`} />,
         document.querySelector(".App")
-      )}
+      )} */}
 
     </div>
   );
