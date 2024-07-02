@@ -50,8 +50,8 @@
       "title": "Web Developer Intern",
       "timeline": "Oct 2021 – Jan 2022",
       "desc": [
-        "Developed responsive frontend components utilizing HTML, CSS, JavaScript and Bootstrap.",
-        "Designed a website for local school involving CSS Media Queries and Bootstrap layouts.",
+        "Designed responsive frontend components for a school website utilizing React, HTML, CSS, JavaScript.",
+        "Optimized CSS based on Lighthouse recommendations, resulting in a 20% reduction in render-blocking resources, improving website performance and loading speed.",
         "Developed Student Management Api’s using Python Flask."
       ]
     }
@@ -232,48 +232,53 @@
   ],
   "skills": [
     {
+      "id": 0,
+      "name": "OOPS",
+      "level": "Intermediate"
+    },
+    {
       "id": 1,
       "name": "DSA",
       "level": "Intermediate"
     },
     {
       "id": 2,
-      "name": "OOPS",
+      "name": "C#",
       "level": "Intermediate"
     },
     {
       "id": 7,
-      "name": "C++",
+      "name": "Flask",
       "level": "Intermediate"
     },
     {
       "id": 6,
-      "name": "React",
-      "level": "Intermediate"
-    },
-    {
-      "id": 3,
-      "name": "Javascript",
-      "level": "Intermediate"
-    },
-    {
-      "id": 4,
-      "name": "C#",
-      "level": "Beginner"
-    },
-    {
-      "id": 5,
-      "name": ".NET WEB API",
-      "level": "Beginner"
-    },
-    {
-      "id": 8,
       "name": "Python",
       "level": "Intermediate"
     },
     {
+      "id": 3,
+      "name": "React",
+      "level": "Intermediate"
+    },
+    {
+      "id": 4,
+      "name": "Javascript",
+      "level": "Beginner"
+    },
+    {
+      "id": 5,
+      "name": "CSS",
+      "level": "Intermediate"
+    },
+    {
+      "id": 8,
+      "name": "HTML",
+      "level": "Intermediate"
+    },
+    {
       "id": 9,
-      "name": "Flask",
+      "name": "C++",
       "level": "Intermediate"
     },
     {
@@ -287,7 +292,7 @@
     "email": "tejasmn2020@gmail.com",
     "location": "Bangalore, India",
     "profession": "SDET @ CSGI | Ex-Intern @ Softmantissa ",
-    "headline": "Aspiring SDE! Looking for Backend/Frontend/FullStack Roles!",
+    "headline": "Aspiring SDE! Looking for Frontend/Backend/FullStack Roles!",
     "links": {
       "resume": "https://drive.google.com/file/d/1vZlM2naXPM-dFPVBR1X4JRvv49TKBsKo/view?usp=sharing",
       "leetcode": "https://www.leetcode.com/tejasmn",

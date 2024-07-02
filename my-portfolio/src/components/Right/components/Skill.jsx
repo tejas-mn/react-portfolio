@@ -6,7 +6,7 @@ function Skill({ skill, level }) {
     <>
       <div className="tooltip">
         {skill}
-        <span className="tooltiptext">{level}</span>
+        {/* <span className="tooltiptext">{level}</span> */}
       </div>
     </>
   );
