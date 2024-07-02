@@ -57,7 +57,7 @@ function ContactSection() {
     <div className="right-01">
       <div className="contact-form">
         <div className="form-section">
-          <h2>📩 Contact Us!</h2>
+          <h2>📩 Contact Me!</h2>
           <form action="#" ref={form} onSubmit={sendEmail} >
             <label for="name">Name</label>
             <input type="text" id="name" name="from_name" required />
@@ -83,10 +83,10 @@ function ContactSection() {
           gap: '20px'
         }}>
           <div>
-            <h2>🏠 Our Location</h2>
+            <h2>🏠 My Location</h2>
             <section className="map" data-mapbox="">
               <figure>
-                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=India+(My%20Business%20Name)&amp;t=&amp;z=6&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="400" height="300" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.6309395!3d12.9539974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1719915585924!5m2!1sen!2sin" width="400" height="300" loading="lazy"></iframe>
               </figure>
             </section>
           </div>
