@@ -69,9 +69,9 @@
       ],
       "timeline": "Sep 2023 – Present",
       "description": "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
-      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
-      "githubUrl": "https://github.com/tejas-mn/Sorto-Viz",
-      "liveUrl": "https://algo-viz-tej.netlify.app/"
+      "imageUrl": "https://private-user-images.githubusercontent.com/68629215/302111269-8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4NTA1OTEsIm5iZiI6MTcyMTg1MDI5MSwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTEyNjktOGNmMTljMmUtYTVlNC00NmExLThhN2QtM2VlMTJmOTEwZjNmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI0VDE5NDQ1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFlODZhODExZjQxYTU0MjI1YjlmYzFiNGMwODRhYzhjMDE1NTQxZWVlNjAzM2NmMDk0ZTgwMmI2OTdlMWU2YWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.9qx_JmLzsiLrG_cz7uSqlXHVGCqt9Y48fX28_j1dJU0",
+      "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
+      "liveUrl": "https://github.com/tejas-mn/.NET7-WEB-API"
     },
     {
       "id": 1,
@@ -228,6 +228,18 @@
       "description": "Git is a powerful version control system that is widely used in software development to track changes, collaborate with others, and manage project versions...",
       "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
       "liveUrl": "https://tejasmn.hashnode.dev/essential-git-commands-cheat-sheet"
+    },
+    {
+      "id": 7,
+      "title": "Mastering *args and **kwargs in Python",
+      "techStack": "Python",
+      "techStackList": [
+        "Python"
+      ],
+      "timeline": "Jul 23, 2024",
+      "description": "In Python, there are times when you might not know in advance how many arguments a function should accept. This is where *args and **kwargs...",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "liveUrl": "https://tejasmn.hashnode.dev/mastering-args-and-kwargs-in-python"
     }
   ],
   "skills": [
@@ -300,7 +312,7 @@
       "linkedin": "https://www.linkedin.com/in/tejasmn/"
     },
 
-    "profilePic":"https://media.licdn.com/dms/image/D5603AQGE2SJsSoxYIA/profile-displayphoto-shrink_400_400/0/1719637943295?e=1725494400&v=beta&t=QTipiwK-_5GAFbIjqC2C5E2tFAQzlhiqUCT9ztVaw1Y",
+    "profilePic":"https://media.licdn.com/dms/image/D5635AQHdbxxn08qbHA/profile-framedphoto-shrink_400_400/0/1721841871683?e=1722456000&v=beta&t=WTNQmAC3GndgNrjubK6BtdjaDK5pDpd7jYTOOTb0yOw",
     "bannerImages": {
       "darkBanner": "https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif",
       "lightBanner": "https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769",

@@ -45,8 +45,8 @@ function WorkSection() {
     switch (activeSection) {
       case '🚀 Projects': return <ProjectsGrid isVisible={true} />;
       case '📰 Articles': return <ProjectsList />;
-      case '🏅 Achievements' : return <p>Coming soon..</p>;
-      case '✨ Certifications' : return <p>Coming soon..</p>;
+      // case '🏅 Achievements' : return <p>Coming soon..</p>;
+      // case '✨ Certifications' : return <p>Coming soon..</p>;
       default: return <ProjectsGrid isVisible={true} />;
     }
   }, [activeSection])
@@ -92,7 +92,8 @@ function WorkSection() {
             📰 Articles
           </div> */}
     
-          <Dropdown2 items={['🚀 Projects', '📰 Articles', '🏅 Achievements', '✨ Certifications']} onSelect={setActiveSection} />
+          <Dropdown2 items={['🚀 Projects', '📰 Articles']} onSelect={setActiveSection} /> 
+          {/* , '🏅 Achievements', '✨ Certifications' */}
 
         </div>
 
