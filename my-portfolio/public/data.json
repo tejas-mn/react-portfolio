@@ -69,7 +69,7 @@
       ],
       "timeline": "Sep 2023 – Present",
       "description": "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
-      "imageUrl": "https://private-user-images.githubusercontent.com/68629215/302111269-8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE4NTA1OTEsIm5iZiI6MTcyMTg1MDI5MSwicGF0aCI6Ii82ODYyOTIxNS8zMDIxMTEyNjktOGNmMTljMmUtYTVlNC00NmExLThhN2QtM2VlMTJmOTEwZjNmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzI0VDE5NDQ1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFlODZhODExZjQxYTU0MjI1YjlmYzFiNGMwODRhYzhjMDE1NTQxZWVlNjAzM2NmMDk0ZTgwMmI2OTdlMWU2YWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.9qx_JmLzsiLrG_cz7uSqlXHVGCqt9Y48fX28_j1dJU0",
+      "imageUrl": "https://github.com/tejas-mn/.NET7-WEB-API/assets/68629215/8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f", 
       "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
       "liveUrl": "https://github.com/tejas-mn/.NET7-WEB-API"
     },
