@@ -135,7 +135,7 @@
       "description": "A Todo app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
       "imageUrl": "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
       "githubUrl": "https://github.com/tejas-mn/Flask-App/tree/master",
-      "liveUrl": "https://github.com/tejas-mn/Flask-App/tree/master"
+      "liveUrl": "https://tejasmn2.pythonanywhere.com/"
     },
     {
       "id": 6,
