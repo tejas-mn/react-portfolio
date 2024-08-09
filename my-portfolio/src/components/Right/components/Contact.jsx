@@ -49,6 +49,10 @@ function ContactSection() {
           }
         );
     } else {
+      showAlert({
+        message: 'Email currently disabled',
+        type: "warning"
+      });
       console.log('Email disabled');
     }
   };
