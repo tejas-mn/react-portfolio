@@ -13,8 +13,7 @@ const preloadImage = (url) => {
 
 const preloadProjectImages = async (projects) => {
     const preloadPromises = projects.map((project) => preloadImage(project.imageUrl));
-    await Promise.all([...preloadPromises, preloadImage("https://i.pinimg.com/originals/cc/6a/fc/cc6afc451a6d3857d556331e16e10bf7.gif"), 
-    preloadImage("https://chosenoneappearal.com/cdn/shop/files/ezgif.com-gif-maker_-_2023-09-18T121549.841_1000x.gif?v=1695053769")]);
+    await Promise.all([...preloadPromises]);
 };
 
 const userContext = createContext();
