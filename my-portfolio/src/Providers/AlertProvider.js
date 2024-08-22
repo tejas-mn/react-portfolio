@@ -6,7 +6,7 @@ export const AlertProvider = ({ children }) => {
     const [alerts, setAlert] = useState([]);
 
     const showAlert = (alertObj) => {
-        setAlert((prev) => [...prev, alertObj]);
+        setAlert((prev) => [alertObj]); //        setAlert((prev) => [...prev, alertObj]);
     }
 
     const hideAlert = (index) => {

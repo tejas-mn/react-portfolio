@@ -1,6 +1,7 @@
 import { useUser } from "../../../Providers/UserProvider";
 import { EmailSvg, Locationsvg } from "../../utils/components/Svg";
 import styles from "../styles/Left.module.css";
+import { useAlert } from "../../../Providers/AlertProvider";
 
 export function ProfileDetails() {
   const {data} = useUser();
@@ -18,7 +19,7 @@ export function ProfileDetails() {
 
 function ContactInfo() {
   const {data} = useUser();
-
+ 
   return (
     <>
       <div>
@@ -35,8 +36,17 @@ function ContactInfo() {
 
 function ResumeButton() {
   const {data} = useUser();
+  const { showAlert } = useAlert();
   return (
-    <div className={styles.resumeBtn}>
+    <div className={styles.resumeBtn} onClick={(e)=>{
+      if(data.userInfo.links.resume === '' || data.userInfo.links.resume === undefined || data.userInfo.links.resume === null){
+        e.preventDefault();
+        showAlert({
+          message: "Currently unavailable",
+          type: "warning"
+        });
+      }
+    }}>
       <a className={styles.anchor} href={data.userInfo.links.resume} target="blank">
         <span className={styles.btnText}>📝</span> My Resume
       </a>
