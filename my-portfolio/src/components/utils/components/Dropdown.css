@@ -9,7 +9,6 @@
     color: var(--text-color-light);
     border: none;
     padding: 10px 20px;
-  
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -31,6 +30,7 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     min-width: max-content;
     z-index: 1;
+    width: 100%;
     text-align: left;
   }
   
@@ -41,6 +41,7 @@
     cursor: pointer;
     background-color: var(--active-tab-light);
     color: var(--text-color-light);
+    text-align: center;
   }
   
   .dropdown-item:hover {
