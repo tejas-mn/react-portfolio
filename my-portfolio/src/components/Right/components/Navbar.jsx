@@ -8,13 +8,13 @@ function NavBtn({ name, link }) {
   );
 }
 
-export function NavBar() {
+export function NavBar({mobileNav}) {
 
   const navBtns = [
-    { name: "🖋️ About", link: "/about" },
-    { name: "💼 Experience", link: "/experience" },
-    { name: "👨🏼‍💻 Work", link: "/work" },
-    { name: "📞 Contact", link: "/contact" }
+    { name: !mobileNav?"🖋️ About":" About", link: "/about" },
+    { name: !mobileNav?"💼 Experience":"Experience", link: "/experience" },
+    { name: !mobileNav?"👨🏼‍💻 Work":"Work", link: "/work" },
+    { name: !mobileNav?"📞 Contact":"Contact", link: "/contact" }
   ]
 
   return (

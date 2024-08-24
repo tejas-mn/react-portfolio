@@ -24,13 +24,13 @@ function App() {
 
         <div data-testid="right" className="right">
           <div data-testid="desktop-nav" className="desktop-nav">
-            <NavBar />
+            <NavBar mobileNav={false}/>
           </div>
           <RightComponent />
         </div>
 
         <div className="mobile-nav">
-          <NavBar />
+          <NavBar mobileNav={true}/>
         </div>
       </div>
     </>
