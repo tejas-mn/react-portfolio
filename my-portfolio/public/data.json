@@ -69,7 +69,7 @@
         "SQL"
       ],
       "timeline": "Sep 2023 – Present",
-      "description": "A .NET Web API for managing e-commerce products and categories. Implmented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
+      "description": "A .NET Web API for managing e-commerce products and categories. Implemented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
       "imageUrl": "https://github.com/tejas-mn/.NET7-WEB-API/assets/68629215/8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f", 
       "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
       "liveUrl": "https://github.com/tejas-mn/.NET7-WEB-API"
@@ -318,7 +318,7 @@
       "lightBanner": "banner-light.gif",
       "single": ""
     },
-    "aboutInfo": "I’m an aspiring Software Engineer with a passion for developing full-stack projects and exploring the depths of software engineering concepts. I’m energized by the challenge of unraveling software engineering principles and applying my insights to diverse projects. I’m starting to share my experiences and thoughts on software engineering and development on my new blog. If you’re looking for a dedicated engineer or a collaborator for your next project, let’s connect and create something extraordinary together!",
+    "aboutInfo": "I’m an aspiring Software Engineer with a passion for developing full-stack projects and exploring the depths of software engineering concepts. I’m energized by the challenge of unraveling software engineering principles and applying my insights to diverse projects. I’m starting to share my experiences and thoughts on software engineering and programming on my new blog. If you’re looking for a dedicated engineer or a collaborator for your next project, let’s connect and create something extraordinary together!",
     "experienceInfo": "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET in US based product company. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript,  React, SQL, C#. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies."
   }
 }
