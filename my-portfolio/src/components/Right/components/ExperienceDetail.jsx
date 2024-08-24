@@ -21,7 +21,7 @@ export default function ExperienceDetail({ e }) {
 }
 
 const styles = {
-  titleBorder: { borderLeft: "5px solid lightblue", paddingLeft: "5px" },
+  titleBorder: { borderLeft: "5px solid #a4a4a4", paddingLeft: "5px" },
   timeline: { float: "right" },
   title: { display: "block" },
   expDetail: {

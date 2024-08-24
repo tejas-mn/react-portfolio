@@ -26,10 +26,7 @@
       "title": "SDET",
       "timeline": "Sep 2023 – Present",
       "desc": [
-        "Writing component tests for APIs developed in the feature utilizing *C#* libraries like *Xunit*, *FluentAssertions* and mocking microservices through *WireMock* integrated into *Docker* & *Azure DevOps* pipeline.",
-        "Writing *SQL* queries for querying and seeding data against database tables for component tests. Utilizing AWS services like *CloudWatch*, *S3* , *DynamoDB*, *SNS*, *SQS* for testing event driven scenarios.",
-        "Performing API automation and scripting using *Postman*, Performance tests using *JMeter* with *Kibana* for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
-        "Actively involved in *Agile methodologies* and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro."
+        "Working as a Software Test Engineer in Ascendon's Core Engineering Team, focusing on API automation testing using *C# .NET* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
       ]
     },
     {
@@ -38,21 +35,25 @@
       "title": "Intern",
       "timeline": "March 2023 – Sep 2023",
       "desc": [
-        "Writing component tests for APIs developed in the feature utilizing C# libraries like Xunit, FluentAssertions and mocking microservices through WireMock integrated into Docker & Azure DevOps pipeline.",
-        "Writing SQL queries for querying and seeding data against database tables for component tests. Utilizing AWS services like CloudWatch, S3 , DynamoDB, SNS, SQS for testing event driven scenarios.",
-        "Performing API automation and scripting using Postman, Performance tests using JMeter with Kibana for visualizing and monitoring performance results and logs. Testing defects across development and production environments.",
-        "Actively involved in Agile methodologies and Scrum ceremonies like Sprint Planning, Story Breakdown and Retro."
+        "Acquired good knowledge in technical (backend), functional, and business aspects of Ascendon, with a strong understanding of its various domains, architecture, features, and overall product."
       ]
     },
     {
       "id": 3,
+      "company": "Edunet Foundation",
+      "title": "Frontend Developer Intern",
+      "timeline": "Sept 2022 – Nov 2022",
+      "desc": [
+        "Worked on building portfolio website using *React*, *HTML*, *CSS* and *Javascript*."
+      ]
+    },
+    {
+      "id": 4,
       "company": "Softmantissa",
       "title": "Web Developer Intern",
       "timeline": "Oct 2021 – Jan 2022",
       "desc": [
-        "Designed responsive frontend components for a school website utilizing React, HTML, CSS, JavaScript.",
-        "Optimized CSS based on Lighthouse recommendations, resulting in a 20% reduction in render-blocking resources, improving website performance and loading speed.",
-        "Developed Student Management Api’s using Python Flask."
+        "Designed responsive frontend components for a school website utilizing *React*, *HTML*, *CSS*, *JavaScript* and backend with *Django*."
       ]
     }
   ],
