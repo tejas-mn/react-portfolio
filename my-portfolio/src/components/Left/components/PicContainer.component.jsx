@@ -28,7 +28,7 @@ export const PicContainer = () => {
         <div className={styles.picDesc}>
           <h2>{data.userInfo.name}</h2>
           <p>
-            <b>💻{data.userInfo.profession}</b>
+            <b>{data.userInfo.profession}</b>
           </p>
         </div>
       </div>
