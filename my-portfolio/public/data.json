@@ -314,6 +314,21 @@
     },
     "profilePic":"default.jpg",
     "bannerImages": {
+      "images":[
+        "https://unsplash.com/photos/grayscale-photo-of-stone-gPm8h3DS1s4",
+        "https://unsplash.com/photos/silhouette-of-trees-under-moon-DOF0IvVwaBY",
+        "https://images.unsplash.com/photo-1633446259606-45413db196a7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://www.hdwallpapers.in/download/tree_branches_in_black_moon_background_4k_hd_black_background-HD.jpg",
+        "https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2021/09/White-abstract-background-wallpaper-illustration-e1656162692761.jpg?resize=1000%2C750&ssl=1",
+        "https://img.freepik.com/free-vector/white-abstract-background_23-2148833155.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1724371200&semt=ais_hybrid",
+        "https://img.freepik.com/free-vector/abstract-memphis-mobile-phone-wallpaper_53876-154032.jpg",
+        "https://png.pngtree.com/thumb_back/fh260/background/20200616/pngtree-white-blur-background-image_339297.jpg",
+        "https://img.freepik.com/premium-photo/white-blur-abstract-background_488220-678.jpg",
+        "https://wallpapers.com/images/hd/blurred-office-background-3440-x-1440-m9cjtg8867a80b05.jpg",
+        "https://us.123rf.com/450wm/jirsak/jirsak1504/jirsak150400070/39381339-office-background-blurred-and-defocused-ideal-for-presentation-background.jpg?ver=6"
+
+      ],
       "darkBanner": "banner-dark.gif",
       "lightBanner": "banner-light.gif",
       "single": ""

@@ -53,60 +53,66 @@ function WorkSection() {
 
   return (
     <section className="right-01">
-      <div style={styles.projectHeader} className="project-title-container">
+      <h2>👨🏼‍💻 Work</h2>
 
-        <div className="btn-group" style={{ display: 'flex', gap: '10px' }}>
+      <div style={{
+        marginTop:'12px'
+      }}>
+        <div style={styles.projectHeader} className="project-title-container">
 
-          {/* <div style={{
-            position: 'relative'
-          }}>
-            <div
-              style={{ ...styles.tab, backgroundColor: (activeSection === 'PROJECTS') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
-              className="project-title"
-              onClick={() => {
-                setActiveSection('PROJECTS')
-                setIsFocused((prev) => !prev)
-              }}
-            >
-              <span className="rocket">{"🚀 "}</span> Projects  <KeyboardArrowDownIcon id="kbd-dwn-arrow" style={{
-                transform: isFocused && 'rotate(180deg)',
-                transition: 'transform 0.4s',
-                fontSize: 'x-large',
-                display: 'none'
-              }} />
-            </div>
-            {isFocused && (
-              <div className="drp-dwn">
-                <DropDown options={["Articles"]} onSelect={() => { setActiveSection('ARTICLES'); setIsFocused(false) }} />
-              </div>
-            )}
+          <div className="btn-group" style={{ display: 'flex', gap: '10px' }}>
+
+            {/* <div style={{
+    position: 'relative'
+  }}>
+    <div
+      style={{ ...styles.tab, backgroundColor: (activeSection === 'PROJECTS') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
+      className="project-title"
+      onClick={() => {
+        setActiveSection('PROJECTS')
+        setIsFocused((prev) => !prev)
+      }}
+    >
+      <span className="rocket">{"🚀 "}</span> Projects  <KeyboardArrowDownIcon id="kbd-dwn-arrow" style={{
+        transform: isFocused && 'rotate(180deg)',
+        transition: 'transform 0.4s',
+        fontSize: 'x-large',
+        display: 'none'
+      }} />
+    </div>
+    {isFocused && (
+      <div className="drp-dwn">
+        <DropDown options={["Articles"]} onSelect={() => { setActiveSection('ARTICLES'); setIsFocused(false) }} />
+      </div>
+    )}
+
+  </div>
+
+  <div
+    style={{ ...styles.tab, backgroundColor: (activeSection === 'ARTICLES') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
+    className="project-title"
+    id="articles-tab"
+    onClick={() => setActiveSection('ARTICLES')}
+  >
+    📰 Articles
+  </div> */}
+
+            <Dropdown2 items={['🚀 Projects', '📰 Articles']} onSelect={setActiveSection} />
+            {/* , '🏅 Achievements', '✨ Certifications' */}
 
           </div>
 
-          <div
-            style={{ ...styles.tab, backgroundColor: (activeSection === 'ARTICLES') ? 'var(--active-tab-light)' : 'var(--inactive-tab-light)' }}
-            className="project-title"
-            id="articles-tab"
-            onClick={() => setActiveSection('ARTICLES')}
-          >
-            📰 Articles
-          </div> */}
-    
-          <Dropdown2 items={['🚀 Projects', '📰 Articles']} onSelect={setActiveSection} /> 
-          {/* , '🏅 Achievements', '✨ Certifications' */}
-
         </div>
 
+        <Suspense fallback={
+          (activeSection === '📰 Articles') ? <ProjectListSkeleton /> : <div className="project-grid"><ProjectGridSkeleton /></div>
+        }>
+
+          {activeSectionComponent}
+
+        </Suspense>
+
       </div>
-
-      <Suspense fallback={
-        (activeSection === '📰 Articles') ? <ProjectListSkeleton /> : <div className="project-grid"><ProjectGridSkeleton /></div>
-      }>
-
-        {activeSectionComponent}
-
-      </Suspense>;
-
 
     </section>
   );
@@ -116,8 +122,8 @@ const styles = {
   projectHeader: {
     display: "flex",
     justifyContent: "space-between",
-    zIndex:1,
-    position:"relative",
+    zIndex: 1,
+    position: "relative",
     alignItems: "center",
     margin: '0 10px 10px'
   },
