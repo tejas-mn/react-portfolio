@@ -14,13 +14,13 @@ export const PicContainer = () => {
 
   const banner = useRef();
 
-  useEffect(() => {
-    banner.current.src = bg[theme];
-  }, [theme]);
+  // useEffect(() => {
+    // banner.current.src = bg[theme];
+  // }, [theme]);
 
   return (
     <div className={styles.containerStyle}>
-      <img className={styles.bannerImg} ref={banner} alt="Banner" rel="dns-prefetch" />
+      {/* <img className={styles.bannerImg} ref={banner} alt="Banner" rel="dns-prefetch" /> */}
       <div className={styles.picContainer}>
         <div className={ styles.pic + " " + styles.picStyle}>
           <img src={data.userInfo.profilePic} alt="Profile" rel="dns-prefetch" />

@@ -9,20 +9,22 @@
   --btn-color-dark: #2d2d2d;
   --btn-color-dark-hover: #3d3d3d;
   --btn-color-light-hover: #f7f7f7;
-  --skills-color-dark: hsl(0, 0%, 19%);
-  --skills-color-light: var(--btn-color-light);
+  --skills-color-dark: hsla(0, 0%, 19%, 0.555);
+  --skills-color-light: #ffffff96;
   --text-color-light: rgb(200, 200, 200);
   --text-color-dark: rgb(0, 0, 0);
   --link-light-theme: whitesmoke;
   --link-dark-theme: black;
-  --index-bg-dark: linear-gradient(11deg,
+  --index-bg-dark: url('https://images.unsplash.com/photo-1558089594-3733127b6a0c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+ /* linear-gradient(11deg,
       rgba(33, 33, 33, 1) 0%,
       rgba(0, 0, 0, 1) 48%,
-      rgba(45, 45, 45, 1) 100%);
-  --index-bg-light: linear-gradient(140deg,
+      rgba(45, 45, 45, 1) 100%);*/
+  --index-bg-light: url('https://png.pngtree.com/thumb_back/fh260/background/20200616/pngtree-white-blur-background-image_339297.jpg');
+  /*linear-gradient(140deg,
       rgba(255, 255, 255, 1) 0%,
       rgba(255, 251, 251, 0.715) 100%,
-      rgba(255, 255, 255, 1) 100%);
+      rgba(255, 255, 255, 1) 100%);*/
   --theme-emoji-light: "🌙";
   --map-theme: grayscale(1) invert(1);
   --active-tab-light: #ffffff;
@@ -38,6 +40,7 @@
   --text-color-light: rgb(0, 0, 0);
   --theme-emoji-light: "☀";
   --map-theme: grayscale(1);
+  --index-bg-light: var(--index-bg-light);
 }
 
 .dark-theme {

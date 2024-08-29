@@ -28,7 +28,7 @@ body {
   letter-spacing: 0px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 html::-webkit-scrollbar {
