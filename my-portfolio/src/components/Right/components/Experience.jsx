@@ -1,5 +1,4 @@
 import { useUser } from "../../../Providers/UserProvider";
-import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
 
 import {
   PaginationProvider,
@@ -34,7 +33,7 @@ function ExperienceSection() {
 }
 
 function NewExpDetail({ e }) {
-  useAutoBoldText();
+
   return (
     <p id={e.id} style={styles.eduPara} className={"edu-p" + e.id}>
       <span style={styles.dot}></span>

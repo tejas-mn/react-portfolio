@@ -38,7 +38,7 @@ function AboutMe() {
 
   return (
     <section>
-      <h2>🖋️ About Me</h2>
+      <h2>👋 About Me</h2>
       <p style={{
         marginBottom:'0px'
       }}>{data.userInfo.aboutInfo}</p>
