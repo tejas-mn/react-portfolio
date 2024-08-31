@@ -29,9 +29,9 @@ function App() {
           <RightComponent />
         </div>
 
-        <div className="mobile-nav">
+        {/* <div className="mobile-nav">
           <NavBar mobileNav={true}/>
-        </div>
+        </div> */}
       </div>
     </>
   );
