@@ -3,23 +3,25 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const AlertContext = createContext();
 
 export const AlertProvider = ({ children }) => {
-    const [alerts, setAlert] = useState([]);
+    const [alerts, setAlerts] = useState([]);
 
     const showAlert = (alertObj) => {
-        setAlert((prev) => [alertObj]); //        setAlert((prev) => [...prev, alertObj]);
-    }
+        setAlerts((prev) => [...prev, alertObj]);
+    };
 
     const hideAlert = (index) => {
-        //bug was here all time directly passing setAlert(alerts.filter()) was updating whole alerts and was rendering all again
-        setAlert((prev) => prev.filter((e, i) => i !== index));
-        //now setAlert will update based on previous state during runtime.
-    }
+        setAlerts((prev) => prev.filter((_, i) => i !== index));
+    };
 
     useEffect(() => {
-        for (let i = 0; i < alerts.length; i++) {
-            setTimeout(() => {
-                hideAlert(i);
-            }, 9000 * (i + 1))
+        if (alerts.length > 0) {
+            //Automatically hide the latest alert after 3 seconds
+            //In previous logic I was creating new timeouts for every addition or removal in alerts array
+            //Also I was not clearing timeouts which was causing inconsistency
+            const latestIndex = alerts.length - 1;
+            const timer = setTimeout(() => hideAlert(latestIndex), 3000);
+            
+            return () => clearTimeout(timer); //clears timout for currrent last and new timeout will be set on new alert which got pushed recently
         }
     }, [alerts]);
 
@@ -27,7 +29,7 @@ export const AlertProvider = ({ children }) => {
         <AlertContext.Provider value={{ alerts, showAlert, hideAlert }}>
             {children}
         </AlertContext.Provider>
-    )
-}
+    );
+};
 
 export const useAlert = () => useContext(AlertContext);

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
 import { createContext } from 'react';
 
@@ -19,34 +19,34 @@ const preloadProjectImages = async (projects) => {
 const userContext = createContext();
 
 const UserProvider = ({ children }) => {
-
     const { data, error, loading } = useFetch('/data.json');
 
+    useEffect(() => {
+        if (data && data.projects) {
+            preloadProjectImages(data.projects)
+                .then(() => {
+                    console.log('All project images preloaded successfully');
+                })
+                .catch((error) => {
+                    console.error('Failed to preload project images:', error);
+                });
+        }
+    }, [data]); 
+
     if (error) {
-        return "Error Loading data";
+        return <div>Error Loading Data</div>;
     }
-    else if (loading) {
-        console.log("Loading Data..")
-    } else {
 
-        preloadProjectImages(data.projects)
-            .then(() => {
-                console.log('All project images preloaded successfully');
-            })
-            .catch((error) => {
-                console.error('Failed to preload project images:', error);
-            });
-
-
-        return (
-            <userContext.Provider value={{
-                data
-            }}>
-                {children}
-            </userContext.Provider>
-        )
+    if (loading) {
+        return <div>Loading Data...</div>; 
     }
-}
+
+    return (
+        <userContext.Provider value={{ data }}>
+            {children}
+        </userContext.Provider>
+    );
+};
 
 const useUser = () => useContext(userContext);
 
