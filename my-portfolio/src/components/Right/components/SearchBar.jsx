@@ -23,6 +23,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
 
   useEffect(() => {
     if (searchText.trim() !== "") {
+      setSearchResult(new Set(["Loading.."]));
       debouncedSearch(searchText.trim(), setSearchResult, tagsState, defaultTags);
     } else {
       setIndex(-1);

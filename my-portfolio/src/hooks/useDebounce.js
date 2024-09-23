@@ -1,21 +1,21 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useState } from "react"
 
 export const useDebounce = (fn, delay) => {
-    const timeoutRef = useRef(null);
+    const [time, setTime] = useState(null);
   
     useEffect(() => {
       // Cleanup function to clear timeout on unmount or 
       // whenever `fn` or `delay` changes (cancels out previous timeouts)
       return () => {
-        clearTimeout(timeoutRef.current);
+        clearTimeout(time);
       };
     }, [fn, delay]);
   
     return (...args) => {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => {
+      clearTimeout(time);
+      setTime(setTimeout(() => {
         fn(...args);
-      }, delay);
+      }, delay));
     };
 }
 
