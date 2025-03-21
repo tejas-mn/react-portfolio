@@ -21,12 +21,21 @@
   ],
   "exp": [
     {
+      "id": 0,
+      "company": "CSG International",
+      "title": "SDET 1",
+      "timeline": "Dec 2024 - Present",
+      "desc": [
+        "Working on test automation and backend development."
+      ]
+    },
+    {
       "id": 1,
       "company": "CSG International",
-      "title": "SDET",
-      "timeline": "Sep 2023 – Present",
+      "title": "SDET Grad",
+      "timeline": "Sep 2023 – Dec 2024",
       "desc": [
-        "Working as a Software Test Engineer in Ascendon's Core Engineering Team, focusing on API automation testing using *C# .NET* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
+        "Working in Ascendon's Core Engineering Team, focusing on API automation testing using *C# .NET* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
       ]
     },
     {
