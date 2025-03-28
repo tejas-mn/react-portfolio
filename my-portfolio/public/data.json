@@ -62,7 +62,7 @@
       "title": "Web Developer Intern",
       "timeline": "Oct 2021 – Jan 2022",
       "desc": [
-        "Designed responsive frontend components for a school website utilizing *React*, *HTML*, *CSS*, *JavaScript* and backend with *Django*."
+        "Designed responsive frontend components for a school website utilizing *React*, *HTML*, *CSS*, *JavaScript* and backend with *Flask* / *Django*."
       ]
     }
   ],
