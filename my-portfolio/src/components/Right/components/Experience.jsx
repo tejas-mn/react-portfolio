@@ -36,7 +36,7 @@ function ExperienceSection() {
 function NewExpDetail({ e }) {
   useAutoBoldText();
   return (
-    <p id={e.id} style={styles.eduPara} className={"edu-p" + e.id}>
+    <p id={e.id} style={styles.eduPara} className={"exp-p" + e.id}>
       <span style={styles.dot}></span>
       <div>{e.timeline}</div>
       <b style={styles.title}>{e.company}</b>

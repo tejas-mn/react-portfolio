@@ -539,7 +539,11 @@ section>p {
   color: var(--text-color-light) !important;
 }
 
-.edu-p0 {
+.exp-p0 {
+  margin-top: 20px !important;
+}
+
+.edu-p1 {
   margin-top: 20px !important;
 }
 
