@@ -250,6 +250,18 @@
       "description": "In Python, there are times when you might not know in advance how many arguments a function should accept. This is where *args and **kwargs...",
       "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
       "liveUrl": "https://tejasmn.hashnode.dev/mastering-args-and-kwargs-in-python"
+    },
+    {
+      "id": 6,
+      "title": "Demystifying Docker Instructions",
+      "techStack": "Docker",
+      "techStackList": [
+        "Docker"
+      ],
+      "timeline": "Dec 29, 2024",
+      "description": "Dockerfiles are the backbone of containerized application development, but some instructions like ADD, COPY, CMD, ENTRYPOINT, and RUN...",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "liveUrl": "https://tejasmn.hashnode.dev/demystifying-docker-instructions-add-copy-cmd-entrypoint-and-run"
     }
   ],
   "skills": [
