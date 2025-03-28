@@ -26,7 +26,7 @@
       "title": "SDET 1",
       "timeline": "Dec 2024 - Present",
       "desc": [
-        "Working on test automation and backend development working towards transitioning to backend development role."
+        "Working on backend development and test automation, aiming to move into a backend development role."
       ]
     },
     {
@@ -266,6 +266,11 @@
     {
       "id": 2,
       "name": "C#",
+      "level": "Intermediate"
+    },
+    {
+      "id": 11,
+      "name": ".NET Core",
       "level": "Intermediate"
     },
     {
