@@ -63,12 +63,14 @@ export default function ProjectModal({
               <GithubProjectSvg /> Github
             </button>
           </a>
-          <a href={liveUrl} target="_blank" rel="noreferrer">
+          {
+            (!(!liveUrl || liveUrl.trim().length === 0)) ? <a href={liveUrl} target="_blank" rel="noreferrer">
             <button style={styles.button}>
               <ProjectLinkSvg />
               Live
             </button>
-          </a>
+          </a> : <></>
+          }
         </div>
       </div>
     </div>

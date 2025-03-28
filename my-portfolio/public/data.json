@@ -81,7 +81,7 @@
       "description": "A .NET Web API for managing e-commerce products and categories. Implemented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
       "imageUrl": "https://github.com/tejas-mn/.NET7-WEB-API/assets/68629215/8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f", 
       "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
-      "liveUrl": "https://github.com/tejas-mn/.NET7-WEB-API"
+      "liveUrl": ""
     },
     {
       "id": 1,
@@ -97,7 +97,7 @@
       "description": "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
       "imageUrl": "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
       "githubUrl": "https://github.com/tejas-mn/Gym-Management-System-Flask",
-      "liveUrl": "https://algo-viz-tej.netlify.app/"
+      "liveUrl": ""
     },
     {
       "id": 2,
@@ -178,7 +178,7 @@
       "description": "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
       "imageUrl": "https://github.com/tejas-mn/mp-final/assets/68629215/af64bc19-a0eb-46bc-b9bd-0d1cb3d9c816",
       "githubUrl": "https://github.com/tejas-mn/mp-final",
-      "liveUrl": "https://github.com/tejas-mn/mp-final"
+      "liveUrl": ""
     },
     {
       "id": 7,
@@ -193,7 +193,7 @@
       "description": "A simple weather app that displays weather information using OpenWeather API.",
       "imageUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab/assets/68629215/d87dd822-044d-47d2-8882-316229607c93",
       "githubUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab",
-      "liveUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab"
+      "liveUrl": ""
     },
     {
       "id": 9,
@@ -207,8 +207,8 @@
       "timeline": "Jan 2024 – Present",
       "description": "A portfolio built using React",
       "imageUrl": "image.png",
-      "githubUrl": "",
-      "liveUrl": ""
+      "githubUrl": "https://github.com/tejas-mn/react-portfolio",
+      "liveUrl": "https://tejasmn-react-portfolio.vercel.app/work"
     },
     {
       "id": 10,
