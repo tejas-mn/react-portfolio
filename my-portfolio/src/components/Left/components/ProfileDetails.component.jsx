@@ -11,7 +11,7 @@ export function ProfileDetails() {
       <p>{data.userInfo.headline}</p>
       <div className={styles.skills2}>
         <ContactInfo />
-        <ResumeButton />
+        {/* <ResumeButton /> */}
       </div>
     </>
   );
