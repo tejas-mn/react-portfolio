@@ -105,7 +105,7 @@ function WorkSection() {
 
         {activeSectionComponent}
 
-      </Suspense>;
+      </Suspense>
 
 
     </section>
