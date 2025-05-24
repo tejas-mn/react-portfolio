@@ -21,12 +21,22 @@
   ],
   "exp": [
     {
+      "id": -1,
+      "company": "CSG International",
+      "title": "SDE 1",
+      "timeline": "May 2025 - Present",
+      "desc": [
+        "Transitioned to SDE 1 working on backend development building core ordering features and APIs for Ascendon.",
+        "*Tech*: C#, .NET Core, SQL, SOLID Principles, Design Patterns, Microservices, AWS, Docker, Terraform, Azure Devops"
+      ]
+    },
+    {
       "id": 0,
       "company": "CSG International",
       "title": "SDET 1",
-      "timeline": "Dec 2024 - Present",
+      "timeline": "Dec 2024 - April 2025",
       "desc": [
-        "Working on backend development and test automation, aiming to move into a backend development role."
+        "Worked on backend development and test automation, aiming to move into a backend development role."
       ]
     },
     {
@@ -35,7 +45,7 @@
       "title": "SDET Grad",
       "timeline": "Sep 2023 – Dec 2024",
       "desc": [
-        "Working in Ascendon's Core Engineering Team, focusing on API automation testing using *C# .NET* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
+        "Worked on API Automation Testing using *C# .NET Core* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
       ]
     },
     {
