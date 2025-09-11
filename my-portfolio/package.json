@@ -25,6 +25,9 @@
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
