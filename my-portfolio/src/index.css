@@ -2,11 +2,12 @@
   --index-bg-color-dark: #282c34;
   --index-bg-color-light: #f9f9f7;
   --index-bg-dark: linear-gradient(
-    11deg,
-    rgba(33, 33, 33, 1) 0%,
-    rgba(0, 0, 0, 1) 48%,
-    rgba(45, 45, 45, 1) 100%
+    90deg, 
+    rgb(33, 33, 33) 0%, 
+    rgb(0, 0, 0) 48%,
+    rgb(45, 45, 45) 100%
   );
+
   --index-bg-light: linear-gradient(
     140deg,
     rgba(255, 255, 255, 1) 0%,

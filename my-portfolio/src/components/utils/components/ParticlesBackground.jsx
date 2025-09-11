@@ -102,11 +102,11 @@ function ParticlesBackground() {
   //   };
   // }, [theme]);
 
-  useEffect(() => {
-    document.querySelector("body").style.background = bg[theme];
-    // options.particles.color = particleColor[theme];
-    // options.particles.links.color = particleColor[theme];
-  }, [theme]);
+  // useEffect(() => {
+  //   document.querySelector("body").style.background = bg[theme];
+  //   // options.particles.color = particleColor[theme];
+  //   // options.particles.links.color = particleColor[theme];
+  // }, [theme]);
 
   // return (
   //   isInitialized && (
