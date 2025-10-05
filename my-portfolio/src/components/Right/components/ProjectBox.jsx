@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ProjectBoxSkeleton from "./Skeletons/ProjectBoxSkeleton";
+import Tilt from 'react-parallax-tilt';
 
 function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
   // const [loading, setLoading] = useState(true);
@@ -43,18 +44,20 @@ function ProjectBox({ project, setCurrentProject, openModal, mesureRef }) {
         openModal();
       }}
     >
-      <div style={styles.gridImageContainer}>
-        <img
-          style={styles.gridImage}
-          rel="dns-prefetch"
-          ref={imageRef}
-          src={
-            project.imageUrl
-          }
-          alt={project.title}
-          loading="lazy"
-        />
-      </div>
+      <Tilt tiltAngleXInitial={-5} tiltAngleYInitial={5} scale={1.02} transitionSpeed={1000}>
+        <div style={styles.gridImageContainer}>
+          <img
+            style={styles.gridImage}
+            rel="dns-prefetch"
+            ref={imageRef}
+            src={
+              project.imageUrl
+            }
+            alt={project.title}
+            loading="lazy"
+          />
+        </div>
+      </Tilt>
       <h3 className="pr-title">{project.title}</h3>
     </div>
   );
@@ -64,10 +67,10 @@ const styles = {
   gridImageContainer: {
     overflow: "hidden",
     transition: "0.3s ease-in-out",
-    borderRadius: "8px",
+    borderRadius: "8px"
   },
   gridImage: {
-    height: "156px",
+    height: "156px"
   }
 };
 

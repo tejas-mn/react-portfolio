@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import DropDown from "../../utils/components/DropDown";
 import { useAlert } from "../../../Providers/AlertProvider";
 import { useDebounce } from "../../../hooks/useDebounce";
+import { motion } from "framer-motion";
 
 export default function SearchBar({ setTags, setFilteredProjects, tagsState, initialProjects }) {
-  const defaultTags = ["React", "C# .NET", "Flask", "Python"];
+  const defaultTags = ["React", "C# .NET", "Flask", "Python", "Django", "JavaScript", "TypeScript", "Node.js", "Express.js", "MongoDB", "SQL", "HTML", "CSS", "Tailwind CSS", "Bootstrap", "Git", "GitHub", "REST API", "GraphQL", "AWS", "Azure", "Docker", "Kubernetes", "Next.js", "Vue.js", "Angular", "PHP", "ASP .Net Core", "Java", "Spring Boot"];
   const [searchText, setSearchText] = useState("");
   const [searchResult, setSearchResult] = useState(new Set());
   const [isFocused, setIsFocused] = useState(true);
@@ -19,7 +20,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
     setIndex(-1);
     setIsFocused(false);
   }
-  const debouncedSearch = useDebounce(fetchSearchResults, 500);
+  const debouncedSearch = useDebounce(fetchSearchResults, 200);
 
   useEffect(() => {
     if (searchText.trim() !== "") {
@@ -115,14 +116,15 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
         onChange={(e) => handleSearch(e.target.value)}
         style={styles.searchInput}
       />
-      <button
+      <motion.button
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.95 }}
+
         className="view-btn"
         onClick={() => handleAddTag(searchText)}
-        disabled={searchText.length === 0}
-      >
+        disabled={searchText.length === 0}>
         Search
-      </button>
-
+      </motion.button>
       {isFocused && (
         <DropDown options={Array.from(searchResult)} onSelect={handleAddTag} selectedIndex={index} />
       )}
@@ -135,8 +137,10 @@ const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
 
   const requestOptions = {
     method: "GET",
-    headers: new Headers({ apikey: process.env.REACT_APP_API_KEY }),
+    headers: new Headers({ apikey: import.meta.env.VITE_API_KEY }),
   };
+
+  setSearchResult(new Set(["Loading..."]));
 
   fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
     .then((res) => {

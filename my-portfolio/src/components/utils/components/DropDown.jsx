@@ -28,6 +28,9 @@ const styles = {
     width: "100%",
     paddingLeft: "0px",
     borderRadius: "8px",
+    maxHeight: "150px",
+    overflowY: "auto",
+    boxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 11px 0px"
   },
   searchListItem: {
     padding: '6px 0px',

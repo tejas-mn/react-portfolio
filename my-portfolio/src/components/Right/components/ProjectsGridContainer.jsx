@@ -53,17 +53,17 @@ export default function ProjectsGridContainer({ filteredProjects, tagsState, set
             {isLoading && <div><ProjectBoxSkeleton /></div>}
 
             <Modal isOpen={modalOpen} onClose={closeModal}>
-                <ProjectModal
-                    setTags={setTags}
-                    tagsState={tagsState}
-                    key={currentProject.id}
-                    title={currentProject.title}
-                    imageUrl={currentProject.imageUrl}
-                    githubUrl={currentProject.githubUrl}
-                    liveUrl={currentProject.liveUrl}
-                    tags={currentProject.techStackList}
-                    description={currentProject.description}
-                />
+                    <ProjectModal
+                        setTags={setTags}
+                        tagsState={tagsState}
+                        key={currentProject.id}
+                        title={currentProject.title}
+                        imageUrl={currentProject.imageUrl}
+                        githubUrl={currentProject.githubUrl}
+                        liveUrl={currentProject.liveUrl}
+                        tags={currentProject.techStackList}
+                        description={currentProject.description}
+                    />
             </Modal>
         </div>
     );

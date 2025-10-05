@@ -1,8 +1,9 @@
-import React from "react";
 import { useAutoBoldText } from "../../../hooks/useAutoBoldText";
 import "../styles/projects.css";
+import Tilt from 'react-parallax-tilt';
 import { GithubProjectSvg, ProjectLinkSvg } from "../../utils/components/Svg";
 import { useAlert } from "../../../Providers/AlertProvider";
+import { motion } from "framer-motion";
 
 export default function ProjectModal({
   imageUrl,
@@ -33,11 +34,25 @@ export default function ProjectModal({
 
   return (
     <div style={styles.container} className="project-modal-container">
+
       <div
         style={styles.imageContainer}
         className="project-modal-image-container"
       >
-        <img src={imageUrl} alt={title} style={styles.image} />
+        <motion.div
+          initial={{ rotate: -5, scale: 0.9, opacity: 0 }}
+          animate={{ rotate: 0, scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <motion.div whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.95 }}>
+            <Tilt scale={1.05} transitionSpeed={1000}>
+
+              <img className="project-modal-image-tilt" src={imageUrl} alt={title} style={styles.image} />
+
+            </Tilt>
+          </motion.div>
+        </motion.div>
       </div>
       <div
         style={styles.contentContainer}
@@ -65,11 +80,11 @@ export default function ProjectModal({
           </a>
           {
             (!(!liveUrl || liveUrl.trim().length === 0)) ? <a href={liveUrl} target="_blank" rel="noreferrer">
-            <button style={styles.button}>
-              <ProjectLinkSvg />
-              Live
-            </button>
-          </a> : <></>
+              <button style={styles.button}>
+                <ProjectLinkSvg />
+                Live
+              </button>
+            </a> : <></>
           }
         </div>
       </div>

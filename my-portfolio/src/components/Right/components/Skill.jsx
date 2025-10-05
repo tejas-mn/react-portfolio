@@ -1,19 +1,23 @@
 import { useUser } from "../../../Providers/UserProvider";
 import "../../../tooltip.css";
+import { motion } from "framer-motion";
 
 function Skill({ skill, level }) {
   return (
     <>
-      <div className="tooltip">
+      <motion.div
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.95 }}
+        className="tooltip">
         {skill}
         {/* <span className="tooltiptext">{level}</span> */}
-      </div>
+      </motion.div>
     </>
   );
 }
 
 export function Skills() {
-  const {data} = useUser();
+  const { data } = useUser();
   return (
     <section>
       <h2 className="tech-skills-heading">⚡ Tech Skills</h2>
