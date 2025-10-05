@@ -1,6 +1,6 @@
-.btn{
+.btn {
   margin-top: 30px;
-  border-radius: 100px; 
+  border-radius: 100px;
 }
 
 .pic {
@@ -10,7 +10,7 @@
   margin-bottom: 0px;
 }
 
-.pic > img {
+.pic>img {
   width: 120px;
   height: 120px;
   border-radius: 108px;
@@ -20,11 +20,11 @@
   color: rgb(255, 255, 255);
 }
 
-.picDesc > h2 {
+.picDesc>h2 {
   margin: 0px;
 }
 
-.picDesc > p {
+.picDesc>p {
   margin-top: 0px;
 }
 
@@ -36,7 +36,7 @@
   padding: 10px;
 }
 
-.skills2 > div {
+.skills2>div {
   list-style: none;
   border-radius: 10px;
   padding: 10px 20px;
@@ -48,9 +48,9 @@
 }
 
 .resumeBtn {
-  background: linear-gradient(343deg, #bffaff6e, #fdffbc5d);
   box-shadow: 0px 0px 10px rgba(74, 74, 74, 0.127);
   padding: 7px 20px !important;
+  color: black !important;
 }
 
 .resumeBtn:hover {

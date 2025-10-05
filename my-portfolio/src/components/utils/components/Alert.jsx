@@ -12,7 +12,9 @@ function Alert({ alertObj }) {
             }}
             className="alert" role="alert">
             <strong style={{
-                color: 'white'
+                color: 'white',
+                fontFamily: "Segoe UI",
+                fontWeight: '400'
             }}>{alertObj.message}</strong>
             <button type="button" className="btn-close" onClick={() => hideAlert(alertObj.id)} aria-label="Close"><strong style={{
                 color: 'white'
