@@ -111,6 +111,7 @@ const styles = {
   },
   image: {
     maxWidth: "100%",
+    width: "100%",
     height: "256px",
     borderRadius: "8px",
     boxShadow: "rgba(74, 74, 74, 0.23) -7px -10px 30px",
