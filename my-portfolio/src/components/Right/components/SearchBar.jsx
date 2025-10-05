@@ -20,7 +20,7 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
     setIndex(-1);
     setIsFocused(false);
   }
-  const debouncedSearch = useDebounce(fetchSearchResults, 200);
+  const debouncedSearch = useDebounce(fetchSearchResults, 500);
 
   useEffect(() => {
     if (searchText.trim() !== "") {
@@ -135,12 +135,13 @@ export default function SearchBar({ setTags, setFilteredProjects, tagsState, ini
 const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
   if (value === undefined) return;
 
+  // Set loading state
+  setSearchResult(new Set(["Loading..."]));
+
   const requestOptions = {
     method: "GET",
     headers: new Headers({ apikey: import.meta.env.VITE_API_KEY }),
   };
-
-  setSearchResult(new Set(["Loading..."]));
 
   fetch(`https://api.apilayer.com/skills?q=${value}`, requestOptions)
     .then((res) => {
@@ -158,6 +159,7 @@ const fetchSearchResults = (value, setSearchResult, tagsState, defaultTags) => {
     })
     .catch((err) => {
       console.log('Error:' + err);
+      setSearchResult(new Set(defaultTags.filter((tag) => !tagsState.has(tag) && tag.toLocaleLowerCase().includes(value.toLocaleLowerCase()))));
     });
 };
 
