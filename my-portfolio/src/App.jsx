@@ -7,10 +7,32 @@ import AlertMessages from "./components/utils/components/Alert";
 import Progress from "./components/utils/components/Progress";
 import ParticlesBackground from "./components/utils/components/ParticlesBackground";
 import useScroll from "./hooks/useScroll";
+import { useEffect } from "react";
+import { useUser } from "./Providers/UserProvider";
 
 function App() {
   const { theme } = useTheme();
   const scrollPosition = useScroll();
+  const { clearCache, clearAllCache } = useUser();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("clearcache") === "true") {
+      clearAllCache();
+      console.log("All cache cleared via URL parameter.");
+      params.delete("clearcache");
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, []);
+
+  const handleRefresh = () => {
+      clearCache(); // This will clear only the resume data cache
+      // The next data fetch will bypass the cache
+  };
+
+  const handleClearAll = () => {
+      clearAllCache(); // This will clear all cached data
+  };
 
   return (
     <>
