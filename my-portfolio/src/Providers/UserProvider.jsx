@@ -20,7 +20,7 @@ const preloadProjectImages = async (projects) => {
 
 const userContext = createContext();
 
-const RESUME_URL = import.meta.env.VITE_RESUME_URL;
+const RESUME_URL = import.meta.env.VITE_USE_LOCAL_JSON ? "data.json" : import.meta.env.VITE_RESUME_URL;
 
 const UserProvider = ({ children }) => {
     const { data, error, loading } = useFetch(
@@ -30,8 +30,9 @@ const UserProvider = ({ children }) => {
     );
 
     useEffect(() => {
-        if (data && data.data.projects) {
-            preloadProjectImages(data.data.projects)
+        // if(import.meta.env.VITE_USE_LOCAL_JSON) console.log('User data updated:', data);
+        if (data && data.projects) {
+            preloadProjectImages(data.projects)
                 .then(() => {
                     console.log('All project images preloaded successfully');
                 })
@@ -55,7 +56,7 @@ const UserProvider = ({ children }) => {
     }
 
     return (
-        <userContext.Provider value={data.data}>
+        <userContext.Provider value={{data}}>
             {children}
         </userContext.Provider>
     );

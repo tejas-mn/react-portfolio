@@ -2,276 +2,116 @@
   "edu": [
     {
       "id": 1,
-      "title": "Dr. Ambedkar Institute Of Technology ",
       "desc": "B.Tech CSE, CGPA: 8.83",
+      "title": "Dr. Ambedkar Institute Of Technology ",
       "timeline": "July 2019 – August 2023"
     },
     {
       "id": 2,
-      "title": "St. Claret PU College   ",
       "desc": "Class 12/PUC, Percentage: 92.67%",
+      "title": "St. Claret PU College   ",
       "timeline": "June 2017 – March 2019"
     },
     {
       "id": 3,
-      "title": "Vinodh English High School ",
       "desc": "Class 10/SSLC, Percentage: 93.76%",
+      "title": "Vinodh English High School ",
       "timeline": "June 2016 – April 2017"
     }
   ],
   "exp": [
     {
       "id": -1,
-      "company": "CSG International",
-      "title": "SDE 1",
-      "timeline": "May 2025 - Present",
       "desc": [
         "Transitioned to SDE 1 working on backend development building core ordering features and APIs for Ascendon.",
         "*Tech*: C#, .NET Core, SQL, SOLID Principles, Design Patterns, Microservices, AWS, Docker, Terraform, Azure Devops"
-      ]
+      ],
+      "title": "SDE 1",
+      "company": "CSG International",
+      "timeline": "May 2025 - Present"
     },
     {
       "id": 0,
-      "company": "CSG International",
-      "title": "SDET 1",
-      "timeline": "Dec 2024 - April 2025",
       "desc": [
         "Worked on backend development and test automation, aiming to move into a backend development role."
-      ]
+      ],
+      "title": "SDET 1",
+      "company": "CSG International",
+      "timeline": "Dec 2024 - April 2025"
     },
     {
       "id": 1,
-      "company": "CSG International",
-      "title": "SDET Grad",
-      "timeline": "Sep 2023 – Dec 2024",
       "desc": [
         "Worked on API Automation Testing using *C# .NET Core* and leveraging microservices, cloud, and DevOps tools such as *AWS*, *Azure*, *Docker*, and *Terraform*."
-      ]
+      ],
+      "title": "SDET Grad",
+      "company": "CSG International",
+      "timeline": "Sep 2023 – Dec 2024"
     },
     {
       "id": 2,
-      "company": "CSG International",
-      "title": "Intern",
-      "timeline": "March 2023 – Sep 2023",
       "desc": [
         "Acquired good knowledge in technical (backend), functional, and business aspects of Ascendon, with a strong understanding of its various domains, architecture, features, and overall product."
-      ]
+      ],
+      "title": "Intern",
+      "company": "CSG International",
+      "timeline": "March 2023 – Sep 2023"
     },
     {
       "id": 3,
-      "company": "Edunet Foundation",
-      "title": "Frontend Developer Intern",
-      "timeline": "Sept 2022 – Nov 2022",
       "desc": [
         "Worked on building portfolio website using *React*, *HTML*, *CSS* and *Javascript*."
-      ]
+      ],
+      "title": "Frontend Developer Intern",
+      "company": "Edunet Foundation",
+      "timeline": "Sept 2022 – Nov 2022"
     },
     {
       "id": 4,
-      "company": "Softmantissa",
-      "title": "Web Developer Intern",
-      "timeline": "Oct 2021 – Jan 2022",
       "desc": [
         "Designed responsive frontend components for a school website utilizing *React*, *HTML*, *CSS*, *JavaScript* and backend with *Flask* / *Django*."
-      ]
+      ],
+      "title": "Web Developer Intern",
+      "company": "Softmantissa",
+      "timeline": "Oct 2021 – Jan 2022"
     }
   ],
-  "projects": [
-    {
-      "id": 8,
-      "title": ".NET Web API",
-      "techStack": "C# .NET,OOPS,SQL",
-      "techStackList": [
-        "C#",
-        ".NET",
-        "OOPS",
-        "SQL"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A .NET Web API for managing e-commerce products and categories. Implemented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
-      "imageUrl": "https://github.com/tejas-mn/.NET7-WEB-API/assets/68629215/8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f", 
-      "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
-      "liveUrl": ""
-    },
-    {
-      "id": 1,
-      "title": "Gym Management System",
-      "techStack": "Flask,Bootstrap,JavaScript,SQL",
-      "techStackList": [
-        "Flask",
-        "Bootstrap",
-        "JavaScript",
-        "SQL"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
-      "imageUrl": "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
-      "githubUrl": "https://github.com/tejas-mn/Gym-Management-System-Flask",
-      "liveUrl": ""
-    },
-    {
-      "id": 2,
-      "title": "Sorting Visualizer",
-      "techStack": "React,JavaScript",
-      "techStackList": [
-        "React",
-        "Javascript"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
-      "imageUrl": "https://github.com/tejas-mn/Sorto-Viz/assets/68629215/4c511869-ff49-4de6-bc1a-d751ddf814ff",
-      "githubUrl": "https://github.com/tejas-mn/Sorto-Viz",
-      "liveUrl": "https://algo-viz-tej.netlify.app/"
-    },
-    {
-      "id": 3,
-      "title": "Leaf Disease Detection using CNN",
-      "techStack": "Flask,Tensorflow,OpenCv,Javascript,Bootstrap",
-      "techStackList": [
-        "Flask",
-        "TensorFlow",
-        "Opencv",
-        "Javascript",
-        "Bootstrap"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A web app to detect potato leaf blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
-      "imageUrl": "https://github.com/tejas-mn/final-year-project/assets/68629215/9a8e5c08-a7a2-4338-83ca-ba3be4ba462d",
-      "githubUrl": "https://github.com/tejas-mn/final-year-project",
-      "liveUrl": "https://tejasmn.pythonanywhere.com/"
-    },
-    {
-      "id": 4,
-      "title": "Task App",
-      "techStack": "Flask,Html & CSS,JavaScript,jQuery",
-      "techStackList": [
-        "Flask",
-        "Html",
-        "CSS",
-        "JavaScript",
-        "jQuery"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A Task app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
-      "imageUrl": "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
-      "githubUrl": "https://github.com/tejas-mn/Flask-App/tree/master",
-      "liveUrl": "https://tejasmn2.pythonanywhere.com/"
-    },
-    {
-      "id": 6,
-      "title": "Web based remote command runner using CGI",
-      "techStack": "Python,Html,RHEL8,Docker,Flask",
-      "techStackList": [
-        "Python",
-        "Html",
-        "RHEL8",
-        "Docker",
-        "Flask"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
-      "imageUrl": "https://github.com/tejas-mn/SSH-Remote-Access/assets/68629215/d7dd336a-3fce-4006-8fcf-04d54392c55b",
-      "githubUrl": "https://github.com/tejas-mn/SSH-Remote-Access",
-      "liveUrl": "https://www.youtube.com/playlist?list=PLGmZIPUNEgq-Mcfrd6fTkiifT_H6cM92B"
-    },
-    {
-      "id": 5,
-      "title": "IR Remote Controller for PC",
-      "techStack": "Tkinter,Arduino,Pyautogui,Python",
-      "techStackList": [
-        "Tkinter",
-        "Arduino",
-        "Pyautogui",
-        "Python"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
-      "imageUrl": "https://github.com/tejas-mn/mp-final/assets/68629215/af64bc19-a0eb-46bc-b9bd-0d1cb3d9c816",
-      "githubUrl": "https://github.com/tejas-mn/mp-final",
-      "liveUrl": ""
-    },
-    {
-      "id": 7,
-      "title": "Weather App",
-      "techStack": "Html,CSS,JavaScript",
-      "techStackList": [
-        "Html",
-        "CSS",
-        "JavaScript"
-      ],
-      "timeline": "Sep 2023 – Present",
-      "description": "A simple weather app that displays weather information using OpenWeather API.",
-      "imageUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab/assets/68629215/d87dd822-044d-47d2-8882-316229607c93",
-      "githubUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab",
-      "liveUrl": ""
-    },
-    {
-      "id": 9,
-      "title": "Portfolio",
-      "techStack": "React,JavaScript,MaterialUI",
-      "techStackList": [
-        "React",
-        "JavaScript",
-        "MaterialUI"
-      ],
-      "timeline": "Jan 2024 – Present",
-      "description": "A portfolio built using React",
-      "imageUrl": "image.png",
-      "githubUrl": "https://github.com/tejas-mn/react-portfolio",
-      "liveUrl": "https://tejasmn-react-portfolio.vercel.app/work"
-    },
-    {
-      "id": 10,
-      "title": "FreeCodeCamp's Responsive Web Design Projects",
-      "techStack": "HTML,CSS,Javascript",
-      "techStackList": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "timeline": "July 2022",
-      "description": "Collection of FreeCodeCamp's Responsive Web Design Course Projects",
-      "imageUrl": "FCC.png",
-      "githubUrl": "https://codepen.io/collection/zxEjMY",
-      "liveUrl": "https://codepen.io/collection/zxEjMY"
-    }
-  ],
-  "blogs" : [
+  "blogs": [
     {
       "id": 8,
       "title": "Essential Git Commands Cheat Sheet",
+      "liveUrl": "https://tejasmn.hashnode.dev/essential-git-commands-cheat-sheet",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "timeline": "Jun 10, 2024",
       "techStack": "Git",
+      "description": "Git is a powerful version control system that is widely used in software development to track changes, collaborate with others, and manage project versions...",
       "techStackList": [
         "Git"
-      ],
-      "timeline": "Jun 10, 2024",
-      "description": "Git is a powerful version control system that is widely used in software development to track changes, collaborate with others, and manage project versions...",
-      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
-      "liveUrl": "https://tejasmn.hashnode.dev/essential-git-commands-cheat-sheet"
+      ]
     },
     {
       "id": 7,
       "title": "Mastering *args and **kwargs in Python",
+      "liveUrl": "https://tejasmn.hashnode.dev/mastering-args-and-kwargs-in-python",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "timeline": "Jul 23, 2024",
       "techStack": "Python",
+      "description": "In Python, there are times when you might not know in advance how many arguments a function should accept. This is where *args and **kwargs...",
       "techStackList": [
         "Python"
-      ],
-      "timeline": "Jul 23, 2024",
-      "description": "In Python, there are times when you might not know in advance how many arguments a function should accept. This is where *args and **kwargs...",
-      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
-      "liveUrl": "https://tejasmn.hashnode.dev/mastering-args-and-kwargs-in-python"
+      ]
     },
     {
       "id": 6,
       "title": "Demystifying Docker Instructions",
+      "liveUrl": "https://tejasmn.hashnode.dev/demystifying-docker-instructions-add-copy-cmd-entrypoint-and-run",
+      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
+      "timeline": "Dec 29, 2024",
       "techStack": "Docker",
+      "description": "Dockerfiles are the backbone of containerized application development, but some instructions like ADD, COPY, CMD, ENTRYPOINT, and RUN...",
       "techStackList": [
         "Docker"
-      ],
-      "timeline": "Dec 29, 2024",
-      "description": "Dockerfiles are the backbone of containerized application development, but some instructions like ADD, COPY, CMD, ENTRYPOINT, and RUN...",
-      "imageUrl": "https://1.bp.blogspot.com/-CQmn2fSiP_k/XzVC8Auzh3I/AAAAAAAAH8M/TnaeRorU2hgl8anoo_IkkzCz-zP_WKzSwCPcBGAYYCw/s1600/image003.gif",
-      "liveUrl": "https://tejasmn.hashnode.dev/demystifying-docker-instructions-add-copy-cmd-entrypoint-and-run"
+      ]
     }
   ],
   "skills": [
@@ -336,25 +176,185 @@
       "level": "Beginner"
     }
   ],
+  "projects": [
+    {
+      "id": 8,
+      "title": ".NET Web API",
+      "liveUrl": "",
+      "imageUrl": "https://github.com/tejas-mn/.NET7-WEB-API/assets/68629215/8cf19c2e-a5e4-46a1-8a7d-3ee12f910f3f",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/.NET7-WEB-API",
+      "techStack": "C# .NET,OOPS,SQL",
+      "description": "A .NET Web API for managing e-commerce products and categories. Implemented Role based Authorization using *JWT* that prevents certain users from accessing API endpoints.",
+      "techStackList": [
+        "C#",
+        ".NET",
+        "OOPS",
+        "SQL"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Gym Management System",
+      "liveUrl": "",
+      "imageUrl": "https://user-images.githubusercontent.com/68629215/181266083-3023a53b-2ece-4539-81ab-9b15f4969bd9.png",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/Gym-Management-System-Flask",
+      "techStack": "Flask,Bootstrap,JavaScript,SQL",
+      "description": "A Full Stack Gym Management application implementing *CRUD* operations, Pagination and Authentication for managing data of Gym Members, Trainers Equipments",
+      "techStackList": [
+        "Flask",
+        "Bootstrap",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sorting Visualizer",
+      "liveUrl": "https://algo-viz-tej.netlify.app/",
+      "imageUrl": "https://github.com/tejas-mn/Sorto-Viz/assets/68629215/4c511869-ff49-4de6-bc1a-d751ddf814ff",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/Sorto-Viz",
+      "techStack": "React,JavaScript",
+      "description": "A sorting visualizer to visualise Bubble Sort, Selection Sort, Merge Sort and Quick Sort.",
+      "techStackList": [
+        "React",
+        "Javascript"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Leaf Disease Detection using CNN",
+      "liveUrl": "https://tejasmn.pythonanywhere.com/",
+      "imageUrl": "https://github.com/tejas-mn/final-year-project/assets/68629215/9a8e5c08-a7a2-4338-83ca-ba3be4ba462d",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/final-year-project",
+      "techStack": "Flask,Tensorflow,OpenCv,Javascript,Bootstrap",
+      "description": "A web app to detect potato leaf blight disease using CNN. Made using Flask, Tensorflow and OpenCV.",
+      "techStackList": [
+        "Flask",
+        "TensorFlow",
+        "Opencv",
+        "Javascript",
+        "Bootstrap"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Task App",
+      "liveUrl": "https://tejasmn2.pythonanywhere.com/",
+      "imageUrl": "https://github.com/tejas-mn/Flask-App/assets/68629215/436e962b-747f-4872-a3aa-bcc94a2f8979",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/Flask-App/tree/master",
+      "techStack": "Flask,Html & CSS,JavaScript,jQuery",
+      "description": "A Task app where users can sign up to maintain todos, update deadlines. Filter and Search capabilities through todos. Made using Flask.",
+      "techStackList": [
+        "Flask",
+        "Html",
+        "CSS",
+        "JavaScript",
+        "jQuery"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Web based remote command runner using CGI",
+      "liveUrl": "https://www.youtube.com/playlist?list=PLGmZIPUNEgq-Mcfrd6fTkiifT_H6cM92B",
+      "imageUrl": "https://github.com/tejas-mn/SSH-Remote-Access/assets/68629215/d7dd336a-3fce-4006-8fcf-04d54392c55b",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/SSH-Remote-Access",
+      "techStack": "Python,Html,RHEL8,Docker,Flask",
+      "description": "A web app that can run terminal commands on a remote server using common gateway interface. Can also run docker commands through web page.",
+      "techStackList": [
+        "Python",
+        "Html",
+        "RHEL8",
+        "Docker",
+        "Flask"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "IR Remote Controller for PC",
+      "liveUrl": "",
+      "imageUrl": "https://github.com/tejas-mn/mp-final/assets/68629215/af64bc19-a0eb-46bc-b9bd-0d1cb3d9c816",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/mp-final",
+      "techStack": "Tkinter,Arduino,Pyautogui,Python",
+      "description": "A Tkinter application that allows a TV remote to control Personal Computer connected via *Arduino*. Can be used to control presentations, media etc.",
+      "techStackList": [
+        "Tkinter",
+        "Arduino",
+        "Pyautogui",
+        "Python"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Weather App",
+      "liveUrl": "",
+      "imageUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab/assets/68629215/d87dd822-044d-47d2-8882-316229607c93",
+      "timeline": "Sep 2023 – Present",
+      "githubUrl": "https://github.com/tejas-mn/weather-app-gcloud-lab",
+      "techStack": "Html,CSS,JavaScript",
+      "description": "A simple weather app that displays weather information using OpenWeather API.",
+      "techStackList": [
+        "Html",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Portfolio",
+      "liveUrl": "https://tejasmn-react-portfolio.vercel.app/work",
+      "imageUrl": "image.png",
+      "timeline": "Jan 2024 – Present",
+      "githubUrl": "https://github.com/tejas-mn/react-portfolio",
+      "techStack": "React,JavaScript,MaterialUI",
+      "description": "A portfolio built using React",
+      "techStackList": [
+        "React",
+        "JavaScript",
+        "MaterialUI"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "FreeCodeCamp's Responsive Web Design Projects",
+      "liveUrl": "https://codepen.io/collection/zxEjMY",
+      "imageUrl": "FCC.png",
+      "timeline": "July 2022",
+      "githubUrl": "https://codepen.io/collection/zxEjMY",
+      "techStack": "HTML,CSS,Javascript",
+      "description": "Collection of FreeCodeCamp's Responsive Web Design Course Projects",
+      "techStackList": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
   "userInfo": {
     "name": "Tejas M N",
     "email": "tejasmn2020@gmail.com",
-    "location": "Bangalore, India",
-    "profession": "💻Software Engineer | 👨🏻‍💻FullStack Developer | 🚀SDET",
-    "headline": "-----------------",
     "links": {
+      "github": "https://www.github.com/tejas-mn",
       "resume": "https://drive.google.com/file/d/1ivvihMxnuakSsEeHPq9V2xlh2fy7jV1A/view?usp=sharing",
       "leetcode": "https://www.leetcode.com/tejasmn",
-      "github": "https://www.github.com/tejas-mn",
       "linkedin": "https://www.linkedin.com/in/tejasmn/"
     },
-    "profilePic" :"https://media.licdn.com/dms/image/v2/D5603AQGRQf_66s8N8w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721841870279?e=1762992000&v=beta&t=TPf54CVyezBHx-pbv_dkeMNHUCriCAXuciTMkrZJlt4",
-    "bannerImages": {
-      "darkBanner": "banner-dark.gif",
-      "lightBanner": "banner-light.gif",
-      "single": ""
-    },
+    "headline": "-----------------",
+    "location": "Bangalore, India",
     "aboutInfo": "I’m an aspiring Software Engineer with a passion for developing full-stack projects and exploring the depths of software engineering concepts. I’m energized by the challenge of unraveling software engineering principles and applying my insights to diverse projects. I’m starting to share my experiences and thoughts on software engineering and programming on my new blog. If you’re looking for a dedicated engineer or a collaborator for your next project, let’s connect and create something extraordinary together!",
+    "profession": "💻Software Engineer | 👨🏻‍💻FullStack Developer ",
+    "profilePic": "https://media.licdn.com/dms/image/v2/D5603AQGRQf_66s8N8w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721841870279?e=1765411200&v=beta&t=jMbFpaA6qwC9RkngNrHGN1h21Sa019YduW-d1dXh08o",
+    "bannerImages": {
+      "single": "",
+      "darkBanner": "banner-dark.gif",
+      "lightBanner": "banner-light.gif"
+    },
     "experienceInfo": "Aspiring Software Engineer from computer science background, graduated in 2023 currently working as SDET at CSG. Proficient in web development and backend programming with expertise in HTML, CSS, JavaScript,  React, SQL, C#. Eager to leverage experience in development to contribute effectively to development teams in a challenging environment. Strong problem-solving skills combined with a passion for learning and adapting to new technologies."
   }
 }

@@ -9,8 +9,8 @@ export default function useFetch(url, requestOptions, cacheDuration = 3600000) {
     const fetchData = async () => {
         try {
             const cachedData = cacheManager.get(url);
-            if (cachedData) {
-                console.log("Using cached data for", url);
+            if (import.meta.env.VITE_USE_LOCAL_JSON === false && cachedData) {
+                // console.log("Using cached data for", url);
                 setData(cachedData);
                 setLoading(false);
                 return;
