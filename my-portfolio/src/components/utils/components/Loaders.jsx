@@ -7,7 +7,7 @@ import {
     Hearts,
     MutatingDots,
     Oval,
-    Plane,
+
     RevolvingDot,
     Rings,
     TailSpin,

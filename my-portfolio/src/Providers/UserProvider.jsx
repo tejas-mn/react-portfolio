@@ -20,7 +20,12 @@ const preloadProjectImages = async (projects) => {
 
 const userContext = createContext();
 
-const RESUME_URL = import.meta.env.VITE_USE_LOCAL_JSON ? "data.json" : import.meta.env.VITE_RESUME_URL;
+const useLocalJson = import.meta.env.VITE_USE_LOCAL_JSON === undefined
+    ? true
+    : import.meta.env.VITE_USE_LOCAL_JSON === 'true';
+const RESUME_URL = useLocalJson
+    ? "/data.json"
+    : import.meta.env.VITE_RESUME_URL ?? "/data.json";
 
 const UserProvider = ({ children }) => {
     const { data, error, loading } = useFetch(

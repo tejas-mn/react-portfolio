@@ -6,16 +6,24 @@ class CacheManager {
     set(key, value, duration) {
         const timestamp = new Date().getTime();
         const payload = JSON.stringify({ value, timestamp, duration });
-        const encrypted = CryptoJS.AES.encrypt(payload, SECRET_KEY).toString();
-        localStorage.setItem(key, encrypted);
+
+        if (SECRET_KEY) {
+            const encrypted = CryptoJS.AES.encrypt(payload, SECRET_KEY).toString();
+            localStorage.setItem(key, encrypted);
+            return;
+        }
+
+        localStorage.setItem(key, payload);
     }
 
     get(key) {
-        const encrypted = localStorage.getItem(key);
-        if (!encrypted) return null;
+        const stored = localStorage.getItem(key);
+        if (!stored) return null;
+
         try {
-            const bytes = CryptoJS.AES.decrypt(encrypted, SECRET_KEY);
-            const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+            const decrypted = SECRET_KEY
+                ? CryptoJS.AES.decrypt(stored, SECRET_KEY).toString(CryptoJS.enc.Utf8)
+                : stored;
             const { value, timestamp, duration } = JSON.parse(decrypted);
             const now = new Date().getTime();
             if (now - timestamp > duration) {
